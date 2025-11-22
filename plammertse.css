@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------------
+-- file    : plammertse.css
+-- purpose : Style sheet for homepage Piet Lammertse
+-- note    : Inside CSS, the comment symbol is / * etc.
+--             inlike HTML, where it is <!--    
+----------------------------------------------------------------------
+-- history :
+--     2025-11-21 new
+----------------------------------------------------------------------*/
+
+/* Sans serif everywhere. Font size TBD ? */
+body {
+  margin:  0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Line and indent spacings for header 2*/
+h2 {
+  margin: 8px 16px;
+  margin-top: 16px;
+}
+
+p {
+  margin: 4px 16px;
+}
+
+/* unordered lists (bullets, not numbered) */
+ul {
+  list-style-type: none;
+  margin : 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+/* list items left aligned */
+li {
+  float: left;
+}
+
+/* format for anchors <a>..</> inside a list */
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* format dropdown lists */
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display:  none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* format anchors inside dropdowns                      */
+/* The first padding is vertical (like a line spacing), */
+/* the second is horizontal (like a tab)                */
+.dropdown-content a {
+  color: black;
+  padding: 4px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
