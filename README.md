@@ -1,2 +1,2 @@
 # Website
-Piet Lammertsepersonal website
+Piet Lammertse personal website
