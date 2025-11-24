@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <!---------------------------------------------------------------------
 -- file    : index.html
---   purpose : Homepage for website Piet Lammertse
+-- purpose : Homepage for website Piet Lammertse
 -----------------------------------------------------------------------
---   history :
---     2025-11-21 new
+-- history :
+--   2025-11-21 PL new
 ----------------------------------------------------------------------> 
 
 <head>
@@ -19,51 +18,229 @@
 <body>
 
 <!---------------------------------------------------------------------
--- Navigation bar menu at the top of the page
---   It has a number of dropdown lists.
+-- Navigation bar menu at the top of the page,
+--   with a number of dropdown lists.
 ---------------------------------------------------------------------->
 <ul>
+
   <li><a href="#home">Home</a></li>
 
-  <li><a href="#news">News</a></li>
-
+  <!-- AIRCRAFT -->
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Aero</a>
+    <a href="javascript:void(0)" class="dropbtn">  Aircraft  </a>
     <div class="dropdown-content">
-      <a href="#">Etkin</a>
-      <a href="#">Short period</a>
-      <a href="#">Phugoid</a>
-      <a href="#">Dutch Roll</a>
-      <a href="#">Spiral</a>
-      <a href="#">Eigenvector</a>
-      <a href="#">Specific Force (simulators)</a>
+      <a href="#" style="color: silver">      Intro            </a>
+      <a href="#" style="color: silver">      Design           </a>
+      <a href="#" style="color: silver">      Aspect Ratio     </a>
+      <a href="#" style="color: silver">      Short Coupling   </a>
+      <a href="#" style="color: silver">      Canard Aircraft  </a>
+      <a href="#" style="color: silver">      Trim Drag        </a>
+      <a href="#" style="color: silver">      Formation Flying </a>
+      <a href="#" style="color: silver">      Engine Cooling   </a>
     </div>
   </li>
 
+  <!-- AERODYNAMICS -->
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Aero</a>
+    <a href="javascript:void(0)" class="dropbtn">  Aerodynamics  </a>
     <div class="dropdown-content">
-      <a href="#">Etkin</a>
-      <a href="#">Short period</a>
-      <a href="#">Phugoid</a>
-      <a href="#">Dutch Roll</a>
-      <a href="#">Spiral</a>
-      <a href="#">Eigenvector</a>
-      <a href="#">Specific Force (simulators)</a>
+<!--      <a href="aero.html"> Intro </a>  -->
+      <a href="#" style="color: silver">       Lift                            </a>
+      <a href="#" style="color: silver">       Aspect Ratio                    </a>
+      <a href="#" style="color: silver">       Wind Tunnels (ground reaction)  </a>
+      <a href="#" style="color: silver">       Tunnel Wall Measurements        </a>
     </div>
   </li>
+
+  <!-- CASE STUDIES -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Case studies  </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> The Wright Brothers </a>
+      <a href="#" style="color: silver"> Fokker - the creative years </a>
+      <a href="#" style="color: silver"> Ludwig Prandtl     </a>
+      <a href="#" style="color: silver"> Alexander Lippisch </a>
+      <a href="#" style="color: silver"> Safety Airplanes   </a>
+      <a href="#" style="color: silver"> NASA               </a>
+      <a href="#" style="color: silver"> NASA Maxwell X-57  </a>
+      <a href="#" style="color: silver"> Burt Rutan         </a>
+      <a href="#" style="color: silver"> Laminar Flow       </a>
+      <a href="#" style="color: silver"> Piaggio Avanti     </a>             <!-- Roskam -->
+      <a href="#" style="color: silver"> Taylor Bullet      </a>
+      <a href="#" style="color: silver"> Electric Pusher    </a>
+    </div>
+  </li>
+
+  <!-- (AIRCRAFT) DYNAMICS -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"> Flight Dynamics  </a>
+    <div class="dropdown-content">
+      <a href="etkin.html">  Etkin        </a>
+      <a href="#" style="color: silver">           Short period </a>
+      <a href="#" style="color: silver">           Phugoid      </a>
+      <a href="#" style="color: silver">           Dutch Roll   </a>
+      <a href="#" style="color: silver">           Spiral       </a>
+      <a href="#" style="color: silver">           Energy Mode  </a>
+    </div>
+  </li>
+
+  <!-- SIMULATION -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"> Simulation  </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Hexapods </a>
+      <a href="#" style="color: silver"> Cueing </a>
+      <a href="#" style="color: silver"> Specific Force </a>
+      <a href="#" style="color: silver"> Artificial Feel </a>
+    </div>
+  </li>
+
+  <!-- CONTROL -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Control   </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Feedforward           </a>
+      <a href="#" style="color: silver"> Feedback             </a>
+      <a href="#" style="color: silver"> Fighting Uncertainty </a>
+      <a href="#" style="color: silver"> Kalman Filters       </a>
+<!-- Physical understandability -->
+      <a href="#" style="color: silver"> Cascaded Control     </a>
+<!-- Non-linearities, see Space -->
+      <a href="#" style="color: silver"> Bang-Bang Control (Minimum Time) </a>
+    </div>
+  </li>
+
+  <!-- PROPELLERS -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Propellers  </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Basic Theory         </a>
+      <a href="#" style="color: silver"> Viscous Optimization </a>
+      <a href="#" style="color: silver"> Pusher Propellers    </a>
+      <a href="#" style="color: silver"> Propeller Noise      </a>
+    </div>
+  </li>
+
+  <!-- SHIPS -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Ships  </a>
+    <div class="dropdown-content">
+      <a href="hydrofoil.html">             Hydrofoils  </a>
+      <a href="#" style="color: silver">    Sailing     </a>
+    </div>
+  </li>
+
+  <!-- SPACE -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Space   </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Satellite Attitude Control              </a>
+      <a href="#" style="color: silver"> Saturation                              </a>
+      <a href="#" style="color: silver"> Dual Control Law (proximal control)     </a>
+      <a href="#" style="color: silver"> Precession                              </a>
+      <a href="#" style="color: silver"> Nutation                                </a>
+    </div>
+  </li>
+
+  <!-- MATH -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Math   </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Linear algebra </a>
+      <a href="#" style="color: silver"> Eigenvalues    </a>
+      <a href="#" style="color: silver"> Eigenvectors   </a>
+    </div>
+  </li>
+
+  <!-- MECHANICS -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Mechanics  </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Center of gravity     </a>
+      <a href="#" style="color: silver"> Center of percussion  </a>
+                <!-- one or top mass derivation for dumbbell, with I=mR^2 etc. -->
+      <a href="#" style="color: silver"> Anti-resonance        </a>
+      <a href="#" style="color: silver"> Pendulums             </a>
+    </div>
+  </li>
+
+  <!-- HAPTICS -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Haptics  </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Impedance Control                 </a>
+      <a href="#" style="color: silver"> Admittance Control                </a>
+      <a href="#" style="color: silver"> Haptic Rendering                  </a>
+      <a href="#" style="color: silver"> Redirected walking on a treadmill </a>
+    </div>
+  </li>
+
+  <!-- VARIA -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">  Varia  </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Intro </a>
+      <a href="#" style="color: silver"> Design Methodology </a>
+      <a href="#" style="color: silver"> Memo System </a>            <!-- Mind Maps - Too Much to Know -->
+      <a href="#" style="color: silver"> Recumbent Bicycles </a>
+      <a href="#" style="color: silver"> Flapping Flight </a>
+      <a href="#" style="color: silver"> Water Simulation </a>
+      <a href="#" style="color: silver"> Buckminster Fuller </a>
+    </div>
+  </li>
+
+  <!-- CV -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"> CV </a>
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Delft </a>
+      <a href="#" style="color: silver"> Design Exercise </a>
+      <a href="#" style="color: silver"> Autopilot </a>
+      <a href="#" style="color: silver"> Fokker </a>
+      <a href="#" style="color: silver"> ISO Satellite </a>
+      <a href="#" style="color: silver"> Zero Gravity </a>
+      <a href="#" style="color: silver"> Zero-G Flight Director </a>
+      <a href="#" style="color: silver"> Haptic Master </a>
+      <a href="#" style="color: silver"> Simodont </a>
+      <a href="#" style="color: silver"> Exoskeleton </a>
+      <a href="#" style="color: silver"> Personal </a>
+    </div>
+  </li>
+
 </ul>
 
+
 <!-----------------------------------------------------------------------
--- Page text below the navigation bar menu
+-- Introductory text below the main navigation bar
 ------------------------------------------------------------------------>
 <h2> Purpose of this site </h2>
+
 <p> This site gives musings on things that have caught my attention over the years.</p>
 <p> The fun is often in applying basic principles to clarify otherwise well known facts.</p>
+<p> Other parts are unashamedly autobiographical.</p>
+
 <p style="margin-top: 12px;" </p>
 <p> Feel free to use any of this material, but do so at your own risk...</p>
-<p> Some of it is tested in practice, but none of it is peer reviewed.
-<p style="margin-left: 12px; margin-top: 16px;"> -- Piet Lammertse -- </p>
+<p> Some of it is tested in practice, but none of it is peer reviewed. </p>
+
+<p style="margin-top: 16px;">
+     -- Piet Lammertse --
+</p>
+
+
+<p style="margin-top: 50px; color : grey;"> <b> <i> build note </i> </b> </p>
+<p style="color : grey;">
+   <i> This site is my first attempt at a personal website. Currently it is almost completely scaffolding, with nearly all menu items greyed out. </i> 
+</p>
+<p style="color : grey;">
+    <i> This version only serves to try out a structure. Hopefully the content will follow Real Soon Now, as Byte magazine used to call such plans :-) . </i> 
+</p>
+
+<p> <br> <br> </p> <!-- Prevent text covering by footer -->
+
+<div class="footer">
+  <p> P. Lammertse,  2025 </p>
+</div>
 
 </body>
 </html>
