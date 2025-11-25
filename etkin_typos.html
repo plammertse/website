@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : etkin_typos.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-11-23 new
+----------------------------------------------------------------------> 
+
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>
+       Piet Lammertse on Etkin
+  </title>
+</head>
+
+<body>
+
+<!---------------------------------------------------------------------
+-- Local navigation bar
+---------------------------------------------------------------------->
+<ul>
+  <li> <a href="index.html">           Home                 </a> </li>
+
+  <li> <a href="etkin.html">           Intro                </a> </li>
+  <li> <a href="etkin_editions.html">  Editions             </a> </li>
+  /* current page blue button, needs no href* /
+  <li> <a style="background-color:#0000E0;"> Typo's          </a> </li>
+  <li> <a href="#">                    Boeing 747 Model     </a> </li>
+  <li> <a href="#">                    Other Books          </a> </li>
+</ul>
+
+
+<!-----------------------------------------------------------------------
+-- Page below the navigation bar menu
+------------------------------------------------------------------------>
+<h3> Etkin Typo's </h3>
+
+<p> There are some non-essential typographical errors in Etkin's B747 model on p.166, 3d. edition.
+</p>
+<p> The Imperial ( ft, lbf ) values in Table 6.2 are consistent with his eigenvalues and eigenvectors.
+</p>
+<p> However, the SI part of the table has an exponent misprint in <i>M</i><sub>w</sub>. 
+The value should be :
+</p>
+<p> &emsp;  <i>M</i><sub>w</sub> = -1.563e5
+</p>
+<p> Another peculiar error is in the value of C<sub>z&ucirc</sub> in Table 6.1.
+The value matching Table 6.1 would be ****.<br>
+This is also much more in line with p.****, which shows that from physical reasoning, 
+the non-dimensional value should be around -&hairsp;2&hairsp;<i>C</i><sub>L</sub>,
+and p.165 states that :
+</p>
+<p> &emsp; <i>C</i><sub>Lo</sub> = 0.654
+
+<h3> Lists of Symbols </h3>
+
+<p> Etkin has the unfortunate habit of ending every chapter with an incremental list of symbols. 
+This makes his notation sometimes hard to track.</p>
+</p>
+
+<h3> Non-dimensional time </h3>
+
+<p> Not a typo, but worth noting is that the time derivative of <i>&alpha;</i>&hairsp; in Table 6.1   
+ is made non-dimensional by an <i>extra</i> term of (c&hairsp;/&hairsp;2V) relative to <i>&alpha;</i>&hairsp;<super>&bull;</super>.</p>
+<p> This is a leftover from previous editions, and it is very poorly documented in the 3d. edition.</p>
+<p> For the eagle eyed, there is a caret on top of the dot in the <i>&alpha;</i>&hairsp;<super>&bull;</super> of Table 6.1.
+This seems to indicate "derivative with respect to a non-dimensional time <i>t&#770;</i> ".<br>
+This non-dimensional time can be reconstructed with some effort from equations (5.5,1) and (5.5,5).
+</p>
+
+
+<!-- Prevent footer from covering the last lines of text       -->
+<p> <br> <br> </p>
+
+<div class="footer">
+  <p> P. Lammertse,  2025 </p>
+</div>
+
+</body>
+</html>

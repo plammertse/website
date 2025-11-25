@@ -48,7 +48,7 @@ ul {
   background-color: #38444d;        /* dark greyish blue */
 }
 
-/* list items left aligned */
+/* list items, left aligned */
 li {
   float: left;
 }
@@ -63,7 +63,8 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+/*  background-color: red;  */
+  background-color:#E00000;
 }
 
 /* format dropdown lists */
