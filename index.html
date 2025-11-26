@@ -25,8 +25,10 @@
 
   <!-- current page gets blue button, needs no href  -->
   <!--   TODO make this a class in the CSS file ?    -->
-<!--  <li> <a style="background-color: DarkBlue;">    Home             </a> -->
-<li> <a style="background-color:#0000C0;">    Home             </a>  </li>
+  <li>
+    <a href="index.html" 
+       style="background-color:#0000B0;">     Home       </a>
+  </li>
 
   <!-- AIRCRAFT -->
   <li class="dropdown">
@@ -103,16 +105,18 @@
 
   <!-- CONTROL -->
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">  Control   </a>
+    <a href="javascript:void(0)" class="dropbtn">
+                                          Control             </a>
     <div class="dropdown-content">
-      <a href="#" style="color: silver"> Feedforward           </a>
+      <a href="feedforward.html"
+                  style="color: silver"> Feedforward          </a>
       <a href="#" style="color: silver"> Feedback             </a>
       <a href="#" style="color: silver"> Fighting Uncertainty </a>
       <a href="#" style="color: silver"> Kalman Filters       </a>
-<!-- Physical understandability -->
       <a href="#" style="color: silver"> Cascaded Control     </a>
-<!-- Non-linearities, see Space -->
+         <!-- Physical understandability -->
       <a href="#" style="color: silver"> Bang-Bang Control (Minimum Time) </a>
+         <!-- Non-linearities, see Space -->
     </div>
   </li>
 
@@ -140,7 +144,8 @@
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">  Space   </a>
     <div class="dropdown-content">
-      <a href="#" style="color: silver"> Satellite Attitude Control              </a>
+      <a style="color: silver"
+        href="satellite_ISO.html" > The ISO satellite                       </a>
       <a href="#" style="color: silver"> Saturation                              </a>
       <a href="#" style="color: silver"> Dual Control Law (proximal control)     </a>
       <a href="#" style="color: silver"> Precession                              </a>
@@ -201,7 +206,7 @@
     <div class="dropdown-content">
       <a href="#" style="color: silver"> Delft </a>
       <a href="#" style="color: silver"> Design Exercise </a>
-      <a href="#" style="color: silver"> Autopilot </a>
+      <a href="beaver.html">              Autopilot - energy mode </a>
       <a href="#" style="color: silver"> Fokker </a>
       <a href="#" style="color: silver"> ISO Satellite </a>
       <a href="#" style="color: silver"> Zero Gravity </a>
