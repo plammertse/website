@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : tuning.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-11-24 new
+----------------------------------------------------------------------> 
+
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>
+       Piet Lammertse on controller tuning
+  </title>
+</head>
+
+<body>
+
+<!---------------------------------------------------------------------
+-- Navigation bar menu at the top of the page
+--   It has a number of dropdown lists.
+---------------------------------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home                 </a> </li>
+  <li> <a href="#">                          Feedforward          </a> </li>
+  <li> <a href="#">                          Feedback             </a> </li>
+  <li> <a href="#">                          Reducing Uncertainty </a> </li>
+  <li> <a href="#">                          Kalman Filters       </a> </li>
+  <li> <a style="background-color:#0000C0;"
+          href="tuning.html">                Controller Tuning    </a> </li>
+</ul>
+
+
+<!-----------------------------------------------------------------------
+-- Text page
+------------------------------------------------------------------------>
+<h2> Controller Tuning </h2>
+
+<!--
+<div style="word-wrap: break-word; max-width: 800px;" >
+-->
+
+<p> Controller tuning is a black art. In my professional life, have never met anyone
+ who had a method much better than trial and error, mixed with some personal rules of thumb.
+I know there must be professionals who do.<br> I just never met them.
+</p>
+
+<h4> Frequency Domain </h4>
+
+<p> There are certain tuning rules (like Ziegler-Nicholls for PD controllers) that you will find in every textbook.
+They require some "a&nbsp;priori" (&nbsp;known before&nbsp;) knowledge of the system,
+and some experimentation while it is running.
+The rationale behind these rules is usually the assumption of a simple system model, like a basic first or second order system. This is not a bad idea in itself.
+</p>
+<p> Such rules are often exercised in the frequency domain. The true professional will do "loop shaping" 
+on the Bode plot or the Nyquist plot of the system response, tweaking the curve to give better response at certain frequen&shycies.
+It is typically a matter of redistributing the gain from one frequency range to another,
+ a special case of nature's universal law of "conservation of misery".
+</p>
+<p> These methods offer no way of making the system perform better across the board.
+They also do not seem to directly suggest adding extra sensors or relocating existing ones, or changing to a better system architecture. 
+</p> 
+
+<h4> Time Domain </h4>
+<p > Since I am by background a time domain person, I have developed my own personal tactics.<br>
+That does not make me a professional, but in the land of the blind...
+</p>
+
+<br>
+<p> PD control has been possible since digital computers.
+In the analog age, pure differentiators and pure integrators were very difficult to implement.
+This often led to controllers which were analog filters like "lead-lag" (working up to some cutoff frequency)
+ or "lag-lead" (leaky integrators working down to a certain frequency).
+
+<!--
+<p>
+<math>
+-->
+
+<!--   margin-left	  : 	auto  -->
+<!-- <math style="margin-left:20px" > -->
+
+<!--
+
+<mrow>
+  <mrow>
+        <msup> <mi>x</mi> <mn>2</mn> </msup> <mo>+</mo>
+            <mrow>
+              <mn>4</mn>
+              <mo>&InvisibleTimes;</mo>
+              <mi>x</mi>
+            </mrow>
+    <mo>+</mo>
+    <mn>4</mn>
+  </mrow>
+    <mo>=</mo>
+    <mn>0</mn>
+</mrow>
+</math>
+</p>
+
+<p>
+<math>
+
+
+  <mrow>
+    <mi>x</mi>
+    <mo>=</mo>
+-->
+
+   <!-- This cannot be set in CSS :-( -->
+
+<!--
+    <mfrac displaystyle="true">
+
+      <mrow>
+        <mrow>
+          <mo>−</mo>
+          <mi>b</mi>
+        </mrow>
+        <mo>±</mo>
+        <msqrt>
+          <mrow>
+            <msup>
+              <mi>b</mi>
+              <mn>2</mn>
+            </msup>
+            <mo>−</mo>
+            <mrow>
+              <mn>4</mn>
+              <mo>⁢</mo>
+              <mi>a</mi>
+              <mo>⁢</mo>
+              <mi>c</mi>
+            </mrow>
+          </mrow>
+        </msqrt>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <mo>⁢</mo>
+        <mi>a</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+</maligngroup>
+
+-->
+
+</p>
+
+<!--
+</div>
+-->
+
+<!-----------------------------------------------------------------------
+<!-- Footer, with a hack to prevent it from covering the last lines
+     of text when scrolling to end of page. -->
+<p> <br> <br> </p>
+<div class="footer">
+  <p> P. Lammertse,  2025 </p>
+</div>
+
+</body>
+</html>

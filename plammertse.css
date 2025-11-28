@@ -27,25 +27,51 @@ h3, h4, h5, h6 {
   margin-top : 16px;
 }
 
+/* paragraph small line distance, larger left margin */
 p {
-  /* small line distance, larger left margin */
+  margin: 4px 32px;
+  /* max. column width, 800 gives some 108 letters   */
+  max-width : 800px;
+  word-wrap : break-word;    /* needs more options ? */
+}
+
+/* extra margin inside <p> for math */
+math {
   margin: 4px 32px;
 }
 
+/* failed attempt to keep full size letters in fractions */
+/* This has to be set by hand in HTML in every mfrac     */
+/*
+mfrac {
+   displaystyle : true;
+}
+*/
+
+/* Attempt to move math equations left */
+block{
+    float: left;
+} 
+
 img {
    display       : inline-block;
-   margin-left   : 15%;
    margin-top    : 16px;
    margin-bottom : 16px;
+/*
+   margin-left   : 15%;
+   width         : 600px;
+   size          : auto;
+*/
 }
 
 /* unordered lists (bullets, not numbered) */
 ul {
   list-style-type: none;
-  margin : 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #38444d;        /* dark greyish blue */
+  margin   : 0;
+  padding  : 0;
+  overflow : hidden;
+/*  background-color: #38444d;  */      /* dark greyish blue */
+  background-color: #404040;
 }
 
 /* list items, left aligned */
@@ -63,7 +89,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-/*  background-color: red;  */
+/*  background-color: red;  made a bit darker : */
   background-color:#E00000;
 }
 
