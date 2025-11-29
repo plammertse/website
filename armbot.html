@@ -32,12 +32,37 @@
 -- Text page
 ------------------------------------------------------------------------>
 <h2> The Armbot exoskeleton </h2>
-<p> While at Moog, I started the development of a novel arm exoskeleton.<br>
-TBW.<br>
-The video below shows the final prototype in action.
-<br> <br> <br>
+<p> While at Moog, around 2009 I started the development of a novel arm exoskeleton.
+It is mechanically balanced, so the mechanism gently floats when it is not powered.
+<p> Bias forces (or rather, torques) are added to the arm by motors on the floor, 
+with force sensors near the motor and admittance control to free up the motion completely.
+By a simple mechanism (modified Galloway), &plusmn45&deg joint angles are transmitted
+from the motors to the elbow and even wrist by simple lightweight pushrods over several links
+with a total added in-between angle of more than 180&deg.
+</p>
+<p> All the human joints are driven in torque only. This feels completely unforced and natural.
+The other DOF's (trans&shylations of all the joints, including the shoulder and the torso)
+are not driven, but instead freed up mechanic&shyally by the 90&deg angle at the top of the column.
+This eliminates the usual ten minutes of "fitting" the patient at the start of a session.
+ The exoskeleton simply does not fight, or even see any patient misalignments or synergies
+ such as the shoulder lifting during abduction.
+</p>
+<p> The shoulder abduction torque is driven along a horizontal axis coming from 45&deg back.
+This fits the human range of motion (ROM) quite closely, 
+and since there is no translational forcing of the shoulder at all,
+the shoulder is free to lift and rotate around any internal point.
+</p>
+</p>
+<p>The video shows the final prototype in action.
+The weight of the upper arm and forearm combined is supported by a settable vertical force, to unload the shoulder.
+This force comes (via the linkage) from the floor motor and force sensor dedicated to this DOF.
+The weight of the forearm, suspended from the upper arm link, is supported by a fully adaptive 
+elbow flexion torque from a second chain of pushrods and motor.
+Shoulder abduction is driven by a third floor motor rotating the red torque tube.
+<br> <br>
 </p>
 
+<!-- Armbot video ------------------------------------------------------>
 <video width="640" height="auto" autoplay muted controls
     style="margin-left:80px" >
   <source src="video/arm_exoskeleton_piet_lammertse.mp4" type="video/mp4">

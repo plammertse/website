@@ -2,21 +2,24 @@
 -- file    : plammertse.css
 -- purpose : Style sheet for homepage Piet Lammertse
 -- note    : Inside CSS, the comment symbol is / * etc.
---             inlike HTML, where it is <!--    
+--             unlike HTML, where it is <!-- -->   
 ----------------------------------------------------------------------
 -- history :
 --     2025-11-21 new
 ----------------------------------------------------------------------*/
 
-/* Sans serif everywhere. Font size TBD ? */
+/* sans serif everywhere.              */
+/* default font size seems top be 16px */
 body {
   margin:  0;
   padding: 0;
-  /* margin-left : 32px; no, this shifts the navbar too */
   font-family: Arial, Helvetica, sans-serif;
+
+  /* don't do this, it shifts the navbar : */
+  /* margin-left : 32px;                   */
 }
 
-/* Line and indent spacings for headers */
+/* line spacing and indent for headers     */
 h2 {
   margin     : 6px 16px;
   margin-top : 16px;
@@ -27,15 +30,23 @@ h3, h4, h5, h6 {
   margin-top : 16px;
 }
 
-/* paragraph small line distance, larger left margin */
+/* paragraph : small vertical line distance,       */
+/* larger left margin                              */
+/* max. column width 800 gives some 108 letters    */
+/* word wraps can be helped with soft hyphens &shy */
 p {
-  margin: 4px 32px;
-  /* max. column width, 800 gives some 108 letters   */
+  margin : 4px 32px;
   max-width : 800px;
-  word-wrap : break-word;    /* needs more options ? */
 }
 
-/* extra margin inside <p> for math */
+/* larger fixed font (default 12, main text is 16 ) */
+/* margin is absolute, inside <p> doesn't add up    */
+pre {
+  font-size : 15px;
+  margin : 4px 64px;
+}
+
+/* extra margin (vertical, horizontal) inside <p> for math */
 math {
   margin: 4px 32px;
 }
@@ -62,6 +73,12 @@ img {
    width         : 600px;
    size          : auto;
 */
+}
+
+video {
+   display       : inline-block;
+   margin-top    : 16px;
+   margin-bottom : 16px;
 }
 
 /* unordered lists (bullets, not numbered) */
