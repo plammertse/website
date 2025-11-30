@@ -39,11 +39,22 @@ p {
   max-width : 800px;
 }
 
-/* larger fixed font (default 12, main text is 16 ) */
+/*<pre> larger fixed font (default 12, main text is 16 ) */
 /* margin is absolute, inside <p> doesn't add up    */
 pre {
   font-size : 15px;
   margin : 4px 64px;
+}
+
+/* TODO This gives a double outline, make this better
+table {
+  outline: thin solid;
+}
+*/
+
+td {
+  padding:4px 11px;
+  outline: thin solid;
 }
 
 /* extra margin (vertical, horizontal) inside <p> for math */
@@ -104,6 +115,13 @@ li a, .dropbtn {
   padding: 14px 16px;
   text-decoration: none;
 }
+
+/*--------------*/
+.dropbtn1 {
+  background-color:blue;
+}
+
+/*----------------*/
 
 li a:hover, .dropdown:hover .dropbtn {
 /*  background-color: red;  made a bit darker : */
