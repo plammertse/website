@@ -18,9 +18,8 @@
 <body>
 
 <!---------------------------------------------------------------------
--- Navigation bar menu at the top of the page
---   It has a number of dropdown lists.
----------------------------------------------------------------------->
+-- NAVIGATION BAR -->
+
 <ul>
   <li> <a href="index.html">                 Home                 </a> </li>
   <li> <a style="background-color:#0000C0;"
@@ -29,17 +28,19 @@
 
 
 <!-----------------------------------------------------------------------
--- Page below the navigation bar menu
------------------------------------------------------------------------->
+-- TEXT PAGE -->
+
 <h2> Matlab scripts </h2>
 
 <p> Over the years, I have collected a number of Matlab scripts.
-The tables below list  some of them. 
+The tables below list  some of them.
+</p>
+<p> They are loosely arranged by subject.
 </p>
 <p>These scripts are sometimes referenced from other pages on this website.
  Others are just along for the ride.
 </p>
-<p>  As usual, they come here warts and all, and with zero guarantee.
+<p> As usual, they come here warts and all, and with zero guarantee.
  If they contain functions or objects (classes), 
  they may have test or example code in a commented section at the end of the file. 
 </p>
@@ -47,39 +48,80 @@ The tables below list  some of them.
 If you don't have Matlab, you might want to run them in Octave Online,
 or ask ChatGPT to convert them to Python for you.
 </p>
-<p> Depending on your system settings, you may open an editor on them by left clicking the link,
-    or save them to your disk by right clicking and selecting <i>"Save link as.."</i>.
+<p> Depending on your system settings, you may open an editor on them
+    by left clicking the link, or save them to your disk
+    by right clicking and selecting   <i>"Save link as.."</i>.
 </p>
 
 <!---------------------------------------------------------------------->
+<!-- ANIMATED GIF's -->
 
-<h4 style="margin:8px 32px; margin-top:16px;"> 
-    Graphics objects (classes) </h4>
+<h4 style="margin : 4px 32px; margin-top : 16px"> 
+    Animated GIF writer
+</h4>
 
-<p>
-<table style="width:700px; margin-left:48px; background:#FCFCFC">
+<table style="width:700px; margin-left:48px; background:#F8F8F8">
   <tr>
     <td style="width:160px;">
       <a href="matlab/GIF_writer.m"> GIF_writer.m </a>
+    </td>
+    <td>
+      Writing Matlab "gca" axes to animated GIF file, frame by frame
+    </td>
+  </tr>
+</table>
+
+<!---------------------------------------------------------------------->
+<!-- GRAPHICS OBJECTS -->
+
+<a name="graphics"</a>
+<h4 style="margin : 4px 32px; margin-top : 16px"> 
+    Graphics objects
+</h4>
+
+<!---------------------------------------------------------------------->
+<!-- TABLE -->
+
+<table style="width:700px; margin-left:48px; background:#F8F8F8">
+  <tr>
+    <td style="width:160px;">
+      <a href="matlab/arrow.m"> arrow.m </a>
      </td>
     <td>
-      <i> Writing Matlab "gca" axes to animated GIF file, frame by frame </i>
+      Rotatable and scalable arrow
     </td>
   </tr>
 
   <tr>
     <td>
-      <a href="matlab/GIF_writer.m"> GIF_writer.m </a>
+      <a href="matlab/CG_marker.m"> CG_marker.m </a>
     </td>
     <td>
-      <i> Writing Matlab "gca" axes to animated GIF file, frame by frame </i>
+      Scalable CG symbol
     </td>
   </tr>
+
+  <tr>
+    <td>
+      <a href="matlab/dumbbell.m"> dumbbell.m </a>
+    </td>
+    <td>
+      Dumbbell shape
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="matlab/nicebox.m"> nicebox.m </a>
+    </td>
+    <td>
+      Text box outline and font
+    </td>
+  </tr>
+
 </table>
-</p>
 
-
-<!---------------------------------------------------------------------->
+<!-- FOOTER --------------------------------------------------------------->
 <p> <br> <br> </p>
 <div class="footer">
   <p> P. Lammertse,  2025 </p>
