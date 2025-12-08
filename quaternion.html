@@ -8,44 +8,62 @@
 --     2025-11-26 new
 ----------------------------------------------------------------------> 
 
+<!-- FORMATTING ------------------------------------------------------>
+
 <head>
   <link rel="stylesheet" href="plammertse.css">
-  <title>
-       Piet Lammertse on quaternions
-  </title>
+  <title>  Piet Lammertse on quaternions  </title>
 </head>
 
+<!-- NAVIGATION BAR MENU --------------------------------------------->
 <body>
 
-<!---------------------------------------------------------------------
--- Navigation bar menu at the top of the page
---   It has a number of dropdown lists.
----------------------------------------------------------------------->
 <ul>
-  <li> <a href="index.html">                 Home                 </a> </li>
-  <li> <a style="background-color:#0000C0;"
-          href="quaternion.html">            Quaternions          </a> </li>
-  <li> <a href="#" style="color: silver">    Consecutive rotations  </a> </li>
-  <li> <a href="#" style="color: silver">    Attitude propagation </a> </li>
-  <li> <a href="#" style="color: silver"> Back to Euler, Amy de Butléir </a> </li>
-  <li> <a href="#" style="color: silver"> Wertz, wrong element order </a> </li>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+<!--   <li> <a href="math.html">        Math&#x25B2;              </a> </li>   -->
+  <li> <a href="math.html">        &#x25B2;&hairsp;Math              </a> </li>
+
+  <li class="dropdown">
+    <a class="dropbtn"
+       style="background-color:#0000B0;
+       href="javascript:void(0)">   Quaternions&hairsp;&#x25BC;	  </a>
+
+    <div class="dropdown-content">
+      <a href="#" style="color: silver"> Definition             </a>
+      <a href="#" style="color: silver"> Consecutive rotations  </a>
+      <a href="#" style="color: silver"> Attitude propagation   </a>
+      <a href="#" style="color: silver"> Back to Euler, Amy de Butléir </a>
+      <a href="#" style="color: silver"> Wertz, wrong element order </a>
+    </div>
+  </li>
 
 </ul>
 
 
-<!-----------------------------------------------------------------------
--- Text page
------------------------------------------------------------------------->
+<!-- TEXT PAGE ------------------------------------------------------->
 <h2> Quaternions </h2>
 
-<p> TBW.
+<p> TBW. <br> <br>
+</p>
+
+<p> I first met quaternions in my work on the ISO satellite.<br>
+( mention the relative rotations in the "control error",
+needed because of the extreme difference between the pointing accuracy
+and the full 180&deg; slewing range ).
+</p>
+<p> Later I found the same quaternions extremely useful, and "almost" 
+intuitive, in cases of forward and inverse kinematics
+ of successive rotations.
+</p>
+<p> First in 3D haptic rendering, and later again in tracking
+ the kinematics of the Simodont dental trainer mechanism, 
+ and my exoskeletons.
 </p>
 
 <!---------------------------------------------------------------------->
-<p> <br> <br> </p>
-<div class="footer">
-  <p> P. Lammertse,  2025 </p>
-</div>
+<br> <br>
+<div class="footer"> P. Lammertse,  2025 </div>
 
 </body>
 </html>

@@ -8,55 +8,51 @@
 --     2025-11-26 new
 ----------------------------------------------------------------------> 
 
+<!-- FORMATTING-------- ---------------------------------------------->
+
 <head>
   <link rel="stylesheet" href="plammertse.css">
-  <title>
-       Piet Lammertse on the ISO satellite
-  </title>
+  <title>  Piet Lammertse on the ISO satellite  </title>
 </head>
 
+
+<!-- NAVIGATION BAR MENU ---------------------------------------------->
 <body>
 
-<!---------------------------------------------------------------------
--- Navigation bar menu at the top of the page
---   It has a number of dropdown lists.
----------------------------------------------------------------------->
 <ul>
   <li> <a href="index.html">                 Home                 </a> </li>
   <li> <a style="background-color:#0000C0;"
           href="satellite_ISO.html">         The ISO satellite    </a> </li>
-  <li> <a href="#">                          Saturation           </a> </li>
-  <li> <a href="#">                          The dual control law </a> </li>
-  <li> <a href="#" style="color: silver"> Precession              </a> </li>
-  <li> <a href="#" style="color: silver"> Nutation                </a> </li>
-
+  <li> <a href="satellite_SAX.html">         The SAX satellite    </a> </li>
+  <li> <a href="dual_control_law.html">      The dual control law </a> </li>
 </ul>
 
 
-<!-----------------------------------------------------------------------
--- Page below the navigation bar menu
------------------------------------------------------------------------->
+<!-- TEXT PAGE -------------------------------------------------------->
+
 <h2> The ISO satellite </h2>
 
-<p> From **** to **** I was involved in the "Attitude and Orbit Control  System" (AOCS) of the ISO satellite.
+<p> From **** to **** I was involved in the "Attitude and Orbit Control
+  System" (AOCS) of the ISO satellite.
 </p>
-<p> ISO was an ESA scientific (astronomical) satellite : "Infrared Space Observatory". 
-Fokker (FSS) did the attitude control system as a subcontractor for A&eacuteroSpatiale.
+<p> ISO was an ESA scientific (astronomical) satellite :
+ "Infrared Space Observatory". 
+ Fokker (FSS) did the attitude control system as a subcontractor
+ for A&eacuteroSpatiale. My job was to run the control simulations.
+ I implemented the spec for the onboard ADA software in FORTRAN,
+ and ran it with dynamical models of the satellite's orbit, 
+ sensors, and actuators. 
 </p>
-<p> My job was to run the control simulations. I implemented the spec for the onboard ADA software in FORTRAN,
- and ran it with dynamical models of the satellite's orbit, sensors, and actuators. 
-</p>
-<p> This was interesting enough in its own right, bit at the end of the project I contributed
- an actual improvement in the attitude (pointing) control law. 
-<!--
-<p> 
-<!-- Hack to prevent footer from covering the last lines of text
-       when scrolling to end of page. -->
-<p> <br> <br> </p>
+<p> This was interesting enough in its own right,
+ but at the end of the project I contributed
+ an actual improvement in the attitude (pointing) control law,
+ which came to be known as the <a href="dual_copntrol_law.html"
+ "dual contrl law"</a>. 
+</p> 
 
-<div class="footer">
-  <p> P. Lammertse,  2025 </p>
-</div>
+<!-- FOOTER ------------------------------------------------------------>
+<br> <br>
+<div class="footer">  P. Lammertse,  2025  </div>
 
 </body>
 </html>
