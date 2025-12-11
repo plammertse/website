@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_02.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-12-07  new
+----------------------------------------------------------------------> 
+
+<!-- FORMATTING  ----------------------------------------------------->
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>  Piet Lammertse on propeller theory  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR MENU --------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+  <li> <a href="prop_book_01.html">&#x25C4  Previous         </a> </li>
+
+  <!-- dropdown -->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Propeller theory  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a href="prop_book_frontispiece.html">
+                    &emsp; <i> Frontispiece </i> </a>
+      <a href="prop_book_preface.html">
+                                           &emsp; <i> Preface </i> </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html">
+                                         1 &ensp; Introduction      </a>
+
+      <a style="background-color:#7070C0;
+                color:white"
+         href="prop_book_02.html">
+                               2 &ensp; Propeller geometry          </a>
+
+      <a href="prop_book_02.html">&ensp;
+                                    2.1 &ensp; Blade elements       </a>
+      <a href="propeller_theory_02.html">&ensp;
+                                     2.2 &ensp; Geometrical pitch   </a>
+      <a href="prop_book_02.html">&ensp;
+                                      2.3 &ensp; ****               </a>
+
+      <a style="background-color:#E8E8E8;
+         href="prop_book_03.html">
+                              3 &ensp; Thrust, power and efficiency </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_04.html">
+                                       4 &ensp; Axial momentum loss </a>
+    </div>
+  </li>
+
+  <li> <a href="prop_book_03.html">  Next &#x25BA</a> </li>
+
+</ul>
+
+
+<!-- TEXT PAGE ------------------------------------------------------->
+
+<h2> 2 &emsp; Propeller geometry </h2>
+
+<!-- SECTION 2.1 ----------------------------------------------------->
+
+<h4> 2.1 &emsp; Blade elements </h4>
+
+<p> A propeller blade is a rotating wing. 
+ Like in a wing, the width of the blade is called the "chord".
+ The chord is measured in the nominal streamwise direction.
+ The propeller has a diameter <i>D</i>, and a maximum radius <i>R</i> 
+ which equals <i>D&thinsp;/&thinsp;</i>2.
+ The distance from the root of the blade is measured by the local radius <i>r</i>. 
+ A small lengthwise strip d<i>r</i> of the blade is called a "blade element".
+ Figure 2.1 shows these definitions.
+</p>
+
+<!-- PROP_SKETCH -->
+<img src="images/prop_sketch.png" 
+     width="300" alt="Propeller sketch";
+     style="margin-left:240px" >
+<p style="margin-left:240px">
+    <i> Figure 2.1 : &ensp; Blade element. </i> 
+</p>
+</center>
+
+<!-- SECTION 2.2 ----------------------------------------------------->
+
+<h4> 2.2 &emsp; Geometrical pitch </h4>
+
+<p> A propeller's pitch is its forward movement during a full
+ revolution of the prop shaft. 
+ The result of the forward and rotational motion of a blade element
+ is a spiral path. 
+ Figure 2.2 shows the path of a blade element at radius <i>r</i>.
+
+The forward motion for one revolution is P and the circumferential
+  motion is 2&hairsp;π&hairsp;<i>r</i>, 
+ and so the slope of the local pitch angle <i>&phi;</i> 
+equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> : 
+</p>
+<p>
+&emsp;	tan⁡〖ϕ 〗      ≡    P / 2πr	(2.1)
+</p>
+<p style="margin-bottom : 0 "> 
+Most propellers are designed for a certain flying velocity 
+ and shaft RPM. Expressing the velocity <i>V</i> in meters per second,
+ and the RPM in rev's per second immediately gives
+ the forward travel in meters per propeller revolution, 
+ and this gives the pitch of the propeller.
+ A  fixed  pitch  propeller will often be manufactured
+ with this "geometrical pitch" all along the blade.
+ The geometrical pitch angle at any radius follows from (2.1), 
+ giving the blade its charac&shyteristic twisted appearance.
+ Figure 2.2 shows the blade element "living" inside a thin-walled
+ tube of air between the radii <i>r</i> and <i>r</i> + d<i>r</i>. 
+</p>
+<p> Much of classical propeller theory assumes that the blade elements
+ influence only the air between the walls of this imaginary tube,
+ and not the air inside <i>r</i> or outside <i>r</i> + d<i>r</i>.
+ We will revisit this rather bold assumption later.
+</p>
+
+<!-- SPIRAL_TUBE_SKETCH -->
+<img width = "500" 
+     style = "margin-left:210px";
+     alt   = "Propeller spiral tube";
+     src   = "images/prop_tube_01.png" >
+<p  style  = "margin-left:240px">
+                      <i> Figure 2.2 : &ensp; Pitch and pitch angle. </i> 
+</p>
+
+<!-- SECTION 2.3 ------------------------------------------------------->
+
+<h4> 2.3 &emsp; Aerodynamic pitch </h4>
+
+<p> In flight, the forward speed and the rate of rotation will generally
+ not match the geometrical pitch of the propeller.
+ The actual aerodynamic pitch angle will be in line with the blade element 
+ velocity diagram of figure 2.3.
+</p>
+<p> The blade circumferential speed  Ω r is the product of 
+ the angular velocity  Ω  of the propeller (&hairsp;in radians per second&hairsp;),
+ and the local radius <i>r</i> (&hairsp;in meters&hairsp;). 
+The velocity  V is the undisturbed flying velocity (&hairsp;in meters per second&hairsp;).
+ The effective local velocities V and Ω r will get modified later by 
+ the blade's own lift inducing a downwash at the blade.
+ </p>
+
+<!-- VELOCITY DIAGRAM -->
+<img width = "300" 
+     style = "margin-left:210px";
+     alt   = "Velocity diagram";
+     src   = "images/prop_velocity_diagram.png" >
+<p  style  = "margin-left:240px">
+           <i> Figure 2.3 : &ensp; Blade element velocity diagram. </i> 
+</p>
+
+
+<!-- SECTION 2.4 ------------------------------------------------------->
+
+<h4> 2.4 &emsp; Advance ratio and speed ratio </h4>
+
+<p> The propeller literature supports a variety of symbols.
+ Some can even have opposite meanings.
+</p>
+<p> Airplane texts generally use the letter λ for the "tip advance ratio"
+  λ  ≡ V / ΩR . 
+ The wind turbine world uses λ for the "tip speed ratio" :
+  λ  ≡  ΩR / V.
+ The difference does make sense. 
+ A wind turbine starts from zero RPM, and an airplane starts
+ from zero forward velocity. 
+ In both cases we wish to avoid a division by zero
+ in the starting condition,
+ so we do not want the zero in the denominator. 
+</p>
+<p> But it is unfortunate that the lowercase letter λ is used
+  for a blade tip condition, since another convention is 
+ that local values ( like the radius <i>r</i> )
+are in lowercase, with tip values (&hairsp;like <i>R</i>&hairsp;) 
+in capitals. 
+ The capital <i>Λ</i> would have been more appropriate. 
+ We will avoid the letter <i>λ</i> altogether. 
+ Following GLAUERT's convention (&hairsp;at least in part of his work&hairsp;),
+ we denote the local speed ratio Ω r/V  by the small letter <i>x</i>. 
+ By the capital letter convention, we call its tip value <i>X</i>,
+ even though this is a bit unusual.
+ This makes <i>X</i> equal to the <i>λ</i> of the wind turbine world,
+ and to the 1/Ii>λ</i> of the airplane world :
+</p>
+<p>
+	x    ≡     Ω r/V  =   1/tan⁡ϕ 
+X    ≡     ΩR/V  =  1/tan⁡Φ 		
+local speed ratio
+
+tip speed ratio	
+(2.2)
+ </p>
+
+
+<!-- VELOCITY DIAGRAM -->
+<img width = "300" 
+     style = "margin-left:210px";
+     alt   = "Velocity diagram";
+     src   = "images/prop_velocity_diagram_x.png" >
+<p  style  = "margin-left:240px">
+           <i> Figure 2.4 : &ensp; The local speed ratio x. </i> 
+</p>
+
+
+<!-- SECTION 2.5 ------------------------------------------------------->
+
+<h4> 2.5 &emsp; The local pitch angle </h4>
+
+<p> Figure 2.4 gives the velocity diagram in terms of the local speed ratio <i>x</i>.
+ At the tip, we use the capital letter. The figure shows by inspection :
+</p>
+<p>
+&emsp;	tan ϕ    =    1/x	(2.3) <br>
+
+<p>
+&emsp;	sin ϕ    =    ( 1)/√(1+x^2 )	(2.4)  <br>
+
+<p>
+&emsp;	cos ϕ    =    ( x)/√(1+x^2 )	(2.5)  <br>
+(/p>
+
+<p>Another relation which comes up frequently in the theory is :
+</p>
+<p>
+&emsp;	cos^2  ϕ    =   ( x^2)/(1+x^2 )   =  1-  1/(1+x^2 )	(2.6)
+</p>
+<p> This also means ( directly, or by trigonometry ) :
+</p>
+<p>
+&emsp;	1/(cos^2  ϕ)     =   (1+x^2)/x^2    =  1 +  1/x^2    = 1+tan^2 ϕ	(2.7)
+&/p>
+
+<p> We will freely use a mixture of function arguments  ϕ and x , 
+on the understanding that they are easily converted into each other.
+ In particular the cos2 ϕ term comes up very frequently, 
+ and is more easily recognized when it is expressed in ϕ instead of  x.
+
+ </p>
+
+
+<!-- SECTION 2.6 ------------------------------------------------------->
+
+<h4> 2.5 &emsp; Non-dimensional length </h4>
+
+<p> The ratio V/ Ω is the forward progression of the propeller
+ for one radian of ro¬¬tat¬ion. 
+ It has the dimension of a length. 
+We will call this "typical length" U :
+</p>
+<p>
+&emsp;	U  ≡    V⁄Ω  	(2.8)
+</p>
+<p> The non-dimensional speed ratio <i>x</i> equals the local radius <i>r</i>, 
+ divided by this standard length. We can rewrite (2.2) as :
+</p>
+&emsp;	x    ≡   r/U    =  r  ⁄ (  V/Ω  )    =  r .(( Ω)/V)   =   Ω r⁄ V  	(2.9)  <br>
+
+&emsp;	X    ≡   R/U    =  R  ⁄ (  V/Ω  )   =  R .(( Ω)/V)   =   Ω R⁄ V	
+<p>
+At  x = 1, the pitch angle is 45° and tan ϕ = 1. 
+ If two propellers have the same tip speed ratio X, then they have 
+ the same tip pitch angle Φ. 
+ This makes x and X con¬ve¬n¬ient non-dimen-sion¬al radius values.
+ As a corol¬lary, we have :
+</p>
+<p>
+&emsp;	r/R     =    x/X	(2.10)
+ </p>
+
+
+<!-- FOOTER ------------------------------------------------------------>
+<br> <br>
+<div class="footer">  P. Lammertse,  2025  </div>
+
+</body>
+</html>

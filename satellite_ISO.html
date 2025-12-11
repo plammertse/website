@@ -20,29 +20,51 @@
 <body>
 
 <ul>
-  <li> <a href="index.html">                 Home                 </a> </li>
-  <li> <a style="background-color:#0000C0;"
-          href="satellite_ISO.html">         The ISO satellite    </a> </li>
-  <li> <a href="satellite_SAX.html">         The SAX satellite    </a> </li>
+  <li> <a href="index.html">             Home                 </a> </li>
+
+  <!-- satellite ISO dropdown -->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >        The satellite ISO &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a href="#">                        Attitude and orbit        </a>
+      <a href="dual_control_law.html">    Dual control law          </a>
+    </div>   
+  </li>
+
+<!--
+  <li> <a style="background-color:#0000B0;"
+          href="satellite_ISO.html">         The satellite ISO    </a> </li>
+
+  <li> <a href="satellite_SAX.html">   The satellite SAX   &#X25BA;</a> </li>
+<!--
   <li> <a href="dual_control_law.html">      The dual control law </a> </li>
+-->
 </ul>
 
 
 <!-- TEXT PAGE -------------------------------------------------------->
 
-<h2> The ISO satellite </h2>
+<h2> The satellite ISO </h2>
 
 <p> From **** to **** I was involved in the "Attitude and Orbit Control
-  System" (AOCS) of the ISO satellite.
+  System" (AOCS) of the ISO satellite. <br>
+ ISO was an ESA scientific (&thinsp;astronomical&thinsp;) satellite. 
+ The acronym stands for : "Infrared Space Observatory".
 </p>
-<p> ISO was an ESA scientific (astronomical) satellite :
- "Infrared Space Observatory". 
- Fokker (FSS) did the attitude control system as a subcontractor
+
+<h4> the Fokker part </h4>
+
+<p> 
+ Fokker (&thinsp;FSS&thinsp;) did the attitude control system as a subcontractor
  for A&eacuteroSpatiale. My job was to run the control simulations.
  I implemented the spec for the onboard ADA software in FORTRAN,
  and ran it with dynamical models of the satellite's orbit, 
  sensors, and actuators. 
 </p>
+<h4> dual control law </h4>
 <p> This was interesting enough in its own right,
  but at the end of the project I contributed
  an actual improvement in the attitude (pointing) control law,

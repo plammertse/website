@@ -10,16 +10,17 @@
 
 /* Sans serif everywhere.                   */
 /*   Default font size seems to be 16px     */
+/* Don't do margin, it shifts the navbar :  */
+/*   margin-left : 32px;                    */
+
 body {
   margin      : 0;
   padding     : 0;
   font-family : Arial, Helvetica, sans-serif;
-
-  /* don't do margin, it shifts the navbar : */
-  /* margin-left : 32px;                     */
 }
 
 /* line spacing + indent for headers         */
+
 h2 {
   margin     : 6px 16px;
   margin-top : 16px;
@@ -30,7 +31,12 @@ h3 {
   margin-top : 16px;
 }
 
-h4, h5, h6 {
+h4 {
+  font-size  : 18px;
+  margin     : 2px 32px;
+  margin-top : 12px;
+}
+h5, h6 {
   margin     : 2px 32px;
   margin-top : 16px;
 }
@@ -53,18 +59,28 @@ pre {
   margin    : 4px 64px;
 }
 
+table {
+   width       : 700px;
+   margin-left :  48px;
+}
+
 /* table content (rows) spaced a little more       */
 td {
   padding : 1px 0;
 }
 
-/* grow the math font size to look like 16px text
+/* increase the math font size to look like 16px text.
    The extra math margin (vertical + horizontal)
    acts *inside* <p> ( and inside <td>,TBC ).                              
    mfrac inline display style cannot be fixed here */
 math {
   font-size : 18px;
-  margin : 4px 32px;
+  margin : 0px 32px;
+}
+
+/* Always use <mspace/> with the slash, or it won't work */
+mspace {
+   width : 0.5em;
 }
 
 img {
@@ -103,7 +119,7 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-/*-- Attemto at cenral color for "here"buttons, needs work : --*/
+/*-- Attempt at cenral color for "here" buttons, needs work : --*/
 .dropbtn1 {
   background-color : blue;
 }
