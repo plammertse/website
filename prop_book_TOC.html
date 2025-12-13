@@ -1,0 +1,83 @@
+
+USE THIS TO INCLUDE BY HAND IN EVERY FILE THAT NEEDS IT.
+THERE IS NO TEXT INCLUDE IN HTML.
+
+
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_TOC.html
+-- purpose : Include file for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-12-12  new
+----------------------------------------------------------------------> 
+
+<!-- HIGHLIGHT THE CURRENT SECTION, -->
+<--  LIKE %C0C0F0 IN THIS EXAMPLE   -->
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
+
+      <a style="background-color:#C0C0F0"";
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
+     </a>
+
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_07.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 14 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_13.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 15 - 17 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_16.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 29 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_26.html"> Vortex theory
+           &emsp;&emsp;&ensp;               ( 26 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_29.html"> Installation
+           &emsp;&emsp;&nbsp;&hairsp;      ( 29 - 30 )
+     </a>
+    </div>
+  </li>
+  <!----------------------------------------------------------------->
+
+
+
+<-- ATTEMPTS TO FLOAT RIGHT THE CHAPTER NUMBERS --
+<--         ( UNSUCCESSFUL SO FAR )             -->
+<!-- This doesn't work : --
+      <a style="background-color:#C0C0F0"";
+         href="prop_book_01.html"> Introduction 
+<span style="display"block; clear:both">
+  <span style="background-color: yellow; display:block; float:left"> Introduction 
+  <span style="background-color: red;    display:block; float:right"> ( 1 - 3 ) </span>
+</span>
+     </a>
+-->
+

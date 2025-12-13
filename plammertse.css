@@ -60,7 +60,7 @@ pre {
 }
 
 table {
-   width       : 700px;
+   width       : 750px;
    margin-left :  48px;
 }
 
@@ -72,7 +72,7 @@ td {
 /* increase the math font size to look like 16px text.
    The extra math margin (vertical + horizontal)
    acts *inside* <p> ( and inside <td>,TBC ).                              
-   mfrac inline display style cannot be fixed here */
+   mfrac from inline to display style cannot be fixed here */
 math {
   font-size : 18px;
   margin : 0px 32px;
@@ -85,8 +85,9 @@ mspace {
 
 img {
    display       : inline-block;
-   margin-top    : 16px;
+/*   margin-top    : 16px;
    margin-bottom : 16px;
+*/
 }
 
 video {

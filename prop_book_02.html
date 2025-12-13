@@ -22,53 +22,61 @@
 
   <li> <a href="prop_book_01.html">&#x25C4  Previous         </a> </li>
 
-  <!-- dropdown -->
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
-       href="javascript:void(0)" >       Propeller theory  &#x25BC;</a>
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
 
     <div class="dropdown-content">
-      <a href="prop_book_frontispiece.html">
-                    &emsp; <i> Frontispiece </i> </a>
-      <a href="prop_book_preface.html">
-                                           &emsp; <i> Preface </i> </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+
+      <a style="background-color:#C0C0F0";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
 
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html">
-                                         1 &ensp; Introduction      </a>
-
-      <a style="background-color:#7070C0;
-                color:white"
-         href="prop_book_02.html">
-                               2 &ensp; Propeller geometry          </a>
-
-      <a href="prop_book_02.html">&ensp;
-                                    2.1 &ensp; Blade elements       </a>
-      <a href="propeller_theory_02.html">&ensp;
-                                     2.2 &ensp; Geometrical pitch   </a>
-      <a href="prop_book_02.html">&ensp;
-                                      2.3 &ensp; ****               </a>
-
-      <a style="background-color:#E8E8E8;
-         href="prop_book_03.html">
-                              3 &ensp; Thrust, power and efficiency </a>
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp; ( 1 - 3 )
+     </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_04.html">
-                                       4 &ensp; Axial momentum loss </a>
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp; ( 4 - 6 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_077.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 7 - 14 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 16 - 25 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_29.html"> Design
+           &emsp;&emsp;&emsp;&emsp;&hairsp; ( 30 - 34 )
+     </a>
     </div>
   </li>
 
   <li> <a href="prop_book_03.html">  Next &#x25BA</a> </li>
+<!-- END TOC --------------------------------------------------------->
 
 </ul>
 
 
 <!-- TEXT PAGE ------------------------------------------------------->
 
+<!--- PAGE HEADER ---------------------------------------------------->
+<p style="margin-left : 320px">  <i> INTRODUCTION </i> </p>
+<hr style="margin : 0 0;">
+
 <h2> 2 &emsp; Propeller geometry </h2>
 
-<!-- SECTION 2.1 ----------------------------------------------------->
+<!-- SECTION HEADER 2.1 ----------------------------------------------->
 
 <h4> 2.1 &emsp; Blade elements </h4>
 
@@ -89,7 +97,6 @@
 <p style="margin-left:240px">
     <i> Figure 2.1 : &ensp; Blade element. </i> 
 </p>
-</center>
 
 <!-- SECTION 2.2 ----------------------------------------------------->
 
@@ -106,11 +113,30 @@ The forward motion for one revolution is P and the circumferential
  and so the slope of the local pitch angle <i>&phi;</i> 
 equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> : 
 </p>
-<p>
-&emsp;	tan⁡〖ϕ 〗      ≡    P / 2πr	(2.1)
-</p>
+
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mo>tan</mo> <mi>&phi;</mi>
+  <mo> ≡ </mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>P</mi> </mrow>
+    <mrow> <mn>2</mn> <mi>&pi; </mi> <mspace style="width:2px"/> <mi>r</mi>
+    </mrow>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.1)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
 <p style="margin-bottom : 0 "> 
-Most propellers are designed for a certain flying velocity 
+ Most propellers are designed for a certain flying velocity 
  and shaft RPM. Expressing the velocity <i>V</i> in meters per second,
  and the RPM in rev's per second immediately gives
  the forward travel in meters per propeller revolution, 
@@ -134,10 +160,10 @@ Most propellers are designed for a certain flying velocity
      alt   = "Propeller spiral tube";
      src   = "images/prop_tube_01.png" >
 <p  style  = "margin-left:240px">
-                      <i> Figure 2.2 : &ensp; Pitch and pitch angle. </i> 
+                 <i> Figure 2.2 : &ensp; Pitch and pitch angle. </i> 
 </p>
 
-<!-- SECTION 2.3 ------------------------------------------------------->
+<!-- SECTION 2.3 ---------------------------------------------------->
 
 <h4> 2.3 &emsp; Aerodynamic pitch </h4>
 
@@ -146,11 +172,13 @@ Most propellers are designed for a certain flying velocity
  The actual aerodynamic pitch angle will be in line with the blade element 
  velocity diagram of figure 2.3.
 </p>
-<p> The blade circumferential speed  Ω r is the product of 
+<p> The blade circumferential speed  <i>Ω r</i> is the product of 
  the angular velocity  Ω  of the propeller (&hairsp;in radians per second&hairsp;),
  and the local radius <i>r</i> (&hairsp;in meters&hairsp;). 
-The velocity  V is the undisturbed flying velocity (&hairsp;in meters per second&hairsp;).
- The effective local velocities V and Ω r will get modified later by 
+The velocity  <i>V</i> is the undisturbed flying velocity
+   (&hairsp;in meters per second&hairsp;).
+ The effective local velocities <i>V</i> and <i>Ω r</i> 
+ will get modified later by 
  the blade's own lift inducing a downwash at the blade.
  </p>
 
@@ -170,40 +198,85 @@ The velocity  V is the undisturbed flying velocity (&hairsp;in meters per second
 
 <p> The propeller literature supports a variety of symbols.
  Some can even have opposite meanings.
-</p>
-<p> Airplane texts generally use the letter λ for the "tip advance ratio"
-  λ  ≡ V / ΩR . 
- The wind turbine world uses λ for the "tip speed ratio" :
-  λ  ≡  ΩR / V.
+ Airplane texts generally use the letter <i>λ</i> for the
+ "tip advance ratio" <i>λ &equiv; V / ΩR</i>. 
  The difference does make sense. 
  A wind turbine starts from zero RPM, and an airplane starts
  from zero forward velocity. 
  In both cases we wish to avoid a division by zero
  in the starting condition,
- so we do not want the zero in the denominator. 
+ so we do not want a zero in the denominator. 
 </p>
-<p> But it is unfortunate that the lowercase letter λ is used
+<p> But it is unfortunate that the lowercase letter <i>λ</i> is used
   for a blade tip condition, since another convention is 
  that local values ( like the radius <i>r</i> )
 are in lowercase, with tip values (&hairsp;like <i>R</i>&hairsp;) 
 in capitals. 
  The capital <i>Λ</i> would have been more appropriate. 
  We will avoid the letter <i>λ</i> altogether. 
- Following GLAUERT's convention (&hairsp;at least in part of his work&hairsp;),
- we denote the local speed ratio Ω r/V  by the small letter <i>x</i>. 
+ Following <span style="font-variant: small-caps;">Glauert</span>'s
+ convention (&hairsp;at least in part of his work&hairsp;),
+ we denote the local speed ratio <i>Ω&thinsp;r&thinsp;/&thinsp;V</i>
+  by the small letter <i>x</i>. 
  By the capital letter convention, we call its tip value <i>X</i>,
  even though this is a bit unusual.
  This makes <i>X</i> equal to the <i>λ</i> of the wind turbine world,
- and to the 1/Ii>λ</i> of the airplane world :
+ and to the <nobr>1/<i>λ</i></nobr> of the airplane world :
 </p>
-<p>
-	x    ≡     Ω r/V  =   1/tan⁡ϕ 
-X    ≡     ΩR/V  =  1/tan⁡Φ 		
-local speed ratio
 
-tip speed ratio	
-(2.2)
- </p>
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>x</mi>
+  <mspace/> <mo> ≡ </mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Omega;</mi> <mspace style="width:2px"/>  <mi>r</mi> </mrow>
+    <mrow> <mi>V</mi> </mrow>
+ </mfrac>
+   <mspace/> <mo> = </mo> <mspace/>
+  <mfrac>
+    <mrow> <mn>1</mn> </mrow>
+    <mrow> <mo>tan</mo> <mi>&phi;</mi></mrow>
+ </mfrac>
+ <mn style="font-size:17px;">
+    <i> &emsp; &emsp; &emsp; &emsp; local speed ratio </i> </mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.2)
+
+</td> </tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>x</mi>
+  <mspace/> <mo> ≡ </mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Omega;</mi> <mspace style="width:2px"/>  <mi>R</mi> </mrow>
+    <mrow> <mi>V</mi> </mrow>
+ </mfrac>
+   <mspace/> <mo> = </mo> <mspace/>
+  <mfrac>
+    <mrow> <mn>1</mn> </mrow>
+    <mrow> <mo>tan</mo> 
+           <msub> <mi>&phi;</mi> <mi>tip</mi> </msub> 
+    </mrow>
+ </mfrac>
+ <mi style="font-size:17px;"> <i> &emsp; &emsp; &emsp; tip speed ratio </i> </mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.3)
+</td>
+ </tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
 
 
 <!-- VELOCITY DIAGRAM -->
@@ -221,65 +294,266 @@ tip speed ratio
 <h4> 2.5 &emsp; The local pitch angle </h4>
 
 <p> Figure 2.4 gives the velocity diagram in terms of the local speed ratio <i>x</i>.
- At the tip, we use the capital letter. The figure shows by inspection :
+ At the tip, we use the capital letter <i>X</i>.
+ The&nbsp;figure shows by inspection :
 </p>
-<p>
-&emsp;	tan ϕ    =    1/x	(2.3) <br>
 
-<p>
-&emsp;	sin ϕ    =    ( 1)/√(1+x^2 )	(2.4)  <br>
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
 
-<p>
-&emsp;	cos ϕ    =    ( x)/√(1+x^2 )	(2.5)  <br>
-(/p>
+<math>
+  <mo> tan </mo> <mi>&phi;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>  <mi>x</mi>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.4)
+</td>
+</tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mo> sin </mo> <mi>&phi;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+  <mstyle displaystyle="true">
+<mfrac> <mn>1</mn>
+  <mrow> <msqrt> 
+    <mn>1</mn> <mo>+</mo>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+ </msqrt>
+</mrow></mfrac></math>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.5)
+</td>
+</tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mo> cos </mo> <mi>&phi;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+  <mstyle displaystyle="true">
+<mfrac> <mi>z</mi>
+  <mrow> <msqrt> 
+    <mn>1</mn> <mo>+</mo>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+ </msqrt>
+</mrow></mfrac></math>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.6)
+</td>
+</tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
 
 <p>Another relation which comes up frequently in the theory is :
-</p>
-<p>
-&emsp;	cos^2  ϕ    =   ( x^2)/(1+x^2 )   =  1-  1/(1+x^2 )	(2.6)
-</p>
-<p> This also means ( directly, or by trigonometry ) :
-</p>
-<p>
-&emsp;	1/(cos^2  ϕ)     =   (1+x^2)/x^2    =  1 +  1/x^2    = 1+tan^2 ϕ	(2.7)
-&/p>
 
-<p> We will freely use a mixture of function arguments  ϕ and x , 
-on the understanding that they are easily converted into each other.
- In particular the cos2 ϕ term comes up very frequently, 
- and is more easily recognized when it is expressed in ϕ instead of  x.
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
 
- </p>
+<math>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+    <mi>&phi;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mn>1</mn> <mo>+</mo> 
+      <msup> <mi>x</mi> <mn>2</mn> </msup>
+    </mrow>
+    <mrow> 
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+  <mn> 1 </mn>
+  <mo> + </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <msup>  <mi>x</mi>  <mn>2</mn>  </msup>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.7)
+</td>
+</tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
+
+<p> We will freely use a mixture of function arguments <i>&phi;</i> 
+ and <i>x</i>, on the understanding that they are easily converted into each other.
+ In particular the cos<sup>2</sup><i>&phi;</i> term comes up very frequently, 
+ and is more easily recognized when it is expressed in <i>&phi;</i>
+ rather than in <i>x</x></i>.
+</p>
 
 
 <!-- SECTION 2.6 ------------------------------------------------------->
 
 <h4> 2.5 &emsp; Non-dimensional length </h4>
 
-<p> The ratio V/ Ω is the forward progression of the propeller
- for one radian of ro¬¬tat¬ion. 
+<p> The ratio <i>V/&Omega;</i> is the forward progression of the propeller
+ for one radian of rotation. 
  It has the dimension of a length. 
-We will call this "typical length" U :
+We will call this "typical length" <i>U</i> :
 </p>
-<p>
-&emsp;	U  ≡    V⁄Ω  	(2.8)
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>U</mi>
+  <mspace/> <mo> ≡ </mo> <mspace/>
+  <mstyle displaystyle="true">
+    <mi>V</mi> <mi>/</mi> <mi>&Omega;</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.9)
+</td>
+ </tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
 </p>
 <p> The non-dimensional speed ratio <i>x</i> equals the local radius <i>r</i>, 
- divided by this standard length. We can rewrite (2.2) as :
+ divided by this standard length. We can rewrite (2.2)&nbsp;and (2.3) as :
 </p>
-&emsp;	x    ≡   r/U    =  r  ⁄ (  V/Ω  )    =  r .(( Ω)/V)   =   Ω r⁄ V  	(2.9)  <br>
 
-&emsp;	X    ≡   R/U    =  R  ⁄ (  V/Ω  )   =  R .(( Ω)/V)   =   Ω R⁄ V	
-<p>
-At  x = 1, the pitch angle is 45° and tan ϕ = 1. 
- If two propellers have the same tip speed ratio X, then they have 
- the same tip pitch angle Φ. 
- This makes x and X con¬ve¬n¬ient non-dimen-sion¬al radius values.
- As a corol¬lary, we have :
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>x</mi>
+  <mspace/> <mo> ≡ </mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>r</mi>  <mi>U</mi>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mi>r</mi> <mo>.</mo> <mo>(</mo>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&Omega;</mi>  <mi>V</mi>
+  </mfrac>
+  <mo>)</mo>
+
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Omega;</mi> 
+       </mi> <mspace style="width:2px"/> <mi>r</mi> </mrow>
+    <mi>V</mi>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.10)
+</td>
+ </tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>x</mi>
+  <mspace/> <mo> ≡ </mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>R</mi>  <mi>U</mi>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mi>R</mi> <mo>.</mo> <mo>(</mo>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&Omega;</mi>  <mi>V</mi>
+  </mfrac>
+  <mo>)</mo>
+
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Omega;</mi> 
+       </mi> <mspace style="width:2px"/> <mi>R</mi> </mrow>
+    <mi>V</mi>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.11)
+</td>
+ </tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
+
+<p> At <i>x</i> = 1, the pitch angle is 45&deg; and tan &phi; = 1. 
+ If two propellers have the same tip speed ratio <i>X</i>, then they have 
+ the same tip pitch angle <i>&Phi;</i>. 
+ This makes <i>x</i> and <i>X</i> convenient non-dimen-sional radius values.
+ As a corollary, we have :
 </p>
-<p>
-&emsp;	r/R     =    x/X	(2.10)
- </p>
+
+<!-- EQUATION ------------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>r</mi>  <mi>R</mi>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>x</mi>  <mi>X</mi>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (2.12)
+</td>
+ </tr> </table>
+<!-- END EQUATION ------------------------------------------------------>
 
 
 <!-- FOOTER ------------------------------------------------------------>
