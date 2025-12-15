@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_06.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-12-15  new
+----------------------------------------------------------------------> 
+
+<!-- FORMATTING  ----------------------------------------------------->
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>  Piet Lammertse on propeller theory  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR MENU --------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+  <li> <a href="prop_book_05.html">&#x25C4  Previous  </a> </li>
+
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
+     </a>
+
+      <a style="background-color:#C0C0F0";
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_07.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 12 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 13 - 15 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 16 - 25 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Vortex theory
+           &emsp;&emsp;&ensp;               ( 26 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Installation
+           &emsp;&emsp;&nbsp;&hairsp;      ( 29 - 30 )
+     </a>
+    </div>
+  </li>
+<!------------------------------------------------------------------->
+
+
+  <li> <a href="prop_book_07.html">  Next &#x25BA</a> </li>
+
+</ul>
+
+
+<!-- TEXT PAGE ------------------------------------------------------->
+
+<!--- PAGE HEADER ---------------------------------------------------->
+<p style="margin-left : 320px">  <i> AXIAL MOMENTUM </i> </p>
+<hr style="margin : 0 0;">
+
+<h2> 6 &emsp; Concentric rings </h4>
+
+
+<!-- SECTION 6.1 ----------------------------------------------------->
+
+<h4> 6.1 &emsp; The independence of the rings </h4>
+
+<p> Most of propeller theory rests on the idea that the momentum tube
+ of figure  4.1 can be subdivided into set of thin-walled
+ concentric tubes, sliding ( and rotating ) inside each other
+ like a pirate's telescope.
+</p>
+<p> These tubes will cut the propeller disk into nested, concentric rings.
+ Figure 2.2 already showed such a tube. 
+</p>
+<p> These thin-walled tubes are supposed not to influence each other very much,
+ but such independence is by no means obvious.
+ The justification can be found in vortex theory,
+ which we will discuss much later.
+ The in&shydepen&shydence of the tubes holds up much better
+ than might reasonably be expected.
+ </p>
+
+
+<!-- SECTION 6.2 ----------------------------------------------------->
+<h4> 6.2 &emsp; The non-dimensional mass flow per ring </h4>
+
+<p> If the rings and tubes of a propeller do not interact,
+ then each ring is like a separate propeller.
+ It has its own local induction ratio,
+ its own pitch angle and its own blade elements.
+ The propeller as a whole is just an assembly
+ of in&shydependent, nested ring propellers,
+ flying in close formation.
+</p>
+<p> It is usual to derive the conditions for a single ring,
+ and then integrate the ring contributions
+ into an overall value for the whole propeller. 
+We will use the prefix "d" for variables belonging
+ to a ring of "infinitesimal" width d<i>r</i>.
+ For the thrust, the contribution of a ring follows
+ <span style="font-variant: small-caps;"> Newton</span>'s
+ momentum law (4.7) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn><mi>T</mi>
+
+  <mo>=</mo>
+
+    <mn>d</mn> 
+      <msup> <mi>m</mi> <mn>&bull; </mn> </msup>
+  <mo>.</mo>
+  <mi>w</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">  (6.1)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+The difference is that now d<i>m</i><sup>&#9679;</sup> is the air
+ flowing through a <i>ring</i>,
+ instead of the air flowing through the whole disk,
+ and that the induction <i>w</i> may vary among the rings.
+ We can add the argument (<i>x</i>) if we wish to emphasize
+ this local variation.
+ The ring equivalent of the non-dimensional mass flow (5.4) is : 
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>m</mi> <mn>&hairsp;&prime;</mn>
+    <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+
+  <mo>&equiv;</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+    <mrow>
+      <mn>d</mn> 
+        <msup> <mi>m</mi> <mn>&bull; </mn> </msup>
+          <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+   </mrow>
+  <mrow>
+    <mi>&rho;</mi> <mn>&hairsp;</mn> <mi>V</mi> <mo>.</mo> 
+    <mi>&pi;&hairsp;</mi>
+      <msup> <mi>R</mi> <mo>2</mn> </msup>
+ </mrow>
+</math>
+
+<td style="width:50px; text-align:right">  (6.2)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> We make the ring thrust non-dimensional
+ by the definition of (3.2) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>T</mi> <mn>&hairsp;&prime;</mn>
+    <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+
+  <mo>&equiv;</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+    <mrow>
+      <mn>d</mn> 
+        <msup> <mi>m</mi> <mn>&bull; </mn> </msup>
+          <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+        <mo>.</mo>
+          <mi>w</mi>
+            <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+   </mrow>
+  <mrow>
+    <mi>&rho;</mi> <mn>&hairsp;</mn>
+    <msup> <mi>V</mi> <mn>2</mn> </msup>
+    <mo>.</mo> 
+    <mi>&pi;&hairsp;</mi>
+      <msup> <mi>R</mi> <mo>2</mn> </msup>
+ </mrow>
+</math>
+
+<td style="width:50px; text-align:right">  (6.3)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+Substituting (4.2) and (6.2) into the ring thrust yields :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>T</mi> <mn>&hairsp;&prime;</mn>
+    <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+
+  <mo>=</mo>
+
+  <mi>b</mi>
+    <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+        <mo>.</mo>
+    <mn>d</mn> <mi>m</mi> <mn>&hairsp;&prime;</mn>
+    <mn>(&hairsp;</mn> <mi>x</mi> <mn>&hairsp;)</mn>
+</math>
+
+<td style="width:50px; text-align:right">  (6.4)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<!-- SECTION 6.3 --------------------------------------------------->
+<h4> 6.3 &emsp; The mass flow per ring </h4>
+
+<p> In (5.2) the mass flow  <i>m</i><sup>&#9679;</sup>
+ was for the whole disk area.
+ For a ring of width dr at radius <i>r</i>, the equivalent area is
+ 2&hairsp;&pi; </i>r</i>.d<i>r</i>.
+ This changes (5.2) into the local mass flow for a ring : 
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> 
+    <msup><mi>m</mi> <mn>&bull;</mn> </msup>
+
+  <mo>=</mo>
+
+  <mi>&rho;</mi> <mn>&thinsp;</mn> <mi>V</mi>
+    <mn>&thinsp;.&thinsp;2</mn> 
+      <mi>&pi;&hairsp;</mi>
+      <mi>R</mi>
+        <mo>.</mo> 
+      <mn>d</mn> <mi>r</mi>
+        <mo>.</mo> 
+      <mn>(&hairsp;1</mn>
+        <mo>+</mo> 
+      <mi>a</mi> <mn>&hairsp;)</mn>
+</math>
+
+<td style="width:50px; text-align:right">  (6.5)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The local non-dimensional mass flow d<i>m</i>&hairsp;&prime; becomes :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>m</mi> <mn>&hairsp;&prime;</mn>
+
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+  <mrow>
+    <mi>&rho;</mi> <mn>&thinsp;</mn> <mi>V</mi>
+      <mn>&thinsp;.&thinsp;2</mn> 
+        <mi>&pi;&hairsp;</mi>
+        <mi>R</mi>
+          <mo>.</mo> 
+        <mn>d</mn> <mi>r</mi>
+          <mo>.</mo> 
+        <mn>(&hairsp;1</mn>
+          <mo>+</mo> 
+        <mi>a</mi> <mn>&hairsp;)</mn>
+   </mrow>
+  <mrow>
+    <mi>&rho;</mi> <mn>&thinsp;</mn> <mi>V</mi>
+      <mo>.</mo>
+      <mi>&pi;&hairsp;</mi>
+      <msup> <mi>R</mi> <mn>2</mn>
+   </mrow>
+</math>
+
+<td style="width:50px; text-align:right">  (6.6)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The value of <i>b</i>&hairsp;(<i>x</i>) may vary from ring to ring,
+  but the relation <i>a</i> = &frac12&thinsp;<i>b</i>&thinsp;
+ from (4.19) remains valid, so in every ring we will have
+ (&thinsp;1&thinsp;+&thinsp;a&thinsp;) =
+ (&thinsp;1&thinsp;+&thinsp;&frac12;&thinsp;b ).
+</p>
+<p> Most of the terms in (6.6) cancel, but the terms in
+ <i>r</i> and <i>R</i> remain.
+ By (2.12) we can replace <i>r&hairsp;/&hairsp;R</i> 
+ by <i>x&hairsp;/&hairsp;X</i>, and
+ <span style="white-space:nowrap">d<i>r&hairsp;/&hairsp;R</i> </span>&nbsp;by
+ d<i>r&hairsp;/&hairsp;R</i>, making d<i>m</i>&hairsp;&prime;
+ truly non-dimensional  :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>m</mi> <mn>&hairsp;&prime;</mn>
+
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+    <mrow>
+      <mn>2&hairsp;</mn> <mi>x</mi>
+      <mo>.</mo> 
+      <mn>d</mn> <mi>x</mi>
+  </mrow>
+   <mrow>
+      <msup> <mi>X</mi> <mn>2</mn>
+   </mrow>
+ </mfrac>
+
+  <mo>.&hairsp;</mo>
+
+  <mn>(&hairsp;1</mn>
+    <mo>+</mo> 
+  <mn>&frac12;&thinsp;</mn><mi>b</mi> <mn>&hairsp;)</mn>
+</math>
+
+<td style="width:50px; text-align:right">  (6.7)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The light loading approximation simplifies this to :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>m</mi> <mn>&hairsp;&prime;</mn>
+
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+    <mrow>
+      <mn>2&hairsp;</mn> <mi>x</mi>
+      <mo>.</mo> 
+      <mn>d</mn> <mi>x</mi>
+  </mrow>
+   <mrow>
+      <msup> <mi>X</mi> <mn>2</mn>
+   </mrow>
+ </mfrac>
+
+</math>
+
+<td style="width:50px; text-align:right">  (6.8)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> This is simply the geometrical frontal area of the ring
+ as a fraction of the frontal area of the whole disk.
+ For light loading, the non-dimensional effective area 
+ <i>m&prime;&thinsp;</i> 
+ for the whole prop disk is simply 1, as in (5.5): 
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>m</mi> <mn>&hairsp;&prime;</mn>
+
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <msubsup> <mo>∫</mo> <mn>0</mn> <mi>X</mi> </msubsup>
+
+  <mn>d</mn> <mi>m</mi> <mn>&thinsp;&prime;</mn>
+
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> <mn>1</mn>
+    <msup><mi>X</mi> <mn>2</mn>
+  </mfrac> 
+
+  <mo>&thinsp;.</mo>
+
+  <msubsup> <mo>∫</mo> <mn>0</mn> <mi>x</mi> </msubsup>
+  <mn>2&thinsp;</mn> <mi>x</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>x</mi>
+
+  <mo>&thinsp;=&thinsp;</mo>  <mn>1</mn>
+
+</math>
+
+<td style="width:50px; text-align:right">  (6.9)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> For heavy loading, the integral terms will be weighted
+ by the local values of 
+ (&hairsp;1&hairsp;+&hairsp;&frac12;&hairsp;b&hairsp;).
+</p>
+<p> The integral of (6.9) from the hub to the radius
+    <i>x</i><mn>&hairsp;<mn><mi>/</mi><mn>&hairsp;</mn><mi>X</mi>
+ equals the  (non-dimensional) area of a disk of radius
+ <i>x&thinsp;/&thinsp;X</i> :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>m</mi> <mn>&hairsp;&prime;</mn>
+  <mn>( 0&rarr; </mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/>
+  <mo>=</mo>
+  <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac> <mn>1</mn>
+    <msup><mi>X</mi> <mn>2</mn>
+  </mfrac> 
+
+  <mo>&thinsp;.</mo>
+
+  <msubsup> <mo>∫</mo> <mn>0</mn> <mi>x</mi> </msubsup>
+  <mn>2&thinsp;</mn> <mi>x</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>x</mi>
+
+  <mo>&thinsp;=&thinsp;</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <msup> <mi>x</mi> <mn>2</mn> </msup>
+    <msup> <mi>X</mi> <mn>2</mn> </msup>
+  </mfrac> 
+
+</math>
+
+<td style="width:50px; text-align:right">  (6.10)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> Figure 6.1 shows this relation.
+ The figure conveys an important message :
+ the median of the disk area is located at the radius
+ <i>r/R</i> = &frac12;√2  ≅ 0.7.
+ Conventional wisdom has it that a propeller is characterized
+ by its "halfway" radius at 0.7 <i>R</i>.
+</p>
+<p> We will find later that both (6.9) and(6.10)
+ can be reduced by tip loss.
+</p>
+<p> The area within  the radius <i>r/R</i> = 0.5 is one quarter
+ of the total disk area, and the area within <i>r/R</i>
+ = 0.25 is only 1/16 of the total disk area.
+ Also, the shape of the blade shank near the hub
+ is dominated by structural considerations,
+ and the central part will be covered by a spinner.
+ All in all, the inner 25 % of the blade is mostly along for the ride. 
+</p>
+
+<!-- INDUCTION_SKETCH -->
+<img src="images/prop_parabola_integral.png" 
+     width="360" alt="Parabolic disk area";
+     style="margin-left :180px;
+            margin-top  :  8px;">
+<p style="margin-left:180px">
+    <i> Figure 6.1 : &ensp;
+         Non-dimensional disk area within radius
+          x&thinsp;/&thinsp;X.</i> 
+</p>
+
+<!-- SECTION 6.4 --------------------------------------------------->
+<h4> 6.4 &emsp; Integrating the thrust over the rings </h4>
+
+<p>
+<!-- SECTION 6.5 --------------------------------------------------->
+<h4> 6.5 &emsp; Numerical integration </h4>
+
+<p></p>
+
+
+<p> <!-- FOOTER ------------------------------------------------------------>
+<br> <br>
+<div class="footer">  P. Lammertse,  2025  </div>
+
+</body>
+</html>

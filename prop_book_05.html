@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_05.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-12-15  new
+----------------------------------------------------------------------> 
+
+<!-- FORMATTING  ----------------------------------------------------->
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>  Piet Lammertse on propeller theory  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR MENU --------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+  <li> <a href="prop_book_04.html">&#x25C4  Previous  </a> </li>
+
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
+     </a>
+
+      <a style="background-color:#C0C0F0";
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_07.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 12 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 13 - 15 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 16 - 25 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Vortex theory
+           &emsp;&emsp;&ensp;               ( 26 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Installation
+           &emsp;&emsp;&nbsp;&hairsp;      ( 29 - 30 )
+     </a>
+    </div>
+  </li>
+<!------------------------------------------------------------------->
+
+
+  <li> <a href="prop_book_06.html">  Next &#x25BA</a> </li>
+
+</ul>
+
+
+<!-- TEXT PAGE ------------------------------------------------------->
+
+<!--- PAGE HEADER ---------------------------------------------------->
+<p style="margin-left : 320px">  <i> AXIAL MOMENTUM </i> </p>
+<hr style="margin : 0 0;">
+
+<!-- SECTION 5.1 ----------------------------------------------------->
+
+<h2> 5 &emsp; Thrust and the mass flow </h4>
+
+<h4> 5.1 &emsp; Mass flow </h4>
+
+<p>
+ So far, the mass flow dropped out of our equations.
+ The efficiencies of (4.12) and (4.16) depended only on the induction.
+ But mass flow does become important when we look at the thrust
+ at which these efficiencies apply.
+ We&nbsp;can rewrite the thrust equation (4.7) as : 
+</p>
+
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+ 
+  <mo>=</mo> 
+  <mstyle displaystyle="true">
+  <mfrac>  <mi>F</mi>  <mi>w</mi>
+ </mfrac>
+</math>
+
+<td style="width:50px; text-align:right">  (5.1)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+In the ideal actuator disk of figure 4.1, the volume of air
+ passing through the prop disk per second equals 
+ the frontal area &pi;&hairsp;<i>R</i><sup>2</sup>, 
+ times the velocity (&hairsp;<i>V</i>&hairsp;+&hairsp;<i>v</i>&hairsp;). 
+ The mass flow equals this volume, 
+ times its density <i>&rho;</i>; (&hairsp;in kg/m<sup>3</sup>&hairsp;)  :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+ 
+  <mo>=</mo> 
+
+  <mi>&rho;</mi> <mn>&thinsp;&pi;&thinsp;</mn> 
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+  <mn>.&thinsp;</mn>
+  <mn>(&hairsp;</mn> <mi>V</mi> <mo>+</mo> <mi>v</mi> <mn>&hairsp;)</mn>
+
+  <mo>=</mo> 
+
+  <mi>&rho;</mi> <mn>&hairsp;</mn> <mi>V</mi>
+  <mn>.&thinsp;&pi;&thinsp;</mn> 
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+  <mn>.&thinsp;</mn>
+  <mn>(&hairsp;</mn>  <mn>1</mn> <mo>+</mo> <mi>a</mi>
+   <mn>&hairsp;)</mn>
+
+</math>
+
+<td style="width:50px; text-align:right">  (5.2)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> We will often use the so-called "light loading" approximation,
+ which says that <i>v</i> ≪ <i>V</i>, or <i>a</i> ≪ 1.
+ This simplifies (5.2) to :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+ 
+  <mo>=</mo> 
+
+  <mi>&rho;</mi> <mn>&hairsp;</mn> <mi>V</mi>
+  <mn>.&thinsp;&pi;&thinsp;</mn> 
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+</math>
+
+<td style="width:50px; text-align:right">  (5.3)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> The fact that a physical propeller can in fact approach the ideal
+ of accelerating all of the air inside the flow tube
+ and none outside it is by non means obvious.
+ We will find a justification for it from the vortex view 
+ in a much later chapter.
+ For the purposes of this chapter and the next, we will accept it as a given.
+ </p>
+
+
+<!-- SECTION 5.2 ----------------------------------------------------->
+<h4> 5.2 &emsp; The non-dimensional mass flow </h4>
+
+<p> 
+ In later chapters on the tip loss it will be useful
+ to have a non-dimensional version of the mass flow,
+ since tip loss acts as a reduction factor on it.
+ Using the ideal mass flow of (5.3) as a reference, we define :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+
+  <mi>m</mi> <mn>&hairsp;&prime;</mn>
+ 
+  <mo>&equiv;</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+  <mrow>
+    <mi>&rho;</mi> <mn>&hairsp;</mn> <mi>V</mi>
+    <mn>.&thinsp;&pi;&thinsp;</mn> 
+    <msup> <mi>R</mi> <mn>2</mn> </msup>
+  </mrow>
+</math>
+
+<td style="width:50px; text-align:right">  (5.4)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>This means that for the ideal propeller, we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>m</mi> <mn>&hairsp;&prime;</mn>
+  <mo>=</mo> 
+  <mn>1</mn>
+</math>
+
+<td style="width:50px; text-align:right">  (5.5)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<!-- SECTION 5.3 --------------------------------------------------->
+<h4> 5.3 &emsp; The effective disk area </h4>
+
+<p> If we do not follow the light loading assumption,
+ then by applying the definition (5.4) to (5.2) we find&thinsp;:
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>m</mi> <mn>&hairsp;&prime;</mn>
+  <mo>=</mo> 
+  <mn>(&thinsp;1</mn> <mo>+</mo> <mi>a</mi> <mn>&hairsp;)</mn>
+</math>
+
+<td style="width:50px; text-align:right">  (5.6)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The heavily loaded propeller handles slightly more mass
+ than that of (5.3).
+</p>
+<p> For (5.2) we derived this increase in mass flow
+ from the speed increase at the prop disk.
+ But from the same figure we might say that the propeller
+ handles the air flowing in from far ahead
+ at the unaccelerated velocity <i>V</i> through a larger
+ frontal area of the flow tube, before contraction.
+ The frontal area of this incoming air is larger than the prop disk
+ by a factor of (&hairsp;1+<i>a</i>&hairsp;). 
+ We can therefore also interpret <i>m</i>&hairsp;&prime;
+ as an effective disk area ratio, slightly larger than one.
+ </p>
+
+<!-- SECTION 5.4 --------------------------------------------------->
+<h4> 5.4 &emsp; Non-dimensional thrust </h4>
+
+ <p> We can make the thrust (3.2) non-dimensional
+ by applying (4.7) to (3.2) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+
+  <mi>T</mi>
+ 
+  <mo>=</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <msup> <mi>m</mi> <mn>&bull;&thinsp;</mn> </msup> 
+      <mi>w</mi>
+   </mrow>
+    <mrow>
+      <mi>&rho;</mi> <mn>&hairsp;</mn> 
+       <msup> <mi>V</mi> <mn>2</mn> </msup>
+      <mn>.&thinsp;&pi;&thinsp;</mn> 
+      <msup> <mi>R</mi> <mn>2</mn> </msup>
+    </mrow>
+ </mfrac>
+</math>
+
+<td style="width:50px; text-align:right">  (5.7)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> With <i>b</i> = <i>w / V</i> from (4.2) this is :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+
+  <mi>T</mi> <mf>&hairsp;&prime;</mn>
+ 
+  <mo>=</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <msup> <mi>m</mi> <mn>&bull;&thinsp;</mn> </msup> 
+      <mi>V</mi>
+   </mrow>
+    <mrow>
+      <mi>&rho;</mi> <mn>&hairsp;</mn> 
+       <msup> <mi>V</mi> <mn>2</mn> </msup>
+      <mn>.&thinsp;&pi;&thinsp;</mn> 
+      <msup> <mi>R</mi> <mn>2</mn> </msup>
+    </mrow>
+ </mfrac> 
+ <mo>&thinsp;.&thinsp;</mo>
+  <mi>b</mi>
+</math>
+
+<td style="width:50px; text-align:right">  (5.8)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The non-dimensional mass flow of (5.4) changes this to :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+ 
+  <mo>=</mo> 
+
+  <mi>m</mi> <mn>&hairsp;&prime;</mn>
+    <mo>.&thinsp;</mo>
+  <mi>b</mi>
+</math>
+
+<td style="width:50px; text-align:right">  (5.9)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> For light loading we can use the unity
+ <i>m</i>&hairsp;&prime; of (5.5) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+ 
+  <mo>=</mo> 
+
+  <mi>b</mi>
+</math>
+
+<td style="width:50px; text-align:right">  (5.10)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> If we drop the light loading assumption we have : 
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+ 
+  <mo>=</mo> 
+
+  <mi>b</mi> <mo>.</mo>
+    <mn>(&hairsp;1</mn> <mo>+</mo> <mi>a</mi>
+    <mn>&hairsp;)</mn>
+
+  <mo>=</mo> 
+
+  <mi>b</mi> <mo>.</mo>
+    <mn>(&hairsp;1</mn> <mo>+</mo>
+    <mn>&frac12&thinsp;</mn> <mi>b</mi>
+    <mn>&hairsp;)</mn>
+
+
+</math>
+
+<td style="width:50px; text-align:right">  (5.11)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> These are the values for uniform induction <i>b</i> 
+and a fully filled flow tube &pi;&thinsp;<i>R</i><sup>2</sup>. 
+ We will see later that <i>b</i> may vary over the prop disk,
+ for instance for rotational optimization,
+ and <i>m</i>&hairsp;&prime; may not fill the whole flow tube,
+ due to tip loss.
+
+
+<!-- SECTION 5.5 --------------------------------------------------->
+<h4> 5.5 &emsp; The ideal efficiency expressed in <i>T</i>&nbsp;' </h4>
+
+<p>
+ Equation (4.18) gave us the efficiency of an ideal,
+ lightly loaded actuator disk in terms of the far wake
+ axial induction <i>b</i>.
+ For light loading, we can change this into a relation
+ with the thrust coefficient by (5.10) and (3.3) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <msub> <mi>&eta;</mi> <mi>m </mi> </msub>
+ 
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>1</mi>
+    <mrow>
+      <mn>1</mn> <mo>+</mo>
+        <mn>&frac12;&thinsp;</mn> 
+        <mi>T</mi> <mn>&hairsp;&prime;</mn>
+    </mrow>
+ </mfrac> 
+
+  <mo>=</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>1</mi>
+    <mrow>
+      <mn>1</mn> <mo>+</mo>
+        <mn>&frac14;&thinsp;</mn> 
+        <msub> <mi>C</mi> <mi>T </mi> </msub>
+    </mrow>
+ </mfrac> 
+
+</math>
+
+<td style="width:50px; text-align:right">  (5.12)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> The momentum loss ratio (4.17) is :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <msub> <mi>P</mi> <mi>m </mi> </msub> <mn>&hairsp;&prime;</mn>
+    </mrow>
+    <mrow> <mi>T</mi><mn>&hairsp;&prime;</mn>  </mrow>
+  </mfrac>
+  <mo>=</mo>
+
+  <mn>&frac12;&thinsp;</mn> 
+        <mi>T</mi> <mn>&hairsp;&prime;</mn>
+
+  <mo>=</mo>
+
+  <mn>&frac14;&thinsp;</mn> 
+        <msub> <mi>C</mi> <mi>T </mi> </msub>
+
+</math>
+
+<td style="width:50px; text-align:right">  (5.13)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<!-- SECTION 5.6 --------------------------------------------------->
+<h4> 5.6 &emsp; The <i>T</i>&nbsp;' for heavy loading </h4>
+
+<p> Airplane  propellers have relatively small induction ratios
+ in cruising flight, typically on the order of  <i>b</i> = 0.1
+ like in our running numerical example.
+ Our equations, starting with (5.11) and followed by many,
+ will stay much simpler if we assume
+ &frac12&hairsp;<i>b</i> &Lt; 1 
+and therefore (&hairsp;1 + <i>a</i>&hairsp;)  &cong; 1.
+ It is common to develop the theory under this so-called 
+ "light loading assumption".
+</p>
+<p> We briefly touch on the general case of "heavy" loading.
+ We can solve (5.11) for <i>b</i> by writing it as a quadratic :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <msup> <mi>b</mi> <mn>2</mn> </msup>
+  <mo>+</mo>
+  <mn>2&hairsp;</mn> <mi>b</mi>
+  <mo>-</mo>
+  <mn>2&hairsp;</mn> <mi>T</mi> <mn>&hairsp;&prime;</mn>
+  <mo>=</mo>
+  <mn>0</mn>
+
+</math>
+
+<td style="width:50px; text-align:right">  (5.14)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> Solving the quadratic gives one positive solution :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>b</mi>
+
+  <mo>=</mo>
+
+  <msqrt>
+    <mn>1</mn> <mo>+</mo> <mn>2</mn>
+      <mi>T</mi> <mn>&hairsp;&prime;</mn>
+  </msqrt>
+  <mo>-</mo>
+  <mn>1</mn>
+
+</math>
+
+<td style="width:50px; text-align:right">  (5.15)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<p> Figure 5.1 shows this relation.
+ For a given induction ratio and efficiency,
+ the contraction of the flow tube draws more air
+ through the prop disk.
+ This increases the thrust at the same efficiency,
+ which gives the propeller a slight advantage.
+ If desired, we can correct our calculations
+ for the contraction by iteratively adapting the radius <i>R</i>
+ of the propeller to a slightly larger value,
+ by a factor of (&hairsp;1 + &frac12;&hairsp;<i>b</i>&hairsp;).
+</p>
+<p> Strictly, we should carry the
+ (&hairsp;1 + &frac12;&hairsp;<i>b</i>&hairsp;)
+ term right through all of our calculations,
+ including the derivatives in the rotational optimization.
+ This is not hard to do,
+ but the small increase in accuracy for heavy loading
+ does not outweigh the added complexity of the equations
+ obscuring our intuitive understanding. 
+</p>
+<p> We will stay with the light loading assumption,
+ mainly because it keeps the central arguments easier to follow.
+ </p>
+
+<!-- INDUCTION_SKETCH -->
+<img src="images/prop_b_tp_ramp.gif" 
+     width="300" alt="Axial induction ratio b versus T_prime";
+     style="margin-left :260px;
+            margin-top  :  8px;">
+<p style="margin-left:260px">
+    <i> Figure 5.1 : &ensp; Axial induction ratio b versus T&hairsp;&prime;. </i> 
+</p>
+
+
+<p> <!-- FOOTER ------------------------------------------------------------>
+<br> <br>
+<div class="footer">  P. Lammertse,  2025  </div>
+
+</body>
+</html>
