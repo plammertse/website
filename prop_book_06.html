@@ -483,13 +483,16 @@ Substituting (4.2) and (6.2) into the ring thrust yields :
 <p> We will find later that both (6.9) and(6.10)
  can be reduced by tip loss.
 </p>
-<p> The area within  the radius <i>r/R</i> = 0.5 is one quarter
- of the total disk area, and the area within <i>r/R</i>
- = 0.25 is only 1/16 of the total disk area.
+<p> The area within  the radius
+ <i>r&thinsp;/&thinsp;R</i>&nbsp;=&nbsp;0.5 is one quarter
+ of the total disk area, and the area within 
+ <i>r&thinsp;/&thinsp;R</i>&nbsp;=&nbsp;0.25 
+ is only 1/16 of the total disk area.
  Also, the shape of the blade shank near the hub
  is dominated by structural considerations,
  and the central part will be covered by a spinner.
- All in all, the inner 25 % of the blade is mostly along for the ride. 
+ All in all, the inner 25&thinsp;% of the blade
+ is mostly along for the ride. 
 </p>
 
 <!-- INDUCTION_SKETCH -->
@@ -506,11 +509,113 @@ Substituting (4.2) and (6.2) into the ring thrust yields :
 <!-- SECTION 6.4 --------------------------------------------------->
 <h4> 6.4 &emsp; Integrating the thrust over the rings </h4>
 
+<p> With (6.7) in (6.4), the local non-dimensional ring thrust is :
+</p>
+<p> &emsp;
+	dT^'   =  b(x)  .(1+a)  .  (2 x .dx)/X^2 
+(6.11)
+</p>
+<p> Integrating d<i>T</i>&thinsp;&prime;
+ over the rings gives the overall thrust :
+<p> &emsp;
+	T^'  = ∫▒〖dT〗^' =  1/X^2  ∫_0^X▒〖b(x)   .(1+a(x)) .2 x .dx〗
+(6.12)
+</p>
+<p> For light loading, we can use the d<i>m</i>&thinsp;&prime;
+ of (6.8), which yields :
+</p>
 <p>
+	dT^'   ≅   b(x)  .  (2 x .dx)/X^2 
+(6.13)
+</p>
+<p>
+The light loading thrust integral is then :
+	T^'  =   1/X^2  ∫_0^X▒〖b(x)  .2 x .dx〗
+(6.14)
+</p>
+<p>
+If  b (x) is constant over the whole blade, then so is a = ½ b, and we have :
+	T^'  = b .(1+a)    1/X^2  ∫_0^X▒〖2  x .dx〗
+(6.15)
+</p>
+<p>
+Since the primitive of x is ½  x2, this reproduces (5.11) for the actuator disk :
+	T^'  = b .(1+a)	(6.16)
+</p>
+<p>
+With the light loading assumption, this retrieves (5.10).
+</p>
+<p> Figure 6.2 shows the ring thrust contributions (6.11).
+ The area under the curve is the integral (6.15).
+ For uniform thrust, the graph is a right triangle of area
+ ( 1 + <i>a</i> ).
+ Its center of mass is at ⅔<i>X</i>  from the left.
+ This is by the way not the same as the median of the area
+ at ½ <i>X</i>√2 , but it is close.
+ We will meet this center of mass in the calculation
+ of the viscous drag.
+</p>
+<p> The curved line is a more typical (&thinsp;normalized&thinsp;)
+ thrust distribution.
+ It retains the nominally triangular shape,
+ but it is reduced by local variations of <i>b</i>(<i>x</i>)
+ due to rotational and viscous optimization,
+ and by local reductions on d<i>m</i>&thinsp;&prime;((i>x</i>)
+ due to tip loss.
+</p>
+<p> The value of (1+<i>a</i>) is an average over the rings
+ in this general case.
+</p>
+<p> &emsp; &emsp;
+		TODO	Show the line for the reduced integral instead. Lose the blue.
+</p>
+<p> <br> <br> IMAGE  </p>
+
+
 <!-- SECTION 6.5 --------------------------------------------------->
 <h4> 6.5 &emsp; Numerical integration </h4>
 
-<p></p>
+<p> The typical functions in propeller theory are of the form 
+ <i>h</i>&hairsp;(<i>x</i>),
+ where <i>h</i>&hairsp;(<i>x</i>) only depends on <i>x</i>,
+ and typically has a teardrop shape
+ which starts with <i>h</i>&hairsp;(0)&nbsp;=&nbsp;0 at the hub and ends
+ with <i>h</i>&hairsp;(<i>X</i>)&nbsp;=&nbsp;0 at the tip.
+ They are often shaped much like the "typical" thrust line
+ in figure 6.2.
+</p>
+<p> We will often wish to integrate them over the prop disk, like this :
+<p> &emsp;
+	H( X )  ≡  ∫_0^X▒〖 h (x)  .(2 x .dx)/〖 X〗^2 〗		(6.17)
+&/p>
+<p> The effective local disk area d<i>m</i>&thinsp;&prime;
+ always contains a term
+ 2<i>x</i> . d<i>x / X</i><sup>2</sup>,
+ so we show it separately here,
+ but this is not even necessary to the argument.
+</p>
+<p> Many of these functions are not as easily integrated as (6.15).
+ In such cases we will use numerical integration.
+ Once a h(x) is available, (6.17) is easily integrated numerically.
+ The integral over the infinitesimal width dx becomes a sum
+ over finite widths Δ<i>x</i> = <i>X / N</i>:
+</p>
+<p> &emsp;
+	H( X )  ≅    1/(X.N)   Σ 〖■(N@0)  〗⁡h (x)   .2 x
+	(6.18)
+</p>
+<p> This expression sums over <i>N(/i>&thinsp;+&thinsp;1</i> points,
+ and divides by <i>N</i> rings.
+ With the end values of <i>h</i>(<i>x</i>)  both zero,
+ this is equivalent to the trapezoidal rule. 
+</p>
+<p> A typical value for <i>N</i> used to be
+ <i>N</i>&nbsp;=&nbsp;10 in the days of the slide rule.
+ The result was often improved by
+  <span style="font-variant: small-caps;"> Simpson</span>'s 
+ weighting rule with end correction.
+ Today, N = 10,000 is more common and (6.18) is adequate.
+</p>
 
 
 <p> <!-- FOOTER ------------------------------------------------------------>
