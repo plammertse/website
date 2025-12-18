@@ -54,11 +54,11 @@
      </a>
       <a style="background-color:#C0C0F0";
          href="prop_book_01.html"> Viscous loss
-           &emsp;&ensp;&hairsp;           ( 13 - 15 )
+           &emsp;&ensp;&hairsp;           ( 15 - 17 )
      </a>
       <a style="background-color:#E8E8E8";
          href="prop_book_01.html"> Tip loss 
-           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 16 - 25 )
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 25 )
      </a>
       <a style="background-color:#E8E8E8";
          href="prop_book_01.html"> Vortex theory
@@ -570,12 +570,8 @@ The viscous efficiency of the blade element is net output power
    </mrow>
 
     <mrow> <mo>tan</mo> <mi>&phi;</mi> </mrow>
-
- </mfrac>
- 
-
-
-</math>
+   </mfrac>
+ </math>
 
 <td style="width:50px; text-align:right">  (15.10)
 </td> </tr> </table>
@@ -603,7 +599,6 @@ The viscous efficiency of the blade element is net output power
     <mrow> <mn>d&hairsp;</mn> <mi>T</mi>
       <mn>&hairsp;.&hairsp;</mn> <mi>V</mi> </mrow>
   </mfrac>
-
 </math>
 
 <td style="width:50px; text-align:right">  (15.11)
@@ -662,34 +657,138 @@ The viscous efficiency of the blade element is net output power
  the derivative of the tangent.
  That derivative is 1/cos<sup>2</sup> <i>&phi;</i> :
 </p>
-<p>&emsp;
-	tan⁡〖( ϕ+ϵ )-tan⁡ϕ 〗     ≅    ϵ .  1/cos^2⁡ϕ 		(15.12)
-</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+ <mo>tan</mo>
+   <mn>(</mn>
+    <mi>&phi;</mi>
+    <mo>+</mo>
+    <mi>&epsilon;</mi>
+    <mn>)</mn>
+
+   <mo>&minus;</mo>
+
+   <mo>tan</mo> <mi>&phi;</mi> 
+
+   <mspace/> <mo>&cong;</mo> <mspace/>
+
+   <mi>&epsilon;</mi>
+   <mo>.</mo>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>1</mi>
+    <mrow> <msup> <mo>cos</mo> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+ </math>
+
+<td style="width:50px; text-align:right">  (15.12)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
 <p> This changes (15.10) into :
 </p>
-<p>&emsp;
-	μ (ϕ)     =  ϵ .  1/cos^2⁡ϕ   .   1/tan⁡ϕ 
-(15.13)
-</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>&mu;</mi> <mn>&hairsp;(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&epsilon;</mi>
+  <mo>.</mo>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>1</mi>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+  <mo>.</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>1</mi>
+    <mrow> <mo>tan</mo> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+ </math>
+</td>
+
+<td style="width:50px; text-align:right">  (15.13)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
 <p> Using tan <i>&phi;</i> = 1/<i>x</i> from (2.4),
- we have a simple,
+ we have a simple
  yet almost exact expression for <i>&mu;</i>,
  which is easiest remembered in mixed coordinates
  <i>&phi;</i> and <i>x</i> : 
 </p>
-<p>&emsp;
-	μ(x)   =       (ϵ . x)/cos^2⁡ϕ 	(15.14)
-</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>&mu;</mi> <mn>&hairsp;(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <<mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+ </math>
+</td>
+
+<td style="width:50px; text-align:right">  (15.14)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
 <p> Eliminating <i>&phi;</i> completely by (2.8),
  this is the same as :
 </p>
-<p>&emsp;
-	μ(x)   =  ϵ .( x+1/x  )
-(15.15)
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>&mu;</mi> <mn>&hairsp;(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&epsilon;</mi>
+  <mo>&hairsp;.</mo>
+  <mn>(&thinsp;</mn>
+
+  <mi>x</mi> <mo>+</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>1</mi>
+    <mi>x</mi>
+  </mfrac>
+  <mn>&thinsp;)</mn>
+ </math>
+</td>
+
+<td style="width:50px; text-align:right">  (15.15)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
 </p>
-<p> Figure 15.4 shows gives the exact value (15.10)
- of <i>&mu;</i>(<i>x</i>) as a solid dark blue line.
- It is the same as figure 15.3, only skewed
+<p> Figure 15.4 shows the exact value (15.10)
+ of <i>&mu;</i>&hairsp;(<i>x</i>) as a solid dark blue line.
+ It is the same as figure 15.3, only skewed to the left
  because it is against <i>x</i> instead of against <i>&phi;</i>.
  The figure also shows approximation (15.14)
  as a dashed line.
@@ -706,12 +805,274 @@ The viscous efficiency of the blade element is net output power
             The local leadscrew loss ratio &mu;(x). </i> 
 <!---------------------------------------------------------------------->
 
+<p> For all but the smallest values of <i>x</i>,
+ i.e. for all pitch angles except  <i>&phi;</i> ≅ 90&deg;,
+ the approximation is nearly perfect.
+ The factor <i>&mu;</i> reaches a minimum of
+  2&hairsp;<i>&epsilon;</i>  near <i>x</i> = 1,
+  the point where <i>&phi;</i> equals 45&deg;.
+</p>
+<p> Some of the literature, like
+<span style="font-variant: small-caps;">Glauert</span>,
+ will set cos<sup>2</sup> <i>&phi;</i> ≈ 1 :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>&mu;</mi>  <mn>&hairsp;(</mn> <mi>x</mi>  <mn>)</mn> 
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (15.16)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+</p>
+<p> Figure 15.4 shows this further simplification as a straight line.
+ It comes closest to an interpretation of <i>&mu;</i> as
+ the "geared" friction coefficient <i>&epsilon;</i>.
+</p>
+<p> In the vector diagram of figure 15.2,
+ for small angles <i>&phi;</i> a small driving force <i>S</i>
+ is equivalent to a large thrust force <i>T</i> by a factor of
+  <i>x</i> = 1 / tan<i>&phi;</i>.
+ In the same way, a small friction force becomes a large drag force.
+</p>
+
 <!-- SECTION 15.5 --------------------------------------------------->
 <h4> 15.5 &emsp; Vector derivation of the same approximation </h4>
 
-<p> 
-TBW.
+<p>  The nearly exact <i>&mu;</i>&thinsp;&hairsp;(<i>x</i>&hairsp;)
+ of (15.14) can also be loosely derived
+ directly from the force diagram.
+ We split the viscous drag vector <i>D</i> into two orthogonal components,
+ which we shall call Δd<i>T</i>  and Δd<i>S</i>. 
 </p>
+<p> Via the steps of Δd<i>T</i>   ≅ <i>D</i> . sin <i>&phi;</i>,
+   <i>D</i>  ≅  <i>&epsilon;</i> . <i>L</i>,
+ and <i>L</i>  ≅   d<i>T</i>/cos <i>&phi;</i>, we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>&Delta;&thinsp;d</mi> <mn>&hairsp;</mn> <mi>T</mi>
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+  <mn>d</mn> <mn>&hairsp;</mn> <mi>T</mi>
+  <mo>.</mo> <mi>&epsilon;</mi>
+  <mo>.</mo> 
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mo>sin</mo> <mi>&phi;</mi> </mrow>
+    <mrow> <mo>cos</mo> <mi>&phi;</mi> </mrow>
+ </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>d&hairsp;</mn> <mi>T</mi>
+  <mo>.</mo> <mi>&epsilon;</mi>
+  <mn>&thinsp;.</mn>
+  <mo>tan</mo> <mi>&phi;</mi>
+</math> </td>
+
+<td style="width:50px; text-align:right">  (15.17)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+</p>
+<p> Similarly, via Δd<i>S</i> ≅ <i>D</i> . cos <i>&phi;</i>, we have :
+</i>
+
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>&Delta;&thinsp;d</mi> <mn>&hairsp;</mn> <mi>S</mi>
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+  <mn>d</mn> <mn>&hairsp;</mn> <mi>T</mi>
+  <mo>.</mo> <mi>&epsilon;</mi>
+  <mo>.</mo> 
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mo>cos</mo> <mi>&phi;</mi> </mrow>
+    <mrow> <mo>cos</mo> <mi>&phi;</mi> </mrow>
+ </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>d&hairsp;</mn> <mi>T</mi>
+  <mo>.</mo> <mi>&epsilon;</mi>
+</math> </td>
+
+<td style="width:50px; text-align:right">  (15.18)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+</p>
+<p> With some hand waving, we can say that if we multiply
+ these two orthogonal drag forces each by the local velocity
+ in their own direction,
+ we will obtain the two terms contributing to the
+ local power loss due to drag.
+</p>
+<p>&emsp; The drag component Δd<i>T</i> directly opposes 
+ the flying velocity <i>V</i>,
+ and the drag component Δd<i>S</i>  directly opposes
+ the circumferential blade element velocity
+ <i>&Omega;&thinsp;r</i>.
+  The total local drag power loss is :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d&hairsp;</mn>
+  <msub> <mi>P</mi> <mn>v</mn> </msub>
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+  <mn>&Delta;&hairsp;d&hairsp;</mn> <mi>T</mi>
+  <mo>.</mo>  <mi>V</mi>
+  <mspace/> <mo>+</mo>  <mspace/>
+  <mn>&Delta;&hairsp;d&hairsp;</mn> <mi>S</mi>
+  <mo>.&thinsp;</mo>  <mi>&Omega;</mi> <mn>&thinsp;</mn> <mi>r</mi>
+</math> </td>
+
+<td style="width:50px; text-align:right">  (15.19)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+Substituting (15.17) and (15.18) and dividing by d<i>T.V</i>,
+ the local loss ratio is :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn> 
+      <msub>  <mi>P</mi> <mn>v</mn> </msub>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mi>T</mi> <mn>.</mn> <mi>V</mi>
+   </mrow>
+ </mfrac>
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>&epsilon;</mi> <mo>.</mo> 
+      <mo>(</mo>
+        <mo>tan</mo> <mi>&phi;</mi> <mo>.</mo> <mi>V</mi>
+        <mo>+</mo>
+        <mi>&Omega;</mi> <mn>&thinsp;</mn> <mi>r</mi>
+      <mo>)</mo>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mi>T</mi> <mn>.</mn> <mi>V</mi>
+   </mrow>
+ </mfrac>
+
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&epsilon;</mi> <mo>.</mo> 
+  <mo>(</mo>
+    <mo>tan</mo> <mi>&phi;</mi>
+    <mo>+</mo>
+    <mstyle displaystyle="true">
+    <mfrac>
+      <mrow> <mi>&Omega;</mi> <mn>&thinsp;</mn> <mi>r</mi>
+     </mrow>
+     <mi>V</mi>
+    </mfrac>
+  <mo>)</mo>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (15.20)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> With (2.2) we have tan ϕ = 1/x and  Ω r/ V = x ,
+ and so (with (3.9) ) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn> 
+      <msub>  <mi>P</mi> <mn>v</mn> </msub> <mn>&hairsp;&prime;</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mi>T</mi> <mn>&hairsp;&prime;</mn>
+   </mrow>
+ </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn> 
+      <msub>  <mi>P</mi> <mn>v</mn> </msub>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mi>T</mi> <mn>.</mn> <mi>V</mi>
+   </mrow>
+ </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&epsilon;</mi> <mo>.</mo> 
+  <mo>(</mo>
+    <mstyle displaystyle="true">
+    <mfrac>
+      <mn>1</mn> <mi>x</mi>
+    </mfrac>
+    <mo>+</mo>
+    <mi>x</mi>
+  <mo>)</mo>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <<mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (15.21)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+ This recovers (15.14).
+ The derivation shows that the linearization (15.16) amounts
+ to looking only at the effect of the viscous drag on the torque,
+ and neglecting its effect on the thrust.
+</p>
+
 <!-- SECTION 15.6 --------------------------------------------------->
 <h4> 15.6 &emsp; Neglecting a small momentum term </h4>
 
