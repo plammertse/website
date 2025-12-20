@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_17.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-12-18  new
+----------------------------------------------------------------------> 
+
+<!-- FORMATTING  ----------------------------------------------------->
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>  Piet Lammertse on propeller theory  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR MENU --------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+  <li> <a href="prop_book_16.html">&#x25C4  Previous  </a> </li>
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_07.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 12 )
+     </a>
+      <a style="background-color:#C0C0F0";
+         href="prop_book_15.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 15 - 17 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_18.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 25 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_22.html"> Vortex theory
+           &emsp;&emsp;&ensp;               ( 22 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Installation
+           &emsp;&emsp;&nbsp;&hairsp;      ( 29 - 30 )
+     </a>
+    </div>
+  </li>
+<!------------------------------------------------------------------->
+
+  <li> <a href="prop_book_18.html">  Next &#x25BA</a> </li>
+
+</ul>
+
+
+<!-- TEXT PAGE ------------------------------------------------------->
+
+<!--- PAGE HEADER ---------------------------------------------------->
+<p style="margin-left : 320px">  <i> VISCOUS LOSS </i> </p>
+<hr style="margin : 0 0;">
+
+<!-- CHAPTER 17 ------------------------------------------------------>
+
+<h2> 17 &emsp; Optimizing the viscous loss </h2>
+
+<!-- SECTION 17.1 ---------------------------------------------------->
+
+<h4> 17.1 &emsp; Relevance </h4>
+
+<p> 
+The classical way to handle viscous loss is the one shown
+ in the previous chapter. The propeller is designed for
+ optimal rotational loss
+ (and later, for tip loss).
+</p>
+<p>&emsp;
+ The viscous loss is then calculated almost as an afterthought,
+ and the outcome is accepted as a fact of life.
+ But this runs against the spirit of propeller optimization,
+ which is to minimize the overall loss
+ by scheduling the induction for constant marginal loss.
+</p>
+<p>&emsp; 
+ Viscous optimization has been a wrinkle in the classical theory
+ of propellers for a long time. Historically,
+ <span style="font-variant: small-caps;"> Glauert</span>
+ already gave the proper solution,
+ but his treatment is not complete,
+ perhaps due to his untimely death in a freak accident.
+ This incompleteness may be the reason
+ why later texts fail to include it.
+</p>
+<p>&emsp;
+ This chapter picks up
+  <span style="font-variant: small-caps;"> Glauert</span>'s
+ argument and takes it
+ to its logical conclusion.
+ The outcome is that in some ways the later literature is right :
+ for normal propellers, not much efficiency is gained
+ by doing a proper viscous optimization.
+ But it is the proper thing to do,
+ and it is not difficult after all.
+ Perhaps more importantly,
+ there is a side benefit in the shape of the blade.
+</p>
+<p>&emsp;
+Readers who use this text as their first introduction
+ to propeller theory may wish to skip this chapter.
+ Those looking for new material,
+ or those who like to tie up loose ends,
+ are encouraged to read it for their own personal enjoyment.
+</p>
+
+<!-- SECTION 17.2 ----------------------------------------------------->
+
+<h4> 17.2 &emsp; A basic trade-off </h4>
+
+<p> Figure 15.4 showed that for minimal viscous loss,
+ all thrust should be concentrated on a paddle close
+ to the hub at <i>x</i>&nbsp;=&nbsp;1, for a 45&deg; pitch angle.
+ By contrast, figure 10.1 showed that the optimal
+ momentum efficiency moves the thrust outboard
+ towards the flattest pitch angles.
+</p>
+<p>&emsp; This difference creates a basic trade-off in blade shape design.
+ We optimize this trade-off by our trusted method
+ of constant marginal loss.
+</p>
+
+
+<!-- SECTION 17.3 ---------------------------------------------------->
+
+<h4> 17.3 &emsp; The viscous marginal loss </h4>
+
+<p> We are hoping to optimize the viscous marginal loss.
+ But somewhat surprisingly, this is not how it works. 
+</p>
+<p>&emsp;
+ By (15.21), the viscous loss is directly proportional to the thrust.
+ An increase of thrust will give an increase of loss,
+ in the same proportion.
+ This linear relationship makes  the marginal loss ratio
+ equal to the actual loss ratio, independent of the local induction.
+ We will not be able to change the local viscous loss ratio
+ by any optimization to the induction.
+<p>&emsp;
+Formally, we can write (15.21) as :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>v</mn> </msub>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <<mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <mn>d&hairsp;</mn> <mi>T</mi> <mo>.</mo> <mi>V</mi>
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.1)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+</p>
+<p> Taking the derivative with respect to  d<i>T.V</i>
+  like in (9.1) gives :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>v</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <<mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.2)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> This marginal loss is exactly the same as the
+ actual local loss ratio (15.21). This is, of course,
+ in the nature of any linear relationship.
+</p>
+<p>&emsp; <span style="font-variant: small-caps;"> Glauert</span>
+ used the simplified viscous drag ratio (15.16) here,
+ but the (&hairsp;almost&hairsp;) exact equation (15.21) will
+ give us simpler and more accurate results.
+</p>
+
+<!-- SECTION 17.4 ---------------------------------------------------->
+
+<h4> 17.4 &emsp; The combined marginal loss </h4>
+
+<p> We combine (17.1) with the marginal momentum loss for an arbitrary
+ (&hairsp;but light loading&hairsp;) induction
+ <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;) in (9.4) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>v</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>b</mi> <mn>(</mn> <mi>x</mi>  <mn>)</mn> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.3)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The combined marginal loss will now depend on 
+ <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;)
+ through the momentum loss.
+ We will first look at the combined marginal loss
+ for the rotationally optimized propeller, without optimization
+ for the viscous loss.<br>
+ This is an interesting reference case,
+ since most of the literature accepts this as the standard solution.
+</p>
+<p>&emsp;
+ The <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;) for the
+ rotationally optimal propeller was given by (10.8),
+ and the resulting (&hairsp;constant&hairsp;) 
+ marginal momentum loss by (10.7).
+ Substituting this into (17.3) yields :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>v</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>T</mi> <mn>&thinsp;&prime;</mn> </mrow>
+    <mrow> <msub> <mi>&kappa;</mi> <mn>&phi;</mn> </msub> 
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.4)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> This combined marginal loss is very similar to (16.1)
+ which gave the actual local loss for the rotationally optimal propeller.
+ The only difference is that the marginal momentum loss is
+ exactly twice the local momentum loss,
+ while the marginal viscous loss remains the same.
+</p>
+<p>&emsp;
+ Figure 17.1 shows the result, with numerical values taken
+ from our standard lightplane example.
+ The graph is almost identical to figure 16.1,
+ again with only the difference in the doubling of the momentum loss.
+</p>
+<p>&emsp;
+ The combined marginal loss is not constant,
+ and so this propeller is not optimal.
+ Moving thrust from the tips to the region around <i>x</i>&nbsp;=&nbsp;1
+ should improve the efficiency. 
+</p>
+
+<!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM --------------------------->
+<img  width="500";
+     style="margin-left:160px";
+     alt="Viscous loss diagram";
+     src="images/prop_viscous_combined_marginal_loss_non_optimized.gif" >
+
+<p style="margin-left   :120px;
+          margin-bottom : 12px;">
+    <i> Figure 17.1 : &ensp; The combined marginal loss (17.4) in the
+ rotationally optimal propeller.
+ </i> 
+<!------------------------------------------------------------------->
+
+<!-- SECTION 17.5 ---------------------------------------------------->
+
+<h4> 17.5 &emsp; Making the combined marginal loss a constant </h4>
+
+<p> We are looking for a thrust distribution which makes
+ the combined marginal loss constant along the blade.
+ Since the new constant will have a different value than before,
+ we will use a new letter <i>A</i>,  instead of the <i>C</i>  of (9.3).
+ We will require :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn>
+      <mn>d&hairsp;</mn> <msub> <mi>P</mi> <mn>v</mn> </msub>
+      <mn>)</mn>
+   </mrow>
+    <mrow> <mn>d&hairsp;</mn>
+      <mn>(</mn> 
+      <mi>T</mi> <mo>.</mo> <mi>V</mi>
+      <mn>)</mn>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>A</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.5)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+With (17.3) this gives :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>b</mi> <mn>(</mn> <mi>x</mi>  <mn>)</mn> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+        <mi>&phi;</mi>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>A</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.6)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> Since A is a constant, the combined optimal distribution becomes :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>b</mi> <mn>(</mn> <mi>x</mi>  <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>A</mi>
+  <mo>.</mo>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+  <mi>&phi;</mi>
+  <mo>&minus;</mo> 
+  <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.7)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+ Relative to (9.5), the right hand term in <i>x</i>  is new.
+</p>
+<p> <span style="font-variant: small-caps;"> Glauert</span>
+ himself used the approximate 
+  <i>&mu;</i>&thinsp;(&hairsp;<i>x</i>&hairsp;)
+ of (15.16), which yields :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>b</mi> <mn>(</mn> <mi>x</mi>  <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mrow>
+    <mo>(</mo> 
+       <mi>A</mi>
+      <mo>&minus;</mo> 
+      <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+   <mo>)</mo> 
+ </mrow>
+
+  <mo>.</mo>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+      <mi>&phi;</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.8)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> This seems simpler than (17.7) at first sight,
+ but when following it through the results are in fact more complex,
+ so we will be using (17.7) from here on.
+</p>
+
+<p>&emsp;&emsp; <i>
+ TODO Discuss <b>Glauert</b>'s figure based on <i>A</i>.
+ </i>
+</p>
+<p>&emsp;
+  The thrust is reduced to zero near
+    <i>X</i>&nbsp;=&nbsp;<i>A / &epsilon;</i>.
+  However,
+ <span style="font-variant: small-caps;"> Glauert</span>'s
+ figure is subtly misleading if we do not realize that
+for the same thrust, <i>A</i> 
+ is much larger than the <i>C</i> of (10.7).
+ Therefore we will first express <i>A</i> in the design parameters.
+</p>
+
+
+<!-- SECTION 17.6 ---------------------------------------------------->
+
+<h4> 17.6 &emsp; The marginal loss in design parameters </h4>
+
+<p> We express <i>A</i> in terms of <i>T</i>&thinsp;&prime;,
+ <i>&epsilon;</i> and <i>X</i>.
+ Using the induction <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;)
+ of (17.7) in the light loading integral (XXXXXXXXXX),
+ the overall thrust is : 
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <msup> <mi>X</mi> <mn>2</mn> </msup>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>X</mi> </msubsup>
+
+  <mrow>
+  <mo>(</mo>
+    <mi>A</mi>
+    <mo>.</mo>
+    <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+    <mi>&phi;</mi>
+    <mo>&minus;</mo> 
+    <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+  <mo>)</mo>
+  </mrow>
+
+  <mo>.</mo>
+  <mn>2&hairsp;</mn> <mi>x</mi> 
+  <mo>.</mo>
+  <mn>d&thinsp;</mn> <mi>x</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.9)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The left hand integral was called <i>&kappa;</i><sub>&phi;</sub>
+ in (10.5), and the primitive of 2&hairsp;<i>x</i><sup>2</sup>
+ is &frac23;&hairsp;<i>x</i>&hairsp;<sup>3</sup>.
+ Between the limits of <i>x</i>&nbsp;=&nbsp;0 and
+ <i>x</i>&nbsp;=&nbsp;<i>X</i> this gives
+ &frac23;&thinsp;<i>X</i>&hairsp;<sup>3</sup>, and so :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>A</mi>
+  <mo>.</mo>
+  <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+
+  <mo>&minus;</mo> 
+
+  <mn>&frac23;&thinsp;</mn> <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.10)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The marginal loss expressed in design parameters is therefore :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>A</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+    <mi>T</mi> <mn>&thinsp;&prime;</mn>
+    <mo>+</mo>
+    <mn>&frac23;&nbsp;</mn> <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.11)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+Substituting  this into (17.7) gives the optimal
+ <i>b</i>&thinsp;(&hairsp;<i>x</i>&hairsp;) in design parameters :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>b</mi> <mn>&thinsp;(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+    <mi>T</mi> <mn>&thinsp;&prime;</mn>
+    <mo>+</mo>
+    <mn>&frac23;&nbsp;</mn> <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+  <mo>.</mo>
+
+  <msup> <mn>cos</mn> <mn>2</mn> </msup>
+  <mi>&phi;</mi>
+
+  <mspace/> <mo>&minus;</mo> <mspace/>
+
+  <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.12)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> This is the equivalent of the induction (10.8)
+ for optimal rotational loss,
+  only this time including the viscous optimization.
+ The original "amplitude"
+    <i>T</i>&thinsp;&prime;&nbsp;&#x2044;&thinsp;<i>&kappa;</i><sub>&phi;</sub>
+  is increased by
+   &frac23;&thinsp;&epsilon;&thinsp;<i>X</i>&nbsp;&#x2044;&thinsp;<i>&kappa;</i><sub>&phi;</sub>.
+<p>&emsp; This new fixed term makes up for the loss of thrust from the radius dependent
+    term <i>&epsilon;</i>&thinsp;.&thinsp;<i>x</i>.
+ We will take a closer look at the shape of (17.12) in figure 17.4,
+ but first we look at the two components of the marginal loss.
+ 
+</p>
+
+<!-- SECTION 17.7 ---------------------------------------------------->
+
+<h4> 17.7 &emsp; Components of the marginal loss </h4>
+
+<p> The marginal viscous loss is independent of
+  <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;),
+ but the marginal momentum loss is not.
+ Substituting the <i>b</i>&hairsp;(&hairsp;x&hairsp;) of (17.7) into the marginal
+ momentum loss (9.4) we have :
+</p>
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mn>d</mn>
+      <mo>(</mo>
+        <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+      <mo>)</mo>
+   </mrow>
+   <mrow>
+     <mn>d</mn>
+     <mo>(</mo>
+       <mn>d</mn> <mi>T</mi> <mo>.</mo> <mi>V</mi>
+     <mo>)</mo>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+    <mi>T</mi> <mn>&thinsp;&prime;</mn>
+    <mo>+</mo>
+    <mn>&frac23;&nbsp;</mn> <mi>&epsilon;</mi> <mo>.</mo> <mi>X</mi>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+  <mspace/> <mo>&minus;</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+   </mrow>
+   <mrow>
+    <msup> <mn>cos</mn> <mn>2</mn> </msup>
+      <mi>&phi;</mi>
+  </mrow>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.13)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The left hand term is the constant marginal loss (17.11).
+ The right hand term effectively subtracts
+ the viscous marginal loss (17.2) from this,
+ leaving a marginal momentum loss which is no longer a constant.
+ The momentum loss by itself will no longer be optimal.
+ Interestingly, the marginal loss is made constant
+ by modifying the momentum term, not the viscous term.
+</p>
+<p>&emsp;
+ Figure 17.2 shows the result.
+ The optimization moves thrust towards the region of lower
+ viscous loss near <i>x</i>&nbsp;=&nbsp;1, as shown in figure 15.4.
+ Increasing the thrust there means that we have to accept
+ a momentum loss varying with the radius.
+</p>
+
+
+<!-- COMBINED LOCAL LOSS DIAGRAM --------------------------->
+<img  width="540";
+     style="margin-left:160px";
+     alt="Viscous loss diagram";
+     src="images/prop_viscous_combined_marginal_loss_optimized.gif" >
+
+<p style="margin-left   :160px;
+          margin-bottom : 12px;">
+    <i> Figure 17.2 : &ensp; Combined marginal loss, optimized by (17.3).
+ </i> 
+<!------------------------------------------------------------------->
+
+<!-- SECTION 17.8 ---------------------------------------------------->
+
+<h4> 17.8 &emsp; The optimized local loss ratio itself is not a constant </h4>
+
+<p> The combined <i>marginal</i> loss is constant along the blade.
+ But unlike for the purely rotational optimum,
+ the actual loss ratio <i>itself</i> is not. 
+</p>
+<p> TBW.
+</p>
+
+<!-- SECTION 17.9 ---------------------------------------------------->
+
+<h4> 17.9 &emsp; Blade shape variation with the section drag  </h4>
+
+<p> TBW.
+</p>
+
+<!-- SECTION 17.10 ---------------------------------------------------->
+
+<h4> 17.10 &emsp; The net gain in the efficiency </h4>
+
+<p> TBW.
+</p>
+
+<!-- SECTION 17.8 ---------------------------------------------------->
+
+<h4> 17.11 &emsp; Numerical example </h4>
+
+<p> TBW.
+</p>
+
+
+<!-- FOOTER ------------------------------------------------------------>
+<br> <br>
+<div class="footer">  P. Lammertse, 2025  </div>
+
+</body>
+</html>
