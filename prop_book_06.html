@@ -22,7 +22,6 @@
 
   <li> <a href="prop_book_05.html">&#x25C4  Previous  </a> </li>
 
-
   <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
   <li class="dropdown">
     <a class="dropbtn";
@@ -34,43 +33,44 @@
          href="prop_book_frontispiece.html">
                     <i> Frontispiece </i> 
      </a>
-      <a style="background-color:#E8E8E8";
+
+      <a style="background-color:#C0C0F0";
          href="prop_book_preface.html">
                     <i> Preface </i>
      </a>
+
       <a style="background-color:#E8E8E8";
          href="prop_book_01.html"> Introduction 
            &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
      </a>
 
-      <a style="background-color:#C0C0F0";
+      <a style="background-color:#E8E8E8";
          href="prop_book_04.html"> Axial induction 
            &emsp;&nbsp;&hairsp;            ( 4 - 6 )
      </a>
-
       <a style="background-color:#E8E8E8";
          href="prop_book_07.html"> Rotation 
-           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 12 )
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 14 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html"> Viscous loss
-           &emsp;&ensp;&hairsp;           ( 13 - 15 )
+         href="prop_book_15.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 15 - 17 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html"> Tip loss 
-           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 16 - 25 )
+         href="prop_book_18.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 21 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html"> Vortex theory
-           &emsp;&emsp;&ensp;               ( 26 )
+         href="prop_book_22.html"> Vortex theory
+           &emsp;&nbsp; ( 22 - 29 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html"> Installation
-           &emsp;&emsp;&nbsp;&hairsp;      ( 29 - 30 )
+         href="prop_book_30.html"> Installation
+           &emsp;&emsp;&nbsp;&hairsp;      ( 30 - 33 )
      </a>
     </div>
   </li>
-<!------------------------------------------------------------------->
+  <!-- END TOC ------------------------------------------------------->
 
 
   <li> <a href="prop_book_07.html">  Next &#x25BA</a> </li>
@@ -107,6 +107,81 @@
  than might reasonably be expected.
  </p>
 
+
+<!-- SECTION 6.2 ----------------------------------------------------->
+<h4> 6.2 &emsp; Integrating over the rings &emsp;&emsp;&emsp; NEW  </h4>
+<p>
+We will often widh to know the average of some function
+ <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+ over the prop disk.
+ This could be the overall thrust, or the total mass flow
+ through the whole prop disk, or some other value.
+ Such overall values can be found by integrating the weighted sums
+ of the local values per ring. 
+<p>&emsp;</i>
+ The frontal area of a ring is 2&hairsp;&pi;&hairsp;<i>r</i>&hairsp;.&hairsp;d<i>r</i>,
+ and the contribution of a local value <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+ to the total will be
+   <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+    . 2&hairsp;&pi;&hairsp;</i>r&hairsp;</i>.&hairsp;d<i>r</i>.
+ Summing over "infinitely narrow" rings of width d<i>r</i> 
+ represents an integral.
+ The average of <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+ over the disk is this integral divided by the disk area :
+</p>
+<p>&emsp;
+	f_( average)	=   1/(π R^2 )  ∫_0^R▒〖f (r)  .2 . r .dr〗
+(6.1)
+</p>
+<p> or by dividing out the factor of &pi; :
+</p>
+<p>&emsp;		
+	f_( average)	=       1/R^2   ∫_0^R▒〖f (r)  .2 . r .dr〗
+(6.2)
+</p>
+<p> The function <i>f</i>(&hairsp;<i>r</i>&hairsp;)
+ is often easier to express in a non-dimensional parameter
+ like <i>x</i> or <i>&phi;</i>.
+ It will then be convenient to write the whole integral in that parameter.
+ We convert <i>r</i> and d<i>r</i> into <i>x</i> and d<i>x</i>,
+ and <i>R</i> into <i>X</i> with (2.10) and (2.11).
+ The factors <i>V</i> / <i>&Omeag;</i> cancel, giving :
+</p>
+<p>&emsp;
+	f_( average)  =   1/X^2   ∫_0^X▒〖f (x) .2 x .dx〗
+(6.3)
+</p>
+<p> We will write either <i>f</i>(&hairsp;<i>r</i>&hairsp;),
+  <i>f</i>(&hairsp;<i>x</i>&hairsp;) or
+ <i>f</i>(&hairsp;<i>&phi;</i>&hairsp;),
+ whichever is the most natural expression for the function
+ at that moment.
+ These are easily converted into each other by (2.5),
+ when the time comes to evaluate the integral.
+ In many cases, we will simply write <i>f</i> without an argument.
+</p>
+<p>&emsp; We can also interpret
+ 2&hairsp;&pi;&hairsp;<i>r</i> . d<i>r</i> as
+ d&hairsp;(&hairsp;&pi;&hairsp;π&hairsp;<i>r</i><sup>2</sup>&hairsp;),
+ the increase of the disk area with <i>r</i>.
+ Likewise, the increase 2&hairsp;<i>x</i>&hairsp;.&hairsp;d<i>x</i>
+ can be written as d&hairsp;(&hairsp;<i>x</i><sup>2</sup>&hairsp;).
+ This is rarely useful from an analytical point of view,
+ but it offers the opportunity to plot <i>f</i>(&hairsp;<i>x</i>&hairsp;)
+ against <i>x</i><sup>2</sup> instead of against <i>x</i>.
+ Such a plot can be useful to get a graphical feeling
+ for the local contribution of a function to the whole prop disk.
+ The function value is unchanged on the vertical axis,
+ but the horizontal "strips" 
+ d&hairsp;(&hairsp;<i>x</i>&hairsp;2&hairsp;)
+ get progressively narrower towards the hub,
+ giving the proper visual impression
+ of their relative contribution to the area integral.
+</p>
+<p> TODO   Give an example plot (later?), maybe for cos^2(x)
+</p> 
+
+</p>
 
 <!-- SECTION 6.2 ----------------------------------------------------->
 <h4> 6.2 &emsp; The non-dimensional mass flow per ring </h4>

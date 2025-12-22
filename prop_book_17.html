@@ -403,7 +403,7 @@ Formally, we can write (15.21) as :
 </p>
 
 <!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM --------------------------->
-<img  width="500";
+<img  width="560";
      style="margin-left:160px";
      alt="Viscous loss diagram";
      src="images/prop_viscous_combined_marginal_loss_non_optimized.gif" >
@@ -748,7 +748,7 @@ Substituting  this into (17.7) gives the optimal
 
 <!-- SECTION 17.7 ---------------------------------------------------->
 
-<h4> 17.7 &emsp; Components of the marginal loss </h4>
+<h4> 17.7 &emsp; Constant marginal loss gives a varying momentum loss </h4>
 
 <p> The marginal viscous loss is independent of
   <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;),
@@ -756,6 +756,7 @@ Substituting  this into (17.7) gives the optimal
  Substituting the <i>b</i>&hairsp;(&hairsp;x&hairsp;) of (17.7) into the marginal
  momentum loss (9.4) we have :
 </p>
+
 <!-- EQUATION ------------------------------------------------------>
 <table> <tr> <td>
 <math> 
@@ -844,27 +845,542 @@ Substituting  this into (17.7) gives the optimal
 <p> The combined <i>marginal</i> loss is constant along the blade.
  But unlike for the purely rotational optimum,
  the actual loss ratio <i>itself</i> is not. 
+ Substituting the combined optimum
+ <i>&hairsp;b</i>(&hairsp;<i>x</i>&hairsp;) of (17.12)
+ into the generic momentum loss (8.4) gives :
 </p>
-<p> TBW.
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+        <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+   </mrow>
+   <mrow>
+       <mn>d</mn> <mi>T</mi> <mo>.</mo> <mi>V</mi>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mrow>
+  <mo>(</mo>
+
+  <mn>&frac12;</mn> <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      </mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+  <mspace/> <mo>+</mo> <mspace/>
+
+  <mn>&frac12;</mn> <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mn>&frac23;&nbsp;</mn> <mi>&epsilon;</mi> <mo>.</mo> <mi>X</mi>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+ <mo>)</mo>
+ </mrow>
+
+  <mspace/> <mo>&minus;</mo> <mspace/>
+
+
+  <mn>&frac12;</mn> <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+   </mrow>
+   <mrow>
+    <msup> <mn>cos</mn> <mn>2</mn> </msup>
+      <mi>&phi;</mi>
+  </mrow>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.14)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>  The whole bracketed term together is a constant.
+ It equals &frac12;&thinsp;<i>A</i>.
 </p>
+<p>  The first term within  the brackets is the rotationally optimal
+ momentum loss ratio (10.10).
+</p>
+<p> The second term within the brackets is exactly half
+ the average rotationally optimal viscous loss ratio of (16.6).
+ These two terms are both constants along the span of the blade.
+</p>
+<p>&emsp; The third term, the only one outside the brackets,
+ is <i>not</i> constant along the span.
+ It varies with <i>x</i> both directly
+ and via 1&nbsp;&#x2044;&thinsp;cos<sup>2</sup>&thinsp;<i>&phi;</i>.
+</p>
+<p>&emsp;
+ This local term is exactly half the viscous loss ratio of (15.21).
+ With (17.14), the viscous loss has been split into two halves :
+ a constant term depending only on <i>X</i>,
+  and a varying term depending only on <i>x</i>.
+</p>
+
+<p>&emsp;
+ Figure 17.3 shows the result for our standard lightplane example.
+ Unlike the marginal loss, the actual loss
+ is not constant along the blade.
+ But compared to figure 16.1, the difference with
+ a constant local loss ratio has approximately been halved.
+</p>
+
+
+<!-- COMBINED LOCAL OPTIMIZED --------------------------->
+<img  width="580";
+     style="margin-left:140px";
+     alt="Viscous loss diagram";
+     src="images/prop_viscous_combined_local_loss_optimized.gif" >
+
+<p style="margin-left   :160px;
+          margin-bottom : 12px;">
+    <i> Figure 17.3 : &ensp; Combined marginal loss, optimized by (17.3).
+ </i> 
+<!---------------------------------
+
 
 <!-- SECTION 17.9 ---------------------------------------------------->
 
-<h4> 17.9 &emsp; Blade shape variation with the section drag  </h4>
+<h4> 17.9 &emsp; The blade shape with the drag ratio </h4>
 
-<p> TBW.
+<p> Figure 17.4 gives the shape of the optimal induction distribution
+ according to (17.12),
+ for our standard lightplane example of
+  <i>T</i>&thinsp;&prime;&nbsp;=&nbsp;0.1,
+ for viscous friction values of <i>&epsilon;</i>&nbsp;=&nbsp;0
+ and <i>&epsilon;</i>&nbsp;=&nbsp;0.02.
+ The zero-friction case of figure 11.1 is shown in red.
+ There is a cross-over at 0.7*thinsp;<i>R</i>,
+ and this is easier understood by collecting terms
+ in <i>T</i>&thinsp;&prime; and in <i>&epsilon;</i>  (17.12)  :
 </p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>b</mi> <mn>&thinsp;(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+    <mi>T</mi> <mn>&thinsp;&prime;</mn>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+  <mo>.</mo>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup>
+  <mi>&phi;</mi>
+
+  <mspace/> <mo>+</mo> <mspace/>
+
+  <mi>&epsilon;</mi>
+  <mo>.</mo>
+
+  <mrow>
+  <mo>(</mo>
+
+    <mn>&frac23;</mn> <mo>.</mo>  <mi>X</mi>
+
+    <mo>.</mo>
+  
+    <mstyle displaystyle="true">
+    <mfrac>
+      <mrow>
+        <msup> <mn>cos</mn> <mn>2</mn> </msup> <mi>&phi;</mi>
+     </mrow>
+      <mrow>
+        <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+     </mrow>
+   </mfrac>
+    <mn>&thinsp;</mn> <mo>&minus;</mo> <mn>&thinsp;</mn> 
+
+    <mi>x</mi>
+
+  <mo>)</mo>
+  </mrow>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.15)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The left hand term provides all the thrust.
+ It is identical to the purely rotational distribution (10.8).
+ Its contribution is directly proportional to <i>T</i>&thinsp;&prime;.
+</p>
+<p>&emsp;
+ The bracketed term on the right hand side is the viscous correction.
+ It does not affect the thrust at all.
+ It is proportional to <i>&epsilon;</i>,
+ and it vanishes for <i>&epsilon;</i>&nbsp;=&nbsp;0.
+ This term will always become zero at
+ approximately the following radius :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>x</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>&frac23;</mn>
+
+  <mo>.</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup>
+      <mi>&phi;</mi>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+  <mo>.</mo>
+
+  <mi>X</mi>
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+  <mn>&frac23;</mn> <mo>.&thinsp;</mo> <mi>X</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.16)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>
+This is just over two thirds of the prop radius,
+ say at 0.7&thinsp;<i>R</i>.
+  The location makes sense.
+ The net thrust of the correction term is zero,
+ and since <nobr>
+ (&hairsp;0.7&hairsp;)<sup>2</sup>&nbsp;=&nbsp;0.49,</nobr>
+ the cross-over location is almost exactly halfway
+ the total disk area.
+</p>
+<p>&emsp;
+ The tip value of the distribution is :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>b</mi> <mn>&thinsp;(</mn> <mi>X</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+    <mi>T</mi> <mn>&thinsp;&prime;</mn>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mn>&phi;</mn> </msub>
+   </mrow>
+ </mfrac>
+
+  <mo>.</mo>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup>
+  <msub> <mi>&phi;</mi> <mn>tip</mn> </msub>
+
+  <mspace/> <mo>+</mo> <mspace/>
+
+  <mi>&epsilon;</mi>
+  <mo>.</mo>
+
+  <mrow>
+  <mo>(</mo>
+
+    <mn>&frac23;</mn> <mo>.</mo>  <mi>X</mi>
+
+    <mo>.</mo>
+  
+    <mstyle displaystyle="true">
+    <mfrac>
+      <mrow>
+        <msup> <mn>cos</mn> <mn>2</mn> </msup>
+        <msub> <mi>&phi;</mi> <mn>tip</mn> </msub>
+     </mrow>
+      <mrow>
+        <msub> <mi>&kappa;</mi> <mn>&phi;</mn> </msub>
+     </mrow>
+   </mfrac>
+
+    <mn>&thinsp;</mn> <mo>&minus;</mo> <mn>&thinsp;</mn> 
+
+    <mi>X</mi>
+
+  <mo>)</mo>
+  </mrow>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.17)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> For larger <i>X</i>  the tip value of the distribution
+ is well approximately by :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <mi>b</mi> <mn>&thinsp;(</mn> <mi>X</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mn>&thinsp;</mn> <mo>&minus;</mo> <mn>&thinsp;</mn> 
+
+  <mn>&frac13;</mn>  <mo>.</mo> 
+  <mi>&epsilon;</mi> <mo>.</mo> <mi>X</mi>
+
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.18)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+</p>
+<p> The tip chord vanishes for
+   <i>T</i>&thinsp;&prime; &thinsp;&lt;&thinsp;
+  &frac13;&thinsp;<i>&epsilon;</i>&thinsp;.&thinsp;<i>X</i>,
+ and the blade will get a sharp point there.
+</p>
+<p>&emsp;
+ In general,
+ <i>&epsilon;</i>&thinsp;.&thinsp;<i>X</i>&nbsp;&#x2044;&nbsp;<i>T</i>&thinsp;&prime;
+ is the shape factor for the viscous correction.
+ The correction is most pronounced for lightly loaded propellers
+ of high tip speed ratio, and for high values of <i>&epsilon;</i>.
+ The change in shape of the thrust dis&shytrib&shyution is obvious.
+</p>
+
+
+<!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM --------------------------->
+<img  width="500";
+     style="margin-left:160px";
+     alt="Viscous loss diagram";
+     src="images/prop_viscous_combined_varying_epsilon.gif" >
+
+<p style="margin-left   :120px;
+          margin-bottom : 0">
+    <i> Figure 17.4 : &ensp; Thrust distribution after viscous optimization (17.12).
+ </i> 
+<p style="margin-left   :240px;
+          margin-bottom : 12px;">
+    <i> T&prime; = 0.1.  Red : &epsilon; = 0.  Blue : &epsilon; = 0.02. 
+ </i> 
+<!------------------------------------------------------------------->
+
 
 <!-- SECTION 17.10 ---------------------------------------------------->
 
 <h4> 17.10 &emsp; The net gain in the efficiency </h4>
 
-<p> TBW.
+<h4>- &ensp;a trade-off between the viscous loss and the momentum loss </h4>
+
+<p> Equation (16.7) gave the combined overall momentum and viscous loss
+ of a propeller optimized only for rotation.
+ We now calculate the improvement when adding the viscous optimization.
+<p>&emsp;
+ We expect an increase in the momentum loss,
+ because the distribution will no longer be fully optimized
+ for mo&shymentum loss.
+ In turn, we expect a stronger improvement in the viscous loss.
+ The sum of the two losses is going to decrease.
+ We will calculate the improvement in the viscous loss first. 
+
+<h4>- &ensp; the viscous loss integral </h4>
+
+<p> Equation (15.21  XXXXXX TBC  ) gave the viscous loss on a ring, for an arbitrary
+ (&hairsp;light loading&hairsp;) induction
+ <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;).
 </p>
+<p>&emsp;
+ Substituting the optimal
+   <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;) of (17.12),
+ some of the cos<sup>2</sup><i>&phi;</i> terms will cancel : 
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <msub> <mi>P</mi> <mn>v</mn>  </msub> <mn>&thinsp;&prime; </mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <msup> <mi>X</mi> <mn>2</mn> </msup>
+  </mfrac>
+
+  <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>X</mi> </msubsup>
+  
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mi>T</mi> <mn>&thinsp;&prime;</mn> <mo>.</mo>
+      <mi>&epsilon;</mi> <mo>.</mo> <mi>X</mi>     
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+ <mspace/> <mo>+</mo> <mspace/>
+
+ <mspace/> <mo>&minus;</mo> <mspace/>
+
+  <msup> <mi>&epsilon;</mi> <mn>2</mn> </msup>
+  <mo>.</mo>
+
+  <mn>(</mn>
+    <mn>1</mn> <mo>+</mo>  <mn>&frac12;&thinsp;</mn>
+    <msup> <mi>X</mi> <mn>2</mn> </msup>
+  <mn>)</mn>
+  
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.19)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p>&emsp;
+	〖P_v〗^'  =   1 /X^2   ∫_0^(X )▒〖( (T ^'.ϵ.x)/κ_ϕ   + (⅔ .ϵ^2.X. x)/κϕ  - (ϵ^2.x^2)/(cos^2 ϕ)  )  .2 x .dx〗
+(17.19)
+</p>
+<p> The first term, together with the 2&thinsp;<i>x</i>
+ outside the brackets, yields  an integral of 2&thinsp;<i>x</i><sup>2</sup>
+  with primitive &frac23;2&thinsp;<i>x</i><sup>3</sup>.
+ The result equals the non-optimized loss
+ for a rotationally optimal propeller, (****).
+</p>
+<p> The second term has the same order of <i>x</i>,
+ but with a different constant.
+</p>
+<p>  In the third term, (2.8) changes the
+ <i>x</i><sup>2</sup> / cos<sup>2</sup> <i>&phi;</i> term 
+ to 1 + <i>x</i>&hairsp;<sup>2</sup>.
+ Together with the 2&thinsp;<i>x</i> outside the brackets,
+ the primitive of this term is
+  <i>x</i>&hairsp;<sup>2</sup> + &frac14; <i>x</i>&hairsp;<sup>4</sup>.
+</p>
+<p>&emsp;
+ The overall integral becomes :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math> 
+
+  <msub> <mi>P</mi> <mn>v</mn>  </msub> <mn>&thinsp;&prime; </mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mn>&frac23;&thinsp;</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+      <mo>.</mo> <mi>&epsilon;</mi> <mo>.</mo> <mi>X</mi>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+   <mspace/> <mo>+</mo> <mspace/>
+  
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mn>4&frasl;9</mn> <mo>.</mo>
+      <msup> <mi>&epsilon;</mi> <mn>2</mn> </msup>
+      <mo>.</mo>
+      <msup> <mi>X</mi> <mn>2</mn> </msup>
+   </mrow>
+    <mrow>
+      <msub> <mi>&kappa;</mi> <mi>&phi;</mi> </msub>
+   </mrow>
+ </mfrac>
+
+ <mspace/> <mo>&minus;</mo> <mspace/>
+
+  <msup> <mi>&epsilon;</mi> <mn>2</mn> </msup>
+  <mo>.</mo>
+
+  <mn>(</mn>
+    <mn>1</mn> <mo>+</mo>  <mn>&frac12;&thinsp;</mn>
+    <msup> <mi>X</mi> <mn>2</mn> </msup>
+  <mn>)</mn>
+  
+</math> </td>
+
+<td style="width:50px; text-align:right">  (17.20)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> Collecting terms, the non-dimensional loss ratio
+ as in (3.9) is :
+</p>
+<p>&emsp;
+	〖P_v〗^'/T^'     =  ⅔  (ϵ .X)/κ_ϕ   -   ϵ^2/(T ^' )  .(1+X^2.(½ -(4/9)/(〖 κ〗_ ϕ  )))
+(17.21)
+</p>
+<p> The left hand term is the viscous loss ratio of
+ the rotationally optimal propeller of (16.6).
+ The right hand term in is the decrease of the viscous loss
+ ratio due to the viscous optimization.
+ We will see below that exactly half of this gain is lost
+ to an increase of the momentum loss ratio. 
+</p>
+
 
 <!-- SECTION 17.8 ---------------------------------------------------->
 
-<h4> 17.11 &emsp; Numerical example </h4>
+<h4> 17.8 &ensp; Numerical example </h4>
 
 <p> TBW.
 </p>
