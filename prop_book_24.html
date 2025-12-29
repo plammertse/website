@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!---------------------------------------------------------------------
--- file    : prop_book_243.html
+-- file    : prop_book_24.html
 -- purpose : Page for website Piet Lammertse
 -----------------------------------------------------------------------
 --   history :
@@ -186,7 +186,7 @@ from the wing section properties will not match
 <!-- FIGURE  ------------------------------------------------------->
 <img  width="320";
      style="margin-left:250px";
-     alt="Actuator tube";
+     alt="Cosine transformation";
      src="images/prop_cosine_wing.gif" >
 <p style="margin-left   :140px;
           margin-bottom : 12px;">
@@ -658,7 +658,7 @@ at a single spanwise location.
 <!-- SECTION 24.4 --------------------------------------------------->
 <h4> 24.4 &emsp; Finding the vortex pattern for a given downwash </h4>
 
-<p> Equaton (23.6) and the matrix <b><i>A</i></b> derived from it, 
+<p> Equation (23.6) and the matrix <b><i>A</i></b> derived from it, 
  give the downwash pattern as a function of
  the circulation distribution.
 </p>
@@ -832,8 +832,9 @@ So far we worked with the trailing vortices d<i>&Gamma;</i>
  as n = 0 . . N from right to left,
  and the N control points as m = 1 . . N, also from right to left.
  The right hand tip vortex d<i>&Gamma;</i><sub>o</sub>
- takes the bound vortex from zero outside the tip to
- <i>&Gamma;</i><sub>1</sub> = &thinsp;d<i>&Gamma;</i><sub>o</sub> inside it:
+ lets the bound vortex jump from zero outside the tip to
+ <i>&Gamma;</i><sub>1</sub> = &thinsp;d<i>&Gamma;</i><sub>o</sub>
+ inside it:
 </p>
 
 
@@ -887,10 +888,148 @@ So far we worked with the trailing vortices d<i>&Gamma;</i>
  </b>
 </p>
 
+<!-- SECTION 24.6 --------------------------------------------------->
+<h4> 24.6 &emsp; Summing the total lift </h4>
+
+<p> Equation (23.4) gave the lift for a short section of bound vortex.
+ The total lift is the sum of all of these sections over the span.
+ The discretized bound vortex changes only on shedding a trailing vortex,
+ so its graph becomes a staircase plot, like in figure 24.2.
+ This suggests integrating the overall lift by summing the constant
+ lift sections between the trailing vortices, and this works out well.
+</p>
+<p>&emsp;
+ With the trailing vortices d<i>&Gamma;</i> numbered from 0 to N 
+ according to (24.3) and the vortex (&hairsp;and downwash&hairsp;)
+ stations numbered from 1 to N according to (24.4), 
+ the integrated lift from (23.4) is found by :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>L</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&rho;</mi> <mo>.</mo> <mi>V</mi>  <mo>.</mo> 
+
+  <msubsup> <mo>&sum;</mo> <mn>1</mn> <mn>N</mn> </msubsup>
+
+  <mn>d</mn>   <msub> <mi>&Gamma;</mi> <mn>k</mn> </msub>
+
+   <mo>.</mo> 
+
+  <mn>[&nbsp;</mn>
+    <msub> <mi>x</mi> <mn>t</mn> </msub> 
+       <mn>(&hairsp;k&hairsp;)</mn>
+      <mo>&minus;</mo>
+      <msub> <mi>x</mi> <mn>t</mn> </msub> 
+        <mn>(&hairsp;k-1&hairsp;)</mn>
+  <mn>&nbsp;]</mn>
+
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (24.12)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+<!-- SECTION 24.7 --------------------------------------------------->
+<h4> 24.7 &emsp; The constant downwash case as a verification </h4>
+
+<p> As a verification of the inverse discrete vortex method,
+ we run the case of constant downwash and see if it reproduces
+ the elliptical lift distribution from the previous chapter.
+ If successful, this is our first confirmation that
+ <span style="font-variant: small-caps;">Munk</span>'s
+ analytical result.
+</p>
+<p>&emsp;
+ To get a (&hairsp;discretized&hairsp;) constant downwash of 1, 
+ we fill the column vector <b><i>w</i></b> with 1's
+ and apply (24.10).
+</p>
+<p>&emsp;
+ Figure 24.7 shows the result for N = 6,
+ i.e. for five downwash (&hairsp;and bound vortex&hairsp;)
+ control points, between six trailing vortices. Together
+ this amounts to three horseshoes.
+ From experience, an even value for N gives nicer results,
+ even though we already know that the center trailing vortex
+ is zero from symmetry.
+</p>
+
+<!-- FIGURE  ------------------------------------------------------->
+<img  width="400";
+     style="margin-left:200px;
+            margin-top: 8px;"
+     alt="Wing discrete constant downwash";
+     src="images/prop_wing_discrete_constant_downwash.gif" >
+<p style="margin-left   : 200px;
+          margin-bottom :  12px;">
+    <i> Figure 24.7 : &ensp;
+          Discretized lift for constant downwash, N = 6.</i>
+</p>
+<!------------------------------------------------------------------------>
+
+
+<p> Even at N = 6 the circulation at the control points
+ is almost spot on the ideal ellipse.
+ At increasing N, for all intents and purposes
+ the bound vortex points are
+ indistinguishable from the ideal ellipse.
+</p>
+<p>&emsp;
+ Remarkably, if we check the total lift
+ by the numerical summation of (24.13),
+ we get the exact result (23.10) of&nbsp;the theoretical ellipse
+ for this downwash, for any order N&nbsp;&le;&nbsp;2.
+ In other words, we get the exact result right away,
+ even for a single horsehoe vortex :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mover>
+   <mi>&Gamma;</mi>
+   <mo>&#x2015;</mo>
+  </mover>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>&frac14;&thinsp;&pi;</mn>
+  <mo>.</mo> <mi>b</mi>
+  <mo>.</mo> <mi>w</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (24.15)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The figure shows N = 1000 as a solid line. Even if this is
+ not proof, it is a strong confirmation of   
+ <span style="font-variant: small-caps;">Munk</span>'s
+ analytical result, or viewed in the other direction,
+ of our discretized solution.
+</p>
+
+
+<br>
+<p> <i> TODO &emsp; Show the downwash resulting
+ from the discretized circulation.
+<br> &emsp; &emsp; &emsp; &ensp;
+ Shudder at the lines in between the control points.
+</p>
+
 
 <!-- FOOTER ------------------------------------------------------------>
 <br> <br>
-<div class="footer">  P. Lammertse,  2025  </div>
+<div class="footer">  P. Lammertse, 2025  </div>
 
 </body>
 </html>
