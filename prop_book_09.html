@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_09.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2025-01-01  renumbered from 8 to 9
+--     2025-12-16  new
+----------------------------------------------------------------------> 
+
+<!-- FORMATTING  ----------------------------------------------------->
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>  Piet Lammertse on propeller theory  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR MENU --------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+  <li> <a href="prop_book_08.html">&#x25C4  Previous  </a> </li>
+
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
+     </a>
+
+      <a style="background-color:#C0C0F0";
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_07.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 12 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_15.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 15 - 17 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_18.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 25 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_22.html"> Vortex theory
+           &emsp;&emsp;&ensp;               ( 22 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_30.html"> Installation
+           &emsp;&emsp;&nbsp;&hairsp;      ( 30 - 33 )
+     </a>
+    </div>
+  </li>
+<!------------------------------------------------------------------->
+
+
+  <li> <a href="prop_book_10.html">  Next &#x25BA</a> </li>
+
+</ul>
+
+
+<!-- TEXT PAGE ------------------------------------------------------->
+
+<!--- PAGE HEADER ---------------------------------------------------->
+<p style="margin-left : 320px">  <i> ROTATION </i> </p>
+<hr style="margin : 0 0;">
+
+<!-- CHAPTER 9 ------------------------------------------------------->
+
+<h2> 9 &emsp; Rotational power and efficiency </h2>
+
+<!-- SECTION 8.1 ----------------------------------------------------->
+
+<h4> 9.1 &emsp; Kinetic energy in the wake </h4>
+
+<p>&emsp; Compared to the axial actuator disk,
+ the blade elements in figure 7.2 leave behind an extra velocity
+ <i>u</i> at&nbsp;right angles to the axial inducton <i>v</i>.
+ This leaves extra kinetic energy in the wake which shows up
+ as a rotational power loss. 
+ By (7.4), the relative increase in kinetic energy due to the rotation
+ at the prop disk (&hairsp;but the ratio is the same
+ in the far wake&hairsp;) :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> 
+      <msup> <mi>u</mi> <mn>2</mn> </msup>
+      <mo>+</mo>
+      <msup> <mi>v</mi> <mn>2</mn> </msup>
+   </mrow>
+   <msup> <mi>v</mi> <mn>2</mn> </msup>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn>1</mn> <mo>+</mo> 
+    <msup> <mn>tan</mn> <mn>2</mn> </msup> 
+    <mi>&phi;</mi>
+
+<!-- NEW IDEA : LINE BREAK AND "TAB" ---------------->
+</td> </tr> </math>
+ <tr> <td>  <math>
+<!--------------------------------------------------->
+  <mspace mstyle width="3.9em"/> <mo>=</mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup>
+      <mi>&phi;</mi>
+   </mrow>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (9.1)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The last step is via trigonometry, or by (2.8).
+ We can also find the
+ 1&nbsp;&#x2044;&thinsp;cos<sup>2</sup>&hairsp;&phi;
+ term directly from geometry.
+</p>
+
+<!-- SECTION 9.2 ----------------------------------------------------->
+
+<h4> 9.2 &emsp; Local efficiency and power loss </h4>
+
+<p> Using <i>w</i> and <i>w</i>&thinsp;&prime; instead of
+ <i>v</i> and <i>w</i>&thinsp;&prime; in figure 7.2,
+ like in (7.3) we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>w</mi> <mn>&thinsp;&prime;</mn>
+
+  <mo> = </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>w</mi>
+    <mrow> <mn>cos</mn> <mi>&phi;</mi>
+   </mrow>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (9.2)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> With the definition <i>w</i> &equiv; <i>b&hairsp;.&hairsp;V</i> 
+ from (4.1), the kinetic energy d<i>P</i><sub>m</sub> left behind
+ in the far wake of a ring becomes  :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+
+  <mo> = </mo>
+
+  <mn>&frac12;&thinsp;</mn> <mn>d</mn> 
+    <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+    <mo>.</mo>
+    <msup> <mrow> <mn>(</mn>
+             <mi>w</mi> <mn>&thinsp;&prime;</mn>
+           <mn>)</mn> </mrow>
+           <mn>2</mn>
+   </msup>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn>&frac12;&thinsp;</mn> <mn>d</mn> 
+  <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+  <mo>.&thinsp;</mo>
+  <msup> <mi>V</mi> <mn>2</mn> </msup>
+
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <msup> <mi>b</mi> <mn>2</mn> </msup>
+    <mrow>
+      <msup> <mn>cos</mn> <mn>2</mn> </msup>
+        <mi>&phi;</mi>
+   </mrow>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (9.3)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> Dividing by the local thrust (6.11) gives us
+ the local momentum loss ratio for any induction ratio
+ <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;) for any value
+ of d<i>m</i><sup>&thinsp;&bull;</sup> :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+      <mn>&thinsp;&prime;</mn>
+   </mrow>
+    <mrow> <mn>d</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+   </mrow>
+    <mrow> <mn>d</mn> <mi>T</mi> <mn>.</mn> <mi>V</mi>
+   </mrow>
+  </mfrac>
+
+
+  <mspace/> <mo> = </mo> <mspace/> </mo>
+
+  <mn>&frac12;&thinsp;</mn> 
+  <mo>.</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn> 
+      <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+      <mo>.</mo>
+      <msup> <mi>V</mi> <mn>2</mn> </msup>
+      <mo>.</mo> 
+      <mstyle displaystyle="true">
+      <mfrac>
+        <msup> <mi>b</mi> <mn>2</mn> </msup>
+        <mrow>
+          <msup> <mn>cos</mn> <mn>2</mn> </msup>
+            <mi>&phi;</mi>
+      </mrow>
+    </mfrac>
+
+   </mrow>
+
+    <mrow> <mn>d</mn> 
+      <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+      <mo>.</mo>
+      <msup> <mi>V</mi> <mn>2</mn> </msup>
+      <mo>.</mo> <mi>b</i>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn>&frac12;</mn>
+  <mo>&thinsp;.&thinsp;</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>b</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn>
+   </mrow>
+    <mrow>
+      <msup> <mn>cos</mn> <mn>2</mn> </msup>
+        <mi>&phi;</mi>
+   </mrow>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (9.4)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> This local momentum loss ratio depends on the local induction ratio,
+ but not on the mass flow through the ring,
+ since the factor d<i>m</i><sup>&thinsp;&bull;</sup> drops out of (9.4). 
+</p>
+<p> Compared to the axial loss ratio (4.16),
+ the rotation increases the momentum loss by a local factor
+ of 1/cos<sup>2</sup><i>&phi;</i>,
+  for any local axial induction ratio
+ <i>b</i>&hairsp;(<i>&hairsp;x&hairsp;</i>).
+ The ring efficiency becomes :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn>
+  <msub> <mi>&eta;</mi> <mn>m</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <mn>1</mn> <mo>+</mo> 
+      <mstyle displaystyle="true">
+      <mfrac>
+        <mrow> <msub> <mi>P</mi> <mn>m</mn> </msub>
+          <mn>&thinsp;&prime;</mn>
+       </mrow>
+        <mrow> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+       </mrow>
+     </mfrac>
+   </mrow>
+ </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+
+    <mrow> 
+        <mrow> <mn>1 + &frac12</mn> <mo>.</mo>
+          
+          <mstyle displaystyle="true">
+          <mfrac>
+            <mrow> <mi>b</mi>
+              <mn>(</mn> <mi>x</mi> <mn>)</mn>
+            </mrow>
+           <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+              <mi>&phi;</mi>
+          </mrow>
+        </mfrac>
+
+     </mrow>
+   </mrow>
+ </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (9.5)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------->
+
+<p> The symbol d<i>&eta;</i><sub>m</sub> is used here loosely
+ for the local momentum efficiency,
+ but we note that such local ratios and efficiencies
+ cannot be integrated over the rings like the overall thrust
+ and power can.
+ </p>
+
+<!-- FOOTER --------------------------------------------------->
+<br><br>
+<div class="footer"> P. Lammertse, 2025  </div>
+
+</body>
+</html>

@@ -90,8 +90,9 @@ math {
 }
 
 /* Always use <mspace/> with the slash, or it won't work */
+/* Setting width itself does not seem to allow an override */
 mspace {
-   width : 0.5em;
+   min-width : 0.5em;
 }
 
 img {
