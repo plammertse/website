@@ -23,7 +23,8 @@
   <li> <a href="prop_book_22.html">&#x25C4  Previous  </a> </li>
 
 
- <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
@@ -47,27 +48,31 @@
 
       <a style="background-color:#E8E8E8";
          href="prop_book_04.html"> Axial induction 
-           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
+           &emsp;&nbsp;&hairsp;            ( 4 - 7 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_07.html"> Rotation 
-           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 14 )
+         href="prop_book_08.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 8 - 15 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_15.html"> Viscous loss
-           &emsp;&ensp;&hairsp;           ( 15 - 17 )
+         href="prop_book_16.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 16 - 18 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_18.html"> Tip loss 
-           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 21 )
+         href="prop_book_19.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 19 - 22 )
      </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_22.html"> Vortex theory
-           &emsp;&nbsp; ( 22 - 29 )
+         href="prop_book_23.html"> Vortex theory
+           &emsp;&nbsp; ( 23 - 28 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_29.html"> Combined loss
+           &nbsp;&thinsp; ( 29 - 23 )
      </a>
       <a style="background-color:#E8E8E8";
          href="prop_book_30.html"> Installation
-           &emsp;&emsp;&nbsp;&hairsp;      ( 30 - 33 )
+           &emsp;&emsp;&nbsp;      ( 34 - 38 )
      </a>
     </div>
   </li>
@@ -222,10 +227,17 @@
 
 <td style="width:50px; text-align:right">  (23.2)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION -------------------------------------------->
 
-<!-- FIGURE  ------------------------------------------------------->
-<img  width="320";
+<p> Figure 23.1 gives the graph of velocity versus radius,
+ looking down the axis of the vortex line.
+ The ideal vortex has infinite velocity at the core.
+ There is no calm "eye of the storm".
+ This makes the concept very clean, but it complicates the math.
+</p>
+
+<!-- FIGURE  ------------------------------------------------->
+<img  width="300";
      style="margin-left:250px";
      alt="Actuator tube";
      src="images/prop_vortex_2D.webp" >
@@ -233,20 +245,14 @@
           margin-bottom : 12px;">
     <i> Figure 23.1 : &ensp; The vertical velocity around a vortex. </i>
 </p>
-<!------------------------------------------------------------------------>
+<!------------------------------------------------------------->
 
-<p> Figure 23.1 gives the graph of velocity versus radius,
- looking down the axis of the vortex line.
-</p>
-<p>&emsp;
- The ideal vortex has infinite velocity at the core.
- There is no calm "eye of the storm".
- This makes the concept very clean, but it complicates the math.
-</p>
 
-<!---------------------------------------------------------------------->
 
-<h4> 23.3 &emsp; Vortex lift - the equivalent of the Lorentz force </h4>
+<!------------------------------------------------------------->
+
+<h4> 23.3 &emsp;
+      Vortex lift - the aerodynamic equivalent of the Lorentz force </h4>
 
 <p> When a parallel airstream flows across a vortex line,
  the circulation changes the flow into a locally curved flow.
@@ -288,7 +294,7 @@
  but it is not caused by the vortex around the lifting line.
 </p>
 
-<!-- FIGURE  ------------------------------------------------------->
+<!-- FIGURE  ------------------------------------------------->
 <img  width="360";
      style="margin-left:250px";
      alt="Actuator tube";
@@ -298,13 +304,13 @@
     <i> Figure 23.2 : &ensp;
            The lift on a vortex placed in a parallel flow. </i>
 </p>
-<!------------------------------------------------------------------------>
+<!------------------------------------------------------------->
 
 <p> The force per unit length of vortex follows
  from the remarkably simple equation :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>F</mi>
@@ -315,12 +321,12 @@
 
 <td style="width:50px; text-align:right">  (23.3)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> This is the aerodynamic equivalent of the
  <span style="font-variant: small-caps;">Lorentz</span> force
  on an electrical current in a magnetic field.
- The electrical current is the analog of the circulation,
+ The elec&shytric&shyal current is the analog of the circulation,
  the wire carrying it is the analog of the vortex line,
  and the magnetic field in which the wire "lives"
  is the analog of the local airflow.
@@ -380,7 +386,7 @@
 </td> </tr> </table>
 <!-- END EQUATION -------------------------------------------------->
 
-<p> The other two legs of the tuning fork
+<p>&emsp; The other two legs of the tuning fork
  are called "trailing vortices",
  colloquially known as "tip vortices".
  Viewed from the airplane, these tip vortices "trail"
@@ -390,8 +396,7 @@
  Immediately after leaving the wing,
  these vortex trails simply float in the stationary atmosphere.
  They do not follow the airplane.
-</p>
-<p>&emsp; The far end of the system is closed by another cross vortex
+ The far end of the system is closed by another cross vortex
  left behind "at infinity", or at least very far away,
  where the aircraft took off.
 </p>
@@ -407,15 +412,15 @@
  as shown in the wake cross-section in figure 23.3.
 </p>
 
-<!---------------------------------------------------------------------->
+<!----------------------------------------------------------->
 
-<h4> 23.5 &emsp; The lift from a horseshoe vortex </h4>
+<h4> 23.5 &emsp; The uniform lift from a single horseshoe vortex </h4>
 
 <p> The lift on the single bound vortex of a horseshoe vortex
  follows directly from (23.3) :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ----------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>L</mi>
@@ -427,14 +432,14 @@
 
 <td style="width:50px; text-align:right">  (23.5)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION ------------------------------------------->
 <p> This is the only lift in the system.
  The trailing vortices do not contribute,
  because they drift with the flow.
  
-<!---------------------------------------------------------------------->
+<!----------------------------------------------------------->
 
-<h4> 23.6 &emsp; The downwash from a single horseshoe vortex </h4>
+<h4> 23.6 &emsp; The local downwash from a single horseshoe vortex </h4>
 
 <p> The downwash far away from the wing
  is not affected by its bound vortex.
@@ -456,7 +461,7 @@
  <i>x</i>&hairsp;<sub>t</sub> away from the vortex line : 
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mn>d&hairsp;</mn><mi>w</mi>
@@ -483,7 +488,7 @@
 
 <td style="width:50px; text-align:right">  (23.6)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p>
 
@@ -620,7 +625,7 @@
 
 <td style="width:50px; text-align:right">  (23.8)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> We will define an average value for 
  <span style="text-decoration:overline;"><i>&Gamma;</i></span> 
@@ -631,7 +636,7 @@
  of the surrounding rectangle :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mover>
@@ -660,7 +665,7 @@
 <p> We can then write the constant downwash as :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>w</mi>
@@ -690,7 +695,7 @@
 
 <td style="width:50px; text-align:right">  (23.10)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> The lift of the elliptical wing is quite easy to find.
  If we integrate (23.4) for an elliptical distribution of 
@@ -701,7 +706,7 @@
 </p>
 
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>L</mi>
@@ -729,7 +734,7 @@
 
 <td style="width:50px; text-align:right">  (23.11)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION ---------------------------------------------->
 
 
 <p> Figure 23.5 shows the lift and downwash for the elliptical wing.
@@ -739,7 +744,7 @@
  i.e. for the same overall lift.
 </p>
 
-<!-- FIGURE  ------------------------------------------------------->
+<!-- FIGURE  -------------------------------------------------->
 <img  width="620";
      style="margin-left:120px";
      alt="Actuator tube";
@@ -750,12 +755,12 @@
     <i> Figure 23.5 : &ensp;
            Lift and downwash for the elliptical wing. </i>
 </p>
-<!------------------------------------------------------------------------>
+<!-------------------------------------------------------------->
 
 
-<!---------------------------------------------------------------------->
+<!-------------------------------------------------------------->
 
-<h4> 23.8 &emsp; The deflected mass </h4>
+<h4> 23.8 &emsp; The deflected mass of the elliptical wing </h4>
 
 <p> If we acccept (23.10) for the downwash,
  then with (23.11) for the lift
@@ -767,7 +772,7 @@
 </p>
 
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION --------------------------------------------------->
 <table> <tr> <td>
 <math>
   <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
@@ -818,7 +823,7 @@
 
 <td style="width:50px; text-align:right">  (23.12)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p>&emsp;
 This is the well known result for an ideal
@@ -833,9 +838,9 @@ This is the well known result for an ideal
  accelerated by an ideal propeller in (5.2) is striking. 
 </p>
 
-<!---------------------------------------------------------------------->
+<!------------------------------------------------------------->
 
-<h4> 23.8 &emsp; A note on the wing aspect ratio </h4>
+<h4> 23.8 &emsp; Wing aspect ratio </h4>
 
 <p> In texts on wings, (23.12) is usually given without proof,
  and in a noticeably different form.</p>
@@ -880,7 +885,7 @@ for a given span.
 </p>
 
 
-<!-- FOOTER ------------------------------------------------------------>
+<!-- FOOTER --------------------------------------------------->
 <br> <br>
 <div class="footer">  P. Lammertse,  2025  </div>
 

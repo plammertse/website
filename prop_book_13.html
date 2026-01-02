@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<!---------------------------------------------------------------------
+-- file    : prop_book_13.html
+-- purpose : Page for website Piet Lammertse
+-----------------------------------------------------------------------
+--   history :
+--     2026-01-01  new
+----------------------------------------------------------------------> 
+
+<!-- FORMATTING  ----------------------------------------------------->
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>  Piet Lammertse on propeller theory  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR MENU --------------------------------------------->
+<ul>
+  <li> <a href="index.html">                 Home            </a> </li>
+
+  <li> <a href="prop_book_12.html">&#x25C4  Previous  </a> </li>
+
+
+  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <li class="dropdown">
+    <a class="dropbtn";
+       style="background-color:#0000B0";
+       href="javascript:void(0)" >       Book  &#x25BC;</a>
+
+    <div class="dropdown-content">
+      <a style="background-color:#E8E8E8";
+         href="prop_book_frontispiece.html">
+                    <i> Frontispiece </i> 
+     </a>
+
+      <a style="background-color:#C0C0F0";
+         href="prop_book_preface.html">
+                    <i> Preface </i>
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_01.html"> Introduction 
+           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
+     </a>
+
+      <a style="background-color:#E8E8E8";
+         href="prop_book_04.html"> Axial induction 
+           &emsp;&nbsp;&hairsp;            ( 4 - 7 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_08.html"> Rotation 
+           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 8 - 15 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_16.html"> Viscous loss
+           &emsp;&ensp;&hairsp;           ( 16 - 18 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_19.html"> Tip loss 
+           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 19 - 22 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_23.html"> Vortex theory
+           &emsp;&nbsp; ( 23 - 28 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_29.html"> Combined loss
+           &nbsp;&thinsp; ( 29 - 23 )
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_30.html"> Installation
+           &emsp;&emsp;&nbsp;      ( 34 - 38 )
+     </a>
+    </div>
+  </li>
+  <!-- END TOC ------------------------------------------------------->
+
+
+  <li> <a href="prop_book_14.html">  Next &#x25BA</a> </li>
+
+</ul>
+
+
+<!-- TEXT PAGE ------------------------------------------------------->
+
+<!--- PAGE HEADER ---------------------------------------------------->
+<p style="margin-left : 320px">  <i> ROTATION </i> </p>
+<hr style="margin : 0 0;">
+
+<!-- CHAPTER 13.1 ----------------------------------------------------->
+
+<h2> 13 &emsp; Blade chords (&hairsp;before tip loss&hairsp;) </h2>
+
+<!-- SECTION 13.1 ----------------------------------------------------->
+
+<h4> 13.1 &emsp; The blade chord for a given lift </h4>
+
+<p> Equation (11.8)  gives the optimum thrust distribution
+ including rotation.
+ We will derive the corresponding blade chord.
+ This chord does not yet include tip loss and viscous optimization.
+ We will add those in later chapters.
+</p>
+<p>&emsp;
+ Equation (7.4) gave the thrust on a ring,
+ and with the d<i>m</i>&hairsp;<sup>&bull;</sup> of (7.8)
+ for light loading, we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>T</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>d</mn> <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+
+  <mo>.</mo>
+  <mi>V</mi>
+
+  <mo>.</mo>
+
+  <mi>b</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+
+  <mi>b</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn>
+  <mo>.</mo>
+  <mi>&rho;</mi> <mn>&hairsp;</mn>
+  <msup> <mi>V</mi> <mn>2</mn> </msup>
+
+  <mo>.</mo>
+
+  <mn>2&hairsp;&pi;</mn>
+  <mi>r</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>r</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (13.1)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+</p>
+<p>&emsp;
+The aerodynamic lift on the blade elements inside the ring
+ must provide this thrust.
+ The lift coefficient <i>C</i><sub>L</sub> for&nbsp;a&nbsp;wing
+ of area <i>S</i> is defined by :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mi>L</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+   <msub> <mi>C</mi> <mn>L</mn> </msub>
+
+  <mo>. &frac12;</mo>
+
+  <mi>&rho;</mi> <mn>&hairsp;</mn>
+  <msup> <mi>V</mi> <mn>2</mn> </msup>
+
+  <mn>.&thinsp;</mn>
+  <mi>S</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (13.2)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+
+</p>
+<p> The blade area inside a ring is
+ <nobr>  d<i>S</i> = 
+  <i>B</i>&thinsp;.&thinsp;<i>c</i>&thinsp;.&thinsp;d<i>r</i>, </nobr>
+ coming from <i>B</i> strips of width d<i>r</i> and chord <i>c</i>.
+ The chord is defined in the direction
+ of the local wind velocity <i>W</i>,
+ as shown in the velocity diagram of figure 8.2.
+ The lift generated by the total blade area
+ d<i>S</i> within the ring is :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>L</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+   <msub> <mi>C</mi> <mn>L</mn> </msub>
+
+  <mo>.&frac12;</mo>
+
+  <mi>&rho;</mi> <mn>&hairsp;</mn>
+  <msup> <mi>W</mi> <mn>2</mn> </msup>
+
+  <mn>.&thinsp;</mn>
+  <mi>B</mi>
+
+  <mn>.&thinsp;</mn>
+  <mi>c</mi>
+
+  <mn>.&thinsp;</mn>
+  <mn>d</mn> <mi>r</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (13.3)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> From figure 8.2, the local wind velocity
+ <i>W</i> equals <i>V /</i> sin <i>&phi;</i> :
+
+x<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>L</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+   <msub> <mi>C</mi> <mn>L</mn> </msub>
+
+  <mo>.</mo>
+  <mn>&frac12;&hairsp;</mn>
+  <mi>&rho;</mi> 
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+  <mrow> <mn>&hairsp;</mn>
+    <msup> <mi>V</mi> <mn>2</mn> </msup>
+  </mrow>
+  <mrow>
+    <msup> <mn>sin</mn> <mn>2</mn> </msup>
+    <mi>&phi;</mi>
+ </mrow>
+
+ </mfrac>
+
+  <mn>.&thinsp;</mn>
+  <mi>B</mi>
+
+  <mn>.&thinsp;</mn>
+  <mi>c</mi>
+
+  <mn>.&thinsp;</mn>
+  <mn>d</mn> <mi>r</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (13.4)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> From the force diagram in figure 8.1,
+ the thrust component of d<i>L</i> is :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>T</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>d</mn> <mi>L</mi>
+
+  <mo>.</mo>
+  <mn>cos</mn>
+   <mi>&phi;</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (13.5)
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> We now have  (13.1) for the ring thrust needed
+ to generate an induction ratio <i>b</i>(<i>x</i>),
+ and (13.5) for the ring thrust
+ aerodynamically available from the blade elements to do this.
+ The two must be equal :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+
+  <mi>&rho;</mi> <mn>&hairsp;</mn>
+
+  <mo>.</mo>
+
+  <mn>2&hairsp;&pi;</mn>
+  <mi>r</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>r</mi>
+
+  <mo>.</mo>
+  <mi>b</mi>
+
+  <msup> <mi>V</mi> <mn>2</mn> </msup>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+    <msub> <mi>C</mi> <mn>L</mn> </msub>
+
+  <mo>.</mo>
+  <mn>&frac12;&hairsp;</mn>
+  <mi>&rho;</mi> 
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+  <mrow> <mn>&hairsp;</mn>
+    <msup> <mi>V</mi> <mn>2</mn> </msup>
+  </mrow>
+  <mrow>
+    <msup> <mn>sin</mn> <mn>2</mn> </msup>
+    <mi>&phi;</mi>
+ </mrow>
+
+ </mfrac>
+
+  <mn>.&thinsp;</mn>
+  <mi>B</mi>
+
+  <mn>.&thinsp;</mn>
+  <mi>c</mi>
+
+  <mn>.&thinsp;</mn>
+  <mn>d</mn> <mi>r</mi>
+
+  <mo>.</mo>
+  <mn>cos</mn>
+   <mi>&phi;</mi>
+</math>
+
+<td style="width:50px; text-align:right">  (13.6)
+</td> </tr> </table>
+
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> Dividing out the common factors
+  <i>&rho;&hairsp;V</i><sup>&hairsp;2</sup> and d<i>r</i>, we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------------>
+<table> <tr> <td>
+<math>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>B</mi> <mo>.</mo> <mi>c</mi> </mrow> 
+    <mrow> <mn>2&pi;&hairsp;</mn> <mi>r</mi> </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>2</mn>
+    <msub> <mi>C</mi> <mn>L</mn> </msub>
+ </mfrac>
+
+  <mo>.</mo>
+
+  <mi>b</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn> 
+
+  <mo>.</mo>
+  <mn>sin&hairsp;</mn>
+   <mi>&phi;</mi>
+  <mo>.</mo>
+  <mn>tan&hairsp;</mn>
+   <mi>&phi;</mi>
+</math>
+
+<td style="width:50px; text-align:right">  (13.7)
+</td> </tr> </table>
+
+</td> </tr> </table>
+<!-- END EQUATION -------------------------------------------------->
+
+<p> The left hand term represents the fraction of the ring
+ that is "covered by chord".
+ We will call it the local solidity, but we have to note
+ that the term "solidity" goes under many other definitions
+ in the literature.
+</p>
+
+<!-- SECTION 13.2 ----------------------------------------------------->
+
+<h4> 13.2 &emsp; The non-dimensional solidity </h4>
+
+<p>
+Equation (2.10) defines <i>x</i> &equiv; <i>&Omega;&hairsp;r / V</i>
+ as the non-dimensional version of the radius <i>r</i>.
+  We similarly define the non-dimensional chord <i>c</i>&thinsp;&prime; :
+</p>
+<p>&emsp;
+	c^'   ≡    Ω c⁄ V	(13.8)
+</p>
+<p>
+The ratio between <i>c</i> and <i>r</i> 
+stays the same in the non-dimensional form.
+ This will allow us to draw the blade planform (13.7)
+ of <i>c</i> versus <i>r</i>  in the same "true" proportions
+ on a scale of <i>c</i>&thinsp;&prime; versus <i>x</i> :
+</p>
+<p>&emsp;
+	c/ r    =    〖 c〗^'/x  	(13.9)
+</p>
+<p> The non-dimensional local solidity stays the same as in (13.7) :
+</p>
+<p>&emsp;
+	(  B .〖c 〗^')/ 2 π x=    2/C_L   .  b(x) .〖 sin〗⁡ϕ  .  〖 tan〗⁡ϕ  	(13.10)
+</p>
+<p>
+With (2.4) and (2.5) we can express this completely in x :
+</p>
+<p>&emsp;
+	(  B .〖c 〗^')/ 2 π x=    2/C_L   .  b(x)    .  1/√(1+x^2 )  .  1/x  
+(13.11)
+</p>
+<p> We will draw the blade shapes in proper proportion
+ on the non-dimensional scale.
+ With <i>x</i> on the horizontal axis, we have for the chord :
+</p>
+<p>&emsp;
+	B .c^'  =   4π/C_L   . b(x) .〖 sin〗⁡ϕ  =    4π/C_L   . b(x) .1/√(1+x^2 )  	(13.12)
+</p>
+
+
+<!-- FOOTER --------------------------------------------------->
+<br><br>
+<div class="footer">  P. Lammertse,  2025  </div>
+
+</body>
+</html>
