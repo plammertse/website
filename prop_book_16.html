@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<!---------------------------------------------------------------------
+<!--------------------------------------------------------------
 -- file    : prop_book_16.html
 -- purpose : Page for website Piet Lammertse
------------------------------------------------------------------------
+----------------------------------------------------------------
 --   history :
 --     2025-12-13  new
-----------------------------------------------------------------------> 
+---------------------------------------------------------------> 
 
-<!-- FORMATTING  ----------------------------------------------------->
+<!-- FORMATTING  ---------------------------------------------->
 <head>
   <link rel="stylesheet" href="plammertse.css">
   <title>  Piet Lammertse on propeller theory  </title>
@@ -16,14 +16,14 @@
 
 <body>
 
-<!-- NAVIGATION BAR MENU --------------------------------------------->
+<!-- NAVIGATION BAR MENU -------------------------------------->
 <ul>
-  <li> <a href="index.html">                 Home            </a> </li>
+  <li> <a href="index.html">                 Home     </a> </li>
 
   <li> <a href="prop_book_15.html">&#x25C4  Previous  </a> </li>
 
 
-  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
@@ -71,56 +71,55 @@
      </a>
     </div>
   </li>
-  <!-- END TOC ------------------------------------------------------->
-
-
+  <!-- END TOC ------------------------------------------------>
 
   <li> <a href="prop_book_17.html">  Next &#x25BA</a> </li>
 
 </ul>
 
 
-<!-- TEXT PAGE ------------------------------------------------------->
+<!-- TEXT PAGE ------------------------------------------------>
 
-<!--- PAGE HEADER ---------------------------------------------------->
+<!--- PAGE HEADER --------------------------------------------->
 <p style="margin-left : 320px">  <i> VISCOUS LOSS </i> </p>
 <hr style="margin : 0 0;">
 
-<!--- LOCAL TOC ------------------------------------------------------>
+<!--- LOCAL TOC ----------------------------------------------->
 <p>
 <h2> <u> Viscous loss</u> </h2>
 
 <a style="text-decoration:none"
    href="prop_book_16.html">
    <h3 style="margin-bottom : -8px;"> 16 &emsp;
-                                           <u> Viscous loss </u>  </h3>
+                                    <u> Viscous loss </u>  </h3>
 </a>
 <a style="text-decoration:none"
    href="prop_book_17.html">
   <h3 style="margin-bottom : -8px;"> 17 &emsp;
-                             <u> Non-optimized viscous loss </u>  </h3>
+                      <u> Non-optimized viscous loss </u>  </h3>
 </a>
 <a style="text-decoration:none"
    href="prop_book_18.html">
    <h3>                 18 &emsp;
-                              <u> Optimizing the viscous loss </u> <h3>
+                      <u> Optimizing the viscous loss </u> </h3>
 </a>
 
 </p>
 <hr style="margin-top : 30px;" >
 <h2> 16 &emsp; Viscous loss </h2>
 
-<!-- SECTION 16.1 ----------------------------------------------------->
+<!-- SECTION 16.1 --------------------------------------------->
 
 <h4> 16.1 &emsp; Introduction </h4>
 <p> Viscous loss is the "leadscrew" part of the power loss.
- The leadscrew acts in a flow accelerated by the propeller's own thrust,
- but the screw itself does not know it.
+ The leadscrew acts in a flow accelerated by the propeller's
+ own thrust, but the screw itself does not know it.
  It just threads itself forward relative to the surrounding air,
  even if that air is slipping backward.
 </p>
-<p>&emsp; At the design stage, the sliding friction force  is proportional
- to the blade lift force.
+<p>&emsp;
+ At the design stage, the sliding friction force
+ is proportional to the blade lift force.
  The ratio is called the friction coefficient.
  It is usually indicated by <i>&mu;</i> 
  (&hairsp;the Greek letter <i>mu</i>&hairsp;).
@@ -142,7 +141,7 @@
  numbers. These are best solved by numerical methods.
 </p>
 
-<!-- SLIDING BLOCK ------------------------------------------------------>
+<!-- SLIDING BLOCK -------------------------------------------->
 <img  width="260";
      style="margin-left:260px";
      alt="Sliding block";
@@ -151,7 +150,7 @@
           margin-bottom : 12px;">
     <i> Figure 16.1 : &ensp; 
             Horizontal force pushing a block up a slope. </i> 
-<!------------------------------------------------------------------------>
+<!------------------------------------------------------------->
 
 <p>&emsp; Figure 16.1 shows a horizontal force pushing a block up a slope.
  On a slope of 1:10, the horizontal force <i>F</i>  travels
@@ -193,7 +192,7 @@
 </p>
 <p>
 
-<!-- SECTION 16.2 ----------------------------------------------------->
+<!-- SECTION 16.2 --------------------------------------------->
 <h4> 16.2 &emsp; Leadscrew efficiency </h4>
 
 <p> We now look at the lift and drag forces on a blade element
@@ -209,7 +208,7 @@
  for <i>&phi;</i>.
 </p>
 
-<!-- VISCOUS FORCE DIAGRAM ----------------------------------------->
+<!-- VISCOUS FORCE DIAGRAM ------------------------------------>
 <img  width="400";
      style="margin-left:220px";
      alt="Viscous force diagram";
@@ -218,7 +217,7 @@
           margin-bottom : 12px;">
     <i> Figure 16.2 : &ensp; 
             Thrust and torque on a blade element. </i> 
-<!------------------------------------------------------------------->
+<!------------------------------------------------------------->
 
 <p> The forward velocity of the airplane is <i>V</i>,
  and the propeller rate of rotation is <i>&Omega;</i> 
@@ -238,7 +237,7 @@ The viscous backward angle of tilt <i>&epsilon;</i> follows
 the inverse of the "glide ratio" <i>L&thinsp;/&thinsp;D</i>:
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mo>tan</mo> <mi>&epsilon;</mi>
@@ -260,7 +259,7 @@ the inverse of the "glide ratio" <i>L&thinsp;/&thinsp;D</i>:
 
 <td style="width:50px; text-align:right">  (16.1)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> We can separate R into an alternative pair
  of orthogonal components : the thrust force d<i>T</i>
@@ -268,7 +267,7 @@ the inverse of the "glide ratio" <i>L&thinsp;/&thinsp;D</i>:
  the "d" prefix meaning "for a ring" as in (6.1).
  From figure 16.2 we have :
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mn>d</mn> <mi>T</mi>
@@ -287,10 +286,10 @@ the inverse of the "glide ratio" <i>L&thinsp;/&thinsp;D</i>:
 
 <td style="width:50px; text-align:right">  (16.2)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table style="margin-top:4px;">
 <tr> <td>
 <math>
@@ -310,13 +309,13 @@ the inverse of the "glide ratio" <i>L&thinsp;/&thinsp;D</i>:
 
 <td style="width:50px; text-align:right">  (16.3)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> With (16.2), the net power exerted by the ring on the airplane is :
 </p>
 
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mn>d</mn> <mi>T</mi> <mo>.</mo> <mi>V</mi>
@@ -336,7 +335,7 @@ the inverse of the "glide ratio" <i>L&thinsp;/&thinsp;D</i>:
 
 <td style="width:50px; text-align:right">  (16.4)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> From figure 16.2, for a blade element d<i>r</i> 
  at radius <i>r</i>&thinsp; the torque <i>Q</i> is :
@@ -445,7 +444,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.7)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> With  tan <i>&phi;</i> = <i>V&thinsp;/&thinsp;Ω&hairsp;r</i>,
  we have :
@@ -492,13 +491,13 @@ The viscous efficiency of the blade element is net output power
  angles of <i>&phi;</i> and small angles of <i>&epsilon;</i>.
 
 </p>
-<!-- SECTION 16.3 --------------------------------------------------->
+<!-- SECTION 16.3 --------------------------------------------->
 <h4> 16.3 &emsp; The viscous loss ratio </h4>
 <p> We can find the local power loss ratio from the viscous efficiency.
  Equating (16.8) to the efficiency definition of (3.8) we have :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
 
@@ -533,12 +532,12 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.9)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> Some reworking gives :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
 
@@ -590,7 +589,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.10)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 
 <p> We will call the viscous power ratio <i>&mu;</i>
@@ -601,7 +600,7 @@ The viscous efficiency of the blade element is net output power
  of the surface friction coefficient <i>&epsilon;</i> :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&mu;</mi>  <mn>(</mn> <mi>&phi;</mi>  <mn>)</mn> 
@@ -618,7 +617,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.11)
 </td> </tr> </table>
-<!-- END EQUATION ------------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> Figure 16.3 shows <i>&mu;</i> as a function of <i>&phi;</i>.
   Textbooks on mechanical drive components give a full analysis of (16.8)
@@ -630,7 +629,7 @@ The viscous efficiency of the blade element is net output power
  </p>
 
 
-<!-- IMAGE MU ( PHI ) ---------------------------------------------------->
+<!-- IMAGE MU ( PHI ) ----------------------------------------->
 <img  width="480";
      style="margin-left:180px";
      alt="Viscous mu(phi)";
@@ -639,7 +638,7 @@ The viscous efficiency of the blade element is net output power
           margin-bottom : 12px;">
     <i> Figure 16.3 : &ensp; 
             The local leadscrew loss ratio &mu;(&phi;). </i> 
-<!------------------------------------------------------------------------>
+<!------------------------------------------------------------->
 
 <p>&emsp; The viscous efficiency is optimal for a pitch angle of
  (&hairsp;45&deg; - &frac12;&thinsp;<i>&epsilon;</i>&thinsp;).
@@ -660,7 +659,7 @@ The viscous efficiency of the blade element is net output power
  in fact use exactly this arrangement.
 
 
-<!-- SECTION 16.4 --------------------------------------------------->
+<!-- SECTION 16.4 --------------------------------------------->
 <h4> 16.4 &emsp; A near-perfect approximation </h4>
 
 <p>  Expression (16.10) for the frictional loss ratio can be greatly
@@ -673,7 +672,7 @@ The viscous efficiency of the blade element is net output power
  That derivative is 1/cos<sup>2</sup> <i>&phi;</i> :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
  <mo>tan</mo>
@@ -703,12 +702,12 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.12)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> This changes (16.10) into :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&mu;</mi> <mn>&hairsp;(</mn> <mi>x</mi> <mn>)</mn>
@@ -739,7 +738,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.13)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> Using tan <i>&phi;</i> = 1/<i>x</i> from (2.4),
  we have a simple
@@ -748,7 +747,7 @@ The viscous efficiency of the blade element is net output power
  <i>&phi;</i> and <i>x</i> : 
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&mu;</mi> <mn>&hairsp;(</mn> <mi>x</mi> <mn>)</mn>
@@ -767,13 +766,13 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.14)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> Eliminating <i>&phi;</i> completely by (2.8),
  this is the same as :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&mu;</mi> <mn>&hairsp;(</mn> <mi>x</mi> <mn>)</mn>
@@ -797,7 +796,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.15)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <a name="F16.4"> </a>
 <p> Figure 16.4 shows the exact value (16.10)
@@ -808,7 +807,7 @@ The viscous efficiency of the blade element is net output power
  as&nbsp;a&nbsp;dashed line.
 </p>
 
-<!-- IMAGE MU ( x ) ---------------------------------------------------->
+<!-- IMAGE MU ( x ) ------------------------------------------->
 <img  width="600";
      style="margin-left:100px";
      alt="Viscous mu(x)";
@@ -817,7 +816,7 @@ The viscous efficiency of the blade element is net output power
           margin-bottom : 12px;">
     <i> Figure 16.4 : &ensp; 
             The local leadscrew loss ratio &mu;(x). </i>
-<!---------------------------------------------------------------------->
+<!------------------------------------------------------------->
 
 <p> For all but the smallest values of <i>x</i>,
  i.e. for all pitch angles except  <i>&phi;</i> ≅ 90&deg;,
@@ -831,7 +830,7 @@ The viscous efficiency of the blade element is net output power
  will set cos<sup>2</sup> <i>&phi;</i> ≈ 1 :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&mu;</mi>  <mn>&hairsp;(</mn> <mi>x</mi>  <mn>)</mn> 
@@ -844,7 +843,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.16)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 </p>
 <p> Figure 16.4 shows this further simplification as a straight line.
@@ -858,21 +857,21 @@ The viscous efficiency of the blade element is net output power
  In the same way, a small friction force becomes a large drag force.
 </p>
 
-<!-- SECTION 16.5 --------------------------------------------------->
+<!-- SECTION 16.5 ---------------------------------------------->
 <h4> 16.5 &emsp; Vector derivation of the same approximation </h4>
 
 <p>  The nearly exact <i>&mu;</i>&thinsp;&hairsp;(<i>x</i>&hairsp;)
  of (16.14) can also be loosely derived
  directly from the force diagram.
- We split the viscous drag vector <i>D</i> into two orthogonal components,
- which we shall call Δd<i>T</i>  and Δd<i>S</i>. 
+ We split the viscous drag vector <i>D</i> into two orthogonal
+ components, which we shall call Δd<i>T</i>  and Δd<i>S</i>. 
 </p>
 <p> Via the steps of Δd<i>T</i>   ≅ <i>D</i> . sin <i>&phi;</i>,
    <i>D</i>  ≅  <i>&epsilon;</i> . <i>L</i>,
  and <i>L</i>  ≅   d<i>T</i>/cos <i>&phi;</i>, we have :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&Delta;&thinsp;d</mi> <mn>&hairsp;</mn> <mi>T</mi>
@@ -898,14 +897,14 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.17)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 </p>
 <p> Similarly, via Δd<i>S</i> ≅ <i>D</i> . cos <i>&phi;</i>, we have :
 </i>
 
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>&Delta;&thinsp;d</mi> <mn>&hairsp;</mn> <mi>S</mi>
@@ -929,7 +928,7 @@ The viscous efficiency of the blade element is net output power
 
 <td style="width:50px; text-align:right">  (16.18)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 
 </p>
