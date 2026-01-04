@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<!---------------------------------------------------------------------
+
+<!--------------------------------------------------------------
 -- file    : prop_book_03.html
 -- purpose : Page for website Piet Lammertse
------------------------------------------------------------------------
+----------------------------------------------------------------
 --   history :
 --     2025-12-07  new
-----------------------------------------------------------------------> 
+---------------------------------------------------------------> 
 
-<!-- FORMATTING  ----------------------------------------------------->
+<!-- FORMATTING  ---------------------------------------------->
 <head>
   <link rel="stylesheet" href="plammertse.css">
   <title>  Piet Lammertse on propeller theory  </title>
@@ -16,13 +17,13 @@
 
 <body>
 
-<!-- NAVIGATION BAR MENU --------------------------------------------->
+<!-- NAVIGATION BAR MENU -------------------------------------->
 <ul>
-  <li> <a href="index.html">                 Home            </a> </li>
+  <li> <a href="index.html">                 Home     </a> </li>
 
-  <li> <a href="prop_book_02.html">&#x25C4  Previous         </a> </li>
+  <li> <a href="prop_book_02.html">&#x25C4  Previous  </a> </li>
 
-  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
@@ -33,10 +34,13 @@
          href="prop_book_frontispiece.html">
                     <i> Frontispiece </i> 
      </a>
-
       <a style="background-color:#E8E8E8";
          href="prop_book_preface.html">
                     <i> Preface </i>
+     </a>
+      <a style="background-color:#E8E8E8";
+         href="prop_book_00_TOC.html">
+                    <i> Table of contents </i>
      </a>
 
       <a style="background-color:#C0C0F0";
@@ -70,35 +74,35 @@
      </a>
     </div>
   </li>
-<!-- END TOC --------------------------------------------------------->
+<!-- END TOC -------------------------------------------------->
 
   <li> <a href="prop_book_04.html">  Next &#x25BA</a> </li>
 
 </ul>
 
 
-<!-- TEXT PAGE ------------------------------------------------------->
+<!-- TEXT PAGE ------------------------------------------------>
 
 
-<!--- PAGE HEADER ---------------------------------------------------->
+<!--- PAGE HEADER --------------------------------------------->
 <p style="margin-left : 320px">  <i> INTRODUCTION </i> </p>
 <hr style="margin : 0 0;">
 
-<!-- CHAPTER 3 ----------------------------------------------------->
+<!-- CHAPTER 3 ------------------------------------------------>
 <h2> 3 &emsp; Thrust, power and efficiency </h2>
 
-<!-- SECTION 3.1 --------------------------------------------------->
+<!-- SECTION 3.1 ---------------------------------------------->
 <h4> 3.1 &emsp; The thrust coefficient </h4>
 <p> This text will use the thrust from the propeller
  as the starting point of the design.
- We will use two definitions of the non-dimensional thrust
+ We will use two definitions of&nbsp;the&nbsp;non-dimensional thrust
  coefficient, out of the many used in the literature.
  In analogy with the lift coefficient <i>C</i><sub>L</sub> of a wing,
- we define the non-dimensional thrust coefficient <i>C</i><sub>T</sub> 
- for use outside propeller theory :
+ we define the non-dimensional thrust coefficient <i>C</i><sub>T</sub>.
+ This is especially useful when applying the propeller in aircraft :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <msub> <mi>C</mi> <mi>T </mi> </msub>
@@ -106,33 +110,35 @@
  <mstyle displaystyle="true">
  <mfrac>
    <mrow> <mi>T</mi> </mrow>
-   <mrow> <mn>½ </mn>
-     <mi>ρ</mi>
+   <mrow> <mn>&frac12&hairsp;</mn>
+     <mi>&rho;</mi> <mn>&hairsp;</mn>
      <msup> <mi>V</mi> <mn>2</mn> </msup>
-     <mo>.</mo>
-     <mi>π </mi>
+     <mn>.&thinsp;&pi;</mn>
      <msup> <mi>R</mi> <mn>2</mn> </msup>
   </mrow>
 </mfrac> </math>
 
 <td style="width:50px; text-align:right">  (3.1)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p>
-This definition is based on ½<i>V&hairsp;</i><sup>2</sup> instead of
- on the more usual (&hairsp;<i>ΩR</i>&hairsp;)<sup>2</sup>. 
- This reflects an emphasis in this text on the&nbsp;requirements 
- of the aircraft, rather than on the torque or the RPM of the powerplant.
+This definition is based on <i>V</i> instead of on
+ the more usual <i>&Omega;&hairsp;R</i>. 
+ This reflects an emphasis in this text on the re&shyquirements 
+ of the aircraft,
+ rather than on the torque or RPM of the powerplant.
 </p>
-<p> In propeller derivations it will be more convenient to divide
- by <i>ρV&hairsp;</i><sup>2</sup> instead of by ½&hairsp;<i>ρV&hairsp;</i><sup>2</sup>.  
- We will denote this division by <i>ρV&hairsp;</i><sup>2</sup> by a prime.
- This version of the non-dimensional thrust coefficient
- is then called <i>T</i>&thinsp;' :
+<p>&emsp;
+ In propeller theory, it will be more convenient to divide
+ by <i>ρV&hairsp;</i><sup>2</sup> instead of
+ by ½&hairsp;<i>ρV&hairsp;</i><sup>2</sup>.  
+ We denote this by a prime.
+ This "other" non-dimensional thrust coefficient
+ is called <i>T</i>&thinsp;' :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>T</mi> <mi>&hairsp;&prime;</mi>
@@ -151,31 +157,30 @@ This definition is based on ½<i>V&hairsp;</i><sup>2</sup> instead of
 
 <td style="width:50px; text-align:right">  (3.2)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p>
 It follows that :
 </p>
 
-
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>T</mi> <mi>&hairsp;&prime;</mi>
   <mspace/> <mo> = </mo> <mspace/>
-   <msub> <mi>C</mi> <mi>T </mi> </msub>
+  <mn>&frac12;&thinsp;</mn> <msub> <mi>C</mi> <mi>T </mi> </msub>
 </math>
 
 <td style="width:50px; text-align:right">  (3.3)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
-<p>
- Mechanical power has the dimension of thrust times velocity. 
+<!-- END EQUATION --------------------------------------------->
+
+<p>  Mechanical power has the dimension of thrust times velocity. 
  We will therefore make power non-dimensional by&nbsp;dividing by
  <i>V</i>&hairsp;<sup>3</sup> instead of by
  <i>V</i>&hairsp;<sup>2</sup> :
 </p>
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>P</mi> <mi>&hairsp;&prime;</mi>
@@ -194,19 +199,24 @@ It follows that :
 
 <td style="width:50px; text-align:right">  (3.4)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- SECTION 3.2 --------------------------------------------------->
+<!-- SECTION 3.2 ---------------------------------------------->
 
 <h4> 3.2 &emsp; The net power </h4>
 
 <p> Mechanical power equals force times velocity.
- The net output power that a propeller exerts on an airplane is
- therefore the thrust multiplied by the flying speed :
+ It also equals energy per second,
+ and torque times rate of rotation 
+ <nobr>(&hairsp;with </nobr> the rotation expressed
+ in radians per <nobr>second&hairsp;)</nobr>.
+ For an airplane, the net output power
+ that a propeller exerts on it
+ is the thrust multiplied by the flying speed :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mi>P</mi> <mspace/> <mo>=</mo> <mi>T</mi> <mo>.</mo> <mi>V</mi>
@@ -215,13 +225,13 @@ It follows that :
 
 <td style="width:50px; text-align:right">  (3.5)
 </td> </tr> </table>
-<!-- END EQUATION --------------------------------------------------->
+<!-- END EQUATION ---------------------------------------------->
 
-<p> It is interesting to note that we can write (3.2)
-  as a mechanical power as well as a force : </p>
-<p>
+<p>&emsp;
+ We can write (3.2) as a mechanical power instead of a force :
+ </p>
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION -------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -246,45 +256,49 @@ It follows that :
 
 <td style="width:50px; text-align:right">  (3.6)
 </td> </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
-<p> We can interpret <i>T&hairsp;&prime;</i> as the non-dimensional thrust,
- but we can also interpret it as the net mechanical power <i>T.V</i>,
- made non-dimensional by the definition of (3.4).
+<p> We can therefore interpret <i>T&hairsp;&prime;</i>
+ not only as the non-dimensional thrust,
+ but also as the non-dimensional net power <i>T.V</i>,
+ by the definition of (3.4).
 </p>
 
 
-<!-- SECTION 3.3 --------------------------------------------------->
+<!-- SECTION 3.3 ---------------------------------------------->
 <h4> 3.3 &emsp; Power loss and efficiency </h4>
-<p> Power equals force times velocity, but it also equals
- torque times rate of rotation ( with the rotation expressed
- in radians per second ), and energy per second.
-</p>
-<p> Efficiency is defined as net power output divided by gross power input.
+
+<p> Efficiency is defined as net power output
+ divided by gross power input.
  Intuitively, loss of efficiency is associated with a loss of output
  for a given input. However, losses in a propeller are more easily
  calculated as an increase of the power input needed for a given power output.
  The efficiency is still the same ratio : output over input,
- but the losses are now written as fractional increases on the input,
- instead of fractional decreases on the output.
+ but the losses are now written as a fractional of the input,
+ instead of a fractional of the output. The two ratios are not the same,
+ and we need to exercise some care here.
+</p>
+<p>&emsp;
  The extra input still goes into energy lost to the wake of the propeller.
  This is why we keep calling these extra inputs "losses".
 </p>
 
 
-<!-- SECTION 3.4 --------------------------------------------------->
+<!-- SECTION 3.4 ---------------------------------------------->
 <h4> 3.4 &emsp; Loss ratios </h4>
 <p>
-The momentum loss and the viscous loss are <i>increases</i>
- on the input power ideally <i>needed</i> for a given output power
-    <i>T&hairsp;.&hairsp;V</i>&hairsp;,
- and we will call these increases 
+The momentum loss and the viscous loss as we define them
+are actually
+ <i>increases</i>
+ on the input power <i>needed</i> for a given output power
+  <nobr>  <i>T&hairsp;.&hairsp;V</i>. </nobr>
+We will call these increases 
     <i>P</i><sub>m</sub> and <i>P</i><sub>v</sub> . 
 The propeller's efficiency then becomes :
 </p>
 
 
-<!-- equation table ------------------------------------------------->
+<!-- equation table -------------------------------------------->
 <table> <tr> <td> <math>
   <mi>η</mi> <mspace/> <mo> = </mo>
 
@@ -303,12 +317,13 @@ The propeller's efficiency then becomes :
 
 <td style="width:50px; text-align:right">  (3.7)
 </td> </tr> </table>
-<!-- end equation table ---------------------------------------------->
+<!-- end equation table ----------------------------------------->
 
-<p> We can divide top and bottom by the net power <i>T.V</i> :
+<p> We can divide top and bottom by the net
+ output power <i>T.V</i> :
 </p>
 
-<!-- equation table -------------------------------------------------->
+<!-- equation table --------------------------------------------->
 <table> <tr> <td> <math>
   <mi>η</mi> <mspace style="width:1ex"/>  <mo>=</mo> 
 
@@ -333,20 +348,20 @@ The propeller's efficiency then becomes :
 
 <td style="width:50px; text-align:right">  (3.8)
 </td> </tr> </table>
-<!-- end equation table ----------------------------------------------->
+<!-- end equation table --------------------------------------->
 
 
 <p> We will call the two fractions the momentum loss ratio and
  the viscous loss ratio.
- These power "losses" are really power increases, relative to the net power.
+ These power "losses" are really power increases,
+ relative to the net power.
  They are non-dimensional,
- and they can be expressed in the non-dimensional thrust and power too.
+ and they can be expressed as ratios to the non-dimensional
+ thrust and output power.
  By (3.4) and (3.6) we have : 
 </p>
 
-
-
-<!-- equation table -------------------------------------------------->
+<!-- equation table ------------------------------------------->
 <table> <tr> <td>
 <math>
   <mstyle displaystyle="true">
@@ -363,10 +378,10 @@ The propeller's efficiency then becomes :
 
 <td style="width:50px; text-align:right">  (3.9)
 </td> </tr> </table>
-<!-- end table equation ----------------------------------------------->
+<!-- end table equation --------------------------------------->
 
 
-<!-- equation table -------------------------------------------------->
+<!-- equation table ------------------------------------------->
 <table> <tr> <td> <math>
   <mspace/> 
   <mi>η</mi>
@@ -400,10 +415,13 @@ The propeller's efficiency then becomes :
 
 <td style="width:50px; text-align:right">  (3.10)
 </td> </tr> </table>
-<!-- end equation table -------------------------------------------->
+<!-- end equation table --------------------------------------->
 
 
-<!-- SECTION 3.5 --------------------------------------------------->
+<!-- SECTION 3.5 ---------------------------------------------->
+
+<!--////////////////////////////////////////////////////////////
+
 <h4> 3.4 &emsp; Types of loss in a propeller </h4>
 <p>
 There are four types of loss in a propeller :
@@ -422,12 +440,15 @@ There are four types of loss in a propeller :
 for a given thrust.
  Viscous loss is different in nature. 
  It is independent of the momentum loss,
- and has a very different relation to the pitch of the propeller.</p>
+ and has a very different relation to the pitch of the propeller.
+</p>
+
+/////////////////////////////////////////////////////////////-->
 
 
-<!-- FOOTER ------------------------------------------------------------>
-<br> <br>
-<div class="footer">  P. Lammertse,  2025  </div>
+<!-- FOOTER --------------------------------------------------->
+<br><br>
+<div class="footer"> P. Lammertse, 2025 </div>
 
 </body>
 </html>

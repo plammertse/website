@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<!---------------------------------------------------------------------
+
+<!--------------------------------------------------------------
 -- file    : prop_book_02.html
 -- purpose : Page for website Piet Lammertse
------------------------------------------------------------------------
+----------------------------------------------------------------
 --   history :
 --     2025-12-07  new
-----------------------------------------------------------------------> 
+---------------------------------------------------------------> 
 
-<!-- FORMATTING  ----------------------------------------------------->
+<!-- FORMATTING  ---------------------------------------------->
 <head>
   <link rel="stylesheet" href="plammertse.css">
   <title>  Piet Lammertse on propeller theory  </title>
@@ -16,17 +17,17 @@
 
 <body>
 
-<!-- NAVIGATION BAR MENU --------------------------------------------->
+<!-- NAVIGATION BAR MENU -------------------------------------->
 <ul>
-  <li> <a href="index.html">                 Home            </a> </li>
+  <li> <a href="index.html">                 Home     </a> </li>
 
-  <li> <a href="prop_book_01.html">&#x25C4  Previous         </a> </li>
+  <li> <a href="prop_book_01.html">&#x25C4  Previous  </a> </li>
 
-  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
-       href="javascript:void(0)" >       Book  &#x25BC;</a>
+       href="javascript:void(0)" >            Book  &#x25BC;</a>
 
     <div class="dropdown-content">
       <a style="background-color:#E8E8E8";
@@ -80,42 +81,63 @@
 
 <h4> 2.1 &emsp; Blade elements </h4>
 
-<p> A propeller blade is a rotating wing. 
+<p> Before going into the theory proper, we need to set
+ a few definitions, mostly for later reference.
+<p>&emsp;
+ A propeller blade is a rotating wing. 
  Like in a wing, the width of the blade is called the "chord".
  The chord is measured in the nominal streamwise direction.
  The propeller has a diameter <i>D</i>, and a maximum radius <i>R</i> 
  which equals <i>D&thinsp;/&thinsp;</i>2.
- The distance from the root of the blade is measured by the local radius <i>r</i>. 
- A small lengthwise strip d<i>r</i> of the blade is called a "blade element".
+ The distance from the root of the blade is measured
+ by the local radius <i>r</i>. 
+ A small lengthwise strip d<i>r</i> of the blade is called
+ a "blade element".
+</p>
+<p>&emsp;
  Figure 2.1 shows these definitions.
 </p>
 
 <!-- PROP_SKETCH -->
 <img src="images/prop_sketch.png" 
      width="300" alt="Propeller sketch";
-     style="margin-left:240px" >
+     style="margin-left:240px; margin-top : 8px;" >
 <p style="margin-left:240px">
     <i> Figure 2.1 : &ensp; Blade element. </i> 
 </p>
 
-<!-- SECTION 2.2 ----------------------------------------------------->
+<!-- SECTION 2.2 ---------------------------------------------->
 
 <h4> 2.2 &emsp; Geometrical pitch </h4>
 
 <p> A propeller's pitch is its forward movement during a full
  revolution of the prop shaft. 
- The result of the forward and rotational motion of a blade element
- is a spiral path. 
+ The result of the forward and rotational motion
+ of a blade element is a spiral path.
+</p>
+<p>&emsp; 
  Figure 2.2 shows the path of a blade element at radius <i>r</i>.
-
-The forward motion for one revolution is P and the circumferential
-  motion is 2&hairsp;π&hairsp;<i>r</i>, 
- and so the slope of the local pitch angle <i>&phi;</i> 
-equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> : 
 </p>
 
+<!-- FIGURE --------------------------------------------------->
+<img width = "500" 
+     style = "margin-left   : 210px;
+              margin-top    :   8px;
+              margin-bottom :   8px;";
+     alt   = "Propeller spiral tube";
+     src   = "images/prop_tube_01.png" >
+<p  style  = "margin-left:240px">
+             <i> Figure 2.2 : &ensp; Pitch and pitch angle. </i> 
+</p>
+<!------------------------------------------------------------->
 
-<!-- EQUATION ------------------------------------------------------->
+<p> The forward motion for one revolution is P and the
+ circumferential motion is 2&hairsp;π&hairsp;<i>r</i>, 
+ and so the slope of the local pitch angle <i>&phi;</i> 
+ equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -123,45 +145,40 @@ equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> :
   <mo> ≡ </mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
-    <mrow> <mi>P</mi> </mrow>
-    <mrow> <mn>2</mn> <mi>&pi; </mi> <mspace style="width:2px"/> <mi>r</mi>
-    </mrow>
+    <mi>P</mi>
+    <mrow> <mn>2&hairsp;&pi;&hairsp;</mn> <mi>r</mi>
+   </mrow>
  </mfrac>
 </math>
 </td>
 
 <td style="width:50px; text-align:right">  (2.1)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
-
+<!-- END EQUATION --------------------------------------------->
 
 <p style="margin-bottom : 0 "> 
  Most propellers are designed for a certain flying velocity 
- and shaft RPM. Expressing the velocity <i>V</i> in meters per second,
- and the RPM in rev's per second immediately gives
+ and shaft RPM. Expressing the velocity <i>V</i> 
+in meters per second
+ and the RPM in revolutions per second, immediately gives
  the forward travel in meters per propeller revolution, 
  and this gives the pitch of the propeller.
+</p>
+<p>&emsp;
  A  fixed  pitch  propeller will often be manufactured
  with this "geometrical pitch" all along the blade.
- The geometrical pitch angle at any radius follows from (2.1), 
+ The geo&shymetrical pitch angle at any radius follows from (2.1), 
  giving the blade its charac&shyteristic twisted appearance.
  Figure 2.2 shows the blade element "living" inside a thin-walled
  tube of air between the radii <i>r</i> and <i>r</i> + d<i>r</i>. 
 </p>
-<p> Much of classical propeller theory assumes that the blade elements
+<p>&emsp; Much of classical propeller theory assumes
+ that the blade elements
  influence only the air between the walls of this imaginary tube,
  and not the air inside <i>r</i> or outside <i>r</i> + d<i>r</i>.
  We will revisit this rather bold assumption later.
 </p>
 
-<!-- SPIRAL_TUBE_SKETCH -->
-<img width = "500" 
-     style = "margin-left:210px";
-     alt   = "Propeller spiral tube";
-     src   = "images/prop_tube_01.png" >
-<p  style  = "margin-left:240px">
-                 <i> Figure 2.2 : &ensp; Pitch and pitch angle. </i> 
-</p>
 
 <!-- SECTION 2.3 ---------------------------------------------------->
 
@@ -173,26 +190,27 @@ equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> :
  velocity diagram of figure 2.3.
 </p>
 <p> The blade circumferential speed  <i>Ω r</i> is the product of 
- the angular velocity  Ω  of the propeller (&hairsp;in radians per second&hairsp;),
+ the angular velocity <i>&Omega;</i> of the propeller
+ <nobr>(&hairsp;in</nobr> radians per <nobr>second&hairsp;),</nobr>
  and the local radius <i>r</i> (&hairsp;in meters&hairsp;). 
-The velocity  <i>V</i> is the undisturbed flying velocity
+ The velocity  <i>V</i> is the undisturbed flying velocity
    (&hairsp;in meters per second&hairsp;).
- The effective local velocities <i>V</i> and <i>Ω r</i> 
- will get modified later by 
- the blade's own lift inducing a downwash at the blade.
+ The effective local velocities <i>V</i> and
+ <i>&Omega;&hairsp;r</i>  will get modified later
+ by the blade's own lift inducing a downwash at the blade.
  </p>
 
-<!-- VELOCITY DIAGRAM -->
+<!-- FIGURE -------------------------------------------------->
 <img width = "300" 
-     style = "margin-left:210px";
+     style = "margin-left:210px;";
      alt   = "Velocity diagram";
      src   = "images/prop_velocity_diagram.png" >
 <p  style  = "margin-left:240px">
-           <i> Figure 2.3 : &ensp; Blade element velocity diagram. </i> 
+    <i> Figure 2.3 : &ensp; Blade element velocity diagram. </i> 
 </p>
+<!------------------------------------------------------------->
 
-
-<!-- SECTION 2.4 ------------------------------------------------------->
+<!-- SECTION 2.4 ---------------------------------------------->
 
 <h4> 2.4 &emsp; Advance ratio and speed ratio </h4>
 
@@ -200,6 +218,8 @@ The velocity  <i>V</i> is the undisturbed flying velocity
  Some can even have opposite meanings.
  Airplane texts generally use the letter <i>λ</i> for the
  "tip advance ratio" <i>λ &equiv; V / ΩR</i>. 
+</p>
+<p>&emsp;
  The difference does make sense. 
  A wind turbine starts from zero RPM, and an airplane starts
  from zero forward velocity. 
@@ -207,17 +227,22 @@ The velocity  <i>V</i> is the undisturbed flying velocity
  in the starting condition,
  so we do not want a zero in the denominator. 
 </p>
-<p> But it is unfortunate that the lowercase letter <i>λ</i> is used
+<p>&emsp; But it is unfortunate that the lowercase letter <i>λ</i> is used
   for a blade tip condition, since another convention is 
- that local values ( like the radius <i>r</i> )
+ that local values <nobr>(&hairsp;like</nobr>
+ the <nobr>radius <i>r</i>&hairsp;)</nobr>
 are in lowercase, with tip values (&hairsp;like <i>R</i>&hairsp;) 
 in capitals. 
  The capital <i>Λ</i> would have been more appropriate. 
  We will avoid the letter <i>λ</i> altogether. 
+</p>
+<p>&emsp;
  Following <span style="font-variant: small-caps;">Glauert</span>'s
  convention (&hairsp;at least in part of his work&hairsp;),
  we denote the local speed ratio <i>Ω&thinsp;r&thinsp;/&thinsp;V</i>
   by the small letter <i>x</i>. 
+</p>
+<p>&emsp;
  By the capital letter convention, we call its tip value <i>X</i>,
  even though this is a bit unusual.
  This makes <i>X</i> equal to the <i>λ</i> of the wind turbine world,
@@ -232,7 +257,7 @@ in capitals.
   <mspace/> <mo> ≡ </mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
-    <mrow> <mi>&Omega;</mi> <mspace style="width:2px"/>  <mi>r</mi> </mrow>
+    <mrow> <mi>&Omega;</mi> <mn>&hairsp;</mn>  <mi>r</mi> </mrow>
     <mrow> <mi>V</mi> </mrow>
  </mfrac>
    <mspace/> <mo> = </mo> <mspace/>
@@ -240,6 +265,7 @@ in capitals.
     <mrow> <mn>1</mn> </mrow>
     <mrow> <mo>tan</mo> <mi>&phi;</mi></mrow>
  </mfrac>
+
  <mn style="font-size:17px;">
     <i> &emsp; &emsp; &emsp; &emsp; local speed ratio </i> </mn>
 </math>
@@ -248,10 +274,10 @@ in capitals.
 <td style="width:50px; text-align:right">  (2.2)
 
 </td> </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -259,7 +285,7 @@ in capitals.
   <mspace/> <mo> ≡ </mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
-    <mrow> <mi>&Omega;</mi> <mspace style="width:2px"/>  <mi>R</mi> </mrow>
+    <mrow> <mi>&Omega;</mi> <mn>&hairsp;</mn>  <mi>R</mi> </mrow>
     <mrow> <mi>V</mi> </mrow>
  </mfrac>
    <mspace/> <mo> = </mo> <mspace/>
@@ -409,23 +435,25 @@ in capitals.
 </tr> </table>
 <!-- END EQUATION ------------------------------------------------------>
 
-
 <p> We will freely use a mixture of function arguments <i>&phi;</i> 
- and <i>x</i>, on the understanding that they are easily converted into each other.
- In particular the cos<sup>2</sup><i>&phi;</i> term comes up very frequently, 
- and is more easily recognized when it is expressed in <i>&phi;</i>
+ and <i>x</i>, on the understanding that they are
+ easily converted into each other.
+ In particular the cos<sup>2</sup><i>&phi;</i> term
+ comes up very frequently, 
+ and is more easily recognized when it is expressed 
+ in <i>&phi;</i>
  rather than in <i>x</x></i>.
 </p>
-
 
 <!-- SECTION 2.6 ------------------------------------------------------->
 
 <h4> 2.5 &emsp; Non-dimensional length </h4>
 
-<p> The ratio <i>V/&Omega;</i> is the forward progression of the propeller
- for one radian of rotation. 
+<p> The ratio <i>V&hairsp;/&hairsp;&Omega;</i> is
+ the forward progression of the propeller
+ for one <i>radian</i> of rotation. 
  It has the dimension of a length. 
-We will call this "typical length" <i>U</i> :
+ We will call this "typical length" <i>U</i> :
 </p>
 
 <!-- EQUATION ------------------------------------------------------->
@@ -470,12 +498,12 @@ We will call this "typical length" <i>U</i> :
   <mo>)</mo>
 
 
-  <mspace/> <mo> = </mo> <mspace/>
+  <mspace/> <mo>&thinsp;=</mo> <mspace/>
 
   <mstyle displaystyle="true">
   <mfrac>
-    <mrow> <mi>&Omega;</mi> 
-       </mi> <mspace style="width:2px"/> <mi>r</mi> </mrow>
+    <mrow> <mi>&Omega;</mi> <mn>&hairsp;</mn> <mi>r</mi>
+   </mrow>
     <mi>V</mi>
   </mfrac>
 
@@ -485,10 +513,10 @@ We will call this "typical length" <i>U</i> :
 <td style="width:50px; text-align:right">  (2.10)
 </td>
  </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -499,7 +527,7 @@ We will call this "typical length" <i>U</i> :
     <mi>R</mi>  <mi>U</mi>
   </mfrac>
 
-  <mspace/> <mo> = </mo> <mspace/>
+  <mspace/> <mo>=</mo> <mspace/>
 
   <mi>R</mi> <mo>.</mo> <mo>(</mo>
   <mstyle displaystyle="true">
@@ -508,13 +536,13 @@ We will call this "typical length" <i>U</i> :
   </mfrac>
   <mo>)</mo>
 
-
   <mspace/> <mo> = </mo> <mspace/>
 
   <mstyle displaystyle="true">
   <mfrac>
     <mrow> <mi>&Omega;</mi> 
-       </mi> <mspace style="width:2px"/> <mi>R</mi> </mrow>
+       <mn>&hairsp;</mn> <mi>R</mi>
+    </mrow>
     <mi>V</mi>
   </mfrac>
 
@@ -524,16 +552,25 @@ We will call this "typical length" <i>U</i> :
 <td style="width:50px; text-align:right">  (2.11)
 </td>
  </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
-<p> At <i>x</i> = 1, the pitch angle is 45&deg; and tan &phi; = 1. 
- If two propellers have the same tip speed ratio <i>X</i>, then they have 
- the same tip pitch angle <i>&Phi;</i>. 
- This makes <i>x</i> and <i>X</i> convenient non-dimen-sional radius values.
+<p> At the non-dimensional radius <i>x</i> = 1,
+ the pitch angle is 45&deg; and tan<i>&thinsp;&phi;</i> = 1.
+</p>
+<p>&emsp;
+ If two propellers have the same tip speed ratio <i>X</i>,
+ then they have the same tip pitch angle
+ <i>&phi;</i><sub>&hairsp;tip</sub> <nobr>(&hairsp;occasionally
+ </nobr> indicated by
+ the <nobr> capital <i>&Phi;&hairsp;)</i> </nobr>. 
+ This makes <i>x</i>&nbsp;and <i>X</i> convenient
+ non-dimensional radius values.
+</p>
+<p>&emsp;
  As a corollary, we have :
 </p>
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mstyle displaystyle="true">
@@ -551,14 +588,14 @@ We will call this "typical length" <i>U</i> :
 </td>
 
 <td style="width:50px; text-align:right">  (2.12)
-</td>
- </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+</td> 
+</tr> </table>
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- FOOTER ------------------------------------------------------------>
+<!-- FOOTER --------------------------------------------------->
 <br> <br>
-<div class="footer">  P. Lammertse,  2025  </div>
+<div class="footer"> P. Lammertse, 2025 </div>
 
 </body>
 </html>
