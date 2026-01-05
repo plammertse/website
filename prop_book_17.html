@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-<!---------------------------------------------------------------------
+
+<!--------------------------------------------------------------
 -- file    : prop_book_17.html
 -- purpose : Page for website Piet Lammertse
------------------------------------------------------------------------
+----------------------------------------------------------------
 --   history :
 --     2025-01-01  renumbered 16 to 17
 --     2025-12-18  new
-----------------------------------------------------------------------> 
+--------------------------------------------------------------->
 
-<!-- FORMATTING  ----------------------------------------------------->
+<!-- FORMATTING  ---------------------------------------------->
 <head>
   <link rel="stylesheet" href="plammertse.css">
   <title>  Piet Lammertse on propeller theory  </title>
@@ -17,13 +18,13 @@
 
 <body>
 
-<!-- NAVIGATION BAR MENU --------------------------------------------->
+<!-- NAVIGATION BAR MENU -------------------------------------->
 <ul>
-  <li> <a href="index.html">                 Home            </a> </li>
+  <li> <a href="index.html">                 Home     </a> </li>
 
   <li> <a href="prop_book_16.html">&#x25C4  Previous  </a> </li>
 
-  <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
+  <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
@@ -70,42 +71,45 @@
      </a>
     </div>
   </li>
-<!------------------------------------------------------------------->
+<!------------------------------------------------------------->
 
   <li> <a href="prop_book_18.html">  Next &#x25BA</a> </li>
 
 </ul>
 
 
-<!-- TEXT PAGE ------------------------------------------------------->
+<!-- TEXT PAGE ------------------------------------------------>
 
-<!--- PAGE HEADER ---------------------------------------------------->
+<!--- PAGE HEADER --------------------------------------------->
 <p style="margin-left : 320px">  <i> VISCOUS LOSS </i> </p>
 <hr style="margin : 0 0;">
 
-<!-- CHAPTER 17 ----------------------------------------------------->
+<!-- CHAPTER 17 ----------------------------------------------->
 
 <h2> 17 &emsp; Non-optimized viscous loss </h2>
 
-<!-- SECTION 17.1 ----------------------------------------------------->
+<!-- SECTION 17.1 --------------------------------------------->
 
 <h4> 17.1 &emsp;
         Viscous loss in the rotationally optimal propeller </h4>
-<p> For the rotationally optimal propeller, the momentum loss (10.10)
- is constant along the blade due to the cos<sup>2</sup><i>&phi;</i>
+<p> For the rotationally optimal propeller,
+ the momentum loss (10.10)
+ is constant along the blade due to the
+ cos<sup>2</sup><i>&phi;</i>
  loading distribution from (10.8).
 </p>
 <p>&emsp;
  The viscous loss however varies along the blade.
  Unlike the momentum loss, the local loss ratio (15.21) 
- is&nbsp;independent of the load, but instead it varies with the radius.
+ is&nbsp;independent of the load,
+ but instead it varies with the radius.
 </p>
 <p>&emsp;
  The combined local loss ratio (10.8) plus (15.21)
  for the rotationally optimal propeller is :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mstyle displaystyle="true">
@@ -147,7 +151,8 @@
 
   <mstyle displaystyle="true">
   <mfrac>
-    <<mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi> </mrow>
+    <mrow>   <mi>&epsilon;</mi> <mo>.</mo> <mi>x</mi>
+   </mrow>
     <mrow> <msup> <mn>cos</mn> <mn>2</mn> </msup> 
         <mi>&phi;</mi>
     </mrow>
@@ -156,7 +161,7 @@
 
 <td style="width:50px; text-align:right">  (17.1)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> Figure 17.1 shows the graph.
  It is the same as figure 15.4, but shifted up
@@ -171,7 +176,7 @@
 <p>&emsp; We will optimize it in the next chapter.
 </p>
 
-<!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM --------------------------->
+<!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM ---------------------->
 <img  width="500";
      style="margin-left : 160px;
             margin-top  :  8px;";
@@ -182,12 +187,10 @@
     <i> Figure 17.1 : &ensp; Local combined loss ratio  (17.1),
  rotationally optimal thrust.
  </i> 
+<!------------------------------------------------------------->
 
 
-<!------------------------------------------------------------------->
-
-
-<!-- SECTION 17.2 ----------------------------------------------------->
+<!-- SECTION 17.2 --------------------------------------------->
 
 <h4> 17.2 &emsp;
         Integrating the viscous loss
@@ -238,14 +241,14 @@
 
 <td style="width:50px; text-align:right">  (17.2)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 </p>
 <p> For lightly loaded propellers without tip loss,
  d<i>T</i>&thinsp;&prime; follows from (10.9) :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mn>d&hairsp;</mn>
@@ -294,7 +297,7 @@
 
 <td style="width:50px; text-align:right">  (17.3)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> The viscous loss  (15.21) contains a term of
  1&hairsp;/&hairsp;cos<sup>2</sup>&hairsp;<i>&phi;</i> 
@@ -302,11 +305,12 @@
  <i>&epsilon;&hairsp;.&hairsp;x</i>.
  The two cos<sup>2</sup><i>&phi;</i> terms happen to cancel,
  effectively replacing the local
- 1&hairsp;/&hairsp;cos<sup>2</sup><i>&phi;</i> loss term by the overall 
+ 1&hairsp;/&hairsp;cos<sup>2</sup><i>&phi;</i>
+ loss term by the overall 
    1&hairsp;/&hairsp;<i>&kappa;</i><sub>&phi;</sub> term :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mn>d&hairsp;</mn>
@@ -341,13 +345,13 @@
 
 <td style="width:50px; text-align:right">  (17.4)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
 <p> The integral is then simply that of
   <i>&epsilon;&thinsp;.&thinsp;x</i> times the mass factor :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <msub>  <mi>P</mi> <mn>v</mn> </msub> <mn>&hairsp;&prime;</mn>
@@ -383,15 +387,16 @@
 
 <td style="width:50px; text-align:right">  (17.5)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
-<p>
-The primitive of 2&thinsp;x<sup>2</sup> is &frac23;&thinsp;x<sup>3</sup>.
+<p> The primitive of 2&thinsp;x<sup>2</sup> is
+ &frac23;&thinsp;x<sup>3</sup>.
 </p>
-<p> Dividing by <i>T</i>&thinsp;&prime;, the overall viscous loss ratio
+<p> Dividing by <i>T</i>&thinsp;&prime;,
+ the overall viscous loss ratio
  for the rotationally optimal propeller is :
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mstyle displaystyle="true">
@@ -425,11 +430,12 @@ The primitive of 2&thinsp;x<sup>2</sup> is &frac23;&thinsp;x<sup>3</sup>.
 
 <td style="width:50px; text-align:right">  (17.6)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
-<p>
-Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
- It is like an effective, average value of <i>x</i>  for the local
+<p> Here the &frac23;&thinsp;<i>X</i>
+ is put in brackets to make a point.
+ It is like an effective, average value of <i>x</i>
+  for the local
  <i>&epsilon;&thinsp;.&thinsp;x</i> in (17.2).
  Viewed in this way, the 1/<i>κ</i><sub>ϕ</sub> term in (17.6)
  also represents  an average, for the
@@ -456,7 +462,7 @@ Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
  <i>&epsilon;&thinsp;X</i>.
 </p>
 
-<!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM --------------------------->
+<!-- COMBINED VISCOUS LOCAL LOSS DIAGRAM ---------------------->
 <img  width="600";
      style="margin-left:120px";
      alt="Viscous loss diagram";
@@ -468,13 +474,14 @@ Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
              rotationally optimal propeller
  </i>
  
-<!------------------------------------------------------------------->
+<!------------------------------------------------------------->
 
 
-<!-- SECTION 17.3 ----------------------------------------------------->
+<!-- SECTION 17.3 --------------------------------------------->
 
 <h4> 17.3 &emsp;
-  The overall loss (&thinsp;rotationally optimal distribution&thinsp;) </h4>
+  The overall loss
+       (&thinsp;rotationally optimal distribution&thinsp;) </h4>
 
 <p> We can now sum the overall (&hairsp;averaged&hairsp;) values
  of the momentum and the viscous losses (10.10) and (17.6),
@@ -484,7 +491,7 @@ Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
  and before viscous optimization :
 </p>
 
-<!-- EQUATION ------------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mstyle displaystyle="true">
@@ -546,9 +553,10 @@ Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
 
 <td style="width:50px; text-align:right">  (17.7)
 </td> </tr> </table>
-<!-- END EQUATION -------------------------------------------------->
+<!-- END EQUATION --------------------------------------------->
 
-<p>&emsp; Figure 17.3 shows the result. The basis is a constant loss
+<p>&emsp; Figure 17.3 shows the result.
+ The basis is a constant loss
  due to the optimized momentum loss,
  and a straight slope due to the non-optimized viscous loss.
  The viscous loss term gives a steady rise of
@@ -561,7 +569,7 @@ Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
  to the straight slope. 
 </p>
 
-<!-- COMBINED VISCOUS OVERALL LOSS DIAGRAM --------------------------->
+<!-- COMBINED VISCOUS OVERALL LOSS DIAGRAM -------------------->
 <img  width="640";
      style="margin-left:120px";
      alt="Viscous loss diagram";
@@ -571,13 +579,14 @@ Here the &frac23;&thinsp;<i>X</i> is put in brackets to make a point.
     <i> Figure 17.3 : &ensp; Overall  combined loss ratio (17.7),
 for rotationally optimal thrust.
  </i> 
-<!------------------------------------------------------------------->
+<!------------------------------------------------------------->
 
 
-<!-- SECTION 17.4 ----------------------------------------------------->
+<!-- SECTION 17.4 --------------------------------------------->
 
 <h4> 17.4 &emsp; The optimal tip speed ratio 
-           (&hairsp;rotationally optimal, before tip loss&hairsp;) </h4>
+           (&hairsp;rotationally optimal,
+                    before tip loss&hairsp;) </h4>
 
 <p> The loss increase at both ends of the <i>X</i> range means
  that there is a minimum halfway.
@@ -614,10 +623,9 @@ for rotationally optimal thrust.
  <i>X</i> to higher values.
 </p>
 
-
-<!-- FOOTER ------------------------------------------------------------>
+<!-- FOOTER --------------------------------------------------->
 <br> <br>
-<div class="footer">  P. Lammertse,  2025  </div>
+<div class="footer"> P. Lammertse, 2025 </div>
 
 </body>
 </html>
