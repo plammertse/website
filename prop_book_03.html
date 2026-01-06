@@ -76,7 +76,7 @@
   </li>
 <!-- END TOC -------------------------------------------------->
 
-  <li> <a href="prop_book_04.html">  Next &#x25BA</a> </li>
+  <li> <a href="prop_book_04_TOC.html">  Next &#x25BA</a> </li>
 
 </ul>
 
@@ -92,14 +92,19 @@
 <h2> 3 &emsp; Thrust, power and efficiency </h2>
 
 <!-- SECTION 3.1 ---------------------------------------------->
+
 <h4> 3.1 &emsp; The thrust coefficient </h4>
+
 <p> This text will use the thrust from the propeller
+ (&hairsp;not yhe torque&hairsp;)
  as the starting point of the design.
+</p>
+<p>&emsp;
  We will use two definitions of&nbsp;the&nbsp;non-dimensional thrust
- coefficient, out of the many used in the literature.
- In analogy with the lift coefficient <i>C</i><sub>L</sub> of a wing,
+ coefficient out of the many used in the literature.
+ In&nbsp;analogy with the lift coefficient <i>C</i><sub>L</sub> of a wing,
  we define the non-dimensional thrust coefficient <i>C</i><sub>T</sub>.
- This is especially useful when applying the propeller in aircraft :
+ This is especially useful when applying the propeller in an aircraft :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -125,13 +130,13 @@
 <p>
 This definition is based on <i>V</i> instead of on
  the more usual <i>&Omega;&hairsp;R</i>. 
- This reflects an emphasis in this text on the re&shyquirements 
+ This reflects an emphasis on the re&shyquirements 
  of the aircraft,
- rather than on the torque or RPM of the powerplant.
+ rather than on the available torque or RPM of the powerplant.
 </p>
 <p>&emsp;
- In propeller theory, it will be more convenient to divide
- by <i>ρV&hairsp;</i><sup>2</sup> instead of
+ Inside classical propeller theory, it will be more convenient
+ to divide by <i>ρV&hairsp;</i><sup>2</sup> instead of
  by ½&hairsp;<i>ρV&hairsp;</i><sup>2</sup>.  
  We denote this by a prime.
  This "other" non-dimensional thrust coefficient
@@ -176,7 +181,7 @@ It follows that :
 <!-- END EQUATION --------------------------------------------->
 
 <p>  Mechanical power has the dimension of thrust times velocity. 
- We will therefore make power non-dimensional by&nbsp;dividing by
+ We will therefore make power non-dimensional dividing by
  <i>V</i>&hairsp;<sup>3</sup> instead of by
  <i>V</i>&hairsp;<sup>2</sup> :
 </p>
@@ -211,6 +216,8 @@ It follows that :
  and torque times rate of rotation 
  <nobr>(&hairsp;with </nobr> the rotation expressed
  in radians per <nobr>second&hairsp;)</nobr>.
+</p>
+<p>&emsp;
  For an airplane, the net output power
  that a propeller exerts on it
  is the thrust multiplied by the flying speed :
@@ -227,9 +234,8 @@ It follows that :
 </td> </tr> </table>
 <!-- END EQUATION ---------------------------------------------->
 
-<p>&emsp;
- We can write (3.2) as a mechanical power instead of a force :
- </p>
+<p> We can write (3.2) as a mechanical power instead of a force :
+</p>
 
 <!-- EQUATION -------------------------------------------------->
 <table> <tr> <td>
@@ -260,7 +266,8 @@ It follows that :
 
 <p> We can therefore interpret <i>T&hairsp;&prime;</i>
  not only as the non-dimensional thrust,
- but also as the non-dimensional net power <i>T.V</i>,
+ but also as the non-dimensional net power <i>T.V</i>
+ exerted by the propeller on the aircraft,
  by the definition of (3.4).
 </p>
 
@@ -272,15 +279,19 @@ It follows that :
  divided by gross power input.
  Intuitively, loss of efficiency is associated with a loss of output
  for a given input. However, losses in a propeller are more easily
- calculated as an increase of the power input needed for a given power output.
- The efficiency is still the same ratio : output over input,
- but the losses are now written as a fractional of the input,
- instead of a fractional of the output. The two ratios are not the same,
- and we need to exercise some care here.
+ calculated as increases of the power input needed 
+ for a given power output.
 </p>
 <p>&emsp;
- The extra input still goes into energy lost to the wake of the propeller.
- This is why we keep calling these extra inputs "losses".
+ The efficiency is still the same ratio : output over input.
+ But the losses are now written as a fraction of the in&shyput,
+ instead of as a fraction of the output.
+ The two ratios are not the same,
+ and we need to exercise some care.
+</p>
+<p>&emsp;
+ The extra input still goes into energy lost to the wake.
+ This is why we still call these extra inputs "losses".
 </p>
 
 
@@ -300,7 +311,17 @@ The propeller's efficiency then becomes :
 
 <!-- equation table -------------------------------------------->
 <table> <tr> <td> <math>
-  <mi>η</mi> <mspace/> <mo> = </mo>
+  <mi>η</mi>
+
+  <mspace/> <mo>&equiv;</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+    <msub> <mi>P</mi> <mn>out</mn> </msub>
+    <msub> <mi>P</mi> <mn>in</mn> </msub>
+  </mfrac> 
+
+  <mspace/> <mo>=</mo> <mspace/>
 
   <mstyle displaystyle="true">
   <mfrac> 
@@ -351,10 +372,12 @@ The propeller's efficiency then becomes :
 <!-- end equation table --------------------------------------->
 
 
-<p> We will call the two fractions the momentum loss ratio and
- the viscous loss ratio.
- These power "losses" are really power increases,
- relative to the net power.
+<p> We will call the two fractions in the denominator,
+ the momentum loss ratio and the viscous loss ratio.
+</p>
+<p>&emsp;
+ These power "losses" are really power increases
+ on the net power.
  They are non-dimensional,
  and they can be expressed as ratios to the non-dimensional
  thrust and output power.

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <!---------------------------------------------------------------------
 -- file    : prop_book_01.html
 -- purpose : Page for website Piet Lammertse
@@ -20,9 +21,7 @@
 <ul>
   <li> <a href="index.html">                 Home            </a> </li>
 
-  <li> <a href="prop_book_preface.html">&#x25C4  Previous  </a> </li>
-
-
+  <li> <a href="prop_book_01_TOC.html">&#x25C4  Previous  </a> </li>
 
   <!-- TOP LEVEL TABLE OF CONTENTS ----------------------------------->
   <li class="dropdown">
@@ -89,65 +88,58 @@
 <p style="margin-left : 320px">  <i> INTRODUCTION </i> </p>
 <hr style="margin : 0 0;">
 
-<!--- LOCAL TOC ------------------------------------------------------>
-<p>
-<h2> <u> Introductory section </u> </h2>
-
-<a style="text-decoration:none"
-   href="prop_book_01.html">
-   <h3 style="margin-bottom : -8px;"> 1 &emsp;
-                                           <u> Introduction </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_02.html">
-   <h3 style="margin-bottom : -8px;"> 2 &emsp;
-                                     <u> Propeller geometry </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_03.html">
-   <h3 style="margin-bottom : -8px;"> 3 &emsp;
-                           <u> Thrust, power and efficiency </u>  </h3>
-</a>
-
-<!-------------------------------------------------------------------->
-
-<hr style="margin-top : 30px;" >
-
 <!-- CHAPTER 1 ------------------------------------------------------->
 
 <h2> 1 &emsp; Introduction </h2>
 
 <!-- SECTION 1.1 ----------------------------------------------------->
+
 <h4> 1.1 &emsp; Audience </h4>
+
 <p> This text is an introduction to classical propeller theory 
  for practicing engineers.
  It aims to give the reader an in&shytuition on how a propeller 
  works at its design point. 
  The equations can also be used for off-design calculations,
- but those are really outside the scope of the present text.
-</p>
-<p>&emsp; Readers interested only in new material may choose to read
- only the chapters on the viscous loss. 
- This contains a simple method of viscous optimization which
- I believe is in its details original to the current text.
-</p>
-<p> The chapters on vortex theory contain material which is not new, 
- but which is not often presented in this way. 
+ but those are mostly outside the scope of the present text.
 </p>
 
 <!-- SECTION 1.2 ----------------------------------------------------->
-<h4> 1.2 &emsp; Vortex theory </h4>
+
+<h4> 1.2 &emsp; New material </h4>
+
+<p> Readers interested only in new material may choose to read
+ only the chapters on viscous loss. 
+ This contains a simple, yet rigorous method of viscous optimization
+ which
+ I believe is in its details original to the current text.
+</p>
+<p>&emsp;
+ The chapters on vortex theory contain material which is not new,
+ but which is not often presented in this way.
+ This section contains a complete, yet very simple lifting line code
+ which reproduces
+  <span style="font-variant: small-caps;">Prandtl</span>'s 
+ tip function from first principles.
+</p>
+
+<!-- SECTION 1.2 ----------------------------------------------------->
+
+<h4> 1.3 &emsp; Vortex theory </h4>
+
 <p> Classical propeller theory has a reputation for being "difficult".
- This may be partly due to the extensive use of the concept of circulation
- to express the blade element lift.
+ This may partly be due to the extensive use of the concept
+ of circulation to express the blade element lift.
 </p>
 <p>&emsp; 
  Circulation is closely linked to vortex theory and potential theory.
- These concepts are very convenient in des&shycrib&shying the flow around a propeller,
- but they tend to be less intuitive to practicing engineers
+ These concepts are very convenient in des&shycrib&shying
+ the flow around a propeller
+ but they tend to be less intuitive to practicing engineers,
  who are more familiar with wing section lift and drag coefficients.
  But ultimately, the justification of the flow pattern around
- the tip of a propeller (&hairsp;and around a wing, for that matter&hairsp;)
+ the tip of a propeller
+   (&hairsp;and around a wing, for that matter&hairsp;)
  can only be found from a vortex argument.</p>
 <p>&emsp;
  This book aims to give the reader the best of both worlds.
@@ -155,28 +147,30 @@
  of vortex theory to an unusual degree.
 </p>
 <p>&emsp;
- The second part gives an introduction to the vortex theory
- which is much more detailed than usual in texts on classical
- propeller theory, and hopefully still quite straightforward.
+ The second part gives an introduction to vortex theory
+ which is much more detailed than is usual in texts on classical
+ propeller theory (&hairsp;and, in fact, wings&hairsp;),
+ and is hopefully still quite straightforward.
 </p>
 
-<!-- SECTION 1.3 --------------------------------------------------->
-<h4> 1.3 &emsp; Notation </h4>
+<!-- SECTION 1.4 --------------------------------------------------->
+<h4> 1.4 &emsp; Notation </h4>
 
-<p> The notation used, and in particular the naming of symbols,
- mostly follows the literature with the exception of
- the tip speed ratio.
+<p> The notation used mostly follows the literature,
+ with the exception of the symbol for the tip speed ratio.
 </p>
 <p>&emsp;
- We use the small <i>x</i> for the local speed ratio 
+ This text uses the small <i>x</i> for the local speed ratio 
 <i>x&nbsp;=&nbsp;Ω&hairsp;r&hairsp;/&hairsp;V</i>,
- and the capital <i>X</i>  for the tip speed ratio 
-<i>X&nbsp;=&nbsp;Ω&hairsp;R&hairsp;/&hairsp;V</i>.  
+ and the capital <i>X</i>  for the tip speed ratio <nobr>
+<i>X&nbsp;=&nbsp;Ω&hairsp;R&hairsp;/&hairsp;V</i>.  </nobr>
  The&nbsp;convention in the literature is to call the tip speed ratio
  either <i>λ</i> or 1<i>&hairsp;/&hairsp;λ</i>,
  depending on the application area <nobr>
 (&hairsp;either</nobr> propellers or wind <nobr>turbines&hairsp;).</nobr>
- Using the capital <i>X</i> instead is more intuitive
+</p>
+<p>&emsp;
+ Using the capital <i>X</i> instead is more intuitive,
  and avoids any such confusion.
  </p>
 
