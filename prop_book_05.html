@@ -92,16 +92,17 @@
 
 <h2> 5 &emsp; Thrust and the mass flow </h4>
 
-<h4> 5.1 &emsp; The mass flow at light loading </h4>
+<h4> 5.1 &emsp; The mass flow in the actuator disk </h4>
 
-<p> So far, the mass flow dropped out of our equations
- for the efficiency.
- The efficiencies (4.14) and (4.18) depended only
+<p> The mass flow dropped out of our equations
+ for the momentum loss.
+ The efficiencies (4.14) and (4.18) depend only
  on the induction <i>a</i>, c.q. <i>b</i>.
- By
- <span style="font-variant: small-caps;">Newton</span>’s
+</p>
+<p>&emsp;
+ By  <span style="font-variant: small-caps;">Newton</span>’s
  law (4.7) however, repeated here as (5.1),
- the <i>thrust</i> does depend on the mass flow :
+ the thrust <i>does</i> depend on the mass flow :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -129,32 +130,38 @@
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> By this route, the mass flow will indirectly affect
- the efficiency for a given thrust after all.
-</p>
 <p>&emsp;
- If the mass flow <i>m</i><sup>&#9679;</sup> is somehow reduced,
- and we will find later that this is the case in the tip loss,
- then for a given thrust <i>T</i> the induction <i>w</i>
- will have to be increased.
+ By this indirect route, the mass flow will affect
+ the efficiency for a given thrust after all.
+ If the mass flow <i>m</i><sup>&#9679;</sup>
+ is&nbsp;for some reason reduced
+ (&hairsp;and we will find later that this is the case
+ in the tip loss&hairsp;),
+ then to maintain a given thrust <i>T</i>,
+ the induction <i>w</i> will have to be increased.
  By (4.18), this increase in <i>w</i> will cause
  a loss of effic&shyiency.
+</p>
+<p>&emsp;
  We will loosely come to call this loss of efficiency
- "the tip loss", but it is really a loss of <i>thrust</i>
+ "the tip loss", but it is really a loss of <i>thrust</i>,
  for a given efficiency.
 </p>
 <p>&emsp;
- We will first look at the mass flow, before tip loss,
- for the ideal actuator disk of uniform induction.
+<!--
+ Consider the mass flow (&hairsp;before tip loss&hairsp;),
+ through the ideal actuator disk of uniform induction.
+-->
  In the ideal actuator disk of figure 4.1,
  the volume of air passing through the prop disk
- per second equals the disk frontal area 
+<nobr>(&hairsp;per second&hairsp;)</nobr> equals
+ the&nbsp;disk frontal area 
   &pi;&hairsp;<i>R</i><sup>&hairsp;2</sup>
  times the velocity <nobr>(&hairsp;
    <i>V</i>&hairsp;+&hairsp;<i>v</i>&hairsp;). </nobr>
  The mass flow <i>m</i><sup>&#9679;</sup> 
- equals this volume,
- times the density <i>&rho;</i> <nobr>
+ equals this volume flow, multiplied by
+ the density <i>&rho;</i> <nobr>
  (&hairsp;in kg/m<sup>3</sup>&hairsp;&hairsp;)&thinsp;</nobr>
  of&nbsp;the&nbsp;passing air :
 </p>
@@ -198,21 +205,25 @@
 <!-- END EQUATION --------------------------------------------->
 
 <p> This mass flow is slightly higher than
- the mass flow without an induction <i>a</i>,
- and by (5.1), this will give slightly more thrust.
+ the mass flow before induction.
+ By (5.1), this will give slightly more thrust.
+</p>
+<p>&emsp;
  Since this is a secondary effect,
  and it complicates many of the later derivations, 
  we will often use the so-called "light loading"
  approximation.
  This assumes
  <i>v</i> &Lt; <i>V</i>, or <i>a</i> &Lt; 1,
- or&nbsp;n&nbsp;other words
+ or&nbsp;in&nbsp;other words
  <nobr>(&hairsp;<i>V</i>+&hairsp;<i>v</i>&hairsp;)
     &cong; <i>V</i>.
  </nobr>
 </p>
-<p> This simplifies (5.2)
- for the lightly loaded ideal actuator disk into :
+<p>&emsp;
+ The light loading assumption simplifies
+ the mass flow  for the lightly loaded ideal
+ actuator disk from (5.2), to :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -234,13 +245,14 @@
 
 <!-- SECTION 5.2 ---------------------------------------------->
 <h4> 5.2 &emsp;
-   The non-dimensional mass flow  <i>m</i>&nbsp;'</h4>
+   The non-dimensional mass flow  <i>m</i>&hairsp;'</h4>
 
-<p> In later chapters on the tip loss, it will be useful
- to have a non-dimensional version of the mass flow
- since tip loss acts as a reduction factor on it.
- Using the ideal mass flow of (5.3) as a reference,
- we define :
+<p> We define the non-dimensional mass flow.
+ We will find later that the tip loss acts
+ as a reduction factor on it.
+</p>
+<p> Using the simple light loading mass flow of (5.3)
+ as a reference, we define :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -271,8 +283,9 @@
 <h4> 5.2 &emsp; The non-dimensional mass flow </h4>
 
 <p> In later chapters on the tip loss it will be useful
- to have a non-dimensional version of the mass flow,
- since tip loss acts as a reduction factor on it.
+ to have a non-dimensional version of the mass flow.
+ We will find that the tip loss acts as a reduction
+ on it.
  Using the ideal mass flow of (5.3) as a reference, we define :
 </p>
 -->
@@ -293,11 +306,11 @@
 <!-- END EQUATION --------------------------------------------->
 
 <p> The fact that a physical propeller can even approach
- the ideal of accelerating all of the air inside the flow tube
- and none outside it like in figure 4.1,
+ the ideal of accelerating just the air inside the flow tube 
+<nobr>(&hairsp;like in </nobr> <nobr> figure 4.1&hairsp;), </nobr>
  and that it therefore can approach <i>m</i>&thinsp;&prime;
-&nbsp;=&nbsp;1 (&hairsp;before tip loss&hairsp;) is by non means obvious.
- We will find a justification from the vortex view later.
+&nbsp;=&nbsp;1 is by non means obvious.
+ We will find a justification in the vortex view later.
  For the pur&shyposes of this chapter and the next ones,
  we will just accept it as a given.
  </p>
@@ -324,24 +337,24 @@
 
 <p> The heavily loaded propeller handles slightly more mass
  than the lightly loaded one of (5.3).
- We can also interpret this as a slight increase
+ We can also inter&shypret this as a slight increase
  in the effective frontal disk area which captures
  the incoming air.
+</p>
+<p>&emsp;
  We derived the increase in mass flow by inspection
  of figure 4.1, from the speed increase at the prop disk.
- </p>
-<p>&emsp;
-But from the same figure we might say that the propeller
- handles air flowing in from far ahead,
+ But&nbsp;from the same figure we might say that the propeller
+ handles the incoming air from far ahead,
  at the un&shyaccel&shyerated velocity <i>V</i>, through a larger
- frontal area of the flow tube before contraction.
+ frontal area of the flow tube, before contraction.
 </p>
 <p>&emsp;
  The frontal area of this incoming air is larger than the prop disk
  by a factor of (&hairsp;1+<i>a</i>&hairsp;). 
  We can therefore also interpret <i>m</i>&hairsp;&prime;
  as an effective (&hairsp;non-dimensional&hairsp;)
- disk area slightly larger than one.
+ actuator disk area slightly larger than one.
  </p>
 
 <!-- SECTION 5.4 ---------------------------------------------->
@@ -396,13 +409,35 @@ But from the same figure we might say that the propeller
   <mi>b</mi>
 </math>
 
+<td style="width:50px; text-align:right">  (5.8)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> With (5.6) and <i>a</i> = &frac12;&thinsp;<i>b</i>
+ this yields :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+ 
+  <mo>=</mo> 
+
+  <mi>b</mi> <mo>.</mo>
+  <mo>(</mo> 
+   <mn>1</mn> <mo>+</mo> <mn>&frac12;&hairsp;</mn> <mi>b</mi>
+  <mo>)</mo>
+</math>
+
 <td style="width:50px; text-align:right">  (5.9)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p> For light loading we can use the
- <i>m</i>&hairsp;&prime;&nbsp;=&nbsp;1 of (5.5).
-  This yields :
+ <i>m</i>&hairsp;&prime;&nbsp;=&nbsp;1 of (5.5),
+ which yields :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -421,7 +456,8 @@ But from the same figure we might say that the propeller
 
 <!-- SECTION 5.5 ---------------------------------------------->
 <h4> 5.5 &emsp; 
-    The ideal efficiency expressed in <i>T</i>&nbsp;' </h4>
+    The ideal, light loading efficiency
+      expressed in <i>T</i>&nbsp;' </h4>
 
 <p>  Equation (4.18) gave us the efficiency of an ideal,
  lightly loaded actuator disk in terms of the far wake
@@ -461,7 +497,7 @@ But from the same figure we might say that the propeller
 </td>
 </math>
 
-<td style="width:50px; text-align:right">  (5.12)
+<td style="width:50px; text-align:right">  (5.11)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -490,10 +526,9 @@ But from the same figure we might say that the propeller
 
 </math>
 
-<td style="width:50px; text-align:right">  (5.13)
+<td style="width:50px; text-align:right">  (5.12)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
-
 
 
 <p> <!-- FOOTER ----------------------------------------------->

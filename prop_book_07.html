@@ -96,116 +96,254 @@
  of figure  4.1 can be subdivided into set of thin-walled
  concentric tubes, sliding ( and rotating ) inside each other
  like a pirate's telescope.
-</p>
-<p> These tubes will cut the propeller disk into nested,
+ These tubes will cut the propeller disk into nested,
  concentric rings.
  Figure 2.2 already showed such a tube. 
 </p>
-<p> These thin-walled tubes are supposed not
- to influence each other very much,
- but such independence is by no means obvious.
+<p>&emsp;
+ The thin-walled tubes are supposed not
+ to influence each other very much.
+ But such independence is by no means obvious.
  The justification can be found in vortex theory,
  which we will discuss much later.
- The in&shydepen&shydence of the tubes holds up much better
- than might reasonably be expected.
- </p>
-
+</p>
+<p>&emsp;
+ In practice, the in&shydepen&shydence of the thin-walled tubes
+ holds up much better than might reasonably be expected.
+</p>
+<p>&emsp;
+ If the rings and tubes of a propeller do not interact,
+ then each ring is like a separate propeller.
+ It has its own local induction ratio,
+ its own pitch angle, and its own blade elements.
+ The propeller as a whole is just an assem&shybly of independent,
+ nested ring propellers flying in close formation.
+<p>&emsp;
+ We can derive the conditions for every single ring,
+ and then integrate the ring contributions
+ into an overall value for the whole propeller.
+</p>
 
 <!-- SECTION 7.2 ---------------------------------------------->
-<h4> 7.2 &emsp; Integrating over the rings &emsp;&emsp;&emsp; NEW  </h4>
-<p>
-We will often widh to know the average of some function
+<h4> 7.2 &emsp; Integrating over the rings </h4>
+<p> We will often wish to know the total,
+ or average of some value
  <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
  over the prop disk.
- This could be the overall thrust, or the total mass flow
- through the whole prop disk, or some other value.
- Such overall values can be found by integrating the weighted sums
- of the local values per ring. 
-<p>&emsp;</i>
+ This could be the overall thrust, or an average loss factor.
+ Such values can be found by integrating the
+ individual ring contributions.
+ We will use the prefix "d" for variables belonging
+ to a ring of "infinitesimal" width d<i>r</i>.
+</p>
+<p>&emsp;
  The frontal area of a ring is
  2&hairsp;&pi;&hairsp;<i>r</i>&hairsp;.&hairsp;d<i>r</i>,
- and the contribution of a local value <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+ and the contribution of a local value
+  <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
  to the total will be
-   <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
-    . 2&hairsp;&pi;&hairsp;</i>r&hairsp;</i>.&hairsp;d<i>r</i>.
+   <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)&hairsp;.&hairsp;2&hairsp;&pi;&hairsp;</i>r&hairsp;</i>.&hairsp;d<i>r</i>.
+
  Summing over "infinitely narrow" rings of width d<i>r</i> 
  represents an integral.
+</p>
+<p>
  The average of <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
- over the disk is this integral divided by the disk area :
+ over the disk is the integral divided by the disk area.
+ We will call this average &thinsp;<i>F</i> :
 </p>
-<p>&emsp;
-	f_( average)	=   1/(π R^2 )  ∫_0^R▒〖f (r)  .2 . r .dr〗
-(7.1)
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>F</mi>
+  <mspace/> <mo>=</mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <mn>&pi;&hairsp;</mn>
+       <msup> <mi>R</mi> <mn>2</mn> </msup>
+   </mrow>
+  </mfrac>
+  <mn>&thinsp;.</mn>
+  <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>R</mi> </msubsup>
+
+  <mi>f</mi> <mn>(</mn><mi>r</mi><mn>)</mn>
+  <mo>.</mo>
+  <mn>2&hairsp;&pi;&hairsp;</mn> <mi>r</mi>
+  <mo>.</mo>
+  <mn>d</mn><mi>r</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">  (7.1)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> or, by dividing out the factor of &pi; :
 </p>
-<p> or by dividing out the factor of &pi; :
-</p>
-<p>&emsp;		
-	f_( average)	=       1/R^2   ∫_0^R▒〖f (r)  .2 . r .dr〗
-(7.2)
-</p>
-<p> The function <i>f</i>(&hairsp;<i>r</i>&hairsp;)
- is often easier to express in a non-dimensional parameter
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>F</mi>
+  <mspace/> <mo>=</mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <msup> <mi>R</mi> <mn>2</mn> </msup>
+  </mfrac>
+  <mn>&thinsp;.</mn>
+  <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>R</mi> </msubsup>
+
+  <mi>f</mi> <mn>(</mn><mi>r</mi><mn>)</mn>
+  <mo>.</mo>
+  <mn>2&hairsp;</mn> <mi>r</mi>
+  <mo>.</mo>
+  <mn>d</mn><mi>r</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">  (7.2)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The function <i>f</i>&hairsp;(&hairsp;<i>r</i>&hairsp;)
+ is often easier to express in a non-dimensional parameter,
  like <i>x</i> or <i>&phi;</i>.
- It will then be convenient to write the whole integral in that parameter.
+ It will then be convenient to write the whole integral
+ in that parameter.</p>
+ <p>&emsp;
  We convert <i>r</i> and d<i>r</i> into <i>x</i> and d<i>x</i>,
  and <i>R</i> into <i>X</i> with (2.10) and (2.11).
- The factors <i>V</i> / <i>&Omeag;</i> cancel, giving :
+ The factors <i>V</i>&nbsp;&#x2044;&thinsp;<i>&Omega;</i>
+ cancel, giving :
 </p>
-<p>&emsp;
-	f_( average)  =   1/X^2   ∫_0^X▒〖f (x) .2 x .dx〗
-(7.3)
-</p>
-<p> We will write either <i>f</i>(&hairsp;<i>r</i>&hairsp;),
-  <i>f</i>(&hairsp;<i>x</i>&hairsp;) or
- <i>f</i>(&hairsp;<i>&phi;</i>&hairsp;),
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>F</mi>
+  <mspace/> <mo>=</mo> <mspace/>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <msup> <mi>X</mi> <mn>2</mn> </msup>
+  </mfrac>
+  <mn>&thinsp;.</mn>
+  <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>X</mi> </msubsup>
+
+  <mi>f</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
+  <mo>.</mo>
+  <mn>2&hairsp;</mn> <mi>x</mi>
+  <mo>.</mo>
+  <mn>d</mn><mi>x</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">  (7.3)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> We can write either <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;),
+  <i>f</i>&thinsp;(&hairsp;<i>x</i>&hairsp;) or
+ <i>f</i>&thinsp;(&hairsp;<i>&phi;</i>&hairsp;),
  whichever is the most natural expression for the function
  at that moment.
- These are easily converted into each other by (2.5),
+ They are easily converted into each other by (2.5),
  when the time comes to evaluate the integral.
  In many cases, we will simply write <i>f</i> without an argument.
 </p>
-<p>&emsp; We can also interpret
- 2&hairsp;&pi;&hairsp;<i>r</i> . d<i>r</i> as
- d&hairsp;(&hairsp;&pi;&hairsp;π&hairsp;<i>r</i><sup>2</sup>&hairsp;),
- the increase of the disk area with <i>r</i>.
- Likewise, the increase 2&hairsp;<i>x</i>&hairsp;.&hairsp;d<i>x</i>
- can be written as d&hairsp;(&hairsp;<i>x</i><sup>2</sup>&hairsp;).
+<p>&emsp; We can interpret
+ 2&hairsp;&pi;&hairsp;<i>r</i>&hairsp;.&hairsp;d<i>r</i> as
+ d&hairsp;(&hairsp;&pi;&hairsp;<i>r</i><sup>&hairsp;2</sup>&hairsp;),
+ the increase of the disk area with <i>r</i>, or
+ 2&hairsp;<i>x</i>&hairsp;.&hairsp;d<i>x</i>
+ as the increase of d&hairsp;(&hairsp;<i>x</i><sup>2</sup>&hairsp;).
  This is rarely useful from an analytical point of view,
- but it offers the opportunity to plot <i>f</i>(&hairsp;<i>x</i>&hairsp;)
+ but it offers the opportunity to plot
+  <i>f</i>&thinsp;(&hairsp;<i>x</i>&hairsp;)
  against <i>x</i><sup>2</sup> instead of against <i>x</i>.
  Such a plot can be useful to get a graphical feeling
- for the local contribution of a function to the whole prop disk.
+ for the contribution of a ring.
  The function value is unchanged on the vertical axis,
  but the horizontal "strips" 
- d&hairsp;(&hairsp;<i>x</i>&hairsp;2&hairsp;)
+ d&hairsp;(&hairsp;<i>x</i>&hairsp;<sup>2</sup>&hairsp;)
  get progressively narrower towards the hub,
  giving the proper visual impression
  of their relative contribution to the area integral.
 </p>
-<p> TODO   Give an example plot (later?), maybe for cos^2(x)
-</p> 
 
+
+<!-- SECTION 7.3 ---------------------------------------------->
+<h4> 7.3 &emsp; Numerical integration </h4>
+
+<p> Somwetimes the analytical integral 
+ (7.3) of <i>f</i>&thinsp;(&hairsp;<i>x</i>&hairsp;) 
+over the prop disk is complicated.
+ In such cases, numerical inte&shygration
+ can come to the rescue.
+ </p>
+<p>&emsp;
+The typical functions in propeller theory have a teardrop shape,
+starting from zero at the hub and going back to zero at the outer 
+end with a more or less elliptical tip.
+ Such functions are easily integrated numerically.
+ The inte&shygral over the infinitesimal width d<i>x</i>
+ becomes a sum over finite widths.
+</p>
+<p>&emsp;
+ Replacing d<i>x</i> in (7.3) by  
+  Δ<i>x</i> = <i>X&nbsp;&#x2044;&thinsp;N</i> 
+and bringing it outside the summation yields :
 </p>
 
-<!-- SECTION 7.2 ---------------------------------------------->
-<h4> 7.2 &emsp; The non-dimensional mass flow per ring </h4>
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>F</mi>
+  <mspace/> <mo>=</mo> <mspace/>
+<mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <mi>X</mi> <mo>.</mo> <mi>N</mi> </mrow>
+  </mfrac>
+  <mn>&ensp;.</mn>
 
-<p> If the rings and tubes of a propeller do not interact,
- then each ring is like a separate propeller.
- It has its own local induction ratio,
- its own pitch angle and its own blade elements.
- The propeller as a whole is just an assembly
- of in&shydependent, nested ring propellers,
- flying in close formation.
+  <msubsup> <mo>&sum;</mo> <mn>0</mn> <mi>N</mi> </msubsup>
+
+  <mi>f</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
+  <mo>.</mo>
+  <mn>2&hairsp;</mn> <mi>x</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">  (7.4)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This expression sums over <i>N</i>&thinsp;+&thinsp;1</i> points,
+ and divides by <i>N</i> rings.
+ With the end values of <i>f</i>&thinsp;(<i>x</i>)  both zero,
+ this is equivalent to the trapezoidal rule. 
 </p>
-<p> It is usual to derive the conditions for a single ring,
- and then integrate the ring contributions
- into an overall value for the whole propeller. 
-We will use the prefix "d" for variables belonging
- to a ring of "infinitesimal" width d<i>r</i>.
+<p>&emsp;
+ A typical value for <i>N</i> used to be
+ <i>N</i>&nbsp;=&nbsp;10 in the days of the slide rule.
+ The result was often improved by
+  <span style="font-variant: small-caps;"> Simp&shyson</span>'s 
+ weighting rule, with end correction for the rounded tip.
+ Today, N = 10,000 is more common and (7.4)
+ does not need such refinement.
+</p>
+
+<!-- SECTION 7.3 ---------------------------------------------->
+<h4> 7.3 &emsp; The non-dimensional mass flow per ring </h4>
+
+<p>
  For the thrust, the contribution of a ring follows
  <span style="font-variant: small-caps;"> Newton</span>'s
- momentum law (4.7) :
+ momentum law :
 </p>
 
 <!-- EQUATION ----------------------------------------------->
@@ -227,7 +365,8 @@ We will use the prefix "d" for variables belonging
 <!-- END EQUATION --------------------------------------------->
 
 <p>
-The difference is that now d<i>m</i><sup>&#9679;</sup> is the air
+The difference with (4.7) is that now
+ d<i>m</i><sup>&#9679;</sup> is the air
  flowing through a <i>ring</i>,
  instead of the air flowing through the whole disk,
  and that the induction <i>w</i> may vary among the rings.
@@ -319,6 +458,7 @@ Substituting (4.2) and (7.2) into the ring thrust yields :
 <td style="width:50px; text-align:right">  (7.4)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
+
 
 
 <!-- SECTION 7.3 ---------------------------------------------->
@@ -652,52 +792,6 @@ With the light loading assumption, this retrieves (5.10).
 		TODO	Show the line for the reduced integral instead. Lose the blue.
 </p>
 <p> <br> <br> IMAGE  </p>
-
-
-<!-- SECTION 7.5 ---------------------------------------------->
-<h4> 7.5 &emsp; Numerical integration </h4>
-
-<p> The typical functions in propeller theory are of the form 
- <i>h</i>&hairsp;(<i>x</i>),
- where <i>h</i>&hairsp;(<i>x</i>) only depends on <i>x</i>,
- and typically has a teardrop shape
- which starts with <i>h</i>&hairsp;(0)&nbsp;=&nbsp;0 at the hub and ends
- with <i>h</i>&hairsp;(<i>X</i>)&nbsp;=&nbsp;0 at the tip.
- They are often shaped much like the "typical" thrust line
- in figure 7.2.
-</p>
-<p> We will often wish to integrate them over the prop disk, like this :
-<p> &emsp;
-	H( X )  ≡  ∫_0^X▒〖 h (x)  .(2 x .dx)/〖 X〗^2 〗		(7.17)
-&/p>
-<p> The effective local disk area d<i>m</i>&thinsp;&prime;
- always contains a term
- 2<i>x</i> . d<i>x / X</i><sup>2</sup>,
- so we show it separately here,
- but this is not even necessary to the argument.
-</p>
-<p> Many of these functions are not as easily integrated as (7.15).
- In such cases we will use numerical integration.
- Once a h(x) is available, (7.17) is easily integrated numerically.
- The integral over the infinitesimal width dx becomes a sum
- over finite widths Δ<i>x</i> = <i>X / N</i>:
-</p>
-<p> &emsp;
-	H( X )  ≅    1/(X.N)   Σ 〖■(N@0)  〗⁡h (x)   .2 x
-	(7.18)
-</p>
-<p> This expression sums over <i>N(/i>&thinsp;+&thinsp;1</i> points,
- and divides by <i>N</i> rings.
- With the end values of <i>h</i>(<i>x</i>)  both zero,
- this is equivalent to the trapezoidal rule. 
-</p>
-<p> A typical value for <i>N</i> used to be
- <i>N</i>&nbsp;=&nbsp;10 in the days of the slide rule.
- The result was often improved by
-  <span style="font-variant: small-caps;"> Simpson</span>'s 
- weighting rule with end correction.
- Today, N = 10,000 is more common and (7.18) is adequate.
-</p>
 
 
 <p> <!-- FOOTER ----------------------------------------------->
