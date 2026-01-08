@@ -86,59 +86,6 @@
 <p style="margin-left : 320px">  <i> ROTATION </i> </p>
 <hr style="margin : 0 0;">
 
-<!--- LOCAL TOC ----------------------------------------------->
-<!--
-<p>
-<h2> <u> Rotation </u> </h2>
-
-<a style="text-decoration:none"
-   href="prop_book_08.html">
-   <h3 style="margin-bottom : -8px;">&nbsp; 8 &emsp;
-                                        <u> Rotational loss </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_09.html">
-   <h3 style="margin-bottom : -8px;">&nbsp; 9 &emsp;
-                         <u> Rotational power and efficiency </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_10.html">
-   <h3 style="margin-bottom : -8px;"> 10 &emsp;
-                         <u> Optimizing the rotational loss  </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_11.html">
-   <h3 style="margin-bottom : -8px;"> 11 &emsp;
-            <u> The optimal efficiency in design parameters   </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_12.html">
-   <h3 style="margin-bottom : -8px;"> 12 &emsp;
-                 <u> Inflating the shape to the design thrust </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_13.html">
-   <h3 style="margin-bottom : -8px;"> 13 &emsp;
-              <u> Blade chords before tip loss </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_14.html">
-   <h3 style="margin-bottom : -8px;"> 14 &emsp;
-                                          <u> Counterrotation </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_15.html">
-   <h3 style="margin-bottom : -8px;"> 15 &emsp;
-                                          <u> The spiral wake </u>  </h3>
-</a>
--->
-<!------------ ------------------------------------------------>
-
-<!--
-<hr style="margin-top : 30px;" >
--->
-
-
 <!-- CHAPTER 8 ------------------------------------------------>
 <h2> 8 &emsp; Rotational loss </h2>
 
@@ -148,17 +95,18 @@
 
 <p> So far, we discussed a purely axial momentum theory.
  But the blades of a propeller also cause a rotation of the wake,
- and this causes an increase in the  momentum loss.
-</p>
-<p> This <i>rotational</i> increase is a factor on the <i>axial</i> loss.
- We could call it the rotational overhead on the momentum loss.
+ and this causes extra  momentum loss.
+ This extra loss is a <i>factor</i> on the axial loss.
+ We could call it the rotational overhead.
  The rotational overhead depends exclusively on the local
  pitch angle <i>&phi;</i>.
 </p>
-<p> This chapter discusses the rotational overhead
+<p>&emsp; This chapter discusses the rotational factor
  without regard to tip loss.
- We will see later that the analysis holds unchanged
- in the case of a finite number of blades.
+ We will see later that the analysis holds without change
+ for that case as well.
+</p>
+<p>&emsp;
  We will first calculate the rotational loss, and then optimize it.
 </p>
 
@@ -167,18 +115,21 @@
 <h4> 8.2 &emsp; The axial component of the blade lift </h4>
 
 <p> Chapter 6 subdivided the prop disk into
- a nested assembly of independent thin-walled flow tubes,
+ a nested assembly of independent, thin-walled flow tubes,
  cutting up the prop disk plane into concentric rings.
  We consider the conditions in one of these rings.
 </p>
-<p style="margin-bottom:-2">
+<p>&emsp;
  Figure 2.3 showed how the blades meet the air
  at a local aerodynamic pitch angle <i>&phi;</i>.
- By the very definition of lift, the blade lift is orthogonal
+ By the very definition of&nbsp;lift,
+ the blade lift is orthogonal
  to the local velocity vector <i>W</i>. 
- The local lift d</i>L</i> is tilted
+ The local lift d<i>L</i> is tilted
  relative to the direction of flight by the same pitch angle.
- Figure 8.1 shows the force diagram.
+</p>
+<p>&emsp;
+ Figure 8.1 shows the force diagram for a blade element.
  The thrust is the forward component of the lift :
 </p>
 
@@ -198,22 +149,23 @@
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> In the actuator disk, the thrust pointed
- straight to the rear, causing a purely axial induced
- velocity v at the prop disk.
- With the lift tilted by the angle <i>&phi;</i>, by
- <span style="font-variant: small-caps;"> Newton</span>'s
- law of action and reaction the velocity increment
- is tilted by the local pitch angle <i>&phi;</i> .
-</p>
-
-<!-- FORCE DIAGRAM -->
+<!-- FIGURE --------------------------------------------------->
 <img width="320" alt="Ring force diagram";
      style="margin-left :260px;
             margin-top  :  8px;"
       src="images/prop_force_diagram.gif">
 <p style="margin-left:260px">
     <i> Figure 8.1 : &ensp; Force diagram for a ring.</i> 
+</p>
+<!------------------------------------------------------------->
+
+<p>&emsp; In the actuator disk, the thrust pointed
+ straight to the rear, causing a purely axial induced
+ velocity <i>v</i> at the prop disk.
+ With the lift tilted by the angle <i>&phi;</i>, by
+ <span style="font-variant: small-caps;"> Newton</span>'s
+ law of action and reaction the velocity increment
+ is tilted by the local pitch angle <i>&phi;</i> .
 </p>
 
 <!-- SECTION 8.3 ---------------------------------------------->
@@ -222,13 +174,27 @@
 
 <p> We will call the induced velocity at the prop disk
  <i>v</i>&thinsp;&prime;.
- Figure 8.2 shows the velocity diagram.
+ Figure 8.2 shows the <i>velocity</i> diagram.
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img width="400" alt="Ring velocity diagram";
+     style="margin-left :180px;
+            margin-top  :  8px;"
+      src="images/prop_velocity_diagram_induced.png">
+<p style="margin-left:250px">
+    <i> Figure 8.2 : &ensp; Velocity diagram for a ring.</i> 
+</p>
+<!------------------------------------------------------------->
+
+<p>&emsp;
  The induced velocity is orthogonal to the local
  blade velocity <i>W</i>&thinsp;&prime;.
  Therefore, <i>v</i>&thinsp;&prime;
  is tilted relative to the flying velocity <i>V</i>.
 </p>
-<p> In lightly loaded propellers, the induced velocity
+<p>&emsp;
+ In lightly loaded propellers, the induced velocity
  <i>v</i>&thinsp;&prime; is much smaller than the 
  blade relative wind
   <i>W</i>&thinsp;&prime;.
@@ -237,6 +203,8 @@
  and <i>v</i>&thinsp;&prime; nearly orthogonal to both.
   The  axial component of the induced velocity
   at the prop disk is <i>v</i>.
+</p>
+<p>&emsp;
  We will call the rotational component <i>u</i>.
  We approximate <i>&phi;</i>&thinsp;&prime;
  by <i>&phi;</i>, which is in keeping
@@ -278,9 +246,7 @@ and so :
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-
-<p>
-The tangential component is :
+<p> The tangential component is :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -295,16 +261,6 @@ The tangential component is :
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-
-<!-- FORCE DIAGRAM -->
-<img width="400" alt="Ring velocity diagram";
-     style="margin-left :180px;
-            margin-top  :  8px;"
-      src="images/prop_velocity_diagram_induced.png">
-<p style="margin-left:250px">
-    <i> Figure 8.2 : &ensp; Velocity diagram for a ring.</i> 
-</p>
-
 <!-- SECTION 8.4 ---------------------------------------------->
 
 <h4> 8.4 &emsp; The local wind speed </h4>
@@ -312,13 +268,14 @@ The tangential component is :
  to <i>W</i>. Therefore the induction gives almost no change in length
  from the nominal wind speed <i>W</i> to the actual wind speed
  <i>W</i>&thinsp;&prime;.
+ There is a change in angle, however.
 </p>
 
 <!-- SECTION 8.5 ---------------------------------------------->
 
-<h4> 8.5 &emsp; The local pitch angle for heavy loading </h4>
+<h4> 8.5 &emsp; The local pitch angle </h4>
 
-<p> The induction <i>v</i>&thinsp;&prime; does change
+<p> The induction <i>v</i>&thinsp;&prime; changes
  the effective local pitch angle.
  We can extend the vector <i>V</i> in figure 8.2 straight down
  by a length of  <i>v</i>&thinsp;&prime;&hairsp;/&hairsp;cos <i>&phi;</i>
@@ -389,7 +346,6 @@ The tangential component is :
   as usual, this yields :
 </p>
 
-
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
@@ -432,10 +388,9 @@ The tangential component is :
 <!-- END EQUATION --------------------------------------------->
 
 <p> When the axial induction <i>b</i> is relatively large,
-  it is customary to replace the angle <i>&phi;</i>
+  it is more exact to replace the angle <i>&phi;</i>
  by <i>&phi;</i>&thinsp;&prime; in some of the calculations,
  but the differences are not large.    
-
 </p>
 
 
@@ -443,10 +398,9 @@ The tangential component is :
 
 <h4> 8.6 &emsp; The swirl angle </h4>
 
-
 <p> The sideways induced velocity <i>u</i> will change the direction
  of the local wind velocity <i>V</i> in in figure 8.2
- by an angle <i>&psi;</i> ( Greek letter psi ).
+ by an angle <i>&psi;</i> (&hairsp;Greek letter <i>"psi"</i>&hairsp;).
  Using  (8.4) for <i>u</i>, the tangent of this
  so-called swirl angle is :
 </p>
@@ -509,7 +463,8 @@ The tangential component is :
  For normal, “lightly loaded” values of <i>b</i> &Lt; 1,
   the swirl angle is at most a few degrees.
 </p>
-<p> The swirl angle gives an angle of attack to the fin
+<p>&emsp;
+ The swirl angle gives an angle of attack to the fin
  of single engine aircraft.
  This is the reason why aircraft with
  right hand turning propellers
@@ -519,7 +474,8 @@ The tangential component is :
   to accommodate the average swirl angle,
  but this does not undo the effects of changing power.
 </p>
-<p> We will briefly discuss the options of counterrotation
+<p>&emsp;
+ We will briefly discuss the options of counterrotation
  and swirl recovery in a later chapter,
  but a normal propeller leaves behind
  the  rotation of figure 8.2,
