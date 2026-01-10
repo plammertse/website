@@ -87,23 +87,27 @@
 
 <!-- CHAPTER 9 ------------------------------------------------>
 
-<h2> 9 &emsp; Rotational power and efficiency </h2>
+<h2> 9 &emsp; Rotational momentum loss </h2>
 
 <!-- SECTION 9.1 ---------------------------------------------->
 
-<h4> 9.1 &emsp; Kinetic energy in the wake </h4>
+<!--
+<h4> 9.1 &emsp; The rotational increase in the momentum loss </h4>
 
 <p> Compared to the axial actuator disk,
  the blade elements in figure 7.2 leave behind an extra velocity
  <i>u</i> at&nbsp;right angles to the axial inducton <i>v</i>.
  This leaves extra kinetic energy in the wake which shows up
  as a rotational power loss. 
+</p>
+<p>&emsp;
  By (7.4), the relative increase in kinetic energy due to the rotation
  at the prop disk (&hairsp;but the ratio is the same
  in the far wake&hairsp;) :
 </p>
 
-<!-- EQUATION ------------------------------------------------->
+<! -- EQUATION ------------------------------------------------- >
+
 <table> <tr> <td>
 <math>
   <mstyle displaystyle="true">
@@ -122,10 +126,10 @@
     <msup> <mn>tan</mn> <mn>2</mn> </msup> 
     <mi>&phi;</mi>
 
-<!-- NEW IDEA : LINE BREAK AND "TAB" -------------------------->
+< ! -- NEW IDEA : LINE BREAK AND "TAB" -------------------------- >
 </td> </tr> </math>
  <tr> <td>  <math>
-<!------------------------------------------------------------->
+<! ------------------------------------------------------------- >
   <mspace mstyle width="3.9em"/> <mo>=</mo> <mspace/> 
 
   <mstyle displaystyle="true">
@@ -138,9 +142,9 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (9.1)
+<td style="width:50px; text-align:right">                   (9.1)
 </td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
+<! -- END EQUATION --------------------------------------------- >
 
 <p> The last step is via trigonometry, or by (2.8).
  We can also find the
@@ -148,13 +152,20 @@
  term directly from geometry.
 </p>
 
-<!-- SECTION 9.2 ---------------------------------------------->
+-->
+<! -- SECTION 9.1 ---------------------------------------------- >
 
-<h4> 9.2 &emsp; Local efficiency and power loss </h4>
+<h4> 9.1 &emsp; Local loss and efficiency </h4>
 
-<p> Using <i>w</i> and <i>w</i>&thinsp;&prime; instead of
- <i>v</i> and <i>w</i>&thinsp;&prime; in figure 7.2,
- like in (7.3) we have :
+<p> Compared to the axial actuator disk,
+ the blade elements leave behind an extra velocity
+ <i>u</i> at&nbsp;right angles to the axial inducton <i>v</i>.
+ This leaves extra kinetic energy in the wake which shows up
+ as an extra momentum loss.
+</p>
+<p>&emsp; Using the far wake values <i>w</i>
+ and <i>w</i>&thinsp;&prime;
+ in figure 7.2, we have :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -173,12 +184,13 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (9.2)
+<td style="width:50px; text-align:right">                 (9.1)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> With the definition <i>w</i> &equiv; <i>b&hairsp;.&hairsp;V</i> 
- from (4.1), the kinetic energy d<i>P</i><sub>m</sub> left behind
+<p> With the definition <i>w</i> &equiv;
+ <i>b&hairsp;.&hairsp;V</i> from (4.1),
+ the kinetic energy d<i>P</i><sub>m</sub> left behind
  in the far wake of a ring becomes  :
 </p>
 
@@ -218,14 +230,16 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (9.3)
+<td style="width:50px; text-align:right">                 (9.2)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> Dividing by the local thrust (6.11) gives us
- the local momentum loss ratio for any induction ratio
+<p> Dividing by the local thrust (7.5) gives us
+ the local momentum loss ratio :
+<!-- for any induction ratio
  <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;) for any value
  of d<i>m</i><sup>&thinsp;&bull;</sup> :
+-->
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -246,19 +260,20 @@
   <mfrac>
     <mrow> <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
    </mrow>
-    <mrow> <mn>d</mn> <mi>T</mi> <mn>.</mn> <mi>V</mi>
+    <mrow> <mn>d</mn> <mi>T</mi> <mo>.</mo> <mi>V</mi>
    </mrow>
   </mfrac>
 
 
   <mspace/> <mo> = </mo> <mspace/> </mo>
 
-  <mn>&frac12;&thinsp;</mn> 
-  <mo>.</mo> 
-
   <mstyle displaystyle="true">
   <mfrac>
-    <mrow> <mn>d</mn> 
+    <mrow>
+      <mn>&frac12;&thinsp;</mn>
+<!--      <mo>.</mo>       -->
+
+      <mn>d</mn> 
       <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
       <mo>.</mo>
       <msup> <mi>V</mi> <mn>2</mn> </msup>
@@ -269,16 +284,15 @@
         <mrow>
           <msup> <mn>cos</mn> <mn>2</mn> </msup>
             <mi>&phi;</mi>
-      </mrow>
-    </mfrac>
-
+       </mrow>
+      </mfrac>
    </mrow>
 
     <mrow> <mn>d</mn> 
       <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
       <mo>.</mo>
-      <msup> <mi>V</mi> <mn>2</mn> </msup>
-      <mo>.</mo> <mi>b</i>
+      <mi>V</mi>
+      <mo>.</mo> <mi>b</mi> <mo>.</mo> <mi>V</mi>
    </mrow>
   </mfrac>
 
@@ -299,19 +313,19 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (9.4)
+<td style="width:50px; text-align:right">                 (9.3)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p> This local momentum loss ratio depends on the local induction ratio,
  but not on the mass flow through the ring,
- since the factor d<i>m</i><sup>&thinsp;&bull;</sup> drops out of (9.4). 
+ since d<i>m</i><sup>&#9679;</sup> drops out of (9.3). 
+ Compared to the axial loss ratio <i>b</i> of (4.16),
+ the rotation increases the local momen&shytum loss by a factor
+<!--  of 1/cos<sup>2</sup><i>&phi;</i>. -->
+1&nbsp;&#x2044;&thinsp;cos<sup>2</sup>&hairsp;&phi;.
 </p>
-<p> Compared to the axial loss ratio (4.16),
- the rotation increases the momentum loss by a local factor
- of 1/cos<sup>2</sup><i>&phi;</i>,
-  for any local axial induction ratio
- <i>b</i>&hairsp;(<i>&hairsp;x&hairsp;</i>).
+<p>&emsp;
  The ring efficiency becomes :
 </p>
 
@@ -329,10 +343,10 @@
     <mrow> <mn>1</mn> <mo>+</mo> 
       <mstyle displaystyle="true">
       <mfrac>
-        <mrow> <msub> <mi>P</mi> <mn>m</mn> </msub>
+        <mrow> <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
           <mn>&thinsp;&prime;</mn>
        </mrow>
-        <mrow> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+        <mrow> <mn>d</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
        </mrow>
      </mfrac>
    </mrow>
@@ -364,19 +378,82 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (9.5)
+<td style="width:50px; text-align:right">                 (9.4)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> The symbol d<i>&eta;</i><sub>m</sub> is used here loosely
- for the local momentum efficiency,
- but we note that such local ratios and efficiencies
- cannot be integrated over the rings like the overall thrust
- and power can.
- </p>
+<p> The symbol d<i>&eta;</i><sub>m</sub>, with a "d" in front,
+ is used here loosely
+ for the <i>local</i> momentum efficiency, but is not 
+ an infini&shytesimal.
+ Local ratios and efficiencies cannot be integrated
+ over the rings like the overall thrust and power can.
+</p>
+
+<!-- SECTION 9.2 ---------------------------------------------->
+
+<h4> 9.2 &emsp; Integrating the rotational loss </h4>
+<p> For the overall efficiency, we cannot integrate
+ the power loss ratio (9.4) over the propeller.
+ As a counterexample, this will not work
+ if one half of the propeller has a power loss ratio
+ of maybe zero, but the only thrust is on the other half.
+</p>
+<p>&emsp;
+ We will have to separately integrate
+ the power and the thrust over the propeller,
+ and find the ratio of those two overall values.
+ We do the integration in non-dimensional form.
+</p>
+<p>&emsp;
+ We can make (9.3) a non-dimensional power by the definition
+ of (3.3) :
+</p>
+<p>&emsp;
+	〖〖dP〗_m〗^'  =  ½ .  (dm●   .V^2)/(ρ V^3.πR^2 ).  b^2/cos^2⁡ϕ 	(9.6)
+</p>
+<p> Following the steps from (7.9) to (7.11),
+ for lightly loaded propellers we have :
+</p>
+<p>&emsp;
+	〖dA〗^'   =     (dm●.V^2)/(ρ V^3.π R^2 )    ≅   (2 x .dx)/X^2 	(9.7)
+</p>
+<p> This turns (9.6) into :
+</p>
+<p>&emsp;
+    〖〖dP〗_m〗^'    =   ½ .( b(x)2 )/cos^2⁡ϕ   .   (2 x .dx)/X^2 	(9.8)
+</p>
+<p>
+The integral is :
+</p>
+<p>&emsp;
+    〖P_m〗^'   =   ∫▒〖〖dP〗_m〗^'   =   1 /X^2   ∫_0^(X )▒〖½ .( b(x)2 )/cos^2⁡ϕ   .2 x .dx〗
+(9.9)
+</p>
+<p> This is the generic, non-dimensional, overall momentum loss
+ for a lightly loaded propeller including rotation,
+ at an arbitrary induction ratio distribution b(x).
+</p>
+<p>&emsp; 
+ The matching thrust integral was given by  (7.17).
+ The ratio of the two integrals yields the overall loss ratio,
+ which is
+   <i>P</i><sub>m</sub>&prime;&nbsp;&#x2044;&thinsp;<i>T</i>&prime; by (3.9) :
+</p>
+<p?&emsp;
+     〖P_m〗^'/T^'    =    (∫▒〖〖dP〗_m〗^'   )/(∫▒〖dT〗^' )   =   ( ∫_0^(X )▒〖½ .( b(x)2 )/cos^2⁡ϕ   .2 x .dx〗)/(∫_0^X▒〖b(x)   .2  x .dx〗)
+(9.10)
+</p>
+<p>&emsp;
+This equation looks a bit daunting at first,
+ but we will derive an optimum distribution <i>b</i>(<i>x</i>)
+ which not only minimizes the rotational loss,
+ but also yields a very simple solution for (9.10).
+</p>
+
 
 <!-- FOOTER --------------------------------------------------->
-<br><br>
+<br> <br>
 <div class="footer"> P. Lammertse, 2025 </div>
 
 </body>

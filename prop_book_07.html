@@ -145,8 +145,6 @@
 
  Summing over "infinitely narrow" rings of width d<i>r</i> 
  represents an integral.
-</p>
-<p>
  The average of <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
  over the disk is the integral divided by the disk area.
  We will call this average &thinsp;<i>F</i> :
@@ -213,10 +211,11 @@
  It will then be convenient to write the whole integral
  in that parameter.</p>
  <p>&emsp;
- We convert <i>r</i> and d<i>r</i> into <i>x</i> and d<i>x</i>,
- and <i>R</i> into <i>X</i> with (2.10) and (2.11).
- The factors <i>V</i>&nbsp;&#x2044;&thinsp;<i>&Omega;</i>
- cancel, giving :
+ By (2.12), we can replace <i>r&nbsp;&#x2044;&nbsp;R</i>
+ by <i>x</i>&nbsp;&#x2044;&thinsp;<i>X</i>,
+ and d<i>r</i>&nbsp;&#x2044;&nbsp;<i>R</i>
+ by d<i>x</i>&nbsp;&#x2044;&thinsp;<i>X</i>,
+ yielding :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -337,35 +336,75 @@ and bringing it outside the summation yields :
 </p>
 
 
-<!-- SECTION 7.3 ---------------------------------------------->
-<h4> 7.3 &emsp; The thrust per ring </h4>
+<!-- SECTION 7.4 ---------------------------------------------->
+<h4> 7.4 &emsp; The thrust per ring </h4>
 
-<p> The non-dimensional thrust
- of a uniform actuator disk follows from (5.9).
+<p> The thrust of a uniform actuator disk follows from (5.1).
  We define the equivalent for a ring :
 </p>
 
-<!-- EQUATION ----------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mn>d</mn><mi>T</mi> <mn>&thinsp;&prime;</mn>
+  <mn>d</mn> <mi>T</mi>
+ 
+  <mspace/> <mo>=</mo> <mspace/>
 
-  <mo>=</mo>
+  <mn>d</mn> <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+  <mo>.</mo>
+  <mi>w</mi>
 
-    <mn>d</mn> 
-      <mi>m</mi> <mn>&hairsp;&prime;</mn>
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>d</mn> <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
   <mo>.</mo>
   <mi>b</mi>
+  <mo>.</mo>
+  <mi>V</mi>
 
 </math>
 
-<td style="width:50px; text-align:right">  (7.5)
+<td style="width:50px; text-align:right">                 (7.5)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The non-dimensional version follows just like in (5.8) :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+
+  <mn>d</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+ 
+  <mo>=</mo> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mn>d</mn> <msup> <mi>m</mi> <mn>&bull;</mn> </msup> 
+   </mrow>
+    <mrow>
+      <mi>&rho;</mi> <mn>&hairsp;</mn> 
+       <msup> <mi>V</mi> <mn>2</mn> </msup>
+      <mn>.&thinsp;&pi;&thinsp;</mn> 
+      <msup> <mi>R</mi> <mn>2</mn> </msup>
+    </mrow>
+ </mfrac>
+
+ <mo>.</mo> <mi>b</mi> <mo>.</mo> <mi>V</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (7.6)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p>
 The difference is that now
- d<i>m</i>&hairsp;&prime; is the air
+ d<i>m</i><sup>&#9679;</sup> 
+ is the air
  flowing through a <i>ring</i>,
  instead of the air flowing through the whole disk,
  and that the induction ratio <i>b</i> may vary among the rings.
@@ -392,13 +431,15 @@ The difference is that now
   <mo>)</mo>
 </math>
 
-<td style="width:50px; text-align:right">  (7.6)
+<td style="width:50px; text-align:right">                 (7.7)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> We make d<i>m</i>&thinsp;&prime; non-dimensional 
+<p> We can make
+ d<i>m</i><sup>&#9679;</sup>
+ non-dimensional 
  relative to the whole disk area in the same way as 
- <i>m</i>&thinsp;&prime; in (5.4) :
+ <i>m</i>&hairsp;&prime; in (5.4) :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -421,7 +462,7 @@ The difference is that now
  </mrow>
 </math>
 
-<td style="width:50px; text-align:right">  (7.7)
+<td style="width:50px; text-align:right">                 (7.8)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -456,13 +497,15 @@ The difference is that now
   <mn>)</mn>
 </math>
 
-<td style="width:50px; text-align:right">  (7.8)
+<td style="width:50px; text-align:right">                 (7.9)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> Replacing <i>r / R</i> by <i>x / X</i>
- and d<i>r / R</i> by d<i>x / X</i>
- like in (7.3) yields :
+<p> Replacing <i>r&nbsp;&#x2044;&nbsp;R</i>
+ by <i>x&nbsp;&#x2044;&nbsp;X</i>
+ and d<i>r&nbsp;&#x2044;&nbsp;R</i>
+ by d<i>x&nbsp;&#x2044;&nbsp;X</i>
+ like we did in (7.3) yields :
 </p>  
 
 <!-- EQUATION ------------------------------------------------->
@@ -492,7 +535,7 @@ The difference is that now
   <mn>)</mn>
 </math>
 
-<td style="width:50px; text-align:right">  (7.9)
+<td style="width:50px; text-align:right">                (7.10)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -520,7 +563,7 @@ The difference is that now
 
 </math>
 
-<td style="width:50px; text-align:right">  (7.10)
+<td style="width:50px; text-align:right">                (7.11)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -529,7 +572,29 @@ The difference is that now
  frontal area of the ring.
 </p>
 
-<p> Using this in (7.5) we have :
+<p>&emsp;
+ Using this in (7.6) we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn><mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mo>=</mo>
+
+    <mn>d</mn> 
+      <mi>m</mi> <mn>&hairsp;&prime;</mn>
+  <mo>.</mo>
+  <mi>b</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (7.12)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> For a "heavily" loaded ring this yields :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -562,7 +627,7 @@ The difference is that now
   <mi>b</mi>
 </math>
 
-<td style="width:50px; text-align:right">  (7.11)
+<td style="width:50px; text-align:right">                (7.13)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -576,10 +641,6 @@ The difference is that now
     
   <mo> = </mo>
 
-  <mi>b</mi>
-
-  <mo>.</mo>
-
   <mstyle displaystyle="true">
   <mfrac> 
    <mrow>
@@ -591,214 +652,157 @@ The difference is that now
      <msup> <mi>X</mi> <mn>2</mn> </msup>
   </mrow>
  </mfrac>
+
+  <mo>.</mo>
+
+  <mi>b</mi>
+
 </math>
 
-<td style="width:50px; text-align:right">  (7.12)
+<td style="width:50px; text-align:right">                (7.14)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
+<!-- SECTION 7.5 ---------------------------------------------->
+<h4> 7.5 &emsp; The momentum loss per ring </h4>
 
-<h4> 7.4 &emsp; Integrals and graphs </h4>
-
-<p> TODO </p>
-
-
-<!----
-
-<p> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX </p>
-
-
-<!----
-
-<p> Integrating d<i>T</i>&thinsp;&prime;
- over the rings gives the overall thrust :
-<p> &emsp;
-	T^'  = ∫▒〖dT〗^' =  1/X^2  ∫_0^X▒〖b(x)   .(1+a(x)) .2 x .dx〗
-(7.12)
-</p>
-<p> For light loading, we can use the d<i>m</i>&thinsp;&prime;
- of (7.8), which yields :
-</p>
-<p>
-	dT^'   ≅   b(x)  .  (2 x .dx)/X^2 
-(7.13)
-</p>
-<p>
-The light loading thrust integral is then :
-	T^'  =   1/X^2  ∫_0^X▒〖b(x)  .2 x .dx〗
-(7.14)
-</p>
-<p>
-If  b (x) is constant over the whole blade, then so is a = ½ b, and we have :
-	T^'  = b .(1+a)    1/X^2  ∫_0^X▒〖2  x .dx〗
-(7.15)
-</p>
-<p>
-Since the primitive of x is ½  x2, this reproduces (5.11) for the actuator disk :
-	T^'  = b .(1+a)	(7.16)
-</p>
-<p>
-With the light loading assumption, this retrieves (5.10).
-</p>
-<p> Figure 7.2 shows the ring thrust contributions (7.11).
- The area under the curve is the integral (7.15).
- For uniform thrust, the graph is a right triangle of area
- ( 1 + <i>a</i> ).
- Its center of mass is at ⅔<i>X</i>  from the left.
- This is by the way not the same as the median of the area
- at ½ <i>X</i>√2 , but it is close.
- We will meet this center of mass in the calculation
- of the viscous drag.
-</p>
-<p> The curved line is a more typical (&thinsp;normalized&thinsp;)
- thrust distribution.
- It retains the nominally triangular shape,
- but it is reduced by local variations of <i>b</i>(<i>x</i>)
- due to rotational and viscous optimization,
- and by local reductions on d<i>m</i>&thinsp;&prime;((i>x</i>)
- due to tip loss.
-</p>
-<p> The value of (1+<i>a</i>) is an average over the rings
- in this general case.
-</p>
-<p> &emsp; &emsp;
-		TODO	Show the line for the reduced integral instead. Lose the blue.
-</p>
-<p> <br> <br> IMAGE  </p>
-
--->
-
-
-
-
-
-<!-- 
-
-<p> The integral of (7.9) from the hub to the radius
-    <i>x</i><mn>&hairsp;<mn><mi>/</mi><mn>&hairsp;</mn><mi>X</mi>
- equals the  (non-dimensional) area of a disk of radius
- <i>x&thinsp;/&thinsp;X</i> :
+<p> The momentum loss for a uniform actuator disk
+ follows from (4.15).
+ The equivalent for a ring is :
 </p>
 
-
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mi>m</mi> <mn>&hairsp;&prime;</mn>
-  <mn>( 0&rarr; </mn> <mi>x</mi> <mn>)</mn>
+  <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+ 
+  <mspace/> <mo>=</mo> <mspace/>
 
-  <mspace/>
-  <mo>=</mo>
-  <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac> <mn>1</mn>
-    <msup><mi>X</mi> <mn>2</mn>
-  </mfrac> 
-
-  <mo>&thinsp;.</mo>
-
-  <msubsup> <mo>∫</mo> <mn>0</mn> <mi>x</mi> </msubsup>
-  <mn>2&thinsp;</mn> <mi>x</mi>
+  <mn>&frac12;&thinsp;</mn>
+  <mn>d</mn> <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
   <mo>.</mo>
-  <mn>d</mn> <mi>x</mi>
+  <msup> <mi>w</mi> <mn>2</mn> </msup>
 
-  <mo>&thinsp;=&thinsp;</mo>
+  <mspace/> <mo>=</mo> <mspace/>
 
-  <mstyle displaystyle="true">
-  <mfrac>
-    <msup> <mi>x</mi> <mn>2</mn> </msup>
-    <msup> <mi>X</mi> <mn>2</mn> </msup>
-  </mfrac> 
+  <mn>&frac12;&thinsp;</mn>
+
+  <mn>d</mn> <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
+  <mo>.</mo>
+  <msup> <mi>b</mi> <mn>2</n> </msup>
+  <mo>.</mo>
+  <msup> <mi>V</mi> <mn>2</n> </msup>
 
 </math>
 
-<td style="width:50px; text-align:right">  (7.10)
+<td style="width:50px; text-align:right">                 (7.15)
 </td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
 
-
-
-
-<p> Figure 7.1 shows this relation.
- The figure conveys an important message :
- the median of the disk area is located at the radius
- <i>r/R</i> = &frac12;√2  ≅ 0.7.
- Conventional wisdom has it that a propeller is characterized
- by its "halfway" radius at 0.7 <i>R</i>.
-</p>
-<p> We will find later that both (7.9) and(7.10)
- can be reduced by tip loss.
-</p>
-<p> The area within  the radius
- <i>r&thinsp;/&thinsp;R</i>&nbsp;=&nbsp;0.5 is one quarter
- of the total disk area, and the area within 
- <i>r&thinsp;/&thinsp;R</i>&nbsp;=&nbsp;0.25 
- is only 1/16 of the total disk area.
- Also, the shape of the blade shank near the hub
- is dominated by structural considerations,
- and the central part will be covered by a spinner.
- All in all, the inner 25&thinsp;% of the blade
- is mostly along for the ride. 
+<p> We can make this non-dimensional in the same way
+as we did for the thrust. The result is :
 </p>
 
-<img src="images/prop_parabola_integral.png" 
-     width="360" alt="Parabolic disk area";
-     style="margin-left :180px;
-            margin-top  :  8px;">
-<p style="margin-left:180px">
-    <i> Figure 7.1 : &ensp;
-         Non-dimensional disk area within radius
-          x&thinsp;/&thinsp;X.</i> 
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub>
+  <mn>&thinsp;&prime;</mn>
+ 
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn>&frac12;&thinsp;</mn>
+  <mn>d</mn> <mi>m</mi> <mn>&thinsp;&prime;</mn>
+  <mo>.</mo>
+  <msup> <mi>b</mi> <mn>2</mn> </msup>
+</math>
+
+<td style="width:50px; text-align:right">                (7.16)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> For a "heavily" loaded ring this yields :
 </p>
 
--->
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn> 
+  <msub> <mi>P</mi> <mn>m</mn> </msub>
+  <mn>&hairsp;&prime;</mn>
+    
+  <mo> = </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac> 
+   <mrow>
+    <mn>2&hairsp;</mn> <mi>x</mi>
+    <mo>.</mo>
+    <mn>d</mn> <mi>x</mi>
+    <mo>.</mo>
+  </mrow>
+   <mrow>
+     <msup> <mi>X</mi> <mn>2</mn> </msup>
+  </mrow>
+ </mfrac>
+
+  <mo>.</mo>
+
+  <mn>(</mn>
+   <mn>1 + &frac12;&hairsp;</mn> <mi>b</mi>
+  <mn>)</mn>
+
+  <mo>.</mo>
+  <mn>&frac12;&thinsp;</mn>
+  <msup> <mi>b</mi> <mn>2</mn> </msup>
+</math>
+
+<td style="width:50px; text-align:right">                (7.17)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> and for light loading :
+</p>
 
 
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn> 
+  <msub> <mi>P</mi> <mn>m</mn> </msub>
+  <mn>&hairsp;&prime;</mn>
+    
+  <mo> = </mo>
 
-<!---
+  <mstyle displaystyle="true">
+  <mfrac> 
+   <mrow>
+    <mn>2&hairsp;</mn> <mi>x</mi>
+    <mo>.</mo>
+    <mn>d</mn> <mi>x</mi>
+    <mo>.</mo>
+  </mrow>
+   <mrow>
+     <msup> <mi>X</mi> <mn>2</mn> </msup>
+  </mrow>
+ </mfrac>
 
-The light loading thrust integral is then :
-	T^'  =   1/X^2  ∫_0^X▒〖b(x)  .2 x .dx〗
-(7.14)
-</p>
-<p>
-If  b (x) is constant over the whole blade, then so is a = ½ b, and we have :
-	T^'  = b .(1+a)    1/X^2  ∫_0^X▒〖2  x .dx〗
-(7.15)
-</p>
-<p>
-Since the primitive of x is ½  x2, this reproduces (5.11) for the actuator disk :
-	T^'  = b .(1+a)	(7.16)
-</p>
-<p>
-With the light loading assumption, this retrieves (5.10).
-</p>
-<p> Figure 7.2 shows the ring thrust contributions (7.11).
- The area under the curve is the integral (7.15).
- For uniform thrust, the graph is a right triangle of area
- ( 1 + <i>a</i> ).
- Its center of mass is at ⅔<i>X</i>  from the left.
- This is by the way not the same as the median of the area
- at ½ <i>X</i>√2 , but it is close.
- We will meet this center of mass in the calculation
- of the viscous drag.
-</p>
-<p> The curved line is a more typical (&thinsp;normalized&thinsp;)
- thrust distribution.
- It retains the nominally triangular shape,
- but it is reduced by local variations of <i>b</i>(<i>x</i>)
- due to rotational and viscous optimization,
- and by local reductions on d<i>m</i>&thinsp;&prime;((i>x</i>)
- due to tip loss.
-</p>
-<p> The value of (1+<i>a</i>) is an average over the rings
- in this general case.
-</p>
-<p> &emsp; &emsp;
-		TODO	Show the line for the reduced integral instead. Lose the blue.
-</p>
-<p> <br> <br> IMAGE  </p>
+  <mo>&hairsp;.&hairsp;</mo>
 
--->
+  <mn>&frac12;&thinsp;</mn>
+
+  <msup> <mi>b</mi> <mn>2</mn> </msup>
+</math>
+
+<td style="width:50px; text-align:right">                (7.18)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- SECTION 7.5 ---------------------------------------------->
+<h4> 7.5 &emsp; Integrals and graphs </h4>
+
+<p> TODO </p>
+
 
 <p> <!-- FOOTER ----------------------------------------------->
 <br> <br>

@@ -22,7 +22,6 @@
 
   <li> <a href="prop_book_09.html">&#x25C4  Previous  </a> </li>
 
-
   <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
   <li class="dropdown">
     <a class="dropbtn";
@@ -90,7 +89,197 @@
 
 <h4> 10.1 &emsp; Marginal loss </h4>
 
-<p> </p>
+<p> We will now find the thrust distribution which minimizes
+ the rotational loss for a given overall thrust
+ and the local and overall efficiency,
+ by the method of "constant marginal loss".
+</p>
+<p>&emsp;
+ The rotational momentum loss ratio (9.3)
+ and the efficiency (9.4) vary along the blade,
+ with the local pitch angle.
+ Intuitively, we can move thrust from a radius
+ with low efficiency to one with high efficiency,
+ making the whole propeller more efficient. 
+</p>
+<p>&emsp;
+ By inspection of (9.4), we can make
+ the efficiency the same everywhere by scheduling
+ <i>b</i>&hairsp;(<i>x</i>)
+ with cos<sup>2</sup><i>&hairsp;&phi;</i>.
+ We&nbsp;will find below that this is in fact the optimal solution.
+</p>
+<p>&emsp;
+ But having the same efficiency everywhere is not formal proof
+ of optimality.
+ The formal proof requires that we make the <i>marginal</i>
+ efficiency the same everywhere.
+ This is not the same thing.
+</p>
+<p>&emsp;
+ A small change in the local thrust d<i>T</i>,
+ or better a small change in the net power
+   d<i>T&hairsp;.&hairsp;V</i>,
+ will cause a small change in the local power loss.
+ The ratio between this extra power loss and the extra
+ net power is called the <i>marginal loss</i>.
+</p>
+<p>&emsp;
+ As long as the derivative of d<i>P</i><sub>m</sub>
+ with respect to d<i>T</i> is not the same everywhere,
+ we can gain efficiency by taking in&shycre&shyments
+ of thrust away from locations with high marginal loss,
+ and moving thrust to locations with low marginal loss.
+ We will stop moving thrust only when the derivative
+ has reached the same value everywhere,
+ i.e.&nbsp;when the <i>marginal</i> loss
+ has the same value everywhere.
+ We will call this constant marginal loss ratio <i>C</i> :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn>
+      <mo>(</mo>
+         <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub> 
+      <mo>)</mo>
+   </mrow>
+    <mrow> <mn>d</mn>
+      <mo>(</mo>
+       <mn>d</mn> <mi>T</mi> <mn>&hairsp;.&hairsp;</mn> <mi>V</mi>
+      <mo>)</mo>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>C</mi>
+</math>
+
+<td style="width:50px; text-align:right">                (10.1)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The inner "d"&thinsp;'s indicate ring values,
+ the outer "d"&thinsp;'s
+ are the symbols for the derivative.
+</p>
+<p>&emsp;
+ Since we are not varying flight conditions
+ like <i>&rho;</i> or <i>V</i>,
+ or any propeller geometrical parameters
+ like <i>R</i> or <i>X</i>,
+ then by (3.9) we can write the same equation
+ in non-dimensional form :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn>
+      <mo>(</mo>
+         <mn>d</mn> <msub> <mi>P</mi> <mn>m</mn> </msub> 
+         <mn>&prime;</mn>
+      <mo>)</mo>
+   </mrow>
+    <mrow> <mn>d</mn>
+      <mo>(</mo>
+       <mn>d</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+      <mo>)</mo>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>C</mi>
+</math>
+
+<td style="width:50px; text-align:right">                (10.2)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The ring thrust d<i>T</i>&thinsp;&prime;
+ is the variable driving the change.
+ We could express d<i>P</i><sub>m</sub>&thinsp;&prime;
+ as a function of d<i>T</i>&thinsp;&prime;,
+ and take the derivative of d<i>P</i><sub>m</sub>&thinsp;&prime;
+ with respect to
+  d<i>T</i>&thinsp;&prime; directly.
+</p>
+<p>&emsp;
+ But it is easier to use the local value
+ of the induction ratio <i>b&hairsp;</i>(<i>x</i>)
+ as the variable driving both d<i>T</i>&thinsp;&prime;
+ and d<i>P</i><sub>m</sub>&prime;.
+</p>
+<p>
+ The marginal loss then becomes :
+</p>
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn>
+      <mo>(</mo>
+         <mn>d</mn> 
+     <msub> <mi>P</mi> <mn>m</mn> </msub> <mn>&prime;</mn>
+      <mo>)</mo>
+
+      <mo>/</mo> <mn>d</mn> <mi>b</mi>
+   </mrow>
+    <mrow>
+      <mn>&hairsp;</mn>
+      <mn>d</mn>
+      <mo>(</mo>
+       <mn>d</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+      <mo>)</mo>
+
+      <mn>&thinsp;</mn>
+      <mo>/</mo> <mn>d</mn> <mi>b</mi>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>C</mi>
+</math>
+
+<td style="width:50px; text-align:right">                (10.3)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Substituting (XXXX) for <i>P</i><sub>m</sub>&prime;
+ and (4.9) for <i>T</i>&thinsp;&prime; yields : 
+</p>
+<p>&emsp;
+	(d/( db)  (dm● . V^2.  (½ b^2)/cos^2⁡ϕ   ))/(  d/db   ( dm●.V^2     .     b        ) )   =  C
+
+(10.3)
+</p>
+<p> In that case the d<i>m</i>● of (7.8) does not depend on <i>b.
+ It can be taken outside the derivatives,
+ where it will cancel between the numerator and the denominator. 
+ Certainly for light loading, the factor 1/cos2ϕ 
+ is also independent of <i>b</i>.
+ This simplifies the marginal loss to :
+</p>
+<p>
+	C =  ( d ( 〖dP〗_m  ))/d (d T.V)    =1/cos^2⁡ϕ   .   ( d/( db)  ( ½ b^2  ))/( d/db ( b ) )   =   b/cos^2⁡ϕ 	
+(10.4)
+</p>
+<p> For optimality, the marginal loss <i>C</i> must be a constant.
+ As a result the axial induction ratio <i>b</i>
+ will have to vary along the blade :
+</p>
+<p>&emsp;
+	b(x)  =  C .cos^2 ϕ	(10.5)
+ </p>
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>
