@@ -273,7 +273,7 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.2)
+<td style="width:50px; text-align:right">                 (2.2)
 
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
@@ -297,11 +297,12 @@ in capitals.
            <msub> <mi>&phi;</mi> <mi>tip</mi> </msub> 
     </mrow>
  </mfrac>
- <mi style="font-size:17px;"> <i> &emsp; &emsp; &emsp; tip speed ratio </i> </mi>
+ <mi style="font-size:17px;">
+               <i> &emsp; &emsp; &emsp; tip speed ratio </i> </mi>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.3)
+<td style="width:50px; text-align:right">                          (2.3)
 </td>
  </tr> </table>
 <!-- END EQUATION ------------------------------------------------------>
@@ -317,7 +318,7 @@ in capitals.
 </p>
 
 
-<!-- SECTION 2.5 ------------------------------------------------------->
+<!-- SECTION 2.5 ---------------------------------------------->
 
 <h4> 2.5 &emsp; The local pitch angle </h4>
 
@@ -326,7 +327,7 @@ in capitals.
  The&nbsp;figure shows by inspection :
 </p>
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -339,13 +340,13 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.4)
+<td style="width:50px; text-align:right">                 (2.4)
 </td>
 </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -364,20 +365,20 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.5)
+<td style="width:50px; text-align:right">                 (2.5)
 </td>
 </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
   <mo> cos </mo> <mi>&phi;</mi>
   <mspace/> <mo> = </mo> <mspace/>
   <mstyle displaystyle="true">
-<mfrac> <mi>z</mi>
+<mfrac> <mi>x</mi>
   <mrow> <msqrt> 
     <mn>1</mn> <mo>+</mo>
     <msup>
@@ -389,15 +390,62 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.6)
+<td style="width:50px; text-align:right">                 (2.6)
 </td>
 </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 
-<p>Another relation which comes up frequently in the theory is :
+<p> Another relation which comes up frequently in the theory is :
+</p>
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup> 
+    <mi>&phi;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> 
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+    </mrow>
+    <mrow>
+      <mn>1</mn> <mo>+</mo> 
+      <msup> <mi>x</mi> <mn>2</mn> </msup>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn> 1 </mn>
+  <mo> &minus; </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <mn>1</mn> <mo>+</mo> 
+      <msup> <mi>x</mi>  <mn>2</mn> </msup>
+   </mrow>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                 (2.7)
+</td>
+</tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This also means (directly, or by trigonometry) :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -432,10 +480,10 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.7)
+<td style="width:50px; text-align:right">                 (2.8)
 </td>
 </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 <p> We will freely use a mixture of function arguments <i>&phi;</i> 
  and <i>x</i>, on the understanding that they are
@@ -447,7 +495,7 @@ in capitals.
  rather than in <i>x</x></i>.
 </p>
 
-<!-- SECTION 2.6 ------------------------------------------------------->
+<!-- SECTION 2.6 ---------------------------------------------->
 
 <h4> 2.5 &emsp; Non-dimensional length </h4>
 
@@ -458,7 +506,7 @@ in capitals.
  We will call this "typical length" <i>U</i> :
 </p>
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -469,17 +517,19 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.9)
+<td style="width:50px; text-align:right">                 (2.9)
 </td>
  </tr> </table>
-<!-- END EQUATION ------------------------------------------------------>
+<!-- END EQUATION --------------------------------------------->
 
 </p>
-<p> The non-dimensional speed ratio <i>x</i> equals the local radius <i>r</i>, 
- divided by this standard length. We can rewrite (2.2)&nbsp;and (2.3) as :
+<p> The non-dimensional speed ratio <i>x</i> equals
+ the local radius <i>r</i>, 
+ divided by this standard length.
+ We can rewrite (2.2)&nbsp;and (2.3) as :
 </p>
 
-<!-- EQUATION ------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 
 <math>
@@ -512,7 +562,7 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.10)
+<td style="width:50px; text-align:right">                (2.10)
 </td>
  </tr> </table>
 <!-- END EQUATION --------------------------------------------->
@@ -551,7 +601,7 @@ in capitals.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (2.11)
+<td style="width:50px; text-align:right">                (2.11)
 </td>
  </tr> </table>
 <!-- END EQUATION --------------------------------------------->
@@ -588,8 +638,8 @@ in capitals.
   </mfrac>
 </math>
 </td>
-
-<td style="width:50px; text-align:right">  (2.12)
+ 
+<td style="width:50px; text-align:right">                (2.12)
 </td> 
 </tr> </table>
 <!-- END EQUATION --------------------------------------------->
