@@ -399,13 +399,7 @@ s</math>
 
 <!-- SECTION 10.2 --------------------------------------------->
 
-<h4> 10.2 &emsp; Heavy loading </h4>
-
-<p> TBW. </p>
-
-<!-- SECTION 10.3 --------------------------------------------->
-
-<h4> 10.3 &emsp; The shape of the reduction factor </h4>
+<h4> 10.2 &emsp; The shape of the reduction factor </h4>
 
 <p>The rotationally optimal induction (10.7)
  contains a factor of
@@ -521,9 +515,9 @@ Figure 10.1 shows the shape of
 </p>
 <!------------------------------------------------------------->
 
-<!-- SECTION 10.4 --------------------------------------------->
+<!-- SECTION 10.3 --------------------------------------------->
 
-<h4> 10.4 &emsp; The optimal overall efficiency </h4>
+<h4> 10.3 &emsp; The optimal overall efficiency </h4>
 
 <p>
 Having found the marginal loss <i>C</i> 
@@ -627,7 +621,7 @@ Having found the marginal loss <i>C</i>
 
 <td style="width:50px; text-align:right">                 (10.12)
 </td> </tr> </table>
-<!-- end equation table ----------------------------------------->
+<!------------------------------------------------------------->
 
 <p>&emsp;
  We now have an expression for the optimal momentum efficiency
@@ -647,9 +641,100 @@ Having found the marginal loss <i>C</i>
  will be less than that of the actuator disk.
 </p>
 
+<!-- SECTION 10.2 --------------------------------------------->
+
+<h4> 10.4 &emsp; Heavy loading </h4>
+
+<p> We will briefly look at the case of heavy loading.
+Picking up the derivatives (10.4) and (10.5), using
+(7.13) and (7.17) for "heavy" loading, and omitting
+the terms of 2<i>x</i>.d<i>x / X</i><sup>&thinsp;2</sup>
+ which wil drop out later anyway, we note :
+ </p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>d</mn>
+    <row> <mn>d</mn> <mi>b</mi>
+   </mrow>
+ </mfrac>
+  <mn>&nbsp;(</mn>
+    <mn>&nbsp;(</mn>
+      <mn> 1 + &frac12;&hairsp;</mn> <mi>b</mi>
+    <mn>)</mn>
+  <mo>.</mo> <mn>&frac12;&thinsp;</mn> 
+  <msup> <mi>b</mi> <mn>2</mn> </msup>
+  <mn>&thinsp;)</mn>
+
+  <mspace/> <mo> = </mo> <mspace/> </mo>
+
+  <mi>b</mi> <mo>+</mo>
+  <mn>&frac34;&thinsp;</mn> 
+  <msup> <mi>b</mi> <mn>2</mn> </msup>
 
 
+</math>
+</td>
 
+<td style="width:50px; text-align:right">               (10.13)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>d</mn>
+    <row> <mn>d</mn> <mi>b</mi>
+   </mrow>
+ </mfrac>
+  <mn>&nbsp;(</mn>
+    <mn>&nbsp;(</mn>
+      <mn> 1 + &frac12;&hairsp;</mn> <mi>b</mi>
+    <mn>)</mn>
+  <mo>.</mo> 
+  <mi>b</mi>
+  <mn>&thinsp;)</mn>
+
+  <mspace/><mspace/><mspace/><mspace/>
+  <mo> = </mo> <mspace/> </mo>
+
+  <mn>1</mn> <mo>+</mo>
+  <mi>b</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">               (10.14)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The ratio between the two is not the easy <i>b</i> of (10.6),
+ but it is close.
+</p>
+<p>&emsp;
+ However, in (9.4) there is also an additional term
+ 1&thinsp;<i>/&thinsp;</i>cos<sup>2</sup><i>&hairsp;&phi;</i>.
+Looking at figure 8.2 and equation (8.6), the local pitch
+ angle <i>&phi;</i> 
+ will also vary with <i>b</i>, so we need to take the derivative 
+of 1<i>/&thinsp;</i>cos<sup>2&hairsp;</sup><i>&phi;</i> 
+ with respect to <i>b</i> and apply the chain rule in (10.4).
+</p>
+<p>&emsp;
+ Although this can all be done, and approximations are available,
+ the result will destroy the simplicity of the op&shytimal
+ induction (10.7) and make all subsequent equations opaque,
+ without adding significant accuracy or opti&shymality
+ to the results.
+ This is the reason why the literature on classical
+ propeller theory invariably applies the "light loading"
+ assumption in all optimization problems, and so will we.
+</p>
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>
