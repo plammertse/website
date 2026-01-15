@@ -80,6 +80,13 @@ td {
   padding : 1px 0;
 }
 
+/* Two equal columns that float next to each other, for TOC */
+.column {
+  float        : left;
+  width        : 400px;    /* for now, half of 800 */
+  padding-left : 10px;
+}
+
 /* increase the math font size to look like 16px text.
    The extra math margin (vertical + horizontal)
    acts *inside* <p> ( and inside <td>,TBC ).                              

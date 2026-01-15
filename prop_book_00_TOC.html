@@ -5,6 +5,7 @@
 -- purpose : Page for website Piet Lammertse
 -----------------------------------------------------------------------
 --   history :
+--     2025-01-14  two columns
 --     2025-01-03  new
 ----------------------------------------------------------------------> 
 
@@ -82,19 +83,22 @@
 </ul>
 
 
-<!-- TEXT PAGE ------------------------------------------------>
-
-<!--- PAGE HEADER --------------------------------------------->
-
-<p style="margin-left : 300px">  <i> TABLE OF CONTENTS </i> </p>
-<hr style="margin : 0 0;">
-
 <!--- DETAILED TOC -------------------------------------------->
-<p>
+
+<!-- CENTRAL "TABLE OF CONTENTS" HEADER -->
+<h2 style="margin-left : 300px">
+    <u> TABLE OF CONTENTS </u> </h2>
+
+<!-- START A ROW OF TWO COLUMNS -->
+
+<!-- START LEFT COLUMN ---------------------------------------->
+<!--  <div class="column" style="background-color:#F8F8F8;"> -->
+  <div class="column">
+
 <a style="text-decoration:none"
    href="prop_book_01.html">
    <h3 style="margin-bottom : -12px;
-              margin-top    : 24px;
+              margin-top    :  0px; 
              font-size      : 22px;">
                                               Front matter </h3>
 <a style="text-decoration : none";
@@ -165,7 +169,7 @@
  <a style="text-decoration:none"
    href="prop_book_08.html">
    <h3 style="margin-bottom : -8px;">&nbsp; 8 &emsp;
-                                 <u> Rotation </u>  </h3>
+                                        <u> Rotation </u>  </h3>
  <a style="text-decoration:none"
    href="prop_book_09.html">
    <h3 style="margin-bottom : -8px;">&nbsp; 9 &emsp;
@@ -177,7 +181,7 @@
  <a style="text-decoration:none"
    href="prop_book_11.html">
    <h3 style="margin-bottom : -8px;">11 &emsp;
-   <u> The thrust at optimal efficiency </u> </h3>
+                 <u> The thrust at optimal efficiency </u> </h3>
  <a style="text-decoration:none"
    href="prop_book_12.html">
    <h3 style="margin-bottom : -8px;">12 &emsp;
@@ -186,12 +190,23 @@
    href="prop_book_13.html">
    <h3 style="margin-bottom : -8px;">13 &emsp;
                                  <u> Counterrotation </u>  </h3>
+ <br> <br> <!-- Prevent hiding behind footer -->
+</div> <!-- END LEFT COLUMN -->
+
+<!------------------------------------------------------------->
+
+<!-- START RIGHT COLUMN -->
+
+  <div class="column">
 
 <!------------------------------------------------------------->
 <a style="text-decoration:none"
    href="prop_book_14_TOC.html">
    <h3 style="margin-bottom : -12px;
-              margin-top    : 24px;
+/*              margin-top    : 24px;       */
+/*              margin-top    : 0px;        */
+              margin-top    : 36px;
+
              font-size      : 22px;">
                                               Viscous loss </h3>
  <a style="text-decoration:none"
@@ -203,32 +218,32 @@
    <h3 style="margin-bottom : -8px;">15 &emsp;
                       <u> Non-optimized viscous loss </u>  </h3>
  <a style="text-decoration:none"
-   href="prop_book_16S.html">
+   href="prop_book_16.html">
    <h3 style="margin-bottom : -8px;">16 &emsp;
                       <u> Optimizing the viscous loss </u>  </h3>
 
 <!------------------------------------------------------------->
 <a style="text-decoration:none"
-   href="prop_book_19.html">
+   href="prop_book_17_TOC.html">
    <h3 style="margin-bottom : -12px;
               margin-top    : 24px;
              font-size      : 22px;">
                                                   Tip loss </h3>
  <a style="text-decoration:none"
+   href="prop_book_17.html">
+   <h3 style="margin-bottom : -8px;">17 &emsp;
+                                        <u> Tip loss </u>  </h3>
+ <a style="text-decoration:none"
+   href="prop_book_18.html">
+   <h3 style="margin-bottom : -8px;">18 &emsp;
+                                   <u> Two solutions </u>  </h3>
+ <a style="text-decoration:none"
    href="prop_book_19.html">
    <h3 style="margin-bottom : -8px;">19 &emsp;
-                                        <u> Tip loss </u>  </h3>
+                             <u> Prandtl's tip model </u>  </h3>
  <a style="text-decoration:none"
    href="prop_book_20.html">
    <h3 style="margin-bottom : -8px;">20 &emsp;
-                                   <u> Two solutions </u>  </h3>
- <a style="text-decoration:none"
-   href="prop_book_21.html">
-   <h3 style="margin-bottom : -8px;">21 &emsp;
-                             <u> Prandtl's tip model </u>  </h3>
- <a style="text-decoration:none"
-   href="prop_book_22.html">
-   <h3 style="margin-bottom : -8px;">22 &emsp;
                            <u> Prandtl with rotation </u>  </h3>
 
 <!------------------------------------------------------------->
@@ -268,6 +283,11 @@
    <h3 style="margin-bottom : -8px;">30 &emsp;
                     <u> Blade chords </u>  </h3>
 
+ <br> <br> <!-- Prevent hiding behind footer -->
+
+</div> <!-- END RIGHT COLUMN -->
+
+</div> <!-- END ROW OF TWO COLUMNS -->
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>

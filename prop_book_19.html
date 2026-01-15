@@ -20,7 +20,7 @@
 <ul>
   <li> <a href="index.html">                 Home     </a> </li>
 
-  <li> <a href="prop_book_19_TOC.html">&#x25C4  Previous  </a> </li>
+  <li> <a href="prop_book_18.html">&#x25C4  Previous  </a> </li>
 
 
   <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
@@ -84,55 +84,169 @@
 <p style="margin-left : 320px">  <i> TIP LOSS </i> </p>
 <hr style="margin : 0 0;">
 
-<!--- LOCAL TOC ----------------------------------------------->
-<!--
-<p>
-<h2> <u> Tip loss</u> </h2>
-
-<a style="text-decoration:none"
-   href="prop_book_19.html">
-   <h3 style="margin-bottom : -8px;"> 19 &emsp;
-                                        <u> Tip loss </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_20.html">
-  <h3 style="margin-bottom : -8px;"> 20 &emsp;
-                                   <u> Two solutions </u>  </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_21.html">
-   <h3 style="margin-bottom : -8px;"> 21 &emsp;
-                              <u> Prandtl's tip model </u> </h3>
-</a>
-<a style="text-decoration:none"
-   href="prop_book_22.html">
-   <h3 style="margin-bottom : -8px;"> 22 &emsp;
-                      <u> Prandtl's tip with rotation </u> </h3>
-</a>
-
-</p>
--->
-
 <!------------------------------------------------------------->
-<!--
-<hr style="margin-top : 30px;" >
--->
 
-<!-- CHAPTER 19 ----------------------------------------------->
+<h2> 19 &emsp; Prandtl's tip model </h2>
 
-<h2> 19 &emsp; Tip loss </h2>
+<!-- SECTION 21.1 --------------------------------------------->
 
-<!-- SECTION 19.1 --------------------------------------------->
-
-<h4> 19.1 &emsp; The nature of the tip loss </h4>
-<p>
- . . . 
+<h4> 19.1 &emsp; Introduction </h4>
+<p> 
+In the same 1919 article where
+ <span style="font-variant: small-caps;">Bezt</span>
+ introduced his derivation of the thrust distribution
+ for minimal rotational loss,
+ <span style="font-variant: small-caps;">Prandtl</span>
+ added an approximate tip loss model.
+ This model has stood the test of time remarkably well.
+ Somewhat surprisingly, it does not use
+ the concept of blade lift or a tip vortex at all.
+ Instead, it is based on the flow conditions
+ around
+ <span style="font-variant: small-caps;">Betz</span>'s
+ optimal spiral wake.
 </p>
+<!-- FIGURE --------------------------------------------------->
+<img  width="400";
+     style="margin-left : 200px;
+            margin-top  :  8px;";
+     alt="Tip sketch Prandtl";
+     src="images/prop_blade_slice_elliptical_prandtl.gif" >
+<p style="margin-left   : 200px;
+          margin-bottom :  12px;">
+    <i> Figure 18.1 : &ensp;
+     Typical
+   <span style="font-variant: small-caps;">Prandtl</span>
+ mass flow reduction F(x).
+ </i> 
+<!------------------------------------------------------------->
+
+
+<p>&emsp;
+ Figure 12.4 showed
+ <span style="font-variant: small-caps;">Betz</span>'s
+ <span style="font-variant: small-caps;">Archimedes</span>
+ screw wake from figure 12.2,
+ slowly translating and rotating.
+ The spiral sheets are in actual fact
+ drifting backward with the induced flow.
+ It was
+ <span style="font-variant: small-caps;">Prandtl</span>'s
+ idea to invert cause and effect here.
+ Since no air passes through the sheet surfaces,
+ we are allowed to imagine that they are smooth,
+ hard surfaces,
+ themselves displacing the air to the rear
+ instead of the other way around.
+ In potential theory,
+ if two flows meet the same boundary conditions,
+ they are identical.
+ If we can find a solution for this new flow,
+ it must be the flow we are looking for.
+</p>
+<p>&emsp; There is also no sliding friction
+ on the surfaces, so they can only push
+ on the air at right angles to their surface.
+ This still does not make the problem trivial,
+ for the
+ <span style="font-variant: small-caps;">Archimedes</span>
+ screw has a complex shape.
+</p>
+<p>&emsp; At the center, the sheets are highly curved;
+ but at the outer edges, they are almost flat.
+ The left hand side of figure 19.1 replaces the
+ <span style="font-variant: small-caps;">Archimedes</span>
+ screw by a stack of flat disks,
+ with the same spacing as the tip spirals
+ in figure 12.3. 
+</p>
+<p>&emsp;
+The disks move to the rear with the induction velocity v',
+  and they take the air with them,
+ except around the edges.
+ Some air is pushed to the side and circles back,
+ creating a wavy outline
+ to what was once a smooth flow tube.
+</p>
+<p>&emsp;
+ <span style="font-variant: small-caps;">Prandtl</span>
+ further simplified this model by making it 2D.
+ He made the edges into straight lines,
+ like the straight fins of a heat sink.
+ He then inverted cause and effect again,
+ by considering the case where the fins are stationary,
+ and the air flows by them at the velocity v'.
+ The relative motion is still the same,
+ and the flow pattern does not change.
+</p>
+<p>&emsp; The right hand side of the figure
+ shows this simplified model.
+ The only size parameter it has
+ is the spacing <i>s</i> between the fins.
+</p>
+<p>&emsp;
+From potential theory,
+ <span style="font-variant: small-caps;">Prandtl</span>
+ was able to derive an equation
+ for the impulsive force distribution on a fin
+ when this system is
+ instantaneously set in motion.
+ A force impulse creating a step in the velocity
+ is the equivalent of a force of some duration
+ creating an acceleration for some time.
+ In both cases, the ratio is a mass.
+</p>
+<p>&emsp; The outcome is an estimate
+ for the “exact” mass coefficient K (x)
+ of (17.2),
+ at least for the tip regions of this simple model.
+</p>
+<p><i> TODO LATER &emsp;&emsp;&emsp; 
+Emphasize once more the difference
+ between induction and mass flow.
+And it's much better than a vortex model.
+ Betz's
+ helical wake sheet is much more similar
+ to the constant downflow wing model,
+ than the isolated tip vortex is.
+ Refer to section **** on vortex methods.
+</i>
+</p>
+
+
+<!-- FIGURE --------------------------------------------------->
+<img  width="280";
+     style="margin-left : 130px;
+            margin-top  :  8px;";
+     alt="Tip sketch Prandtl";
+     src="images/prop_prandtl_disk_skewer.gif" >
+<!--<p style="margin-left   : 200px;
+          margin-bottom :  12px;">
+    <i> Figure 18.1 : &ensp;
+     Typical
+   <span style="font-variant: small-caps;">Prandtl</span>
+ mass flow reduction F(x).
+ </i> 
+-->
+<!------------------------------------------------------------->
+
+<!-- FIGURE --------------------------------------------------->
+<img  width="280";
+     style="margin-left : 60px;
+            margin-top  :  8px;";
+     alt="Tip sketch Prandtl";
+     src="images/prop_prandtl_heatsink_no_floor.gif" >
+<p style="margin-left   : 200px;
+          margin-bottom :  12px;">
+    <i> Figure 19.2 : &ensp;
+     Spiral sheet simplified to infinite heats sink fins.
+ </i> 
+<!------------------------------------------------------------->
 
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>
-<div class="footer"> P. Lammertse, 2025 </div>
+<div class="footer"> P. Lammertse, 2025  </div>
 
 </body>
 </html>
