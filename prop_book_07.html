@@ -292,7 +292,7 @@ end with a more or less elliptical tip.
 </p>
 <p>&emsp;
  Replacing d<i>x</i> in (7.3) by  
-  Δ<i>x</i> = <i>X&nbsp;&#x2044;&thinsp;N</i> 
+  &Delta;&hairsp;<i>x</i> = <i>X&nbsp;&#x2044;&thinsp;N</i> 
 and bringing it outside the summation yields :
 </p>
 
@@ -308,7 +308,16 @@ and bringing it outside the summation yields :
   </mfrac>
   <mn>&ensp;.</mn>
 
-  <msubsup> <mo>&sum;</mo> <mn>0</mn> <mi>N</mi> </msubsup>
+  <msubsup>
+    <mo>&sum;</mo> 
+   <mrow> <mi>0</mi> <mn>&hairsp;.&thinsp;&Delta;</mn>
+     <mi>x</mi>
+  </mrow>
+   <mrow> <mn>N</mn> <mn>&hairsp;.&thinsp;&Delta;</mn>
+     <mi>x</mi>
+  </mrow>
+     <!-- <mn>0</mn> <mi>N</mi>-->
+ </msubsup> 
 
   <mi>f</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
   <mo>.</mo>
@@ -320,8 +329,11 @@ and bringing it outside the summation yields :
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> This expression sums over <i>N</i>&thinsp;+&thinsp;1</i> points,
- and divides by <i>N</i> rings.
+<p> This expression sums over <i>N</i>&thinsp;+&thinsp;1</i> points
+ ranging from <nobr> <i>x</i> = 0 </nobr> 
+ to <nobr> <i>x</i> = <i>X</i> </nobr>,
+ and divides by <i>N</i> rings of width
+ <nobr> &Delta;&hairsp;<i>x</i>. </nobr>
  With the end values of <i>f</i>&thinsp;(<i>x</i>)  both zero,
  this is equiv&shyalent to the trapezoidal rule. 
 </p>
