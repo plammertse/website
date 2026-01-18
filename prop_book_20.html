@@ -22,76 +22,41 @@
 
   <li> <a href="prop_book_19.html">&#x25C4  Previous  </a> </li>
 
-
-  <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
+  <!-- DROPDOWN ----------------------------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
-       href="javascript:void(0)" >       Book  &#x25BC;</a>
-
+       href="javascript:void(0)" >       Book       &#x25BC;</a>
     <div class="dropdown-content">
       <a style="background-color:#E8E8E8";
-         href="prop_book_frontispiece.html">
-                    <i> Frontispiece </i> 
-     </a>
-
+         href="prop_book_frontispiece.html"> Frontispiece   </a>
       <a style="background-color:#C0C0F0";
-         href="prop_book_preface.html">
-                    <i> Preface </i>
-     </a>
-
+         href="prop_book_preface.html">     Preface         </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html"> Introduction 
-           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
-     </a>
-
+         href="prop_book_00_TOC.html">    Table of contents </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_04.html"> Axial induction 
-           &emsp;&nbsp;&hairsp;            ( 4 - 6 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_07.html"> Rotation 
-           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 7 - 14 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_15.html"> Viscous loss
-           &emsp;&ensp;&hairsp;           ( 15 - 17 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_18.html"> Tip loss 
-           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 18 - 21 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_23.html"> Vortex theory
-           &emsp;&nbsp; ( 23 - 29 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_30.html"> Installation
-           &emsp;&emsp;&nbsp;&hairsp;      ( 30 - 33 )
-     </a>
+         href="prop_book_17_TOC.html">      Section TOC     </a>
     </div>
   </li>
-  <!-- END TOC ------------------------------------------------>
+  <!-- END DROPDOWN ------------------------------------------->
 
-  <li> <a href="prop_book_21_TOC.html">  Next &#x25BA</a> </li>
-
+  <li> <a href="prop_book_23_TOC.html">  Next &#x25BA</a> </li>
 </ul>
 
+<!-- TEXT BLOCK HEADER ---------------------------------------->
 
-<!-- TEXT PAGE ------------------------------------------------>
-
-<!--- PAGE HEADER --------------------------------------------->
-<p style="margin-left : 320px">  <i> TIP LOSS </i> </p>
+<p style="margin-left : 320px">  <i> TIP LOSS </i>          </p>
 <hr style="margin : 0 0;">
 
 <!------------------------------------------------------------->
 
-<h2> 20 &emsp; Prandtl's tip with rotation </h2>
+<h2> 20 &emsp; Prandtl's tip with rotation                 </h2>
 
 <!-- SECTION 20.1 --------------------------------------------->
 
 <h4> 20.1 &emsp; 
-   Prandtl's tip versus the the non-dimensional radius <i>x</i> </h4>
+   Prandtl's tip plotted against
+     the non-dimensional radius <i>x</i>                   </h4>
 
 <p> So far we looked at
  <span style="font-variant: small-caps;">Prandtl</span>'s
@@ -105,18 +70,17 @@
 
 With
  <span style="font-variant: small-caps;">Prandtl</span>'s
-  approximation <i>F</i>&hairsp;(<i>x</i>)
- for <i>K&hairsp;</i>(<i>x</i>), <nobr>
+  approximation <i>F</i>&hairsp;&prime;&hairsp;(<i>x</i>)
+ for <i>K&hairsp;</i>(<i>x</i>) <nobr>
 (&hairsp;slightly </nobr>
  adapted here, as indicated
- by the <nobr> prime&hairsp;) </nobr>
- we define the obvious approximation
- to
-<!-- the <i>G&hairsp;</i>(x) of -->
-(17.6) :
+ by the <nobr> prime&hairsp;), </nobr>
+ we define the obvious approximation to the
+ <i>G</i>&hairsp;(<i>x</i>) of (17.6) :
 </p>
+
 <!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
+<table> <tr> <td style="padding-top : 4px;">
 <math>
   <mi>G</mi> <mn>&thinsp;&prime;</mn>
   <mn>(</mn> <mi>x</mi> <mn>)</mn> 
@@ -133,7 +97,9 @@ With
   <mn>(</mn> <mi>x</mi> <mn>)</mn> 
 </math>
 
-<td style="width:50px; text-align:right">                (20.1)
+<td style="padding-top : 4px;
+           width       : 50px;
+           text-align  : right">                         (20.1)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -143,15 +109,16 @@ With
 <p>&emsp;
  Figure 20.1 shows
  <i>F</i>&hairsp;&prime;&hairsp;(<i>x</i>)
- at a different scale 
- than either figure 19.6 or figure 19.7.
+ at a horizontal scale different from
+ either figure 19.6 or figure 19.7.
  Those figures were at the scale of 
- <i>B&hairsp;.&hairsp;X</i>
+ <i>B&hairsp;.&hairsp;X</i>,
  which is natural to
  <span style="font-variant: small-caps;">Prandtl</span>'s
  tip function,
- and at the scale of <i>R</i> which is natural for
- a propeller of fixed diameter.
+ and at the scale of <i>r&thinsp;/&hairsp;R</i>
+ which is natural for different propellers
+ of the same diameter.
  The new figure shows
  <i>F</i>&hairsp;&prime;&hairsp;(<i>x</i>)
  on the  <i>x</i> scale, which is the natural scale
@@ -287,11 +254,17 @@ With
   <msup> <mn>cos</mn> <mn>2&hairsp;</mn> </msup>
   <mi>&phi;</mi>
 
+  <mo> . </mo>
+  <mi>F</mi>
+
+  <mn>&thinsp;&prime;</mn>
+  <mn>(</mn> <mi>x</mi> <mn>)</mn> 
+
   <mo>&hairsp;.</mo>
 
-    <mn>2&hairsp;</mn> <mi>x</mi>
-    <mo>.</mo>
-    <mn>d</mn> <mi>x</mi>
+  <mn>2&hairsp;</mn> <mi>x</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>x</mi>
 </math>
 
 <td style="width:50px; text-align:right">                (20.2)
@@ -300,11 +273,11 @@ With
 
 <p> There is no simple analytical solution for this integral,
  but we have relatively simple equations
- for both terms of the integrand (20.1),
- so this expression is easily integrated numerically
+ for all the terms of the integrand,
+ so the expression is easily integrated numerically
  by as many steps as we like <nobr>
-(&hairsp;typically, </nobr> <nobr> 10,000&hairsp;), </nobr>
- using the numerical integral formula (7.21) :
+(&hairsp;typically, </nobr> <nobr> 10,000&hairsp;). </nobr>
+ We can use the numerical integral formula (7.21) :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -352,6 +325,141 @@ With
 <td style="width:50px; text-align:right">                (20.3)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
+
+
+<!-- SECTION 20.4 --------------------------------------------->
+
+<h4> 20.4 &emsp; Restoring to unit thrust   </h4>
+
+<p> In section 11.3 we restored the
+ cos<sup>&hairsp;2</sup><i>&hairsp;&phi;</i>
+distribution to unit thrust by inflating it 
+by the inverse of the overal thrust loss factor
+<mi>&kappa;</i><sub>&phi;</sub>.
+ We can do the same for the 
+ <i>G</i>&hairsp;&prime;&hairsp;(<i>x</i>)
+ distribution (20.1). This changes (11.11) into :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>b</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mo>&thinsp;.&thinsp;</mo>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <msup> <mn>cos</mn> <mn>2</mn> </msup>
+      <mi>&phi;</mi>
+      <mo>&hairsp;.</mo>
+      <mi>F</mi>
+      <mn>&thinsp;&prime;</mn>
+      <mn>(</mn> <mi>x</mi> <mn>)</mn> 
+    </mrow>
+     <mrow>
+       <msub> <mi>&kappa;</mi>
+       <mn>G&hairsp;&prime;</mn> </msub>
+    </mrow>
+  </mfrac> 
+</math> </td>
+
+<td style="width:50px; text-align:right">                (20.4)
+</td> </tr> </table>
+<!------------------------------------------------------------->
+
+<p>&emsp;
+ Figure 20.3 shows the result.
+ It is the equivalent of figure 11.2, 
+but this time including the 
+ <span style="font-variant: small-caps;">Prandtl</span>
+ tip loss CASES B = 2 AND B =  6. 
+<br>
+CHORDS LATER, <br>
+KAPPA_G ALSO LATER (AFTER VORTEX).
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img width="580" alt="Cos2.F normalized";
+     style="margin-left :120px;
+            margin-top  : -2px;"
+      src="images/prop_prandtl_with_rotation_x_inflated_TEMP.gif">
+<p style="margin-left   : 120px;
+          margin-bottom :  12px">
+    <i> Figure 20.4 : &ensp;
+       XXXXXXXXXXXXXXXXXXXXXXXXXXXX. 
+</i> </p>
+<!------------------------------------------------------------->
+
+<p> <i> Figure 11.2 repeats figure 10.1,
+ but this time for
+ cos<sup>2</sup><i>&phi;&thinsp;/&thinsp;&kappa;</i><sub>&phi;</sub>&hairsp;.
+ This normalizes the reduction factor
+ to an average of&nbsp;1 over the whole blade.
+ In other words,
+ it replaces the reduction by cos<sup>2</sup><i>&phi;</i> of (10.7)
+ by a slightly inflated version, which is a redistribution
+ around an average of 1.
+ The shapes in figure 11.2 all have the same unit thrust,
+ for their particular tip speed ratio <i>X</i>.
+</i>
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <<mn>d</mn> <mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>b</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mo>.</mo>
+
+  <mi>m</mi> <mn>&thinsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>T</mi> <mn>&thinsp;&prime;</mn>
+
+  <mo>&thinsp;.&thinsp;</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+     <mrow>
+  <msup> <mn>cos</mn> <mn>2</mn> </msup>
+  <mi>&phi;</mi>
+    </mrow>
+     <mrow>
+       <msub> <mi>&kappa;</mi> <mn>&phi;</mn> </msub>
+    </mrow>
+  </mfrac> 
+
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+     <mrow>
+       <mn>2</mn> <mi>x</mi> 
+       <mn>&thinsp;.&thinsp;</mn>
+       <mn>d</mn> <mi>x</mi>
+    </mrow>
+     <mrow>
+       <msup> <mi>X</mi> <mn>2</mn> </msup>
+    </mrow>
+  </mfrac> 
+</math> </td>
+
+<td style="width:50px; text-align:right">                (20.4)
+</td> </tr> </table>
+<!------------------------------------------------------------->
+
+
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>
