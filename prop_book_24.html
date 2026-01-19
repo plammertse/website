@@ -151,26 +151,15 @@ from the wing section properties will not match
  they defined an angular spanwise coordinate
  which replaces the distance <i>x</i> from the wing center
  by an angular measurement on the unit circle.
-</p>
-<p>&emsp;
  Figure 24.1 shows the transformation.
+ The angle <i>&phi;</i> runs from 0 to &pi;
+ when <i>x</i> runs from <i>x</i>&thinsp;=&thinsp;1 
+ (&hairsp;at  the right hand tip&hairsp;)
+ to <i>x</i>&thinsp;= &minus;&thinsp;1 (&hairsp;at the left hand tip&hairsp;).
+ The angle is defined by :
 </p>
 
-<!-- FIGURE  -------------------------------------------------->
-<img  width="320";
-     style="margin-left:250px";
-     alt="Cosine transformation";
-     src="images/prop_cosine_wing.gif" >
-<p style="margin-left   :140px;
-          margin-bottom : 12px;">
-    <i> Figure 24.1 : &ensp;
- Cosine transformation for the spanwise coordinate. </i>
-</p>
-<!------------------------------------------------------------->
-
-<p> The angle &phi; is defined by :
-</p>
-
+<p>
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
@@ -190,11 +179,19 @@ from the wing section properties will not match
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> The angle <i>&phi;</i> runs from 0 to &pi;
- when <i>x</i> runs from <i>x</i> =1 
- (&hairsp;at  the right hand tip&hairsp;)
- to <i>x</i> = -1 (&hairsp;at the left hand tip&hairsp;).
+
+<!-- FIGURE  -------------------------------------------------->
+<img  width="320";
+     style="margin-left:250px";
+     alt="Cosine transformation";
+     src="images/prop_cosine_wing.gif" >
+<p style="margin-left   :140px;
+          margin-bottom : 12px;">
+    <i> Figure 24.1 : &ensp;
+ Cosine transformation for the spanwise coordinate. </i>
 </p>
+<!------------------------------------------------------------->
+
 <p> The first
   <span style="font-variant: small-caps;"> Fourier</span>
  term for the circulation is :
@@ -220,12 +217,15 @@ from the wing section properties will not match
 
 <p> The amplitude <i>A</i><sub>1</sub> can be chosen freely.
  It determines the contribution to the lift and the downwash
- for this particular term.
- Since the graph of a cosine on the x-axis
+ for this term.
+</p>
+<p>&emsp;
+ Since the combination of a cosine on the x-axis
  and a sine on the y-axis forms an ellipse,
  the first
  <span style="font-variant: small-caps;">Fourier</span>
- term describes the optimal elliptical distribution
+ term describes an ellipse. This term  represents
+ the optimal elliptical distribution
  with constant downwash.
 </p>
 <p>&emsp; 
@@ -236,7 +236,7 @@ from the wing section properties will not match
 <i>A</i><sub>3</sub>&hairsp;.&hairsp;sin 3&hairsp;<i>&phi;</i> etc.
  These higher frequency waves have 2, 3 etc. sine wave peaks
  distributed over equal distances in <i>&phi;</i> along the span,
- alternating between up and down.
+ alternating between up and down inductions.
 </p>
 <p>&emsp;
  The uneven numbers give a peak in the middle

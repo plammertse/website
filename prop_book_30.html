@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!--------------------------------------------------------------
--- file    : prop_book_12.html
+-- file    : prop_book_30.html
 -- purpose : Page for website Piet Lammertse
 ----------------------------------------------------------------
 --   history :
@@ -20,88 +20,52 @@
 <ul>
   <li> <a href="index.html">                 Home     </a> </li>
 
-  <li> <a href="prop_book_11.html">&#x25C4  Previous  </a> </li>
+  <li> <a href="prop_book_29.html">&#x25C4  Previous  </a> </li>
 
-
-  <!-- TOP LEVEL TABLE OF CONTENTS ---------------------------->
+  <!-- DROPDOWN ----------------------------------------------->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
-       href="javascript:void(0)" >       Book  &#x25BC;</a>
-
+       href="javascript:void(0)" >       Book       &#x25BC;</a>
     <div class="dropdown-content">
       <a style="background-color:#E8E8E8";
-         href="prop_book_frontispiece.html">
-                    <i> Frontispiece </i> 
-     </a>
-
+         href="prop_book_frontispiece.html"> Frontispiece   </a>
       <a style="background-color:#C0C0F0";
-         href="prop_book_preface.html">
-                    <i> Preface </i>
-     </a>
-
+         href="prop_book_preface.html">     Preface         </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_01.html"> Introduction 
-           &emsp;&emsp;&ensp;&hairsp;     ( 1 - 3 )
-     </a>
-
+         href="prop_book_00_TOC.html">    Table of contents </a>
       <a style="background-color:#E8E8E8";
-         href="prop_book_04.html"> Axial induction 
-           &emsp;&nbsp;&hairsp;            ( 4 - 7 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_08.html"> Rotation 
-           &emsp;&emsp;&emsp;&ensp;&nbsp;  ( 8 - 15 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_16.html"> Viscous loss
-           &emsp;&ensp;&hairsp;           ( 16 - 18 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_19.html"> Tip loss 
-           &emsp;&emsp;&emsp;&ensp;&nbsp; ( 19 - 22 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_23.html"> Vortex theory
-           &emsp;&nbsp; ( 23 - 28 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_29.html"> Combined loss
-           &nbsp;&thinsp; ( 29 - 23 )
-     </a>
-      <a style="background-color:#E8E8E8";
-         href="prop_book_30.html"> Installation
-           &emsp;&emsp;&nbsp;      ( 34 - 38 )
-     </a>
+         href="prop_book_23_TOC.html">      Section TOC     </a>
     </div>
   </li>
-  <!-- END TOC ------------------------------------------------>
+  <!-- END DROPDOWN ------------------------------------------->
 
-
-  <li> <a href="prop_book_14.html">  Next &#x25BA</a> </li>
+<!--
+  <li> <a href="prop_book_14.html">  Next      &#x25BA</a> </li>
+-->
 
 </ul>
 
 
-<!-- TEXT PAGE ------------------------------------------------>
+<!-- TEXT BLOCK HEADER ---------------------------------------->
 
-<!--- PAGE HEADER --------------------------------------------->
-<p style="margin-left : 320px">  <i> ROTATION </i> </p>
+<p style="margin-left : 320px">  <i>TIP LOSS </i>           </p>
 <hr style="margin : 0 0;">
 
-<!-- CHAPTER 12.1 --------------------------------------------->
+<!-- CHAPTER 30.1 --------------------------------------------->
 
-<h2> 12 &emsp; Blade chords </h2>
+<h2> 30 &emsp; Blade chords </h2>
 
-<!-- SECTION 12.1 --------------------------------------------->
+<!-- SECTION 30.1 --------------------------------------------->
 
-<h4> 12.1 &emsp; The blade chord for a given lift </h4>
+<h4> 30.1 &emsp; The blade chord for a given lift          </h4>
 
 <p> Equation (11.8)  gives the optimum thrust distribution
  including rotation.
  We will derive the corresponding blade chord.
- This chord does not yet include tip loss and viscous optimization.
- We will add those in later chapters.
+ This chord does not yet include tip loss
+ and viscous optimization.
+ We will add those in later sections.
 </p>
 <p>&emsp;
  Equation (7.4) gave the thrust on a ring,
@@ -143,7 +107,7 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (12.1)
+<td style="width:50px; text-align:right">                (30.1)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -173,10 +137,9 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (12.2)
+<td style="width:50px; text-align:right">  (30.2)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
-
 
 </p>
 <p> The blade area inside a ring is
@@ -216,14 +179,14 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (12.3)
+<td style="width:50px; text-align:right">                (30.3)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p> From figure 8.2, the local wind velocity
  <i>W</i> equals <i>V /</i> sin <i>&phi;</i> :
 
-<!-- EQUATION ------------------------------------------------>
+<!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <mn>d</mn> <mi>L</mi>
@@ -260,7 +223,7 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (12.4)
+<td style="width:50px; text-align:right">                (30.4)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -283,13 +246,13 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (12.5)
+<td style="width:50px; text-align:right">                (30.5)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> We now have  (12.1) for the ring thrust needed
+<p> We now have  (30.1) for the ring thrust needed
  to generate an induction ratio <i>b</i>(<i>x</i>),
- and (12.5) for the ring thrust available
+ and (30.5) for the ring thrust available
  from blade element lift to do this.
  The two must be equal :
 </p>
@@ -347,7 +310,7 @@
    <mi>&phi;</mi>
 </math>
 
-<td style="width:50px; text-align:right">                (12.6)
+<td style="width:50px; text-align:right">                (30.6)
 </td> </tr> </table>
 
 </td> </tr> </table>
@@ -393,7 +356,7 @@
   </mfrac>
 </math>
 
-<td style="width:50px; text-align:right">                (12.7)
+<td style="width:50px; text-align:right">                (30.7)
 </td> </tr> </table>
 
 </td> </tr> </table>
@@ -406,9 +369,9 @@
  in the literature.
 </p>
 
-<!-- SECTION 12.2 --------------------------------------------->
+<!-- SECTION 30.2 --------------------------------------------->
 
-<h4> 12.2 &emsp; The non-dimensional solidity </h4>
+<h4> 30.2 &emsp; The non-dimensional solidity              </h4>
 
 <p> Equation (2.10) defines
  <i>x</i> &equiv; <i>&Omega;&hairsp;r / V</i>
@@ -435,13 +398,13 @@
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (12.8)
+<td style="width:50px; text-align:right">                (30.8)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p> The ratio between <i>c</i> and <i>r</i> 
 stays the same in the non-dimensional form.
- This will allow us to draw the blade planform (12.7)
+ This will allow us to draw the blade planform (30.7)
  of <i>c</i> versus <i>r</i>  in the same "true" proportions
  on a scale of <i>c</i>&thinsp;&prime; versus <i>x</i> :
 </p>
@@ -469,12 +432,12 @@ stays the same in the non-dimensional form.
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (12.9)
+<td style="width:50px; text-align:right">                (30.9)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p> The non-dimensional local solidity
- stays the same as in (12.7), but we rewrite one
+ stays the same as in (30.7), but we rewrite one
    sin&thinsp;<i>&phi;</i>&thinsp;<i>/</i>&thinsp;cos&thinsp;<i>&phi;</i>
   as tan&thinsp;<i>&phi;</i> in anticipation of the next step :
 </p>
@@ -511,7 +474,7 @@ stays the same in the non-dimensional form.
    <mi>&phi;</mi>
 </math>
 
-<td style="width:50px; text-align:right">               (12.10)
+<td style="width:50px; text-align:right">               (30.10)
 </td> </tr> </table>
 
 </td> </tr> </table>
@@ -547,11 +510,11 @@ stays the same in the non-dimensional form.
 
   <mn>sin&hairsp;</mn> <mi>&phi;</mi>
 </math>
+</td>
 
-<td style="width:50px; text-align:right">               (12.11)
-</td> </tr> </table>
-
-</td> </tr> </table>
+<td style="width:50px; text-align:right">               (30.11)
+</td>
+ </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 
@@ -589,7 +552,7 @@ stays the same in the non-dimensional form.
  </mfrac>
 </math>
 
-<td style="width:50px; text-align:right">  (12.12)
+<td style="width:50px; text-align:right">  (30.12)
 </td> </tr> </table>
 
 </td> </tr> </table>
@@ -599,13 +562,13 @@ stays the same in the non-dimensional form.
 
 
 
-<!-- SECTION 12.3 --------------------------------------------->
+<!-- SECTION 30.3 --------------------------------------------->
 
-<h4> 12.3 &emsp; The blade shape for uniform loading </h4>
+<h4> 30.3 &emsp; The blade shape for uniform loading       </h4>
 
 <p> For uniform loading, (XXXX) gives us the constant induction
   <nobr> <i>b</i>(<i>x</i>) = <i>T</i>&thinsp;&prime;. </nobr>
- This turns (12.11) into :
+ This turns (30.11) into :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -630,7 +593,7 @@ stays the same in the non-dimensional form.
   <mn>sin&hairsp;</mn> <mi>&phi;</mi>
 </math>
 
-<td style="width:50px; text-align:right">               (12.13)
+<td style="width:50px; text-align:right">               (30.13)
 </td> </tr> </table>
 
 </td> </tr> </table>
@@ -652,15 +615,15 @@ stays the same in the non-dimensional form.
 
    <mn>sin&hairsp;</mn> <mi>&phi;</mi>
 </math>
+</td>
 
-<td style="width:50px; text-align:right">                (12.14)
+<td style="width:50px; text-align:right">                (30.14)
 </td> </tr> </table>
 
-</td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p>&emsp;
- Figure 12.1 shows this factor against <i>x</i>, as a red line.
+ Figure 30.1 shows this factor against <i>x</i>, as a red line.
 </p>
 <p>&emsp; 
  For larger values of <i>x</i>, this line approaches 1</i>/x</i>,
@@ -685,27 +648,29 @@ stays the same in the non-dimensional form.
 </p>
 
 
-<!-- SECTION 12.4 --------------------------------------------->
+<!-- SECTION 30.4 --------------------------------------------->
 
-<h4> 12.4 &emsp; The blade shape for rotationally optimal loading </h4>
+<h4> 30.4 &emsp;
+   The blade shape for rotationally optimal loading        </h4>
 
 <p> Rotational optimization will scale the thrust by
  cos<sup>2</sup><i>&phi;</i>.
  With the light loading <i>b</i>(<i>x</i>) of (11.8),
- the non-dimensional chord (12.12) becomes :  
+ the non-dimensional chord (30.12) becomes :  
 </p>
 <p>&emsp;
 	B .c^'  =    4 π/C_L .  T^'/κ_ ϕ   . cos^2 ϕ . sin⁡ϕ
-(12.15) 
+(30.15) 
 </p>
 <p> With (2.7) for cos<sup>2</sup><i>&phi;</i>,
  the blade shape factor becomes :
 </p>
 <p>&emsp;
-	f_(c,2)    =〖 cos^2 ϕ .  sin〗⁡〖ϕ = x^2/(1+x^2 )  .  1/√(1+x^2 )〗
-(12.16)
+	f_(c,2)
+    =〖 cos^2 ϕ .  sin〗⁡〖ϕ = x^2/(1+x^2 )  .  1/√(1+x^2 )〗
+(30.16)
 </p>
-<p> Figure 12.1 shows this factor as a solid blue line.
+<p> Figure 30.1 shows this factor as a solid blue line.
 </p>
 
 
@@ -717,21 +682,24 @@ stays the same in the non-dimensional form.
      src="images/prop_cos2_chord_x.gif" >
 <p style="margin-left   :160px;
           margin-bottom : 12px;">
-    <i> Figure 12.1 : &ensp;
-Chord shapes for uniform and rotationally optimal distributions. </i> 
+    <i> Figure 30.1 : &ensp;
+            Chord shapes for uniform
+            and rotationally optimal distributions. </i> 
 <!------------------------------------------------------------->
 
 <p> For large <i>x</i>, where
  ( 1 + <i>x</i><sup>2</sup> ) &cong; <i>x</i><sup>2</sup>,
  the blade shape factor is approximately
  <i>f</i><sub>c,2</sub> &cong; 1<i>/x</i> 
- just like in (12.14) for the uniform propeller.
+ just like in (30.14) for the uniform propeller.
 </p>
 <p>&emsp;
- For small <i>x</i> we have ( 1+ <i>x</i>(sup>2</sup>) &cong; 1
+ For small <i>x</i> we have
+ ( 1+ <i>x</i>(sup>2</sup>) &cong; 1
   and this yields <i>f</i><sub>c,2</sub> &cong; 1<i>/x</i> fc,2
  &cong; <i>x</i><sup>2</sup>.
- The local solidity (12.15) divides this by a factor of 1<i>/x</i>,
+ The local solidity (30.15) divides this
+ by a factor of 1<i>/x</i>,
  but even then the result does not go to infinity.
  The local solidity in fact goes to zero at the hub,
  at a rate of 1<i>/x</i>.
@@ -742,36 +710,36 @@ Chord shapes for uniform and rotationally optimal distributions. </i>
 </op>
 <p>&emsp;
  The location of the widest chord is found by setting
- the derivative of  (12.16) to zero.
+ the derivative of  (30.16) to zero.
  This yields tan<sup>2</sup><i>&phi;</i> = &frac12;,
  hence <i>x</i> = &radic;2 :
 </p>
 <p>&emsp;
-	〖  x〗_ wide  =  √2	(12.17)
+	〖  x〗_ wide  =  √2	(30.17)
 </p>
 <p> The chord factor at this point is :
 </p>
 <p>&emsp;
 	f_(c,2 max)  = ⅔  . √(⅓)   ≅ 0.385
-(12.18) 
+(30.18) 
 </p>
-<p>Figure 12.1 indicates the widest point by a circle marker.
+<p>Figure 30.1 indicates the widest point by a circle marker.
 </p>
 
-<!-- SECTION 12.5 --------------------------------------------->
+<!-- SECTION 30.5 --------------------------------------------->
 
-<h4> 12.5 &emsp; Inflating the chord to unit thrust </h4>
+<h4> 30.5 &emsp; Inflating the chord to unit thrust        </h4>
 
 <p> To normalize the thrust,
  we can make the factor 1<i>/&kappa;</i><sub>&phi;</sub>
- in (12.15)  part of the blade shape factor :
+ in (30.15)  part of the blade shape factor :
 </p>
 <p>&emsp;
 	f_(c,3)    =〖1/κ_ ϕ   . cos^2 ϕ .  sin〗⁡ϕ
-(12.19) 
+(30.19) 
 </p>
-<p> Figure 12.2 shows the result.
- As for the thrust in figure 12.1,
+<p> Figure 30.2 shows the result.
+ As for the thrust in figure 30.1,
  all rotationally optimal propellers are identical in shape,
  since the shape depends only on <i>x</i>.
  Blades of smaller <i>X</i> are just "cut off" sooner,
@@ -786,15 +754,15 @@ Chord shapes for uniform and rotationally optimal distributions. </i>
      src="images/prop_chords_inflated.gif" >
 <p style="margin-left   :160px;
           margin-bottom : 12px;">
-    <i> Figure 12.2 : &ensp;
+    <i> Figure 30.2 : &ensp;
           Rotationally optimal chord for unit thrust. </i> 
 <!------------------------------------------------------------->
 
-<!-- SECTION 12.6 --------------------------------------------->
+<!-- SECTION 30.6 --------------------------------------------->
 
-<h4> 12.6 &emsp; The dimensional chord </h4>
+<h4> 30.6 &emsp; The dimensional chord                     </h4>
 
-<p> Figures 12.1 and 12.2 showed the non-dimensional chord
+<p> Figures 30.1 and 30.2 showed the non-dimensional chord
  <i>c</i>&thinsp;&prinme; against <i>x</i>.
  The non-dimensional  radius runs from 0 to <i>X</i>.
  This makes it hard to compare the shapes
@@ -806,30 +774,32 @@ Chord shapes for uniform and rotationally optimal distributions. </i>
  We get a better impression of the shape variation
  if we plot all blades to a standard radius from 0 to 1.
  We achieve this by plotting <i>c/R</i> versus <i>r/R</i>.
- Relative to figure 12.2, we need to reduce
+ Relative to figure 30.2, we need to reduce
  both the horizontal and the vertical axis by  1<i>/X</i>.
- This changes (12.15) to :
+ This changes (30.15) to :
 </p>
 <p>&emsp;
-	B .  c/R   = B .  〖 c〗^'/X  =    4 π/C_L .  T^'/κ_ ϕ   . 〖1/X  . cos〗^2 ϕ . sin⁡ϕ
-(12.20) 
+	B .  c/R   = B .  〖 c〗^'/X  =
+    4 π/C_L .  T^'/κ_ ϕ   . 〖1/X  . cos〗^2 ϕ . sin⁡ϕ
+(30.20) 
 </p>
-<p> Figure 12.3 shows the result for two-bladed propellers
+<p> Figure 30.3 shows the result for two-bladed propellers
  of various tip speed ratios <i>X</i>.
- This figure is basically the same as figure 12.2,
+ This figure is basically the same as figure 30.2,
  but this time with all blades scaled to a single radius.
  This new plot is dimensioned for our typical lightplane example
  of <i>T</i>&thinsp;&prime;&nbsp;=&nbsp;0.1 and
  <i>C</i><sub>L</sub>&nbsp;=&nbsp;0.4.
 </p>
 <p>&emsp;
- By (12.17) the widest chord is located at
+ By (30.17) the widest chord is located at
  <i>r/R</i>&nbsp;=&nbsp;&radic;2<i>/X</i>,
- and by (12.18) the maximum width is :
+ and by (30.18) the maximum width is :
 </p>
 <p>&emsp;
-	B .  c_max/R   =   4 π/C_L .  T^'/κ_ ϕ   .   0.385/X
-(12.21) 
+	B .  c_max/R   =
+   4 π/C_L .  T^'/κ_ ϕ   .   0.385/X
+(30.21) 
 </p>
 <p> These points are marked by a circle marker.
  Apart from the secondary effect of
@@ -838,34 +808,36 @@ Chord shapes for uniform and rotationally optimal distributions. </i>
  the width of the widest chord varies with 1<i>/X</i>.
 </p>
 
-<!-- SECTION 12.7 --------------------------------------------->
+<!-- SECTION 30.7 --------------------------------------------->
 
-<h4> 12.7 &emsp; The chord at the tip</h4>
+<h4> 30.7 &emsp; The chord at the tip                      </h4>
 
 <p>
 At the tip, we have <i>x</i> = <i>X</i>.
-  Expressing <i>f</i><sub>c,2</sub> in <i>x</i> like in (12.16),
+  Expressing <i>f</i><sub>c,2</sub> in <i>x</i> like in (30.16),
  but substituting <i>X</i> for <i>x</i>,
- equation (12.20) now reads : 
+ equation (30.20) now reads : 
 </p>
 <p>&emsp;
-	B .  c_tip/R   =  4 π/C_L .  T^'/κ_ ϕ   .  1/X  .  X^2/(1+X^2 )  .  1/√(1+X^2 )
-(12.22) 
+	B .  c_tip/R   =
+       4 π/C_L .  T^'/κ_ ϕ   .  1/X  .  X^2/(1+X^2 )  .  1/√(1+X^2 )
+(30.22) 
 </p>
 <p> For larger X we have  (1 + X 2 )  ≅  X 2,
  and we can approximate the tip chord  by : 
 </p>
 <p>&emsp;
-	B .  c_tip/R   ≅     4 π/C_L .  T^'/κ_ ϕ   .   1/X^2 
-(12.23)
+	B .  c_tip/R   ≅
+        4 π/C_L .  T^'/κ_ ϕ   .   1/X^2 
+(30.23)
 </p>
 <p> The tip chord is therefore roughly proportional to
  1<i>&hairsp;/&hairsp;X</i><sup>&hairsp;2</sup>.
 </p>
 
-<!-- SECTION 12.8 --------------------------------------------->
+<!-- SECTION 30.8 --------------------------------------------->
 
-<h4> 12.8 &emsp; The chord at 0.7&hairsp;<i>R</i></h4>
+<h4> 30.8 &emsp; The chord at 0.7&hairsp;<i>R</i></h4>
 <p> The tip is not always the most convenient place
  to measure the chord.
   The typical working radius for a propeller blade is
@@ -878,25 +850,27 @@ At the tip, we have <i>x</i> = <i>X</i>.
  as for the tip chord, and we have :
 </p>
 <p>&emsp;
-	B .  c_0.7/R  ≅    4 π/C_L .  T^'/κ_ ϕ   .   1/( 0.7 X^2 )
-(12.24) 
+	B .  c_0.7/R  ≅
+    4 π/C_L .  T^'/κ_ ϕ   .   1/( 0.7 X^2 )
+(30.24) 
 </p>
 <p> The chord at 70&thinsp;% of the radius is
- roughly proportional to 1<i>&hairsp;/&hairsp;X</i>&hairsp;<sup>2</sup>.
+ roughly proportional to
+ 1<i>&hairsp;/&hairsp;X</i>&hairsp;<sup>2</sup>.
  Higher pitch propellers therefore have much wider blades,
- as was already obvious from figure 12.3.
+ as was already obvious from figure 30.3.
 </p>
 
 
-<!-- SECTION 12.9 --------------------------------------------->
+<!-- SECTION 30.9 --------------------------------------------->
 
-<h4> 12.9 &emsp; Blade taper </h4>
+<h4> 30.9 &emsp; Blade taper                               </h4>
 <p>
-With (12.21) the widest chord at <i>x</i> = &radic;2
+With (30.21) the widest chord at <i>x</i> = &radic;2
   is proportional to 1<i>&hairsp;/&hairsp;X</i>,
- and by (12.23) and (12.24) the chords farther out
+ and by (30.23) and (30.24) the chords farther out
  are proportional to 1<i>&hairsp;/&hairsp;X</i>&hairsp;<sup>2</sup>.
- Figure 12.3 shows how this works out in practice.
+ Figure 30.3 shows how this works out in practice.
  Propellers of high pitch (&hairsp;hence of low X&hairsp;)
  have paddle-like shapes,
  with the tips nearly as wide as the widest point
@@ -920,8 +894,9 @@ With (12.21) the widest chord at <i>x</i> = &radic;2
  All else being equal, this makes the lift per chord width
  locally proportional to <i>x</i><sup>2</sup>,
  and at the tip to <i>X</i><sup>2</sup>.
- This ratio is reflected in the tip chord width of (12.23).
+ This ratio is reflected in the tip chord width of (30.23).
 </p>
+
 <!-- FOOTER --------------------------------------------------->
 <br> <br>
 <div class="footer"> P. Lammertse, 2025 </div>
