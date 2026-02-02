@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html>
+
+<!--------------------------------------------------------------
+-- file    : linkages.html
+-- purpose : Page for website Piet Lammertse
+----------------------------------------------------------------
+--   history :
+--     2026-01-29 new
+---------------------------------------------------------------> 
+
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title>
+       Piet Lammertse on linkages
+  </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR ------------------------------------------->
+<ul>
+  <li><a href="index.html">                  Home     </a> </li>
+  <li> <a href="haptic_master.html">         Haptics  </a> </li>
+  <li> <a style="background-color:#0000C0;"
+          href="mri.html">                   MRI      </a> </li>
+</ul>
+
+<!------------------------------------------------------------->
+<!-- TEXT PAGE -->
+
+<h2> HAND LINKAGES </h2>
+
+<h2> Introduction </h2>
+
+<h4> subject </h4>
+
+<p> We look at the design and analysis
+ of hand linkages, typically consisting of pushrods
+ and bellcranks, but also torque tubes and cable drives. 
+ Such mechanismas are common in aircraft flight controls,
+ but also in  haptics <nobr> (&hairsp;including </nobr>
+exoskeletons&hairsp;),
+ and are potentially useful in humanoid robots.
+
+<!-- MAYBE ADD LATER< UNDERCARRIAGES AND FLAP DRIVES,
+     AND POWER GRAPHS (VULGRAAD) --> 
+
+</p>
+
+<h4> direct motivation </h4>
+
+<p> The direct motivation for this section
+ on hand linkages is the design
+ of a haptic joystick for use in MRI.
+ By&nbsp;"haptic" we mean a computer-controlled,
+ force-sensitive so-called "manipulandum", 
+ capable of operating close to the bore of the MRI tunnel.
+</p>
+<p>&emsp;
+ Many machines of this type have been built over the years,
+ but they do not seem to be very successful.
+ Or&nbsp;maybe they are not really needed,
+ but we will leave that aside for now.
+</p>
+<p>&emsp;
+ Most solutions focus on finding actuators and force sensors
+ that are allowed in the MRI room.
+ This leads to aluminium induction motors, active hydraulics, etc.
+ Another solution, rarely seen, is to perform the actuation 
+ and measurement  outside the MRI room, and transfer the movement
+ to the MRI table using a simple, passive mecha&shynism.
+ The reason this road is rarely taken is probably the perception
+ that it will be very hard transfer hand movement
+ rigidly, lightly and with negligible friction
+ over the required distance of almost 10 metres.
+</p>
+<p>&emsp;
+ Yet there are plenty of examples of this in other fields.
+</p>
+
+<h4> manual control of aircraft </h4>
+
+<p> Most aircraft do not have power steering.
+ The elevator, ailerons and rudder are controlled mechanically
+ via a control stick and foot pedals.
+ The transmission is via cross-stranded steel cables,
+ over pulleys of approximately 80 mm in diameter,
+ ending in a lever at the control surface.
+</p>
+<p>&emsp;
+ A more expensive, higher-quality version
+ uses lightweight push rods.
+ Each individual push rod is less than
+ 1&nbsp;metre long
+ to prevent buckling, and is supported by
+ smooth-running levers of approximately 50 mm radius.
+</p>
+<p> Changes in direction are negotiated by forked
+ (&hairsp;"butterfly"&hairsp;)
+ bellcranks.
+ The places in the aircraft's structure
+ where the pulleys and rockers exert a reaction force
+ must be extremely rigid, to avoid losing energy
+ from the linkage.
+ They are usually located at the corners
+ of a rigid spar and a rib or frame,
+ so that they do not flex under varying control forces.
+</p>
+<p>&emsp;
+ Manual aircraft controls of are extremely rigid,
+ light and free of play, because the pilot
+ must be able to feel the aerodynamic forces
+ on the control surfaces directly.
+ When the pilot releases the stick,
+ the control surface itself must move the stick
+ to the momentary equilibrium position,
+ or possibly oscillate around it.
+
+<h4> application in MRI </h4>
+
+<p> The forces and distances from the control stick
+ to the control surface are of the same order
+ as those in an MRI chamber, and sometimes longer.
+</p>
+<p>&emsp;
+ Large commercial aircraft from the 1950s,
+ including the first generation of jet transports,
+ still had manual controls. 
+ It should therefore be possible to apply this principle
+ to transfer the movements of a haptic drive
+ from outside the MRI chamber to a manipulandum
+ close to the MRI tunnel.
+ The only difference with an aircraft is
+ that no metal parts are allowed.
+</p>
+<p>&emsp;
+ An added complication is that the bed slides
+ back and forth during use,
+ but this problem is no larger than
+ in an aircraft with folding wings.
+</p>
+
+<h4> requirements on the mechanism </h4>
+
+<p> The linkage system should be light and rigid,
+ and as free as possible from play and friction.
+ This note is an attempt to examine these properties
+ and optimize them where possible.
+</p>
+
+<h2> Properties of a manipulandum</h2>
+
+<h4> A simple manipulandum </h4>
+
+<p> The simplest form of a haptic manipulandum 
+ is a joystick like the one shown in figure 1.
+ The handle is driven by a force-sensitive motor,
+ via a mechanical transmission.
+ The transmission has stiffness,
+ mass, friction and play.
+ The stiffness and the mass together form
+ a spring-mass system
+ with at least one natural frequency.
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img width="450" alt="Haptic joystick";
+     style="margin-left   : 300px;
+            margin-top    :   8px"
+      src="images/linkage_haptic_joystick.gif">
+<p style="margin-left     : 300px;
+          margin-bottom   :  8px;">
+    <i> Figure 1 : &ensp; Haptic joystick.</i> 
+</p>
+<!------------------------------------------------------------->
+
+<p> In practice, the handle also has its own mass,
+ as does the human hand holding it,
+ although the user is free to let go of the joystick.
+ The controlled servo motor will also behave
+ like a spring-mass system,
+ although we can also block the output shaft.
+</p>
+
+
+<h4> bandwidth </h4>
+
+<p> A common quality measure in servo systems is the bandwidth.
+ Roughly speaking, this is the highest frequency
+ that the system can reasonably transmit.
+ It usually corresponds to the lowest frequency
+ at which the system will go in resonance.
+ At that frequency, the output of the system 
+ no longer follows the input, but overshoots it by far.
+</p>
+<p>&emsp;
+ The joystick in Figure 1 behaves like a simple
+ spring-mass system.
+ Initially, we model the mass of the entire linkage
+ between the motor and the stick as a single mass
+ (&hairsp;"lumped mass"&hairsp;)
+ and the flexibility as a single spring.
+ The (&hairsp;undamped&hairsp;) natural frequency
+ of a spring-mass system is then given
+ by the following equation :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>&omega;</mi>
+
+  <mo> = </mo> <mspace/>
+
+  <msqrt>
+<!--
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>K</mi>
+    <mi>m</mi>
+ </mfrac>
+-->
+ <mi>K</mi> <mn>/</mn> <mi>m</mi>
+ </msqrt>
+  <mspace width="11em"/>
+ <mn>[ rad/s ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (1)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>f</mi>
+  <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&omega;</mi>
+    <mn>2&hairsp;&pi;</mn>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mn>2&hairsp;&pi;</mn>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <msqrt>
+ <mi>K</mi> <mn>/</mn> <mi>m</mi>
+ </msqrt>
+
+  <mspace width="6em"/>
+  <mn>[ Hz ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (2)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<p>
+Where :
+</p>
+<p>&emsp;
+<i>K</i> &emsp; &emsp;	serial stiffness of all links.
+</p>
+<p>&emsp;
+<i>m</i> &emsp; &emsp;	serial mass (concentrated
+       at the "open" end of the linkage)
+</p>
+
+<h4> mass at the user's hand </h4>
+
+<p> Torques and moments of inertia do not mean much
+ to most people.
+ Force and mass are more familiar.
+</p>
+<p>&emsp;
+ With a joystick-like manipulum comes a lever length.
+ A lever of one metre would be nice for calculations,
+ but it is not a common size for a joystick,
+ and therefore still not very intuitive.
+ A common lever length for a joystick is :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>R</mi> <mn>m</mn> </msub>
+
+  <mo> = </mo> <mspace/>
+
+  <mn>0.05</mn>
+  <mspace width="12em"/>
+  <mn>[ m ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (3)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This is the distance between the pivot point
+ of the joystick and the "point of contact"
+ of the hand gripping it.
+</p>
+<p>&emsp;
+ The mass of the human hand itself is approximately 
+ 0.5&nbsp;[&hairsp;kg&hairsp;],
+ and is located on a "lever length"
+ of approx&shyimately 0.05&nbsp;[&hairsp;m&hairsp;]
+ around the wrist.
+</p>
+
+<h4>stiffness and mass</h4>
+
+<p> It is not trivial to set requirements
+ for the stiffness and mass of a haptic manipulandum.
+ Bandwidth appears to be not the only criterion.
+ We will see that it is largely determined
+ by material properties and the distance to be covered,
+ rather than by geometry.
+ Also, the same bandwidth can be achieved
+ with large forces and large masses,
+ or with small forces and small masses.
+</p>
+<p>&emsp;
+ As a first example let us take the Haptic Master,
+ a relatively large admittance-controlled device.
+ In free motion, this device has a stable
+ "apparent mass" (&hairsp;the perceived mass,
+ equal to the virtual mass
+ set in the admittance controller,
+ plus the physical mass of the end effector
+ attached outside the force sensor&hairsp;)
+ of approximately 3 kg :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>m</mi>
+
+  <mo> = </mo> <mspace/>
+
+  <mn>3</mn>
+  <mspace width="12em"/>
+  <mn>[ kg ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">  (4)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<p>&emsp;
+    m	=    3            [ kg ]                             (4)
+</p>
+<p> With a blocked motor
+ (&emsp;or with an infinitely rigid virtual wall&emsp;
+ or perturbation&hairsp;),
+ the perceived stiffness is approximately:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>K</mi>
+
+  <mo> = </mo> <mspace/>
+
+  <mn>20,000</mn>
+  <mspace width="6em"/>
+  <mn>[ N/m ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (5)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Expressing this in terms of the bandwidth
+ that the virtual controller
+ can impose on the end effector, we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>f</mi>
+
+  <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mn>2&hairsp;&pi;</mn>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <msqrt>
+  <mn>20,000</mn> <mn>/</mn> <mn>3</mn>
+ </msqrt>
+
+   <mspace/> <mo>&cong; </mo> <mspace/>
+
+  <mn>13</mn>
+
+  <mspace width="4em"/>
+  <mn>[ Hz ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (6)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Our second example is the Sensable Phantom,
+ a much smaller, impedance-controlled device.
+ This type of device has a much lower stiffness
+ of approximately 2,000 [N/m].
+ It does not feel like a hard wall or tabletop,
+ but rather like a rubber eraser.
+ On the other hand, the perceived mass is also much lower&nbsp;:
+ approximately 50 grams with a pen-shaped handle
+ (&hairsp;"stylus"&hairsp;).
+ The bandwidth of the Phantom as a perturbator is then :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>f</mi>
+
+  <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mn>2&hairsp;&pi;</mn>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <msqrt>
+  <mn>2,000</mn> <mn>/</mn> <mn>0.05</mn>
+ </msqrt>
+
+   <mspace/> <mo>&cong; </mo> <mspace/>
+
+  <mn>30</mn>
+
+  <mspace width="4em"/>
+  <mn>[ Hz ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (7)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This may sound great, but the forces are very small.
+ You can feel them in your fingertips,
+ but they wil not perturb your whole hand.
+</p>
+<p>&emsp;
+ The human hand weighs approximately 0.5 [kg].
+ With the Haptic Master,
+ this is much less than the total virtual mass of 3 [kg],
+ and you can use the HM to perturb the entire hand.
+ This would be impossible with a Sensable Phantom,
+ so perhaps it is better
+ to take the mass of the human hand into account
+ when determining the band&shywidth.
+
+<h2>Reflected properties</h2>
+
+<h4> Reflected stiffness and mass of components </h4>
+
+<p> For a given movement of the reference point,
+ all parts of the linkage will move,
+ each in their own proportion.
+ This&nbsp;proportion can be referred to as the
+ "gearing ratio" or the "mechanical advantage".
+ The latter name is more appropriate to forces,
+ which are inversely proportional to the displacements.
+</p>
+<p>&emsp;
+ Converting the stiffness and mass of a component
+ to the reference point is traditionally called
+ "reflecting".
+ At&nbsp;the reference point, we will talk about
+ the "reflected mass" and sometimes also of
+ the "reflected stiffness".
+
+<h4>"reflecting" components to the end point</h4>
+
+<p> We are looking for ways to combine
+ the contributions of a collection of separate components
+ into a single number for the end-to-end stiffness
+ at the end point,
+ and a single number for the mass at that location.
+</p>
+<p>&emsp;
+ The most intuitive approach for manual operation
+ is the stiffness and mass expressed in a linear force
+ and a linear displacement.
+ It can also be expressed as a torque and a rotation,
+ but for most people these are less familiar.
+</p>
+<p>&emsp;
+ The reference point in the mechanism
+ can be chosen freely and does not even have to be
+ physically present in the mechanism.
+ But in a joystick, the grip point of 
+ the handle is the obvious choice.
+</p>
+<p>&emsp;
+ The control stick will often take the form
+ of a joystick with a pivot point.
+ The point of contact between the hand and the stick
+ is then important when converting to a linear movement. 
+ As a first example, we take the effect
+ (&hairsp;the "reflection"&hairsp;) 
+of the mass <i>m</i><sub>C</sub>
+ and the spring <i>K</i><sub>CD</sub>
+ to the end point <i>A</i> of the joystick in figure 1. 
+</p>
+
+<h4> reflected displacements </h4>
+
+<p> In the initial position of the joystick,
+ <i>x</i><sub>A</sub>&nbsp;=&nbsp;0,
+ and the additional displacement under a pulling force
+ is &Delta;<i>x</i><sub>A</sub>&nbsp;=&nbsp;0.
+ We&nbsp;will call the displacement of point <i>C</i>, 
+ <i>x</i><sub>C</sub>,
+ and the rotation of the joystick
+ <i>&theta;</i><sub>&hairsp;B</sub>.
+</p>
+<p>&emsp;
+ With a displacement <i>x</i><sub>A</sub>
+ of the end effector,
+ rigid levers give the following transfer "gearings" :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>&theta;</mi> <mn>B</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>x</mi> <mn>A</mn> </msub>
+  <mo>/</mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                    (8)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr>
+<td style = "padding : 6px 0px;">
+
+<math>
+  <msub> <mi>x</mi> <mn>C</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>&theta;</mi> <mn>B</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (9)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> And so:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>x</mi> <mn>C</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>x</mi> <mn>A</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (10)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> or conversely:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>x</mi> <mn>A</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>x</mi> <mn>C</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (11)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> As a sign convention we give all displacements
+ the same sign when the mechanism
+ moves in one direction.
+</p>
+
+<h4> reflected forces </h4>
+
+<p> Now apply a force <i>F</i><sub>A</sub>
+ to the end effector of figure 1. 
+The bending moment in the stick at point B is then:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>T</mi> <mn>B</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>F</mi> <mn>A</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (12)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This makes the force <i>F</i><sub>C</sub>
+ at the end of the spring
+ (&hairsp;or pushrod&hairsp;) CD equal to :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>F</mi> <mn>C</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>T</mi> <mn>B</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                 (13)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+The two "gearing ratios" in series therefore yield:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>F</mi> <mn>C</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>F</mi> <mn>A</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (14)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> or conversely:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>F</mi> <mn>A</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>F</mi> <mn>C</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (15)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The force transfer ratio is seen to be inversely proportional
+ to the displacement transfer ratio.
+ This is consistent with conservation of energy :
+ force times distance remains equal at the input and output,
+ so that no energy is stored in the mechanism.
+</p>
+
+<h4>reflected stiffness </h4>
+
+<p> From a static point of view,
+ a force in A also causes a small displacement of A.
+ This is because there is compliance in a number of elements.
+ The simplest way to see this is in the extension
+ or compression of the spring (&hairsp;or pushrod&hairsp;) CD,
+ under a force <i>F</i><sub>C</sub> at its end point.
+ Let us call the local stiffness
+ (&hairsp;force per relative length change&hairsp;)
+ <i>K</i><sub>CD</sub>.
+ Then we have:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>K</mi> <mn>CD</mn> </msub>
+
+   <mspace/> <mo> &equiv; </mo> <mspace/>
+
+  <msub> <mi>F</mi> <mn>CD</mn> </msub>
+  <mo> / </mo>
+  <mn>&Delta;</mn> <msub> <mi>x</mi> <mn>CD</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (16)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Combining (16) and (15),
+ the influence in A
+ of the deflection of the spring or push rod CD equals :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>F</mi> <mn>A</mn> </msub>
+  <mo>/</mo>
+  <mn>&Delta;</mn> <msub> <mi>x</mi> <mn>A</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mo> ( </mo>
+    <msub> <mi>F</mi> <mn>CD</mn> </msub>
+    <mo> / </mo>
+    <msub> <mi>L</mi> <mn>AB</mn> </msub>
+    <mo> . </mo>
+    <msub> <mi>L</mi> <mn>BC</mn> </msub>
+  <mo> ) </mo>
+
+  <mo> / </mo>
+
+  <mo> ( </mo>
+    <mn>&Delta;</mn> <msub> <mi>x</mi> <mn>CD</mn> </msub>
+    <mo> . </mo>
+    <msub> <mi>L</mi> <mn>AB</mn> </msub>
+    <mo> / </mo>
+    <msub> <mi>L</mi> <mn>BC</mn> </msub>
+  <mo> ) </mo>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (17)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mspace style="width:3.65em;"/>
+
+  <mspace/> <mo> = </mo> <mspace/> <mspace/> <mspace/>
+
+  <msub> <mi>F</mi> <mn>CD</mn> </msub>
+  <mo>/</mo>
+  <mn>&Delta;</mn> <msub> <mi>x</mi> <mn>CD</mn> </msub>
+
+  <mo> . </mo>
+
+  <mo> ( </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>BC</mn>
+    </msub>
+    <mo> / </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>AB</mn>
+    </msub>
+  <mo> ) </mo>
+</math>
+
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mspace style="width:3.65em;"/>
+
+  <mspace/> <mo> = </mo> <mspace/> <mspace/> <mspace/>
+
+  <msub> <mi>K</mi> <mn>CD</mn> </msub>
+
+  <mo> .</mo>
+
+  <mo> ( </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>BC</mn>
+    </msub>
+    <mo> / </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>AB</mn>
+    </msub>
+  <mo> ) </mo>
+</math>
+</td>
+
+<!--
+<td style="width:50px; text-align:right">  (**)
+-->
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> By the definition of stiffness,
+ the following applies to the "reflected" stiffness
+ of the pushrod CD at A:
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>K</mi> <mn>A (CD)</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> <mspace/> <mspace/>
+
+  <msub> <mi>K</mi> <mn>CD</mn> </msub>
+
+  <mo> .</mo>
+
+  <mo> ( </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>BC</mn>
+    </msub>
+    <mo> / </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>AB</mn>
+    </msub>
+  <mo> ) </mo>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (18)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The stiffness reflected from CD to A
+ is therefore proportional to the square of the lever ratio
+between them.
+</p>
+<p> If we pull on a spring element by a long lever,
+ it feels less stiff for two reasons.
+ First, we exert a greater force on&nbsp;the spring element.
+ And second, our end point moves more
+ for a given deflection of the spring element.
+</p>
+
+<!------------------------------------------------------------->
+<h4> reflected mass </h4>
+
+<p> For the reflected mass, we look at the accelerations.
+ For a mass in C, the following applies:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>F</mi> <mn>C</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+  <mo>.</mo>
+
+  <msub> <mi>a</mi> <mn>C</mn> </msub>
+
+  <mspace/> <mo> &equiv; </mo> <mspace/>
+
+  <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+  <mo> . </mo>
+
+  <msup> <mn>d</mn> <mn>2</mn> </msup> 
+  <msub> <mi>x</mi> <mn>C</mn> </msub> 
+  <mn>/</mn>
+  <mn>d</mn> <msup> <mi>t</mi> <mn>2</mn> </msup> 
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (19)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+If we apply (****) to the forces, then the following applies:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>F</mi> <mn>A</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>F</mi> <mn>C</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+  <mo> . </mo>
+
+  <mo>(</mo>
+    <msup> <mn>d</mn> <mn>2</mn> </msup> 
+    <msub> <mi>x</mi> <mn>C</mn> </msub> 
+    <mo> / </mo>
+    <mn>d</mn> <msup> <mi>t</mi> <mn>2</mn> </msup> 
+  <mo>)</mo>
+
+  <mo> . </mo>
+
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (20)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+If we apply (****) for the displacements,
+ then the following applies:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>F</mi> <mn>A</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+  <mo> . </mo>
+
+  <mo>(</mo>
+    <msup> <mn>d</mn> <mn>2</mn> </msup>
+    <msub> <mi>x</mi> <mn>A</mn> </msub> 
+    <mo> / </mo>
+    <mn>d</mn> <msup> <mi>t</mi> <mn>2</mn> </msup> 
+
+    <mo> . </mo>
+    <msub> <mi>L</mi> <mn>BC</mn> </msub>
+    <mo> / </mo>
+    <msub> <mi>L</mi> <mn>AB</mn> </msub>
+  <mo>)</mo>
+
+  <mo> . </mo>
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+  <mo> / </mo>
+  <msub> <mi>L</mi> <mn>AB</mn> </msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (21)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr>
+<td style="padding: 2px;">
+<math>
+
+  <mspace width="1.75em"/>
+  <mo> = </mo> <mspace/>
+
+  <mo>(</mo>
+    <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+    <mo> . </mo>
+
+    <msub>
+     <msup> <mi>L</mi> <mn>2</mn> </msup>
+     <mn>BC</mn>
+   </msub>
+    <mo> / </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>AB</mn> </msub>
+    </msub>
+  <mo>)</mo>
+
+  <mo> . </mo>
+
+  <msup> <mn>d</mn> <mn>2</mn> </msup>
+  <msub> <mi>x</mi> <mn>A</mn> </msub> 
+  <mo> / </mo>
+  <mn>d</mn> <msup> <mi>t</mi> <mn>2</mn> </msup> 
+
+</math>
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Here we see that the role of <i>m</i><sub>C</sub>
+ in A is taken by:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>m</mi> <mn>A (C) </mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+  <mo> . </mo>
+
+  <mo>(</mo>
+    <msub>
+     <msup> <mi>L</mi> <mn>2</mn> </msup>
+     <mn>BC</mn>
+   </msub>
+    <mo> / </mo>
+    <msub>
+      <msup> <mi>L</mi> <mn>2</mn> </msup>
+      <mn>AB</mn> </msub>
+    </msub>
+  <mo>)</mo>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (22)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+The mass of CD "reflected" from C to A is therefore
+ proportional to the square of the lever ratio.
+</p>
+<p>&emsp;
+ If we try to accelerate a mass on a long lever with a short lever,
+ it will feel heavier for two reasons.
+ First, we are trying to accelerate the distant mass more,
+ on a longer lever.
+ Second, the "mass force" also acts on the longer lever,
+ so that the force at our end becomes correspondingly larger.
+</p>
+
+<!------------------------------------------------------------->
+<h4> reflected bandwidth </h4>
+
+<p> The stiffness and the mass of a component
+ somewhere in the chain both reflect in the same way
+ at the end point.
+ If a component, such as a push rod,
+ has a certain ratio between stiffness and mass,
+ then nothing will change in the end bandwidth
+if we attach that component to a longer or shorter lever.
+</p>
+<p>&emsp; 
+ This makes perfect sense if we look at figure 1.
+ As long as point A is just a mathematical point with
+ no mass of its own,
+ it will not affect the natural frequency 
+ of mass <i>m</i><sub>C</sub> oscillating on 
+ spring <i>K</i><sub>CD</sub>.
+ If the user moves point A back and forth at a given rate
+ and with a given amplitude,
+ then the forces at A will be smaller with a longer lever AB.
+ The lever will move quadratically “lighter”.
+ This applies to both the spring force and the mass.
+</p>
+<p>&emsp;
+ But when we release the lever,
+ it will oscillate at the same rate as before.
+</p>
+
+<!------------------------------------------------------------->
+<h4> rotating components </h4>
+
+<p> A mechanism may also contain rotating parts,
+ like flywheels or torque tubes.
+ The equations of motion of such parts
+ use torques and moments of inertia.
+ The displacements are in radians, the stiffness in Nm/rad,
+ and the inertia in kg.m<sup>2</sup>. 
+ However, these can then be converted unambiguously
+  into linear forces and masses.
+</p>
+<p>&emsp;
+ As an example, consider
+ the mass <i>m</i> <sub>c</sub> in figure 1 
+ as a rotating element,
+ a single-sided, rotating  "flywheel" 
+ with a radius of <i>L</i><sub>BC</sub>
+ and a mass of <i>m</i><sub>C</sub>.
+ This gives the object a moment of inertia (&hairsp;around B&hairsp;) of :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>I</mi> <mn>C</mn> </msub>
+
+   <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>m</mi> <mn>C</mn> </msub>
+
+  <mo> . </mo>
+
+  <msub>
+    <msup> <mi>L</mi> <mn>2</mn> </msup>
+    <mn>BC</mn>
+ </msub>
+ 
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (23)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+The angular rotation of this element is linked to xC via:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <msub> <mi>x</mi> <mn>C</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+ 
+  <mo> . </mo> 
+
+  <mn>d</mn> <msub> <mi>&theta;</mi> <mn>C</mn> </msub>
+ 
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (24)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+We can interpret the spring force in C as a torque around B:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>T</mi> <mn>C</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <msub> <mi>F</mi> <mn>C</mn> </msub>
+  <mo> . </mo> 
+  <msub> <mi>L</mi> <mn>BC</mn> </msub>
+ 
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (25)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> We can consider the stiffness
+ as a torsional stiffness between the
+ torque <i>T</i><sub>C</sub>
+ and the rotation d<i>&theta;</i><sub>C</sub> :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>K</mi> <mn>t</mn> </msub>
+
+  <mspace/> <mo> &equiv; </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <msub> <mi>T</mi> <mn>C</mn> </msub>
+    <mrow>
+      <mn>d</mn><msub> <mi>&theta;</mi> <mn>C</mn> </msub>
+    </mrow>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (26)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> With (24) and (25) the stiffness is therefore:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>K</mi> <mn>t</mn> </msub>
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <msub> <mi>F</mi> <mn>C</mn> </msub> </mrow>
+    <mrow> <mn>d</mn> <msub> <mi>x</mi> <mn>C</mn> </sub> </mrow>
+  </mfrac>
+
+  <mo> . </mo> 
+
+  <msub> <msup> <mi>L</mi> <mn>2</mn> </msup>
+         <mn>BC</mn> </msub>
+
+  <mspace/> <mo> &equiv; </mo> <mspace/> 
+
+  <msub> <mi>K</mi> <mn>CD</mn> </msub>
+
+  <mo> . </mo> 
+
+  <msub> <msup> <mi>L</mi> <mn>2</mn> </msup>
+         <mn>BC</mn> </msub>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (27)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> In this view, the natural frequency of the rotating element
+ on the "torque spring" follows from the ratio 
+ between the torsional stiffness
+ and the mass moment of inertia,
+ but this ratio is unchanged from the linear view:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <msub> <mi>K</mi> <mn>t</mn> </msub>
+    <msub> <mi>I</mi> <mn>C</mn> </msub>
+ </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <msub> <mi>K</mi> <mn>CD</mn> </msub>
+      <mo> . </mo>
+      <msub> <msup> <mi>L</mi> <mn>2</mn> </msup>
+         <mn>BC</mn> </msub>
+   </mrow>
+    <mrow>
+      <msub> <mi>m</mi> <mn>C</mn> </msub>
+      <mo> . </mo>
+      <msub> <msup> <mi>L</mi> <mn>2</mn> </msup>
+         <mn>BC</mn> </msub>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <msub> <mi>K</mi> <mn>CD</mn> </msub>
+   </mrow>
+    <mrow>
+      <msub> <mi>m</mi> <mn>C</mn> </msub>
+   </mrow>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (28)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Figure 2 shows a ‘real’ torque spring,
+ with a ring as an example of an object
+ with a moment of inertia.
+</p>
+<p>&emsp;
+ And (28) applies to the angular momentum
+ of any arbitrary object.
+ A ring clearly has the same radius of inertia <i>R</i>
+ for its entire mass,
+ but for a solid disc for example,
+ the following applies:
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>I</mi> <mn>disk</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mn>&frac12;&thinsp;</mn> <mi>m</mi> 
+  <mn>&thinsp;</mn>
+  <msup> <mi>R</mi> <mn>2</mn> </msup
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (29)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> In that case, the so-called "radius of inertia" is :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mrow> <mi>r</mi> <mn>&prime;</mn> </mrow>
+    <mn>disk</mn>
+ </msub>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>R</mi> 
+    <msqrt> <mn>2</mn> </msqrt>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (30)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<!-- FIGURE --------------------------------------------------->
+<img width="420" alt="Torque spring ring";
+     style="margin-left   : 160px;"
+      src="images/linkage_torque_spring_ring.gif">
+<p style="margin-left     : 200px;
+          margin-bottom   :  8px;">
+    <i> Figure 2 : &ensp; Torque spring on ring.</i> 
+</p>
+<!------------------------------------------------------------->
+
+<br> <br>
+<h2> Individual construction elements </h2>
+
+<h4> stiffness, strength and mass of pushrods </h4>
+
+<p> The tensile strength, or the compression strength
+ of a push rod until it buckles, is given by:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>&sigma;</mi>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mi>F</mi> 
+  <mo>/</mo>
+  <mi>A</mi> 
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (31)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The mass is given by :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>m</mi>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mi>&rho;</mi> 
+  <mo>.</mo>
+  <mi>A</mi> 
+  <mo>.</mo>
+  <mi>L</mi> 
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (32)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>The specific strength (&hairsp;strength per mass&hairsp;)
+ is therefore:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>F</mi>
+    <mi>m</mi>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>A</mi> <mo>.</mo> <mi>&sigma;</mi> </mrow> 
+    <mrow> <mi>A</mi> <mo>.</mo>
+       <mi>&rho;</mi> <mo>.</mo> <mi>L</mi>
+    </mrow> 
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&sigma;</mi> 
+    <mi>&rho;</mi>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn> 
+    <mi>L</mi>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (33)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The stiffness is found from:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>x</mi>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>F</mi>
+    <mrow> <mi>E</mi> <mo>.</mo> <mi>A</mi>
+    </mrow>
+  </mfrac>
+  <mo> . </mo>
+  <mi>L</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (34)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> so
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>K</mi>
+
+  <mspace/> <mo> &equiv; </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>F</mi>
+    <mrow> <mn>d</mn> <mi>x</mi> </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/> 
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>E</mi> <mo>.</mo> <mi>A</mi> </mrow>
+    <mi>L</mi>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (35)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The specific stiffness is:
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>K</mi>
+    <mi>m</mi>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>E</mi>
+    <mi>&rho;</mi>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mi>L</mi>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (36)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The ratio between stiffness and strength is:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn><i>stiffness</i></mn>
+    <mn><i>strength</i></mn>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>E</mi>
+    <mi>&sigma;</mi>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (37)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Neither the cross-sectional area <i>A</i>
+ nor the length <i>L</i>
+ appear in this ratio.
+ These are only material properties.<br>
+ It is therefore not possible to change this ratio
+ in a given pushrod.
+</p>
+
+<h4> the achievable bandwidth of a single pushrod </h4>
+
+<p> From the equations above, a pushrod becomes linearly
+ heavier and less stiff as it gets longer.
+ The ratio between stiffness and mass
+ therefore goes down with <i>L</i><sup>2</sup> :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>K</mi>
+    <mi>m</mi>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>E</mi>
+    <mi>&rho;</mi>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <msup> <mi>L</mi> <mn>2</mn> </msup>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (38)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>f</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>E</mi> <mo>.</mo> <mi>A</mi> </mrow>
+    <mi>L</mi>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <mi>&rho;</mi> <mo>.</mo>
+        <mi>A</mi> <mo>.</mo> <mi>L</mi>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mn>2&hairsp;&pi;</mn>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mi>L</mi>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <msqrt>
+<!--
+  Bug in Chrome renders radical far too deep :
+    <mfrac>
+      <mi>E</mi>
+      <mi>&rho;</mi>
+    </mfrac>
+-->
+   <mi>E</mi> <mn>/</mn> <mi>&rho;</mi>
+</msqrt>
+
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (41)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>&emsp;
+
+K / m = E . A / (ρ . A . L) =	  E    .    1  
+                L                              ρ            L2    (38)
+<p>
+<p> The bandwidth which the  pushrod can transmit decreases
+ with the square root of that ratio.
+ In other words, the bandwidth decreases
+ linearly with <i>L</i>.
+</p>
+<p>&emsp;
+For aluminium, the material properties (see 05109_m0.doc ) are:
+    E         =      69  e9                 [ N/mm2 ]	(39)
+    ρ         =    2.75 e3                 [ kg/m3 ]    (40)
+The maximum bandwidth of an insulated push rod is therefore:
+    f    =    1 / 2π  *  √ E / ρ                   [Hz]
+						L
+≅ 800 [Hz]
+L (41)
+The number itself does not say much, but it gives an order of magnitude.
+</p>
+
+<!-- FOOTER --------------------------------------------------->
+<br> <br>
+<div class="footer"> P. Lammertse, 2026 </div>
+
+</body>
+</html>
