@@ -42,6 +42,10 @@
  but also in  haptics <nobr> (&hairsp;including </nobr>
 exoskeletons&hairsp;),
  and are potentially useful in humanoid robots.
+</p>
+<p>&emsp;
+There is a small postscript on hydraulic lines and
+ Bowden cables, but those are not in the same league. 
 
 <!-- MAYBE ADD LATER< UNDERCARRIAGES AND FLAP DRIVES,
      AND POWER GRAPHS (VULGRAAD) --> 
@@ -1493,52 +1497,6 @@ We can interpret the spring force in C as a torque around B:
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p>The specific strength (&hairsp;strength per mass&hairsp;)
- is therefore:
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mi>F</mi>
-    <mi>m</mi>
-  </mfrac>
-
-  <mspace/> <mo> = </mo> <mspace/> 
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mrow> <mi>A</mi> <mo>.</mo> <mi>&sigma;</mi> </mrow> 
-    <mrow> <mi>A</mi> <mo>.</mo>
-       <mi>&rho;</mi> <mo>.</mo> <mi>L</mi>
-    </mrow> 
-  </mfrac>
-
-  <mspace/> <mo> = </mo> <mspace/> 
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mi>&sigma;</mi> 
-    <mi>&rho;</mi>
-  </mfrac>
-
-  <mo>.</mo>
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mn>1</mn> 
-    <mi>L</mi>
-  </mfrac>
-
-</math>
-</td>
-
-<td style="width:50px; text-align:right">                  (33)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
 <p> The stiffness is found from:
 </p>
 
@@ -1561,7 +1519,7 @@ We can interpret the spring force in C as a torque around B:
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                  (34)
+<td style="width:50px; text-align:right">                  (33)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -1592,79 +1550,10 @@ We can interpret the spring force in C as a torque around B:
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                  (35)
+<td style="width:50px; text-align:right">                  (34)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> The specific stiffness is:
-</p>
-
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mi>K</mi>
-    <mi>m</mi>
-  </mfrac>
-
-  <mspace/> <mo> = </mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mi>E</mi>
-    <mi>&rho;</mi>
-  </mfrac>
-
-  <mo> . </mo>
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mn>1</mn>
-    <mi>L</mi>
-  </mfrac>
-
-</math>
-</td>
-
-<td style="width:50px; text-align:right">                  (36)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> The ratio between stiffness and strength is:
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mn><i>stiffness</i></mn>
-    <mn><i>strength</i></mn>
-  </mfrac>
-
-  <mspace/> <mo> = </mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mi>E</mi>
-    <mi>&sigma;</mi>
-  </mfrac>
-</math>
-</td>
-
-<td style="width:50px; text-align:right">                  (37)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> Neither the cross-sectional area <i>A</i>
- nor the length <i>L</i>
- appear in this ratio.
- These are only material properties.<br>
- It is therefore not possible to change this ratio
- in a given pushrod.
-</p>
 
 <h4> the achievable bandwidth of a single pushrod </h4>
 
@@ -1703,10 +1592,15 @@ We can interpret the spring force in C as a torque around B:
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                  (38)
+<td style="width:50px; text-align:right">                  (35)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
+<p> The bandwidth which the  pushrod can transmit decreases
+ with the square root of this ratio.
+ In other words, the bandwidth decreases
+ linearly with <i>L</i> :
+</p>
 
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
@@ -1763,30 +1657,133 @@ We can interpret the spring force in C as a torque around B:
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                  (41)
+<td style="width:50px; text-align:right">                  (36)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p>&emsp;
-
-K / m = E . A / (ρ . A . L) =	  E    .    1  
-                L                              ρ            L2    (38)
-<p>
-<p> The bandwidth which the  pushrod can transmit decreases
- with the square root of that ratio.
- In other words, the bandwidth decreases
- linearly with <i>L</i>.
+<p> For aluminium, the material properties are:
 </p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>E</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn> &ensp; 69&nbsp;e9 </mn>
+  <mspace width="5em"/>
+  <msup> <mn> [ N/m </mn> <mn>2</mn> </msup> <mn>]</mn>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (37)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>&rho;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn> 2.75&nbsp;e3 </mn>
+  <mspace width="5em"/>
+  <msup> <mn> [ kg/m </mn> <mn>3</mn> </msup> <mn>]</mn>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (38)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The maximum bandwidth of an isolated push rod is therefore:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>f</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn> 800 </mn>
+
+  <mspace/> <mo>.</mo> <mspace/>
+  
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mi>L</mi>
+  </mfrac>
+
+  <mspace width="4.2em"/>
+  <msup> <mn> [ Hz ] </mn>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (39)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+</p>
+<p> The number itself does not mean much,
+ but it gives us an order of magnitude.
+</p>
+
+<!------------------------------------------------------------->
+<h4> numerical example for a pushrod </h4>
+
+<p> Let us say that in figure 1, 
+ the values of <i>m</i> and <i>K</i> are the mass and stiffness
+ of a single pushrod.
+ Consider a round aluminium pushrod with a cross-section
+ of 20 x 1 mm and a length of 1 metre.
+ The frontal area is to  a  good approximation, with
+ <i>R</i>&thinsp;&prime;
+ &hairsp;=&nbsp;(&frac12;&thinsp;<i>D</i>&thinsp;&minus;&thinsp;&frac12;&thinsp;<i>t</i>&hairsp;) :
+</p>
+
+<p>
+TBW</p>
+
+
+<!--
+
+
 <p>&emsp;
-For aluminium, the material properties (see 05109_m0.doc ) are:
-    E         =      69  e9                 [ N/mm2 ]	(39)
-    ρ         =    2.75 e3                 [ kg/m3 ]    (40)
-The maximum bandwidth of an insulated push rod is therefore:
-    f    =    1 / 2π  *  √ E / ρ                   [Hz]
-						L
-≅ 800 [Hz]
-L (41)
-The number itself does not say much, but it gives an order of magnitude.
+	A        =    2 π R t
+        =    2 π * 0.0095  *  0.001
+        =        60 e-6                        [ m2 ]    (40)
+It can also be calculated exactly with π R2 - π ( R - t )2 , or equally exactly with R' = ( R - ½ t ), but for convenience you can also simply take R = ½ D. The stiffness is:
+K        =    E . A / L        
+        =    69 e9 * 6 e-5 / 1
+		=        4.14 e6                    [ N/m ]    (41)
+and the mass is:
+m        =    ρ  .  A . L        
+            =    2.75 e3 * 60 e-6  *  1
+            =        0.165                        [ kg ]	(42)
+The bandwidth is indeed, as previously predicted for an aluminium push rod of length L = 1 :
+    f        =    1 / 2π  . √ ( 4.14 e6 / 0.165 )
+            =        797                [ Hz ]	(43)
+The stiffness is a factor of 200 higher than the typical haptic stiffness requirement of 20,000 [ N / m ].
+This changes by a factor of 10 at the length of L = 10 m that we have to bridge in the MRI room. 
+Then the push rod will only have a stiffness of K = 40  e3 N/m, and the mass will increase to 1.65 kg .
+We will soon see what happens to the stiffness when we vary the levers. First, let's look at the strength.
+
+
+-->
+
+<!------------------------------------------------------------->
+<h2> hydraulics - bike and car brakes </h2>
+<p>
+Hydraulics is soft and smooth, but not very stiff. 
+And trust me, it always leaks.
+</p>
+<p>
+Bike brakes come in chains (back pedaling),
+ linkages, Bowden cables, and hydraulics. 
 </p>
 
 <!-- FOOTER --------------------------------------------------->
