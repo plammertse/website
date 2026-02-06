@@ -26,46 +26,71 @@
           href="mri.html">                   MRI      </a> </li>
 </ul>
 
-<!------------------------------------------------------------->
+<!-- TEXT PAGE ------------------------------------------------>
 <!-- TEXT PAGE -->
 
 <h2> HAND LINKAGES </h2>
 
 <h2> Introduction </h2>
 
-<h4> subject </h4>
+<h4> applications of hand linkages </h4>
 
-<p> We look at the design and analysis
+<p> We will take a look at the design and analysis
  of hand linkages, typically consisting of pushrods
  and bellcranks, but also torque tubes and cable drives. 
- Such mechanismas are common in aircraft flight controls,
+ Such mechanisms are common in aircraft flight controls,
  but also in  haptics <nobr> (&hairsp;including </nobr>
 exoskeletons&hairsp;),
- and are potentially useful in humanoid robots.
-</p>
-<p>&emsp;
+ and they may be useful in humanoid robots.
 There is a small postscript on hydraulic lines and
  Bowden cables, but those are not in the same league. 
+<p>&emsp;
+The video shows an early application of a hand linkage, 
+for a remote manipulator in a nuclear lab.
+The dexter&shyity achieved is remarkable.
+ A point of interest is that 
+often in such mechanisms, the user initiates motions
+which are relatively gentle in the remote environment.
+We do not want to break glass in the lab.
+But the lab objects may well transmit back small, but 
+crisp contact forces, signalling contact or even collisions
+in the remote environ&shyment of delicate
+but hard tools and objects. 
+</p>
+
+<!-- VIDEO  --------------------------------------------------->
+<video width="640" height="auto" autoplay muted controls
+    style="margin-left   : 120px;
+           margin-bottom : 0px;
+           margin-top    : 8px;" >
+  <source type="video/mp4"
+     src="video/linkages_nuclear_lab_goertz.mp4" >
+  Your browser does not support the video tag.
+</video>
+<p style= "margin-left : 300px;">
+<b><i>Goertz nuclear lab manipulator.</i></b> </p>
+<!------------------------------------------------------------->
 
 <!-- MAYBE ADD LATER< UNDERCARRIAGES AND FLAP DRIVES,
      AND POWER GRAPHS (VULGRAAD) --> 
 
 </p>
 
-<h4> direct motivation </h4>
+<h4> current motivation </h4>
 
 <p> The direct motivation for this section
  on hand linkages is the design
  of a haptic joystick for use in MRI.
- By&nbsp;"haptic" we mean a computer-controlled,
+ By "haptic" we mean a computer-controlled,
  force-sensitive so-called "manipulandum", 
- capable of operating close to the bore of the MRI tunnel.
+ capable of operating
+ close&nbsp;to&nbsp;the bore of the MRI tunnel.
 </p>
 <p>&emsp;
  Many machines of this type have been built over the years,
  but they do not seem to be very successful.
- Or&nbsp;maybe they are not really needed,
- but we will leave that aside for now.
+ Or&nbsp;maybe the world does not really need them,
+ but we will leave that possibility aside for now.
 </p>
 <p>&emsp;
  Most solutions focus on finding actuators and force sensors
@@ -153,9 +178,9 @@ There is a small postscript on hydraulic lines and
  and optimize them where possible.
 </p>
 
-<h2> Properties of a manipulandum</h2>
+<h2> A simple manipulandum </h2>
 
-<h4> A simple manipulandum </h4>
+<h4> the spring loaded joystick </h4>
 
 <p> The simplest form of a haptic manipulandum 
  is a joystick like the one shown in figure 1.
@@ -166,6 +191,14 @@ There is a small postscript on hydraulic lines and
  The stiffness and the mass together form
  a spring-mass system
  with at least one natural frequency.
+</p>
+<p>&emsp;
+ In practice, the handle also has its own mass,
+ as does the human hand holding it,
+ although the user is free to let go of the joystick.
+ The controlled servo motor will also behave
+ like a spring-mass system,
+ although we can also block the output shaft.
 </p>
 
 <!-- FIGURE --------------------------------------------------->
@@ -178,15 +211,6 @@ There is a small postscript on hydraulic lines and
     <i> Figure 1 : &ensp; Haptic joystick.</i> 
 </p>
 <!------------------------------------------------------------->
-
-<p> In practice, the handle also has its own mass,
- as does the human hand holding it,
- although the user is free to let go of the joystick.
- The controlled servo motor will also behave
- like a spring-mass system,
- although we can also block the output shaft.
-</p>
-
 
 <h4> bandwidth </h4>
 
@@ -495,7 +519,7 @@ Where :
 
 <h2>Reflected properties</h2>
 
-<h4> Reflected stiffness and mass of components </h4>
+<h4> reflecting stiffness and mass </h4>
 
 <p> For a given movement of the reference point,
  all parts of the linkage will move,
@@ -1435,7 +1459,6 @@ We can interpret the spring force in C as a torque around B:
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-
 <!-- FIGURE --------------------------------------------------->
 <img width="420" alt="Torque spring ring";
      style="margin-left   : 160px;"
@@ -1446,10 +1469,6 @@ We can interpret the spring force in C as a torque around B:
 </p>
 <!------------------------------------------------------------->
 
-<br> <br>
-<!-- - - - - 
-<h2> Individual construction elements </h2>
-- - - -->
 <h2> Pushrods </h2>
 
 <p> We will now discuss a number of individual structural elements.
@@ -2245,7 +2264,7 @@ and the reflected mass becomes a factor of 25 lower.
 </p>
 <p>&emsp;
  We will see that torque tubes,
- like torque in any structure,
+ like the appearance of torque in any structure,
  are less desirable than push-pull tubes.
  But they can give a convenient, and sometimes
  unavoidable solution over short distances.
@@ -2916,7 +2935,7 @@ the linear stiffness or Young's modulus <i>E</i>.
 <td style="width:50px; text-align:right">                  (67)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
-</p>
+
 <p>&emsp;
  Again, the number in itself does not mean much
  but it does provide a kind of upper limit.
@@ -2948,12 +2967,566 @@ This works out to half the value for a thin walled
 tube of the same mass. 
 </p>
 
+<!-- FIGURE --------------------------------------------------->
+<img width="420" alt="Polar moment of inertia";
+     style="margin-left   : 180px;
+            margin-top    :   8px"
+      src="images/linkages_tube_shaft_J.gif">
+<p style="margin-left     : 180px;
+          margin-bottom   :  8px;">
+    <i> Figure 3 : &ensp;
+              Polar moment of inertia of tube and shaft.</i> 
+</p>
+<!------------------------------------------------------------->
 
+<h4> torque tube numerical example </h4>
+
+<p> A torque tube should preferably have a larger diameter
+ than a pushrod,
+ but let us take as an example  the same tube 
+ which we used before as a pushrod.
+ This was a round alu
+ tube of 20 x 1 mm
+ with a length of 1 metre. We&nbsp;have :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>J</mi> <mn>p</mn> </msub>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn> 2&pi; </mn>
+  <mo>.</mo>
+  <msup> <mi>R</mi> <mn>3</mn> </msup>
+  <mo>.</mo>
+  <mi>t</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn> 2&pi; </mn>
+  <mo>*</mo>
+  <msup> <mn>( 0.1 )</mn> <mn>3</mn> </msup>
+  <mo>*</mo>
+  <mi>0.001</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn> 6.3 e-9 </mn>
+
+ <mspace style="width:3em;"/>
+ <msup> <mn> [ m</mn> <mn>4</mn> </msup>
+  <mn>&nbsp;]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (68)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>K</mi> <mn>t</mn> </msub>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>G</mi>
+  <mo>.</mo>
+  <mi>J</mi>
+  <mo>/</mo>
+  <mi>L</mi>
+
+  <mspace/> <mspace/> <mo>=</mo> <mspace/>
+
+  <mn> 28 e9 </mn>
+  <mo>*</mo>
+  <mn> 6.3 e-9 </mn>
+  <mo>/</mo>
+  <mn> 1 </mn>
+
+  <mspace/>
+  <mspace/> <mo> =</mo> <mspace/>
+ 
+
+  <mn> 174 </mn>
+
+ <mspace style="width:4.2em;"/>
+ <mn> [ Nm ] </mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (69)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>I</mi> <mn>m</mn> </msub>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&rho;</mi>
+  <mo>.</mo>
+  <mi>J</mi>
+  <mo>.</mo>
+  <mi>L</mi>
+
+  <mspace/><mspace/> <mspace/>  <mo>=</mo> <mspace/>
+
+  <mn> 2.75 e3 </mn>
+  <mo>*</mo>
+  <mn> 6.3 e-9 </mn>
+  <mo>*</mo>
+  <mn> 1 </mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mn> 17.3 e-6 </mn>
+
+ <mspace style="width:2.4em;"/>
+ <msup> <mn> [ kg.m</mn> <mn>2</mn> </msup>
+ <mn>&nbsp;]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (70)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Reflected by (27) to a point A by lever of 0.05 m, this is :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>K</mi> <mn>A</mn> </msub>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+     <mn>174</mn>
+     <msup> <mn>( 0.05 )</mn> <mn>2</mn> </msup>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+ <mn> 69 e3 </mn>
+
+ <mspace style="width:5.4em;"/>
+ <mn> [ N/m ] </mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (71)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The same factor applies to the mass in A :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+    <msub> <mi>m</mi> <mn>A</mn> </msub>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+     <mn> 17.3 e-6 </mn>
+     <msup> <mn>( 0.05 )</mn> <mn>2</mn> </msup>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+ <mn> 6.9 e3 </mn>
+
+ <mspace style="width:5em;"/>
+ <msup> <mn> [ kg.m</mn> <mn>2</mn> </msup>
+ <mn>&nbsp;]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                  (72)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> As a check, this gives for the bandwidth :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <msub> <mi>f</mi> <mn>A</mn> </msub>
+
+  <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mn>2&hairsp;&pi;</mn>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <msqrt>
+    <mn>69 e3</mn>
+    <mo> / </mo>
+    <mn>6.9 -e3</mn>
+  </msqrt>
+
+  <mo> = </mo> <mspace/>
+
+  <mn> 500 </mn>
+
+  <mspace width="6em"/>
+  <mn>[ Hz ]</mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (73)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>&emsp;
+ As predicted in (67), the bandwidth for the torque tube
+ is less than that for the pushrod by a factor of
+<!--
+ <math> <msqrt> <mi>G</mi> <mn>/</mn> <mi>E</mi> </msqrt> </math>
+<br>
+-->
+&radic;(<i>G/E</i>).This is a factor of around 0.6,
+ which does not really change the order of magnitude
+ for the bandwidth.
+</p>
+<p>&emsp;
+ However, the stiffness and the moving mass 
+ are on a completely different scale
+ than in the pushrod.
+For the same physical tube and lever,
+ the reflected moving mass of the torque tube 
+is a factor of 25 lower :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mstyle displaystyle = "true">
+  <mfrac>
+    <msub> <mi>m</mi> <mn>A, &nbsp; pushrod
+      &nbsp;&nbsp;&nbsp;&nbsp;</mn> </msub>
+    <msub> <mi>m</mi> <mn>A, torque tube</mn> </msub>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>0.165</mn>
+    <mn>6.9 e-3</mn>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn> 24 </mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (74)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>&emsp;
+ There is a shortcut to this ratio as well.
+ The material, and therefore the stiffness and mass, of the pushrod
+ rotates on the lever, at a radius of 0.05 [m].
+The material of the torque tube however
+rotates on the tube's wall radius of 0.01 [m]. 
+So, there is a difference in radius by a factor of 5,
+and the radius squared gets a factor of 25 :
+</p>
+<p>&emsp;
+For the stiffness, there is an additional material factor of
+ <nobr> <i>G&hairsp;/&hairsp;W</i> ≅ 0.4. </nobr> 
+This makes for a total ratio of
+ <nobr> 1&hairsp;/&hairsp;62.5, </nobr> 
+which confirms the result of our earlier long detour :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mstyle displaystyle = "true">
+  <mfrac>
+    <msub> <mi>K</mi> <mn>A,  &nbsp; pushrod
+       &nbsp;&nbsp;&nbsp;&nbsp;</mn> </msub>
+    <msub> <mi>K</mi> <mn>A, torque tube</mn> </msub>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>4.14 e6</mn>
+    <mn>69. e3</mn>
+  </mfrac>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn> 60 </mn>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (75)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<h4> torque tubes swinging on eccentric bearings </h4>
+
+<p> A torque tube does not need to be supported
+ in its centerline.
+ It can also make a pivoting, swinging motion on bearings
+ located parallel to the centerline, outside the tube.
+</p>
+<p>&emsp;
+ Eccentricity does not affect torsional stiffness, 
+because a torque has no point of application
+ <nobr> (&hairsp;consider </nobr>
+ the case of an <nobr> ultracentrifuge
+ if this concept is unfamiliar to <nobr> you&hairsp;). </nobr>
+ However, the swinging motion does play a role in the moving mass.
+</p>
+<p>&emsp;
+We already had the polar mass moment of inertia (54)
+ of the tube itself.
+If the tube turns on a bearing located on an arm of length
+ <i>e</i> away the centerline, then Steiner's
+ displacement theorem adds another term of
+ <i>A . e</i><sup>&hairsp;2</sup> to
+ the polar moment of inertia around the bearing :  
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>J</mi>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mi>A</mi> <mo>.</mo>
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+  <mo> + </mo>
+  <mi>A</mi> <mo>.</mo>
+  <msup> <mi>e</mi> <mn>2</mn> </msup>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (76)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> An external bearing is always outside the radius <i>R</i>.
+ If the eccentricity is a certain percentage of <i>R</i>,
+ let's say <i>e</i>&nbsp;&cong;&nbsp;1.4&nbsp;<i>R</i>,
+ then this yields:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+
+<math>
+  <mi>J</mi>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+  <mn>3</mn> <mo>.</mo> <mi>A</mi>
+  <mo>.</mo> 
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (77)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> In conclusion, the eccentricity of the bearing
+ makes no difference
+ to the torsional stiffness, but  it does increase
+ the mass moment of inertia of the tube
+ by a factor of approximately three.
+ Whether this is a problem depends on the application.
+</p>
+
+<h2> Levers </h2>
+
+<h4> lever stiffness </h4>
+
+<p> Intuitively,  we would measure the stiffness of a lever
+ by the lateral movement of its tip under a side force. 
+ But for concatenating a chain of stiffnesses later, 
+it is easier to measure the lever stiffness as the rotation 
+of the <i>root</i> of the lever under a torque,
+while blocking the sideways displacement
+ of the <i>tip</i>.
+ See the sketch :
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img width="500" alt="Lever";
+     style="margin-left   : 200px;"
+      src="images/linkage_lever_stiffness.gif">
+<p style="margin-left     : 300px;
+          margin-bottom   :  8px;">
+    <i> Figure 4 : &ensp; Lever bending.</i> 
+</p>
+<!------------------------------------------------------------->
+
+<p> The ratio between the rotation of the base
+and the displacement of the tip is:
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>T</mi>
+  <mspace/> <mspace/> <mo> = </mo> <mspace/>
+  <mi>F</mi> <mo>.</mo> <mi>L</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (78)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>d</mn> <mi>&theta;</mi>
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>d</mn> <mi>x</mi> </mrow>
+    <msub> <mi>L</mi> <mn>A</mn> </msub>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (79)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr>
+<td style = "padding : 6px 0px;">
+<math>
+  <msub> <mi>K</mi> <mn>t</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>T</mi>
+    <mrow> <mn>d</mn> <mi>&theta;</mi>
+   </mrow>
+  </mfrac>
+
+  <mspace/> <mspace/> <mo> = </mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>F</mi>
+    <mrow> <mn>d</mn> <mi>x</mi> </mrow>
+  </mfrac>
+
+  <mo> . </mo> 
+  <msub> <msup> <mi>L</mi> <mn>2</mn> </msup> <mn>A</mn></msub>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (80)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The angle d<i>&theta;</i> is not the same as
+ the rotation of the end point of the lever
+ when the base is clamped. 
+</p>
+<p>&emsp;
+ We are really talking about the lateral tip
+displacement d<i>x</i>,
+ with the correct <i>displacement</i> equation
+as found in texts on strength of materials.
+</p>
+
+<h4> lever mass </h4>
+
+<p> The moment of inertia of a lever 
+(&hairsp;and of the joystick itself&hairsp;)
+ follows from a few standard formulas, 
+including Steiner's. 
+For a straight stick attached to a pivot point,
+ the following approximation applies:  
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr>
+<td style = "padding : 6px 0px;">
+<math>
+  <msub> <mi>I</mi> <mn>m</mn> </msub>
+
+  <mspace/> <mo> = </mo> <mspace/>
+
+  <mn>&frac13;&thinsp;</mn>
+  <mi>m</mi>
+  <mn>&thinsp;</mn>
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                   (80)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The lever mass moment of inertia is reflected to the 
+output position using the standard equations of (****).
+</p>
+<p> Whether a more accurate estimate 
+(&hairsp;and optimization&hairsp;)
+ is worthwhile depends on the details. 
+</p>
+
+<h2> Cable mechanisms </h2>
+
+<p> Cable mechanisms are in a class of their own,
+ although in many ways, cables are just flexible pushrods.
+</p>
+<p> We will be referring to cables running under tension
+ over pulleys. The special case of sheathed, push-pull
+ Bowden cables will be only briefly discussed later.
+</p>
 
 <!------------------------------------------------------------->
 <h2> Hydraulics  </h2>
 
-<h4> avoiding linkages altogether </h4>
+<h4> avoiding mechanical linkages altogether </h4>
 
 <p> We cannot leave the subject of hand linkages
  without briefly discussing hydraulics,
@@ -2973,7 +3546,7 @@ moving pivots and joints without much thinking effort.
 
 <h4> bike and car brakes </h4>
 <p>Bicycle brakes area often actuated via
-by Bowden cables, but also by back pedaling
+by Bowden cables, but also by back-pedaling
 via the chain, by pushrod linkages, and by hydraulic lines. 
 Car brakes area usually actuated by hydaulic lines as well.
  Travel is relatively limited, and forces are high.
