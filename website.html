@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<!---------------------------------------------------------------------
+<!--------------------------------------------------------------
 -- file    : website.html
 -- purpose : Page for website Piet Lammertse
------------------------------------------------------------------------
+----------------------------------------------------------------
 --   history :
 --     2025-12-03 new
-----------------------------------------------------------------------> 
+---------------------------------------------------------------> 
 
 <head>
   <link rel="stylesheet" href="plammertse.css">
@@ -15,50 +15,77 @@
 
 <body>
 
-<!-- NAVIGATION BAR -------------------------------------------------->
+<!-- NAVIGATION BAR ------------------------------------------->
 <ul>
-  <li> <a href="index.html">              Home                 </a> </li>
-  <li> <a href="mind_maps.html">          Mind maps    &#x25B2;</a> </li>
+  <li> <a href="index.html">     Home                 </a> </li>
+<!--
+  <li> <a href="mind_maps.html"> Mind maps    &#x25B2;</a> </li>
+-->
   <li> <a style="background-color:#0000B0;"
-          href="website.html">               Website          </a> </li>
-  <li> <a href="memo_system.html">        Memo system  &#x25BA;</a></li>
+          href="website.html">       Website          </a> </li>
+<!--
+  <li> <a href="memo_system.html">
+                                  Memo system  &#x25BA;</a></li>
+-->
 </ul>
 
 
-<!-- TEXT PAGE -------------------------------------------------------->
+<!-- TEXT ------------------------------------------------------>
 <h2> Website </h2>
 
-<p> The website you are looking at is, if you like, an extract
- of the contents of my memo system.
-  In other words, it is a certain view of my personal "mind map".
+<h4> memo system </h4>
+
+<p> The website you are looking at is an extract
+ of the contents of my
+ <a href="memo_system.html"> memo system </a>.
+  In other words, it is a certain view of my personal
+ "<a href="mind_maps.html"> mind map </a>".
 </p>
-<p>&emsp; I had wanted to do a website like this for a long time,
+
+<h4> history </h4>
+
+<p>I had wanted to do a website like this for a long time,
  but I did not know how.
-My main problem was in hosting. I&nbsp;believe this was more expensive
+My main problem was in hosting. I&nbsp;think this was more expensive
  and more volatile
-in the past than it is today. Another potential problem was IP, or&nbsp;
-maybe even just
- differences of opinion, with my employers.
+in the past than it is today.
+Maybe the bigger problem however was IP,
+ or differences of opinion with my employers.
 </p>
-<p>&emsp; Technically, I knew how to make a simple website. 
+
+<h4> technicalities </h4>
+
+<p> Technically I always knew how to make a simple website. 
 In fact, I had already made
-an interactive website and server for the "web" user interface
+an interactive website and server for the "web" interface
  of the Haptic Master.
-Its pages were built by the realtime software in plain HTML and CSS,
- responding to CGI-type commands from the browser.
+Its pages were built in the realtime software 
+ by straight&shyforward C++ code.
+ This generated
+  a dropdown menu with data input and display fields
+ in plain CSS and HTML,
+ and responded to the CGI-type commands 
+ coming back from the browser
+ by adapt&shying the layout and data.
 </p>
-<p>&emsp; It was only recently that I found out that it has become commonplace
-to make your own website with companies like WordPress.
-When I looked at their themes and templates however, it seemed to me that
-they were too fancy to my old-fashioned liking.
-I therefore decided to hack together a simple website almost directly
- in HTML and CSS, using examples from W3Schools, and host it in github's "Pages".
+<p>&emsp; Recently I found out
+ that it has become more commonplace
+to make your website with tools like Word&shyPress.
+When I looked at their themes and templates however,
+they seemed too fancy to my old-fashioned liking.
+I there&shyfore decided to hack together
+ this simple, passive website almost directly
+ in CSS and HTML using examples from W3Schools,
+ and to host it in github's "Pages".
 </p>
-<p >
-&emsp;You are looking at the result. It is, as always, a work in progress.
-Some architectural choices were made because I do not know better.
+
+<h4> currrent status </h4>
+
+<p> You are looking at the result of my efforts.
+ It is, as always, a work in progress.
+Some architectural choices were made because I did not know better.
 I have tried to avoid all scripting in JavaScript or similar,
-and all references to outside re&shysources, for better longevity.
+and all references to outside resources for better longevity.
 I hope it works.
 </p>
 
