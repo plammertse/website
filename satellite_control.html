@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<!---------------------------------------------------------------------
+<!--------------------------------------------------------------
 -- file    : satellite_control.html
 -- purpose : Page for website Piet Lammertse
------------------------------------------------------------------------
+----------------------------------------------------------------
 -- history :
 --   2025-12-08 PL new
-----------------------------------------------------------------------> 
+---------------------------------------------------------------> 
 
-<!-- FORMATTING--- --------------------------------------------------->
+<!-- FORMATTING--- -------------------------------------------->
 
 <head>
   <link rel="stylesheet" href="plammertse.css">
@@ -17,46 +17,148 @@
 
 <body>
 
-<!-- NAVIGATION BAR --------------------------------------------------->
+<!-- NAVIGATION BAR -------------------------------------------->
 
 <ul>
-  <li> <a href="index.html">                 Home            </a> </li>
+  <li> <a href="index.html">           Home            </a> </li>
 
   <!-- satellite dropdown -->
   <li class="dropdown">
     <a class="dropbtn";
        style="background-color:#0000B0";
-       href="javascript:void(0)" >       Satellite control &#x25BC; </a>
+       href="javascript:void(0)" >
+                                 The space industry </a>
+<!--
+                             The space industry &#x25BC;     </a>
     <div class="dropdown-content">
-      <a href="satellite_ISO.html">    The ISO satellite             </a>
-      <a href="satellite_SAX.html">    The SAX satellite             </a>
-      <a href="dual_control_law.html"> The dual control law          </a>
+      <a href="satellite_ISO.html">
+                                The ISO satellite            </a>
+      <a href="satellite_SAX.html">
+                                The SAX satellite            </a>
+      <a href="dual_control_law.html">
+                               The dual control law          </a>
     </div>
+-->
   </li>
 
 </ul>
 
-<!-- TEXT PAGE -------------------------------------------------------->
+<!-------------------------------------------------------------->
 
-<h2> Satellite control </h2>
+<h2> The space industry </h2>
 
-<p> From 1988 to 1998 I worked for Fokker Space, first at Schiphol,
-later in Leiden.
+<h4> early career </h4>
+
+<p> From 1988 to 1998 I worked for Fokker Space
+ in Amsterdam and Leiden.
+ These were formative years for me.
 </p>
-<p> I was hired to do the control simulations for the <a href="satellite_ISO.html">
-ISO satellite </a>, 
-and I spent the best part of five years doing that.
+<p>&emsp; In a way, after a few exhilarating years
+ in the flight test department of Fokker Aircraft,
+this almost felt like my first "proper",
+professional job.
 </p>
-<p> I then graduated to the <a href="satellite_SAX.html"> SAX satellite </a>
+<p>&emsp;
+The people there were true intellectuals, like I have
+ never experienced since. Most of them held PhD's in
+ astronomy, and had broad interests.
+ One thing they were not though, was engineers.
+ The whole thing was an object lesson in how far
+ you can get with basic knowledge,
+ without having learned engineering design.
+ It turns out you can come a long way,
+ but at a price.
+</p>
+
+
+<h4> next level configuration control </h4>
+
+<p>
+- next level configuration control.
+</p>
+
+<!--
+<p>&emsp;
+ Before this, I had worked in software engineering
+ for a year,
+ then for two years in the flight test hangar
+ of the Fokker Aircaft company
+ as a data acquisition analyst and programmer.
+</p>&emsp; The work in the hangar felt
+ as an extension of my aviation hobby.
+ It involves being among airplanes every day,
+ and occasionally hitching a test flight.
+</p> 
+<p>&emsp;
+ These were also the years that the
+ Fokker aircraft company, despite frantic efforts
+ of everyone involved except higher management,
+ went into a free fall ending in 
+ the breakup of the factory.
+<p>&emsp;
+ In a way, the 10 year stint in the Space Department
+ that followed felt as my first "real" job.
+<p>&emsp;
+ I could have joined the research intstitute in Pettenb
+budding wind turbine industry,
+ but when I applied I found out that they did not even
+ have a single cmpujter onthe  and the government
+ autrowthiness departement
+teh other 
+-->
+
+
+<!-------------------------------------------------------------->
+
+<h4> attitude control of the ISO satellite </h4>
+
+<p> My first assignment at Space was to do
+ the software simulations for the hardware
+ and on-board software of ESA's 
+ astronomical satellite 
+    <a href="satellite_ISO.html"> ISO</a>, 
+ and I spent the best part of five years doing that.
+</p>
+<p>&emsp;
+ Out of this grew my work on a non-saturating
+"proximal" control law,
+ which became a new
+ <a href = "dual_control_law.html"> 
+ "dual control law"</a>. 
+</p>
+<p> Another spin-off for me was the extensive use
+ of the <a href="quaternion.html">
+ quaternion</a> in the equations
+ for the satellite's motions.
+ Getting an intimate feel for the care and feeding
+ of quaternions has served me well ever since.
+
+<h4> attitude control of the SAX satellite </h4>
+
+<p>&emsp;
+ I then moved over to consultancy work for the
+   <a href="satellite_SAX.html"> SAX satellite</a>
 and a few smaller control projects.
+ The SAX satellite gave rise to some work on the 
+ the somewhat arcane 
+ <a href="kalman.html"> Kalman</a> filter,
+ which I mastered enough
+ to write a useful manual on how to use this
+ in the satellite's no-gyro control mode.
 </p>
-<p> Officially I spent the last five years in the zero-G department,
- which was a fun playground for someone more interested in flying
-than in space, see zero_g.html, TBW. 
+
+<h4> zero-G flying </h4>
+
+<p> After the satellites, I spent the next five years in the
+ zero-G department,
+ which was a fun playground for some&shyone
+ more interested in flying than in spacecraft.
+ See the separate section on 
+ <a href="zero_G.html"> zero-G</a> flying. 
 </p>
 
 
-<!-- FOOTER ------------------------------------------------------------->
+<!-- FOOTER ------------------------------------------------------>
 <br> <br>
 <div class="footer">  P. Lammertse,  2025  </div>
 
