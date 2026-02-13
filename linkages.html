@@ -33,17 +33,124 @@
 
 <h2> Introduction </h2>
 
+<h4> linkages and drives </h4>
+
+<p> We will first make the distinction between 
+linkages (&hairsp;or mechanisms&hairsp;)
+and drives.
+</p>
+<p>&emsp;
+ Shafts, cables, and chains typically transmit
+continuous power.
+ Gearboxes change low torque,
+ high RPM motion into high torque, low RPM motion.
+ These are all typical parts of a
+ (&hairsp;power&hairsp;) drive.
+Linkages on the other hand, transmit forces
+ over a limited range of motion
+ in a back-and-forth fashion.
+ We&nbsp;can call such linkages mechanisms
+ in the strict mechanical sense of the word,
+ even if they use cables.
+</p>
+<p>&emsp;
+Viewed in this way, purists will call a cable winch
+in a harbour crane a mechanism. Most people
+ would be more comfortable calling
+ this a drive, because of the "almost infinite"
+ travel of the cable.
+</p>
+<p>&emsp;
+ In small haptics devices however, the travel
+ of the cable drive is limited between two end stops.
+These can rightly be called cable mechanisms,
+ if only because they act just like  push-pull rods, 
+ or some other finite mechanism. 
+ Such haptic drives by the way are routinely called 
+ "capstan drives". This is definitely wrong,
+  because in fact the end of the cable is fixed to
+ the motor axis which makes it a winch,
+ not a capstan.
+</p>
+
+
+
+<!--
+<p> Linkages can be kinematically interesting,
+ like straight line mechanisms and pantographs,
+ or interesting in the way they match the 
+ more or less constant power or force
+ of an actuator to a strongly varying load,
+ like when retracting an aircraft undercarriage
+ leg agains the force of gravity.   
+
+constant
+ force transmit power,
+ like matching the more or less constant force
+ of a hydraulic actuator to a swing arm
+ lifting a weight against gravity, like in a 
+force of a hydrauic
+ other ways, like efficient
+ matching of hydraulic or electrical power,
+ like in linkages retracting airplane undercarriages
+ against gravity, hoists and cranes, and many other
+ applications.
+</p>
+<p>&emsp; 
+-->
+
 <h4> applications of hand linkages </h4>
 
-<p> We will take a look at the design and analysis
- of hand linkages, typically consisting of pushrods
- and bellcranks, but also torque tubes and cable drives. 
- Such mechanisms are common in aircraft flight controls,
+<p> Hand linkages are not so much
+ a separate class of linkage.
+ They are more of an application area for lightweight
+ and low friction mechanisms, typically consisting
+ of pushrods and bellcranks, torque tubes
+ and cables. 
+The video below shows an example
+ which uses all of these components.
+</p>
+
+<!-- VIDEO  --------------------------------------------------->
+<video width="640" height="auto" autoplay muted controls
+    style="margin-left   : 120px;
+           margin-bottom : 0px;
+           margin-top    : 8px;" >
+  <source type="video/mp4"
+     src="video/linkages_nuclear_lab_goertz.mp4" >
+  Your browser does not support the video tag.
+</video>
+<p style= "margin-left  : 300px;
+           margin-bottom : 12px;">
+<b><i>Goertz nuclear lab manipulator.</i></b> </p>
+<!------------------------------------------------------------->
+
+<p>&emsp;
+ Hand force mechanisms are common in aircraft flight controls,
  but also in  haptics <nobr> (&hairsp;including </nobr>
 exoskeletons&hairsp;),
  and they may be useful in humanoid robots.
+<!--
 There is a small postscript on hydraulic lines and
- Bowden cables, but those are not in the same league. 
+ Bowden cables, but those are not in the same league.
+--> 
+The crucial difference with power drives is not even
+ the limited range of motion, but the fact that
+ these are two-way mechanisms.
+ The human user drives the movement, but equally important
+ is the information transmitted back to the user
+ from the other end of the chain on the forces
+ encountered there, in reaction to this movement.
+</p>
+<p>&emsp; In master-slave systems, we would call these
+ the forces "from the environment".
+ In aircraft flight controls, these are the aerodynamic
+forces from the control surfaces, which give crucial
+ information on the state of the aircraft to the pilot. 
+ Such crisp force information can only be obtained via a stiff,
+ low mass, low friction mech&shyanism.
+</p>
+
 <p>&emsp;
 The video shows an early application of a hand linkage, 
 for a remote manipulator in a nuclear lab.
@@ -58,19 +165,21 @@ in the remote environ&shyment of delicate
 but hard tools and objects. 
 </p>
 
-<!-- VIDEO  --------------------------------------------------->
-<video width="640" height="auto" autoplay muted controls
-    style="margin-left   : 120px;
-           margin-bottom : 0px;
-           margin-top    : 8px;" >
-  <source type="video/mp4"
-     src="video/linkages_nuclear_lab_goertz.mp4" >
-  Your browser does not support the video tag.
-</video>
-<p style= "margin-left : 300px;">
-<b><i>Goertz nuclear lab manipulator.</i></b> </p>
-<!------------------------------------------------------------->
+<h4> typical components </h4>
 
+<p> Hand linkages typically use one or more
+ of the following components :
+</p>
+<p> - cables running over pulleys. </p>
+<p> - pushrods. </p>
+<p> - torque tubes. </p>
+<p> We will see that each have their merit.
+ Cable solutions are lowest in weight, although this is not 
+ necessarily true of their moving mass, since they also
+ tend to have the largest  travel of the moving parts, in oarticular the cable itself.
+
+ not .typically have the largest travel of the nmonvingarts 
+has 
 <p>
 <b>TODO</b>
 </p>

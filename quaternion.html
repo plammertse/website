@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <!--------------------------------------------------------------
 -- file    : quaternion.html
 -- purpose : Page for website Piet Lammertse
@@ -20,8 +21,6 @@
 
 <ul>
   <li> <a href="index.html">          Home            </a> </li>
-
-  <li> <a href="kinematics.html"> Kinematics          </a> </li>
 
   <li class="dropdown">
     <a class="dropbtn"
@@ -45,26 +44,81 @@
 <!-- TEXT PAGE ------------------------------------------------>
 <h2> Quaternions </h2>
 
-<h4> satellites - successive attitude rotations </h4>
+<h4> what are quaternions </h4>
 
-<p> I first met quaternions in my work on the ISO satellite.<br>
-( mention the relative rotations in the "control error",
-needed because of the extreme difference
- between the pointing accuracy
-and the full 180&deg; slewing range, and infnitesimal roations
-in simulation ).
+<p>
+- Hamilton.
+</p>
+<p>
+- mathematically it's sort sort of
+ an expanded complex number. Not just an extra i,
+ but i, j, and k.
+</p>
+<p>
+- unfortunate element order
+ in Wertz's book on "Spacecraft Attitude Control".
+</p>
+<p>
+- one day, put memo PL-18-052 here.
 </p>
 
-<h4> successive mechanical rotations </h4>
+<h4> the unit quaternion </h4>
 
-<p> Later I found quaternions extremely useful, and "almost" 
-intuitive, in cases of forward and inverse kinematics
- of successive rotations.
+<p>
+- for attitudes, use normalized quaternion.
+</p>
+<p>
+- that means one element is redundant.
+</p>
+
+<h4> why use (&hairsp;unit&hairsp;) quaternions </h4>
+
+<p> I first met quaternions in my work on the ISO satellite.
+Later I found them extremely useful in mechanisms,
+ and then again in haptic rendering.
+</p>
+<p> - they can be "almost" intuitive (&hairsp;examples&hairsp;).
 </p>
 <p> First in 3D haptic rendering, and later again in tracking
  the kinematics of the Simodont dental trainer mechanism, 
  and my exoskeletons.
 </p>
+
+<h4> rigid body - successive rotations </h4>
+
+<p> - Euler angles. </p>
+<p> - Amy de Butleir. </p>
+
+<h4> successive rotations in serial mechanisms </h4>
+
+<p>- order matters. </p>
+<p>- exoskeletons, ADL gimbal. </p>
+<p> forward and inverse kinematics </p>
+<p>- add end point positions too. </p>
+
+<h4> satellite attitude </h4>
+
+<p>
+- small relative rotations in the "control error", <br>
+&emsp;needed because of the extreme difference
+ between the pointing accuracy
+and the full 180&deg; slewing range.
+</p>
+<p>
+- infinitesimal rotations in "attitude propagation", in simulation.
+</p>
+
+<p>
+- rigid body rotations in VR (haptic rendering).
+</p>
+
+
+<h4> attitude propagation - integrating infinitesimal rotations </h4>
+
+<p>
+- ( 1, 0, 0, 0 )
+</p>
+
 
 <!------------------------------------------------------------->
 <br> <br>
