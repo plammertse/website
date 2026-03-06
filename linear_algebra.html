@@ -102,15 +102,20 @@ numbers by symbols too :
   c * x + d * y = f
 </p>
 <p> I remember how in high school it baffled me that
-the a, b, c and d seemed to belong to a different "family"
+the <i>a</i>, <i>b</i>, <i>c</i> and <i>d</i>
+ seemed to belong to a different "family"
 than the <i>x</i> and the <i>y</i>.
 Why would one letter be "known"
  and the other "unknown" ?
- As it turns out, I was right. You can juggle with these
+</p>
+<p>&emsp;
+ As it turns out, I was right about that.
+ You can juggle with these
 numbers any way you like. You can fill in one set
 and determine the other, in any mixture you like.
 The only thing that remains true is that from  N equations,
 you can never find more than N "unknown" values.
+This truth holds out in all of mathematics and beyond.
 </p>
 
 <h4> intersecting lines </h4>
@@ -119,41 +124,98 @@ you can never find more than N "unknown" values.
 - parallel lines. Useless duplication. Subtle connections.
 </p>
 
-<h4> matrices </h4>
+<h4> matrix notation </h4>
 
 <p> Matrices are just a shorthand to note down
 the simultaneous linear equations.
-This you will really need to look up in an introductory text
- on linear algebra :
+The name means something like a grid
+ to collects numbers in.
 </p>
 <p>&emsp;
-  (  a  b ) . ( x )  =  ( e )
+The equations above in matrix notation are :
 </p>
-<p>&emsp;
-  ( c  d )              ( f )
-</p>
+
+<!------------------------------------------------>
 <p>
-Havng grouped the numbers like this,
-we can label the blocks of numbers in a notation
-even more removed from the original equations :
+<math>
+
+<mstyle displaystyle="true">
+<mo>[</mo>
+
+<mtable>
+  <mtr>
+    <mtd> <mi>a</mi> </mtd>
+    <mtd> <mi>b</mi> </mtd>
+  </mtr>
+  <mtr>
+    <mtd> <mi>c</mi> </mtd>
+    <mtd> <mi>d</mi> </mtd>
+  </mtr>
+</mtable>
+
+<mo>]</mo>
+
+<mo>.</mo>
+
+<mo>[</mo>
+
+<mtable>
+  <mtr>
+    <mtd> <mi>x</mi> </mtd>
+  </mtr>
+  <mtr>
+    <mtd> <mi>y</mi> </mtd>
+  </mtr>
+</mtable>
+
+<mo>]</mo>
+
+<mo>=</mo>
+
+<mo>[</mo>
+
+<mtable>
+  <mtr>
+    <mtd> <mi>e</mi> </mtd>
+  </mtr>
+  <mtr>
+    <mtd> <mi>f</mi> </mtd>
+  </mtr>
+</mtable>
+
+<mo>]</mo>
+
+</math>
+</p>
+
+<p>
+If the rules of matrix and vector multiplication
+ are really new to you, then now would be the time
+to look up an introductory text on linear algebra.
+Having grouped the numbers like this,
+we can give names to each block of numbers.
+We can write :
 </p>
 <p>&emsp;
  A . x  =  b
 </p>
 <p>
-The block of numbers A is called a matrix,
-like a waffle iron that collects numbers in a grid.
 </p>
-<p>&emsp;
-  The columns of numbers x and b are called "vectors".
-</p>
-<p>&emsp;
-- parallel with directions in space. And rotations and scalings.
+<p> The "matrix" <b><i>A</i></b> is the square block of numbers.
+It does not have to be square, but in our applications
+it usually is, because we try to have the same
+number of equations as unknowns.
+ The columns of numbers <i><b>x</b></i>
+  and <i><b>b</i></b> are called "vectors".
 </p>
 <p>
 There, now I've done it myself.
 We have moved from a very simple problem to a very abstract
 concept.
+</p>
+
+<p>&emsp;
+- parallel with directions in space. And rotations and scalings.
 </p>
 
 <h4> analytical eigenvalues of a 2 x 2 matrix </h4>

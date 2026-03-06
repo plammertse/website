@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<!--------------------------------------------------------------
+-- file    : canards.html
+-- purpose : Page for website Piet Lammertse
+----------------------------------------------------------------
+--   history :
+--     2026-03-02 new
+---------------------------------------------------------------> 
+
+<!-- FORMATTING------------------------------------------------>
+<head>
+  <link rel="stylesheet" href="plammertse.css">
+  <title> Piet Lammertse on stabilizer and canard trim </title>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR-------------------------------------------->
+<ul>
+  <li> <a href="index.html">           Home           </a> </li>
+
+  <li> <a href="canards.html" >      Canards             </a> </li>
+  <li> <a style="background-color:#0000B0;";
+       href="trim.html" >            Trim             </a> </li>
+</ul>
+
+
+<!------------------------------------------------------------->
+
+<h2> Trim </h2>
+
+<h4> trim and stability </h4>
+
+<p> Trim is the equilibrium condition
+ where the total pitching moment of the airplane is zero.
+This is a necessary condition for steady flight,
+but it is not enough.
+</p>
+<p>&emsp;
+To be useful, the trimmed condition also needs to be stable.
+We will discuss this elsewhere. 
+Briefly, the air&shyplane needs to act like a weathervane,
+with the center of its "side area" aft of the pivot.
+In free flight, the CG is the pivot.
+The center of the side area is called the AC
+ ("aerodynamic center").
+</p>
+
+<h4> ways of seeing </h4>
+
+<p> Trim is often treated as part of the stability analysis
+of the airplane, and that analysis is definitely needed first.
+</p>
+<p>&emsp;
+But I believe it can be instructive to take that part
+for granted, and then look at trim again
+from a more static point of view.
+This can cast a useful light on tail loads and trim drag,
+and even on the design differences between 
+<a style = "color:#0000B0;";
+href="canards.html"> canard</a>
+ and conventional aircraft.
+ </p>
+
+<h4> two independent terms in the tailplane load </h4>
+
+<p> It is a bit unusual, but very enlightening to separate out
+two independent functions of the tailplane
+ (&hairsp;or canard&hairsp;).
+</p>
+<p>&emsp;
+One function is to cancel the so-called
+ zero-lift moment of the airframe.
+This is an aerodynamic coefficient, which comes mostly
+ comes from the curvature of the wing section,
+ and perhaps the fuselage.
+</p>
+<p>&emsp;
+Compensating for this aerodynamic coefficient 
+requires nothing more than a fixed offset
+ to the lift coefficient and therefore to the angle
+of attack, of the tailplane or canard.
+</p>
+<p>&emsp;
+Since all aerodynamic forces increase with the square
+of the airspeed, its contribution to the tailplane force
+starts from zero at zero velocity, and grows quadratically
+with the flying speed.
+But apart from the physical force, once set, this offset
+ can be forgotten.
+With the tailplane set at this fixed angle, the airplane
+has zero lift and zero moment at all airspeeds.
+It is, if you like, trimmed for zero lift.
+<!--
+This part of the trim is <i>non-dimensional.
+It is a fixed angle, and a fixed offset in the lift coefficient
+of the tailplane.
+-->
+</p>
+<p>&emsp;
+The second component  of the tailplane lift is
+to change the trim from zero lift to some
+other lift value.
+</p>
+<p>
+TBW.
+</p>
+
+<h4> zero moment at zero lift </h4>
+
+<p> A normal, downward curved wing section gives a nose down moment
+at zero lift. 
+ To trim it, even for zero lift, we need to add a positive
+ (&hairsp;nose up&hairsp;) moment.
+
+<!--
+This moment increases with 
+  &frac12;&thinsp;<i>&rho;&hairsp;V&thinsp;</i></><sup>2</sup>,
+so it strongly increases with airspeed.
+-->
+
+The positive moment at zero lift is normally provided by 
+a stabilizer pushing down or a canard pushing up,
+<i>at zero lift</i>.
+This is accomplished by a difference in angle of attack,
+or rather incidence setting between the wing and the 
+stabilizer, which is officially called "decalage",
+with a nice 1914 vintage French word.
+The difference needed is typically something like 3&deg.
+To keep zero lift, the wing needs a little bit of up lift
+(&hairsp;hence angle of attack(&hairsp;),
+ to compensate for the down lift on the stabilizer,
+but since the tail arm to the CG is much longer than
+the wing arm, to a first approximation
+the moment equation is 
+(&hairsp;leaving out the common term of
+&frac12;&thinsp;<i>&rho;&hairsp;V&thinsp;</i></><sup>2</sup> ) :
+ </p>
+<p>&emsp;
+   C<sub>m&hairsp;ac</sub> . S . c =
+     &Delta;&hairsp;C<sub>L,h</sub> .
+ S<sub>h</sub> . l<sub>h</sub>&hairsp;.
+</p>
+<p> The stabilizer permanently needs a bit of lift coefficient
+to counter the wing zero lift moment.
+<p>&emsp;<i>
+TODO &emsp; Give an estimate of this CL, and relate it to the 3 &deg decalage.
+Think of the F27 upside-down stab section.
+</i></p>
+</p>
+<p>&emsp;<i>
+TODO &emsp; Give estimates of distance between 
+wong AC and aircraft AC, based on Cmac, tail volume and tail arm,
+maybe in a separate "scratch pad" trim page ?
+</i></p>
+<p>&emsp;<i>
+&emsp; &emsp; Together wit the static margin, this determines
+whether the CG is ahead or aft of the wing AC. 
+</i></p>
+<p>&emsp;<i>
+&emsp; &emsp; Note the two terms in the tail load,
+one dimensional, one varying with q. 
+</i></p>
+<p>
+Interestingly, the&nbsp;real, physical down force on the tail 
+needed to maintain zero moment at zero lift, increases with 
+&frac12;&thinsp;<i>&rho;&hairsp;V&thinsp;</i></><sup>2</sup>.
+</p>
+<p>
+This explains the increasing down force on the
+stabilizer with increasing flying speed.
+</p>
+
+<h4> zero moment at positive lift </h4>
+
+<p> We now add a net lift, but we keep
+ a zero moment about the CG.
+Figure 1 gives the situation.
+</p>
+<p>&emsp;
+The lift is provided by the wing lift L<sub>h</sub>
+ and the stabilizer lift L<sub>h</sub>.
+If the wing AC is a distance x<sub>CG</sub>
+ ahead of the CG and
+the stabilizer AC is at a distance of l<sub>h</sub>
+ behind it, then the moment equation is :    
+</p>
+<p>&emsp;
+  L<sub>w</sub> . x<sub>CG</sub> = 
+    &Delta; L<sub>h</sub> . l<sub>h</sub>&hairsp;
+</p>
+<p> This equation does not change with speed or trim,
+so the <i>extra</i> lift on the stabilizer 
+on top of what is needed to counter the wing's
+ C<sub>m&hairsp;ac</sub>
+always has the same ratio to the lift of the wing.
+Unlike the basic decalage, this ratio does not
+change with airspeed.
+What does change strongly with airspeed are 
+the non-dimensional values
+of C<sub>Lw</sub> and C<sub>Lh</sub>, but
+always in that same ratio.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<h4> trimming by a stabilizer </h4>
+
+<p> We will use a simplified case to highlight the main
+ principle of trimming an airplane by a canard or stabilizer.
+The&nbsp;general case just shifts a few lines up and down a bit.
+The simplified case for the stabilizer is like this :
+</p>
+<p>
+- &ensp; we use an airplane with a symmetrical wing section.
+</p>
+<p>
+- &ensp; we place the CG at the quarter chord point of the wing.
+</p>
+<p> The quarter chord point of a wing is its AC.
+All its "extra" lift with angle of attack applies there.
+Since a sym&shymet&shyrical section has no lift
+ at zero angle of attack, in our case <i>all</i>
+ of the lift of the wing applies there.
+</p>
+<p>&emsp;
+It may seem like this airplane will not be stable,
+but that is not true. The overall AC of wing and
+stabilizer will be aft of the CG by a distance called
+the "static margin". In fact, having the CG near the 
+quarter point of the wing is quite a usual location.
+</p>
+<p> FIGURE ZERO LIFT </p>
+<p> FIGURE TRIMMED </p>
+<p>&emsp;
+<br>
+
+<h4> static margin - the weathervane stability in pitch </h4>
+<p> TODO.
+</p>
+<p>
+- treat elsewhere.
+</p>
+-->
+
+<!-- FOOTER ------------------------------------------------------------>
+<br> <br>
+<div class="footer"> P. Lammertse, 2026 </div>
+
+</body>
+</html>
