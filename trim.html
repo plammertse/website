@@ -48,6 +48,38 @@ The center of the side area is called the AC
  ("aerodynamic center").
 </p>
 
+<h4> elevator effect </h4>
+
+<p> I always had an uneasy feeling
+ about trim and the elevator.
+</p>
+<p>&emsp;
+It is a well known fact that the tailplane download
+ increases
+with airspeed, and that in many airplanes the tailplane
+load is upward in slower flight.
+ I believed this to be due to the higher angle
+of attack. 
+</p>
+<p>&emsp;
+ But there is this contradiction.
+ To get to slower flight, you have to pull up elevator.
+ And this gives a down force on the tailplane,
+ not an up force.
+It seemed like two forces were fighting,
+ and the winner was not clear to me.
+</p>
+<p>&emsp;
+ Friends of mine were trying to balance a canard airplane,
+ and this gave me a reason to finally think this through.
+I found that in most standard textbooks the anwer
+ to the static equilibrium is rather hidden
+ in the analysis of the dynamic stability.
+The section below gives a clean and simple shortcut
+ to the static solution.
+</p>
+
+<!--
 <h4> ways of seeing </h4>
 
 <p> Trim is often treated as part of the stability analysis
@@ -63,116 +95,206 @@ and even on the design differences between
 href="canards.html"> canard</a>
  and conventional aircraft.
  </p>
+-->
 
-<h4> two independent terms in the tailplane load </h4>
+<h4> the two components of the tailplane load </h4>
 
-<p> It is a bit unusual, but very enlightening to separate out
-two independent functions of the tailplane
- (&hairsp;or canard&hairsp;).
+<p> It turns out that the up or down 
+load on  the tailplane or canard
+consists of two independent components.
 </p>
 <p>&emsp;
-One function is to cancel the so-called
- zero-lift moment of the airframe.
-This is an aerodynamic coefficient, which comes mostly
- comes from the curvature of the wing section,
- and perhaps the fuselage.
+One component of the tail load is purely aerodynamic.
+This component is needed to balance the intrinsic
+nose down moment that every curved wing section
+exerts on the airplane.
+ This nose down moment is a constant
+ in the non-dimensional world,
+and so dimensionally it is
+proportional to the square of the airspeed.
+The down force on the tail&shyplane needed to counter
+this moment is therefore also proportional
+ to the square of the airspeed. 
+This down&shyload always wins in the end
+for the higher airspeeds.
 </p>
 <p>&emsp;
-Compensating for this aerodynamic coefficient 
-requires nothing more than a fixed offset
- to the lift coefficient and therefore to the angle
-of attack, of the tailplane or canard.
+The other component is also aerodynamic of course,
+but there is a simple shortcut to it :
+ <i>for the trimmed con&shydition</i>,
+it is simply the static
+force balance around the aircraft CG, 
+between the lift of the wing
+and the lift of the tailplane.
+Since these are at fixed distances from the CG,
+this balance is independent of the airspeed.
+For a given aircraft weight and CG,
+ this component of the tailplane load is therefore
+ somewhat surprisingly, <i>fixed</i>.
 </p>
 <p>&emsp;
-Since all aerodynamic forces increase with the square
-of the airspeed, its contribution to the tailplane force
-starts from zero at zero velocity, and grows quadratically
-with the flying speed.
-But apart from the physical force, once set, this offset
- can be forgotten.
-With the tailplane set at this fixed angle, the airplane
-has zero lift and zero moment at all airspeeds.
-It is, if you like, trimmed for zero lift.
+We will first discuss the two components separately,
+and then add them into the full tailplane load.
+</p>
 <!--
 This part of the trim is <i>non-dimensional.
 It is a fixed angle, and a fixed offset in the lift coefficient
 of the tailplane.
 -->
 </p>
-<p>&emsp;
-The second component  of the tailplane lift is
-to change the trim from zero lift to some
-other lift value.
-</p>
-<p>
-TBW.
-</p>
 
 <h4> zero moment at zero lift </h4>
 
 <p> A normal, downward curved wing section gives a nose down moment
 at zero lift. 
- To trim it, even for zero lift, we need to add a positive
+ To compensate for this towards equilibrium,
+ we need to add a positive
  (&hairsp;nose up&hairsp;) moment.
-
-<!--
-This moment increases with 
-  &frac12;&thinsp;<i>&rho;&hairsp;V&thinsp;</i></><sup>2</sup>,
-so it strongly increases with airspeed.
--->
-
-The positive moment at zero lift is normally provided by 
-a stabilizer pushing down or a canard pushing up,
-<i>at zero lift</i>.
+This is normally provided by a stabilizer pushing down
+ or a canard pushing up.
+The wing needs to give the opposite force to maintain
+<i>net zero lift</i>.
+</p>
+<p>&emsp;
 This is accomplished by a difference in angle of attack,
-or rather incidence setting between the wing and the 
-stabilizer, which is officially called "decalage",
+ hence in lift coefficient, 
+between the wing and the stabilizer.
+ Typically the wing rotates a little bit up
+and the tailplane a lot more down to maintain
+net zero lift, because of their difference in area.
+The difference in incidence is officially called "decalage",
 with a nice 1914 vintage French word.
-The difference needed is typically something like 3&deg.
-To keep zero lift, the wing needs a little bit of up lift
-(&hairsp;hence angle of attack(&hairsp;),
- to compensate for the down lift on the stabilizer,
-but since the tail arm to the CG is much longer than
-the wing arm, to a first approximation
+</p>
+<p>&emsp;
+We can make a quick estimate of the lift coefficient
+needed on the tailplane.
+Since the tail arm to the CG is&nbsp;much longer than
+the wing moment arm, to a first approximation
 the moment equation is 
 (&hairsp;leaving out the common term of
 &frac12;&thinsp;<i>&rho;&hairsp;V&thinsp;</i></><sup>2</sup> ) :
  </p>
-<p>&emsp;
-   C<sub>m&hairsp;ac</sub> . S . c =
-     &Delta;&hairsp;C<sub>L,h</sub> .
- S<sub>h</sub> . l<sub>h</sub>&hairsp;.
-</p>
-<p> The stabilizer permanently needs a bit of lift coefficient
-to counter the wing zero lift moment.
-<p>&emsp;<i>
-TODO &emsp; Give an estimate of this CL, and relate it to the 3 &deg decalage.
-Think of the F27 upside-down stab section.
-</i></p>
-</p>
-<p>&emsp;<i>
-TODO &emsp; Give estimates of distance between 
-wong AC and aircraft AC, based on Cmac, tail volume and tail arm,
-maybe in a separate "scratch pad" trim page ?
-</i></p>
-<p>&emsp;<i>
-&emsp; &emsp; Together wit the static margin, this determines
-whether the CG is ahead or aft of the wing AC. 
-</i></p>
-<p>&emsp;<i>
-&emsp; &emsp; Note the two terms in the tail load,
-one dimensional, one varying with q. 
-</i></p>
-<p>
-Interestingly, the&nbsp;real, physical down force on the tail 
-needed to maintain zero moment at zero lift, increases with 
-&frac12;&thinsp;<i>&rho;&hairsp;V&thinsp;</i></><sup>2</sup>.
-</p>
-<p>
-This explains the increasing down force on the
-stabilizer with increasing flying speed.
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>C</mi> <mn>m,ac</mn> </msub> 
+  <mo>. </mo> <mi>S</mi> <mo>.</mo> <mi>c</mi>
+
+  <mspace /> <mo> = </mo> <mspace />
+
+  <mn>&Delta;&hairsp;</mn>
+  <msub> <mi>C</mi> <mn>Lh</mn> </msub>
+  <mo>. </mo> 
+  <msub> <mi>S</mi> <mn>h</mn> </msub>
+  <mo>.</mo> 
+  <msub> <mi>l</mi> <mn>h</mn> </msub>
+</math>
+
+<td style="width:50px; text-align:right">                 (1)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> which means :
 </p>
 
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>&Delta;&hairsp;</mn>
+  <msub> <mi>C</mi> <mn>Lh</mn> </msub>
+
+  <mo> = </mo> <mspace />
+
+  <msub> <mi>C</mi> <mn>m,ac</mn> </msub> 
+  <mo> . </mo> 
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>S</mi> <mo> . </mo> <mi>c</mi> </msub>
+    </mrow>
+    <mrow>
+      <msub> <mi>S</mi> <mn>h</mn> </msub>
+      <mo>.</mo> 
+      <msub> <mi>l</mi> <mn>h</mn> </msub>
+    </mrow>
+  </mfrac>
+</math>
+
+<td style="width:50px; text-align:right">                 (2)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The fraction on the right hand side is
+the inverse of the so-called "tail volume coefficient"
+(&hairsp;so called because of its dimension
+ of a length times an area&hairsp;).
+Typical values are <i>S</i><sub>h</sub>
+ <i>/ S</i> = 0.2 and <i>l&hairsp;</i><sub>h</sub> <i>/ c</i> = 2.5,
+ and so the tail volume coefficient is on the order of 0.5.
+A typical value for the <i>C</i><sub>m,ac</sub> of
+a conventional NACA airfoil is &minus;&hairsp;0.10.
+</p>
+<p>&emsp;
+These typical values lead to :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mn>&Delta;&hairsp;</mn>
+  <msub> <mi>C</mi> <mn>Lh</mn> </msub>
+
+  <mspace /> <mo> &cong; </mo> <mspace />
+
+  <mn> &minus;&thinsp;0.10 / 0.5 </mn>
+  <mspace /> <mo> &cong; </mo> <mspace />
+  <mn> &minus;&thinsp;0.2 </mn>
+</math>
+
+<td style="width:50px; text-align:right">                 (3)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> From first principles (&hairsp;potential theory&hairsp;)
+the lift curve slope of almost any airfoil is 
+ d<i>C</i><sub>L</sub> / d<i>&alpha;</i>
+ &cong; 0.11 per degree, so this would indicate the need for 
+a tailplane decalage of about &minus;&thinsp;2&deg.
+</p>
+<p>&emsp;
+A common value in model aircraft is &minus;&thinsp;3&deg, and this makes
+sense if we take into account the effect of the down&shywash
+of the wing on the tailplane.
+ This reduces the aerodynamic angle of attack of the tailplane
+with increasing wing lift, leading to a lower
+effective value for 
+   d<i>C</i><sub>Lh</sub> / d<i>&alpha;</i>.
+We will not go into this, because here we are only 
+con&shycerned with the principle and the first order of magnitude
+of the decalage, not in its exact value in any particular case.
+</p>
+<p>&emsp;
+The negative <i>C</i><sub>Lh</sub> explains why stabilizers
+often have "inverted" wing sections, although we will see
+that there is another factor which contributes to the tail load.
+</p>
+<p>&emsp;
+In a canard, the moments are the same,
+ but the sign is different.
+ Also, a canard is not in the downwash of the main wing,
+so it may need a decalage of maybe +&hairsp;2&deg.
+However, we will see that the other, "fixed" term
+in the canard is much larger than in 
+conventional aircraft.
+</p>
+<p>&emsp;<i>
+TODO &emsp; Mention the F27 upside-down stab section,
+and the Cessna Cardinal upside down slot later.
+</i></p>
+</p>
+
+
+<br> <br> <br> <br> 
 <h4> zero moment at positive lift </h4>
 
 <p> We now add a net lift, but we keep
@@ -204,6 +326,17 @@ of C<sub>Lw</sub> and C<sub>Lh</sub>, but
 always in that same ratio.
 </p>
 
+<p>&emsp;<i>
+TODO &emsp; Give estimates of distance/chord between 
+wing AC and aircraft AC.<br>
+&emsp; &emsp; &emsp; &emsp; 
+(&hairsp;based on Cmac, tail volume and tail arm&hairsp;).
+</i></p>
+<p>&emsp;<i>
+&emsp; &emsp; &emsp; 
+Together with the static margin, this determines
+whether the CG is ahead or aft of the wing AC. 
+</i></p>
 
 
 
@@ -261,6 +394,12 @@ quarter point of the wing is quite a usual location.
 - treat elsewhere.
 </p>
 -->
+
+<h4 >postscript on the elevator conundrum </h4>
+
+<p>
+- &emsp; difference between static and dynamic elevator effect.
+</p>
 
 <!-- FOOTER ------------------------------------------------------------>
 <br> <br>
