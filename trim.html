@@ -667,23 +667,15 @@ the more or less obvious result :
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-<mspace width="20px"/>
-
   <msub> <mi>L</mi> <mn>h+</mn> </msub>
+
   <mo> = </mo>
+
+  <mi>L</mi>
+  <mo>.</mo>
  <mstyle displaystyle="true">
   <mfrac>
     <msub> <mi>x</mi> <mn>w</mn> </msub>
-    <msub> <mi>l</mi> <mn>h</mn> </msub>
-  </mfrac>
-
-<mspace width="50px"/>
-
-  <msub> <mi>L</mi> <mn>w+</mn> </msub>
-  <mo> = </mo>
- <mstyle displaystyle="true">
-  <mfrac>
-    <msub> <mi>x</mi> <mn>h</mn> </msub>
     <msub> <mi>l</mi> <mn>h</mn> </msub>
   </mfrac>
 </math>
@@ -692,11 +684,29 @@ the more or less obvious result :
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
+<!-- EQUATION ------------------------------------------------->
+<table style="margin-top : 8px;"> <tr> <td>
+<math>
+  <msub> <mi>L</mi> <mn>w+</mn> </msub>
+  <mo> = </mo>
+  <mi>L</mi>
+  <mo>.</mo>
+ <mstyle displaystyle="true">
+  <mfrac>
+    <msub> <mi>x</mi> <mn>h</mn> </msub>
+    <msub> <mi>l</mi> <mn>h</mn> </msub>
+  </mfrac>
+</math>
+
+<td style="width:50px; text-align:right">                 (15)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
 <p> These forces are independent of the flying speed.
  They are simply a force balance around the CG location.
 </p>
-<p>
-This is directly opposite to the
+<p>&emsp;
+This is the reverse case from
  &hairsp;&Delta;&hairsp;<i>L</i><sub>h</sub>
 and &hairsp;&Delta;&hairsp;<i>L</i><sub>w</sub> of (3) and (4),
 which trim out <i>C</i><sub>m<sub>ac</sub></sub>&hairsp;.
@@ -704,7 +714,8 @@ Those forces are proportional to the square of the flying speed,
 but they do <i>not</i> vary with the CG location.
 </p>
 <p>
-Figure 2 shows how this works out in a typical conventional airplane,
+Figure 2 shows how this works out
+ in a typical conventional airplane,
 and in a canard.
 </p>
 
@@ -721,7 +732,7 @@ and in a canard.
 </p>
 
 <p> In a conventional airplane, the CG may be ahead of the wing
-or behind it.
+or behind it. We will study this below.
 </p>
 <p>&emsp;
  If it is behind,  
@@ -743,7 +754,7 @@ The canard load starts out positive from "zero" speed.
 <h4> the CG location relative to the wing </h4>
 
 <p> From equation (14) and Figure 2 we see that it
-is ineresting to know if the CG lies ahead of the wing
+is interesting to know if the CG lies ahead of the wing
 or behind it, and if so by how much.
 With the typical numbers used in (6) and one more rule of thumb,
 we can hazard a guess.
@@ -803,7 +814,7 @@ contributors.
 
 </math>
 
-<td style="width:50px; text-align:right">                 (15)
+<td style="width:50px; text-align:right">                 (16)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -840,7 +851,7 @@ and using (2) for the definition of
 
 </math>
 
-<td style="width:50px; text-align:right">                 (16)
+<td style="width:50px; text-align:right">                 (17)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -887,7 +898,7 @@ of the average wing chord, or MAC
   </mfrac>
 </math>
 
-<td style="width:50px; text-align:right">                 (17)
+<td style="width:50px; text-align:right">                 (18)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -925,19 +936,19 @@ of the average wing chord, or MAC
 
 </math>
 
-<td style="width:50px; text-align:right">                 (18)
+<td style="width:50px; text-align:right">                 (19)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> We now take into account a stability figure or merit
+<p> We now take into account a stability figure of merit
  called the "static margin". 
 This is the (&hairsp;non-dimensional&hairsp;)
  dis&shytance between the aircraft AC and CG.
 <p>&emsp;
 The aircraft will be stable like a weathervane,
- if the effective location of the weathervane's side area
- (&hairsp;the AC) is behind its axis of rotation
- (&hairsp;the CG&hairsp;), by a sufficient margin.
+ provided the effective location of the weathervane's side area
+ <nobr> (&hairsp;the AC&hairsp;) </nobr> is behind its axis of rotation
+ <nobr> (&hairsp;the CG&hairsp;) </nobr> by a sufficient margin.
  This margin is made non-dimensional by the wing chord.
 The definition  is :
 </p>
@@ -958,7 +969,7 @@ The definition  is :
   <mi>c</mi>
 </math>
 
-<td style="width:50px; text-align:right">                 (19)
+<td style="width:50px; text-align:right">                 (20)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -1018,7 +1029,7 @@ The definition  is :
 
 </math>
 
-<td style="width:50px; text-align:right">                 (20)
+<td style="width:50px; text-align:right">                 (21)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -1026,7 +1037,7 @@ The definition  is :
  0.1 or 0.2&nbsp;<i>c</i>.
 If we select 0.2 for a reasonably stable airplane,
 with still a bit of leeway for aft CG locations,
-then we have, from (18) in (20) : 
+then we have, from (19) in (21) : 
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -1051,25 +1062,292 @@ then we have, from (18) in (20) :
 
 </math>
 
-<td style="width:50px; text-align:right">                 (21)
+<td style="width:50px; text-align:right">                 (22)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
 <p> In words, the aircraft AC lies about
  0.4&hairsp;<i>c</i> aft of the wing,
 and the aircraft CG lies about 
-0.2&hairsp;<i>c</i> forward of the AC,
+0.2&hairsp;<i>c</i> forward of the aircraft AC,
 so&nbsp;the CG lies about 0.2&hairsp;<i>c</i>
  aft of the wing.
 The CG lies between the wing and the tailplane,
-and the tailplane wil have positive lift
+so the tailplane wil have positive lift
 at "zero airspeed".
 </p>
 <p>&emsp;
-Figure 2 give the accurate view in this case :
+Applying this to (14) we have for the tailplane load :
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>L</mi> <mn>h+</mn> </msub>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+ <mstyle displaystyle="true">
+  <mfrac>
+    <msub> <mn> &minus; 0.2 </mn> </msub>
+    <msub> <mn> &ensp; 2.5 </mn> </msub>
+  </mfrac>
+  <mo>.</mo>
+  <mi>L</mi>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+  <mn> &minus; 0.08 &thinsp; </mn>  <mi>L</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (23)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> With 
+ <i>x</i></sub>h</sub> = <i>l</i><sub>h</sub>
+- <i>x</i></sub>w</sub> from (2)
+we have from (15) for the wing load, as a check :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>L</mi> <mn>w+</mn> </msub>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+ <mstyle displaystyle="true">
+  <mfrac>
+    <msub> <mn> 2.5 + 0.2 </mn> </msub>
+    <msub> <mn> &ensp; 2.5 </mn> </msub>
+  </mfrac>
+  <mo>.</mo>
+  <mi>L</mi>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+  <mn> + 1.08 &thinsp; </mn>  <mi>L</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (24)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>&emsp;
+Figure 2 gives the accurate view in this case :
 the tailplane load starts out positive, and
 only becomes negative beyond a certain airspeed.
 </p>
+<p>&emsp;
+In practice, many other parts of the aircraft such
+as the fuselage nose and the engine nacelles
+tend to be de&shystabi&shylizing.
+They tend to move the overall AC forward.
+This is not a problem
+if we move the CG forward by the same amount.
+Model aircraft for instance
+ usually have the CG at the
+wing quarter chord point.
+</p>
+
+<h4> the same case for the canard </h4>
+
+<p> We repeat the numerical example
+for the case of the canard.
+The equations and the sign conventions are the same, 
+but some numerical values have reversed sign.
+Figure 3 shows some definitions.
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img src="images/trim_canard_definitions.gif" 
+     width="320" alt="Trim canard definitions"
+     style="margin-left   : 250px;
+            margin-top    :   8px;
+            margin-bottom :   8px;" >
+<p style="margin-left  : 250px;
+         margin-bottom:   8px">
+ <b><i> Figure 3 : &emsp; Canard geometry. </i></b>
+
+<p>
+The absolute value of 2.5 for 
+<i>l</i><sub>h</sub> may still
+be about right, but the sign is now negative,
+for the stabilizer is ahead of the main wing.
+ With the same ballpark figure for
+for <i>S</i><sub>h</sub> / <i>S</i>,
+ (18) now becomes :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+  <mrow>
+    <msub> <mi>x</mi> <mn>AC</mn> </msub> 
+    <mo> &minus; </mo>
+    <msub> <mi>x</mi> <mn>w</mn> </msub> 
+   </mrow>
+   <msub> <mi>c</mi>
+  </mfrac>
+
+  <mspace/><mo> &cong; </mo> <mspace/>
+
+  <mn> &minus; 0.4 </mn>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (25)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> and with the same static margin <i>s</i>
+ and for <i>s</i>, (21) becomes :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+  <mrow>
+    <msub> <mi>x</mi> <mn>w</mn> </msub> 
+    <mo> &minus; </mo>
+    <msub> <mi>x</mi> <mn>CG</mn> </msub> 
+   </mrow>
+   <msub> <mi>c</mi>
+  </mfrac>
+
+  <mspace/><mo> &cong; </mo> <mspace/>
+
+  <mn> 0.2 + 0.4 </mn>
+  <mspace/><mo> &cong; </mo> <mspace/>
+
+  <mn> 0.6 </mn>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (26)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> In other words, a stable CG will lie well ahead
+of the main wing. With the wing AC always
+at the quarter chord point,
+the CG typically lies 0.35&hairsp;<i>c</i>
+ ahead of the wing leading edge.
+</p>
+<p>&emsp;
+Applying this to the trim equation (14),
+where <i>x</i><sub>w</sub> and
+ <i>x</i><sub>w</sub> were relative to the CG,
+ we have :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>L</mi> <mn>h+</mn> </msub>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+ <mspace/>
+ <mstyle displaystyle="true">
+  <mfrac>
+    <msub> <mn> 0.6 </mn> </msub>
+    <msub> <mn> 2.5 </mn> </msub>
+  </mfrac>
+  <mo>.</mo>
+  <mi>L</mi>
+
+   <mspace/> <mspace/>
+  <mspace/> <mo> &cong; </mo> <mspace/>
+  <mspace/> <mspace/> 
+  <mn> 0.24 &thinsp; </mn>  <mi>L</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (27)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+As a check, with
+ <i>x</i><sub>h</sub> = <i>l&hairsp;</i><sub>h</sub>
++ <i>x</i><sub>w</sub> from (2) and with the 
+negative  
+<i>l&hairsp;</i><sub>h</sub> from (23),
+the main wing load (15) becomes :
+</p> 
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>L</mi> <mn>w+</mn> </msub>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+ <mstyle displaystyle="true">
+  <mfrac>
+    <mn> 0.6 &minus; 2.5 </mn>
+    <mn> &minus; 2.5 </mn>
+  </mfrac>
+  <mo>.</mo>
+  <mi>L</mi>
+
+  <mspace/> <mo> &cong; </mo> <mspace/>
+
+  <mn> 0.76 &thinsp; </mn>  <mi>L</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">                 (28)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> The sum is still <i>L</i>,
+but the canard carries a far greater part
+of the load than with the normal stabilizer,
+even at "zero speed".
+ As we saw in Figure 2, this load only
+increases with higher airspeed. 
+This sometimes leads to elaborate
+high lift devices on the canard, 
+which makes one wonder 
+if it is a good idea to make such a small surface
+ responsible for such a large part of the overall lift.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4> postscript on the elevator conundrum </h4>
+
+<p>
+- &emsp; difference between static and dynamic elevator effect.
+</p>
+<p>
+- &emsp; a trim <i>step input</i> gives a dynamic response of 
+ the "weathervane" around the CG.
+</p>
+
+<p>&emsp;<i>
+TODO &emsp; Mention the F27 mild upside-down stab section,
+and the extreme Cessna Cardinal upside down slot with forward CG.
+</i></p>
+</p>
+
+
 
 <!--
 <p>
@@ -1079,26 +1357,6 @@ of C<sub>Lw</sub> and C<sub>Lh</sub>, but
 always in that same ratio.
 </p>
 -->
-
-<h4> the same case for the canard </h4>
-
-<p> TBW </p>
-
-<h4> postscript on the elevator conundrum </h4>
-
-<p>
-- &emsp; difference between static and dynamic elevator effect.
-</p>
-<p>
-- &emsp; a trim step input gives a dynamic respnse of 
- the "weathervane" around the CG.
-</p>
-
-<p>&emsp;<i>
-TODO &emsp; Mention the F27 mild upside-down stab section,
-and the extreme Cessna Cardinal upside down slot with forward CG.
-</i></p>
-</p>
 
 <!-- FOOTER ------------------------------------------------------------>
 <br> <br>
