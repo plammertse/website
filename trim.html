@@ -658,7 +658,7 @@ the more or less obvious result :
 (&hairsp;easiest to see if <i>x</i><sub>w</sub> < 0,
  so the CG lies between the wing and the tailplane&hairsp;),
   with the following algebraic solution (&hairsp;where
-  <i>l</i><sub>h</sub> is as defined by (2)&nbsp;) :
+  <i>l&hairsp;</i><sub>h</sub> was defined in (2)&nbsp;) :
 
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
@@ -671,8 +671,12 @@ the more or less obvious result :
   <mo>.</mo>
  <mstyle displaystyle="true">
   <mfrac>
-    <msub> <mi>x</mi> <mn>w</mn> </msub>
-    <msub> <mi>l</mi> <mn>h</mn> </msub>
+    <mrow> <mn>&minus;</mn>
+      <msub> <mi>x</mi> <mn>w</mn> </msub>
+    </mrow>
+  <mrow>
+     <mn>&thinsp;</mn> <msub> <mi>l</mi> <mn>h</mn> </msub>
+  </mrow>
   </mfrac>
 </math>
 
@@ -1084,7 +1088,7 @@ Applying this to (14) we have for the tailplane load :
 
  <mstyle displaystyle="true">
   <mfrac>
-    <msub> <mn> &minus; 0.2 </mn> </msub>
+    <msub> <mn> &minus; ( &minus; 0.2 )  </mn> </msub>
     <msub> <mn> &ensp; 2.5 </mn> </msub>
   </mfrac>
   <mo>.</mo>
@@ -1092,7 +1096,7 @@ Applying this to (14) we have for the tailplane load :
 
   <mspace/> <mo> &cong; </mo> <mspace/>
 
-  <mn> &minus; 0.08 &thinsp; </mn>  <mi>L</mi>
+  <mn> 0.08 &thinsp; </mn>  <mi>L</mi>
 
 </math>
 
@@ -1102,7 +1106,7 @@ Applying this to (14) we have for the tailplane load :
 
 <p> With 
  <i>x</i><sub>h</sub> = <i>l</i><sub>h</sub>
-- <i>x</i></sub>w</sub> from (2)
++ <i>x</i><sub>w</sub> from (2)
 we have from (15) for the wing load, as a check :
 </p>
 
@@ -1111,11 +1115,11 @@ we have from (15) for the wing load, as a check :
 <math>
   <msub> <mi>L</mi> <mn>w+</mn> </msub>
 
-  <mspace/> <mo> &cong; </mo> <mspace/>
+  <mspace/> <mo> &cong; </mo> <mspace/> <mspace/>
 
  <mstyle displaystyle="true">
   <mfrac>
-    <msub> <mn> 2.5 + 0.2 </mn> </msub>
+    <msub> <mn> 2.5 &minus; 0.2 </mn> </msub>
     <msub> <mn> &ensp; 2.5 </mn> </msub>
   </mfrac>
   <mo>.</mo>
@@ -1123,7 +1127,7 @@ we have from (15) for the wing load, as a check :
 
   <mspace/> <mo> &cong; </mo> <mspace/>
 
-  <mn> + 1.08 &thinsp; </mn>  <mi>L</mi>
+  <mn> 0.92 &thinsp; </mn>  <mi>L</mi>
 
 </math>
 
@@ -1133,9 +1137,9 @@ we have from (15) for the wing load, as a check :
 
 <p> Sure enough, (23) and (24) together provide
  the overall lift <i>L</i>.
-Figure 2 gives the accurate view in this case :
-the tailplane load starts out positive, and
-only becomes negative beyond a certain airspeed.
+Figure 2 gives the correct view in this case :
+the&nbsp;tailplane load starts out positive, and
+then becomes negative beyond a certain airspeed.
 </p>
 <p>&emsp;
 In practice, many other parts of the aircraft such
@@ -1173,9 +1177,23 @@ The absolute value of 2.5 for
 <i>l</i><sub>h</sub> may still
 be about right, but the sign is now negative,
 for the stabilizer is ahead of the main wing.
- With the same ballpark figure for
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msub> <mi>l</mi> <mn>h</mn> </msub>
+  <mspace/><mo> &cong; </mo> <mspace/>
+  <mn> &minus; 0.5 </mn>
+</math>
+
+<td style="width:50px; text-align:right">                 (25)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> With the same ballpark figure for
 for <i>S</i><sub>h</sub> / <i>S</i>,
- (18) now becomes :
+ (19) now becomes :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -1193,15 +1211,29 @@ for <i>S</i><sub>h</sub> / <i>S</i>,
 
   <mspace/><mo> &cong; </mo> <mspace/>
 
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn> 0.2 </mn>
+    <mn> 1 + 0.2 </mn>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mn> ( &minus; 2.5 ) </mn>
+
+  <mspace/><mo> &cong; </mo> <mspace/>
+
   <mn> &minus; 0.4 </mn>
+
 
 </math>
 
-<td style="width:50px; text-align:right">                 (25)
+<td style="width:50px; text-align:right">                 (26)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> and with the same static margin <i>s</i>, (21) becomes :
+<p> and with the same static margin
+    <i>s</i> = 0.2, (21) becomes :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -1219,20 +1251,21 @@ for <i>S</i><sub>h</sub> / <i>S</i>,
 
   <mspace/><mo> &cong; </mo> <mspace/>
 
-  <mn> 0.2 + 0.4 </mn>
+  <mn> 0.2 &minus; ( &minus; 0.4 ) </mn>
   <mspace/><mo> &cong; </mo> <mspace/>
 
-  <mn> 0.6 </mn>
+  <mn> + 0.6 </mn>
 
 </math>
 
-<td style="width:50px; text-align:right">                 (26)
+<td style="width:50px; text-align:right">                 (27)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> In other words, a stable CG will lie well ahead
-of the main wing. With the wing AC always
-at the quarter chord point,
+<p> In words, a stable CG will lie well ahead
+of the main wing, because the aircraft AC lies ahead
+of the wing, and the&nbsp;CG lies ahead of the aircraft AC.
+ With the wing AC always at the wing quarter chord point,
 the CG typically lies 0.35&hairsp;<i>c</i>
  ahead of the wing leading edge.
 </p>
@@ -1249,23 +1282,23 @@ where <i>x</i><sub>w</sub> and
   <msub> <mi>L</mi> <mn>h+</mn> </msub>
 
   <mspace/> <mo> &cong; </mo> <mspace/>
- <mspace/>
+ <mspace/> <mspace/>
  <mstyle displaystyle="true">
   <mfrac>
-    <msub> <mn> 0.6 </mn> </msub>
-    <msub> <mn> 2.5 </mn> </msub>
+    <msub> <mn> &minus; 0.6 </mn> </msub>
+    <msub> <mn> &minus; 2.5 </mn> </msub>
   </mfrac>
-  <mo>.</mo>
+  <mspace/> <mn> . </mn> <mspace/>
   <mi>L</mi>
 
-   <mspace/> <mspace/>
+  <mspace/>
   <mspace/> <mo> &cong; </mo> <mspace/>
-  <mspace/> <mspace/> 
+  <mspace/>
   <mn> 0.24 &thinsp; </mn>  <mi>L</mi>
 
 </math>
 
-<td style="width:50px; text-align:right">                 (27)
+<td style="width:50px; text-align:right">                 (28)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -1288,7 +1321,7 @@ the main wing load (15) becomes :
     <mn> 0.6 &minus; 2.5 </mn>
     <mn> &minus; 2.5 </mn>
   </mfrac>
-  <mo>.</mo>
+  <mspace/> <mn> . </mn> <mspace/> 
   <mi>L</mi>
 
   <mspace/> <mo> &cong; </mo> <mspace/>
@@ -1297,16 +1330,18 @@ the main wing load (15) becomes :
 
 </math>
 
-<td style="width:50px; text-align:right">                 (28)
+<td style="width:50px; text-align:right">                 (29)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> The sum is still <i>L</i>,
+<p> The overall lift is still <i>L</i>,
 but the canard carries a far greater part
 of the load than with the normal stabilizer,
-even at "zero speed".
+even at&nbsp;"zero speed".
  As we saw in Figure 2, this load only
-increases with higher airspeed. 
+increases with higher airspeed.
+</p>
+<p>&emsp;
 This sometimes leads to elaborate
 high lift devices on the canard, 
 which makes one wonder 
