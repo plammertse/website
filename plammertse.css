@@ -5,6 +5,7 @@
 --             This is unlike HTML, where it is <!-- -->   
 ---------------------------------------------------------------
 -- history :
+--     2026-03-15 small, gradual developments
 --     2025-11-21 new
 --------------------------------------------------------------*/
 
@@ -19,7 +20,12 @@ body {
   font-family : Arial, Helvetica, sans-serif;
 }
 
-/* line spacing + indent for headers         */
+/* all hyperlinks darker blue */
+/* in Chrome, this changes dead links to black (they were lighter blue) */
+a {
+   color : #000080;
+}
+/* line spacing + indent for header         */
 
 h2 {
   margin     : 6px 16px;
@@ -51,6 +57,7 @@ p {
 /* font-size : 16px;  already the default, I think */
 }
 
+/* horizontal rulers text width */
 hr {
   margin-left : 32px;
   max-width   : 800px;" >
@@ -94,24 +101,23 @@ td {
 
 /* increase the math font size to look like 16px text.
    The extra math margin (vertical + horizontal)
-   acts *inside* <p> ( and inside <td>,TBC ).                              
-   mfrac from inline to display style cannot be fixed here */
+   acts *inside* <p> ( and inside <td>, TBC ).                              
+   <mfrac> from inline to display style cannot be fixed here,
+   this needs <mstyle displaystyle="true"> first every time. */
 math {
   font-size : 18px;
   margin : 0px 32px;
 }
 
-/* Always use <mspace/> with the slash, or it won't work */
-/* Setting width itself does not seem to allow an override */
+/* Always use <mspace/> with the slash, else it won't work  */
+/* <mspace> width itself does not seem to allow an override */
 mspace {
    min-width : 0.5em;
 }
 
 img {
    display       : inline-block;
-/*   margin-top    : 16px;
-   margin-bottom : 16px;
-*/
+   /* margin-top    : 16px; margin-bottom : 16px;  */
 }
 
 video {
@@ -144,19 +150,18 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-/*-- Attempt at central color for "here" buttons, needs work : --*/
+/* Attempt at central color for "here" buttons, needs work : */
 .dropbtn1 {
   background-color : blue;
 }
 
-/*----------------*/
-
+/* dark red banner button on hover */
 li a:hover, .dropdown:hover .dropbtn {
 /*  background-color: red;  made the red a bit darker : */
   background-color : #E00000;
 }
 
-/* format dropdown lists */
+/* dropdown lists */
 li.dropdown {
   display : inline-block;
 }
@@ -175,8 +180,9 @@ li.dropdown {
 /* format anchors inside dropdowns                      */
 /* The first padding is vertical (like a line spacing), */
 /* the second is horizontal (like a tab)                */
+/* Text color dark blue is a bit less harsh than black  */
 .dropdown-content a {
-  color      : black;
+  color      : #000040;
   padding    : 4px 14px;
   text-decoration: none;
   display    : block;
