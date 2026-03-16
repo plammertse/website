@@ -21,9 +21,11 @@ body {
 }
 
 /* all hyperlinks darker blue */
-/* in Chrome, this changes dead links to black (they were lighter blue) */
+/* in Chrome, this briefly changed dead links
+   to black (they were lighter blue), but no more ? 
+   Also see the result in prop_book_00_TOC.html  */
 a {
-   color : #000080;
+   color : #000040;    /* #000080  */
 }
 /* line spacing + indent for header         */
 
@@ -177,12 +179,12 @@ li.dropdown {
   z-index    : 1;
 }
 
-/* format anchors inside dropdowns                      */
+/* format anchors *inside dropdowns*  (plain elsewhere) */ 
 /* The first padding is vertical (like a line spacing), */
 /* the second is horizontal (like a tab)                */
 /* Text color dark blue is a bit less harsh than black  */
 .dropdown-content a {
-  color      : #000040;
+  color      : #000070;         /* #000080  too blue ?? */
   padding    : 4px 14px;
   text-decoration: none;
   display    : block;
