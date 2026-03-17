@@ -38,8 +38,11 @@
 
 <h4> 2.1 &emsp; Blade elements                             </h4>
 
-<p> Before going into the theory proper, we need to set
- a few definitions, mostly for later reference.
+<p> Before going into the theory, we need to set
+ a few definitions.
+ Readers who are already familiar with the termi&shynology
+ can skip this chapter on a first reading,
+ and refer back to it later when necessary. 
 <p>&emsp;
  A propeller blade is a rotating wing. 
  Like in a wing, the width of the blade is called the "chord".
@@ -52,7 +55,7 @@
  a "blade element".
 </p>
 <p>&emsp;
- Figure 2.1 shows these definitions.
+ Figure 2.1 shows some of these definitions.
 </p>
 
 <!-- PROP_SKETCH -->
@@ -89,7 +92,7 @@
 </p>
 <!------------------------------------------------------------->
 
-<p> The forward motion for one revolution is P and the
+<p> The forward motion for one revolution is <i>P</i> and the
  circumferential motion is 2&hairsp;π&hairsp;<i>r</i>, 
  and so the slope of the local pitch angle <i>&phi;</i> 
  equals <i>P</i> over 2&hairsp;π&hairsp;<i>r</i> :
@@ -118,15 +121,17 @@
  Most propellers are designed for a certain flying velocity 
  and shaft RPM. Expressing the velocity <i>V</i> 
 in meters per second
- and the RPM in revolutions per second, immediately gives
- the forward travel in meters per propeller revolution, 
- and this gives the pitch of the propeller.
+ and the RPM in revolutions per second immediately gives
+ the forward travel in meters per propeller revo&shylution, 
+ and this is the aerodynamic pitch of the propeller.
 </p>
 <p>&emsp;
  A  fixed  pitch  propeller will often be manufactured
- with this "geometrical pitch" all along the blade.
+ with the same "geometrical pitch" all along the blade.
  The geo&shymetrical pitch angle at any radius follows from (2.1), 
  giving the blade its charac&shyteristic twisted appearance.
+</p>
+<p>&emsp;
  Figure 2.2 shows the blade element "living" inside a thin-walled
  tube of air between the radii <i>r</i> and <i>r</i> + d<i>r</i>. 
 </p>
@@ -148,15 +153,19 @@ in meters per second
 <p>&emsp;
  The actual aerodynamic pitch angle will be in line with the blade element 
  velocity diagram of figure 2.3.
- The blade circumferential speed  <i>Ω r</i> is the product of 
+ The blade circumferential speed  <i>Ω&thinsp;r</i> is the product of 
  the angular velocity <i>&Omega;</i> of the propeller
  <nobr>(&hairsp;in</nobr> radians per <nobr>second&hairsp;),</nobr>
  and the local radius <i>r</i> (&hairsp;in meters&hairsp;). 
  The velocity  <i>V</i> is the undisturbed flying velocity
    (&hairsp;in meters per second&hairsp;).
- The effective local velocities <i>V</i> and
- <i>&Omega;&hairsp;r</i>  will get modified later
- by the blade's own lift inducing a downwash at the blade.
+</p>
+<p>&emsp;
+ The actual local velocities <i>V</i> and
+ <i>&Omega;&hairsp;r</i> are modified a little 
+ by the blade's own lift,
+ inducing a downwash at the blade element.
+This is part of the theory.
  </p>
 
 <!-- FIGURE -------------------------------------------------->
@@ -173,10 +182,14 @@ in meters per second
 
 <h4> 2.4 &emsp; Advance ratio and speed ratio </h4>
 
-<p> The propeller literature supports a variety of symbols.
+<p> The propeller literature supports a wide variety of symbols.
  Some can even have opposite meanings.
  Airplane texts generally use the letter <i>λ</i> for the
- "tip advance ratio" <i>&lambda; &equiv; V / &Omega;&hairsp;R</i>. 
+ "tip advance ratio"
+ <i>&lambda; &equiv; V / &Omega;&hairsp;R</i>,
+ while the wind turbine community uses the&nbsp;inverse convention,
+the "tip speed ratio" 
+ <i>&lambda; &equiv; &Omega;&hairsp;R / V</i>.
 </p>
 <p>&emsp;
  The difference does make sense. 
@@ -184,28 +197,34 @@ in meters per second
  from zero forward velocity. 
  In both cases we wish to avoid a division by zero
  in the starting condition,
- so we do not want a zero in the denominator. 
-</p>
-<p>&emsp; But it is unfortunate that the lowercase letter <i>λ</i> is used
-  for a blade tip condition, since another convention is 
- that local values <nobr>(&hairsp;like</nobr>
- the <nobr>radius <i>r</i>&hairsp;)</nobr>
-are in lowercase, with tip values (&hairsp;like <i>R</i>&hairsp;) 
-in capitals. 
- The capital <i>Λ</i> would have been more appropriate. 
- We will avoid the letter <i>λ</i> altogether. 
+ so we do not want a&nbsp;zero in the denominator. 
 </p>
 <p>&emsp;
+ It is unfortunate in both cases that
+ the lowercase letter <i>λ</i> is used
+  for a blade tip condition, since another con&shyvention is 
+ that local values <nobr>(&hairsp;like</nobr>
+ the <nobr>radius <i>r</i>&hairsp;)</nobr>
+are in lowercase, with tip values
+ (&hairsp;like <i>R</i>&hairsp;) 
+in capitals. 
+ The capital <i>Λ</i> would have been more appropriate. 
+</p>
+<p>&emsp;
+ We will avoid the letter <i>λ</i> altogether. 
  Following <span style="font-variant: small-caps;">Glauert</span>'s
  convention (&hairsp;at least in part of his work&hairsp;),
  we denote the local speed ratio <i>Ω&thinsp;r&thinsp;/&thinsp;V</i>
   by the small letter <i>x</i>. 
+ By the capital letter convention we call its tip value <i>X</i>.
+ This makes <i>X</i> equal to the <i>λ</i> of the wind turbine world,
+ and to the <nobr>1<i>&thinsp;/&thinsp;λ</i></nobr>
+ of the airplane world.
 </p>
 <p>&emsp;
- By the capital letter convention, we call its tip value <i>X</i>,
- even though this is a bit unusual.
- This makes <i>X</i> equal to the <i>λ</i> of the wind turbine world,
- and to the <nobr>1/<i>λ</i></nobr> of the airplane world :
+ Using <i>X</i> instead of <i>λ</i> c.q.
+ 1<i>&thinsp;/&thinsp;λ</i> is a bit unusual,
+ but it works out quite well in the equations.
 </p>
 
 <!-- EQUATION ------------------------------------------------------->
@@ -240,7 +259,7 @@ in capitals.
 <table> <tr> <td>
 
 <math>
-  <mi>x</mi>
+  <mi>X</mi>
   <mspace/> <mo> ≡ </mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
@@ -279,7 +298,8 @@ in capitals.
 
 <h4> 2.5 &emsp; The local pitch angle </h4>
 
-<p> Figure 2.4 gives the velocity diagram in terms of the local speed ratio <i>x</i>.
+<p> Figure 2.4 gives the velocity diagram
+ in terms of the local speed ratio <i>x</i>.
  At the tip, we use the capital letter <i>X</i>.
  The&nbsp;figure shows by inspection :
 </p>
@@ -455,11 +475,12 @@ in capitals.
 </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> We will freely use a mixture of function arguments <i>&phi;</i> 
+<p>&emsp;
+ We will freely use a mixture of function arguments <i>&phi;</i> 
  and <i>x</i>, on the understanding that they are
- easily converted into each other.
- In particular the cos<sup>2</sup><i>&phi;</i> term
- comes up very frequently, 
+ easily con&shyverted into each other.
+ In particular, the cos<sup>2</sup><i>&thinsp;&phi;</i> term
+ comes up very frequently 
  and is more easily recognized when it is expressed 
  in <i>&phi;</i>
  rather than in <i>x</x></i>.
@@ -494,7 +515,7 @@ in capitals.
 
 </p>
 <p> The non-dimensional speed ratio <i>x</i> equals
- the local radius <i>r</i>, 
+ the dimensional radius <i>r</i>, 
  divided by this standard length.
  We can rewrite (2.2)&nbsp;and (2.3) as :
 </p>
