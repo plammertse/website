@@ -1,51 +1,182 @@
 <!DOCTYPE html>
 <html>
-
 <!--------------------------------------------------------------
- file    : prop_book_28.html
- purpose : Page for website Piet Lammertse
+-- file    : prop_book_28.html
+-- purpose : Page for website Piet Lammertse
 ----------------------------------------------------------------
-   history :
-     2025-01-03  new
----------------------------------------------------------------> 
+--   history :
+--     2026-03-18  new
+--------------------------------------------------------------->
 
-<!- FORMATTING ------------------------------------------------>
+<!-- FORMATTING  ---------------------------------------------->
 <head>
   <link rel="stylesheet" href="plammertse.css">
-  <title>  Piet Lammertse on propeller theory  </title>
+  <title> Piet Lammertse on propeller theory </title>
 </head>
 
 <body>
 
-<! --NAVIGATION BAR MENU -------------------------------------->
+<!-- NAVIGATION BAR MENU -------------------------------------->
 <ul>
-  <li> <a href="index.html">                Home      </a> </li>
+  <li> <a href="index.html">                 Home     </a> </li>
   <li> <a href="prop_book_27.html">&#x25C4  Previous  </a> </li>
   <li> <a style="background-color:#0000C0;"
           href="prop_book_00_TOC.html"> 
                                       Contents &#x25BC</a> </li>
-  <li> <a href="prop_book_29.html">  Next &#x25BA</a> </li>
+  <!--  //////   CURRENTLY NO NEXT CHAPTER  ////////// -->
 </ul>
 
 <!-- PAGE HEADER ---------------------------------------------->
 
-<p style="margin-left : 320px">  <i> VORTEX THEORY </i>     </p>
+<p style="margin-left : 320px">  <i> CHORDS </i>           </p>
 <hr style="margin : 0 0;">
 
-<span style="color:darkgrey">  <!-- ///////  TODO  //////// -->
+<!-- CHAPTER -------------------------------------------------->
 
-<!-- CHAPTER 28 ----------------------------------------------->
+<!-- <span style="color:darkgrey">   -->
 
-<h2> 28 &emsp; Comparing Prandtl to Lerbs                  </h2>
+<h2> 28 &emsp; Blade chords with tip loss </h2>
 
-<!-- SECTION 28.1 --------------------------------------------->
+<!-- SECTION -------------------------------------------------->
 
-<h4> 28.1 &emsp; Introduction                              </h4>
+<h4> 28.1 &emsp; The tip effect on the blade chord </h4>
 
-<p> TBW.
+<p> Equation (27.20) gave the blade chord for the
+ rotationally optimized <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;)
+of (XXXX).
+ The tip loss changes <i>b</i>&hairsp;(&hairsp;<i>x</i>&hairsp;)
+ to (26.2), which includes the term
+    <i>K</i>&hairsp;(&hairsp;<i>x</i>&hairsp;),
+ which changes the integrated thrust reduction from
+  <i>&kappa;</i><sub>&phi;</sub> to <i>&kappa;</i><sub>G</sub>&hairsp;.
+</p>
+<p>&emsp;
+ The new chord is : 
 </p>
 
-</span>
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>B</mi> <mo>.</mo> 
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>c</mi>
+    <mi>R</mi>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle = "true">
+  <mfrac>
+   <mn>4&pi;</mn>
+   <msub><mi>C</mi><mn>L</mn></msub>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mi>K</mi> <mn>(</mn> <mi>x</mi> <mn>)</mn>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle = "true">
+  <mfrac>
+    <mrow> <mi>T</mi><mn>&prime;</mn> </mrow>   
+    <msub><mi>&kappa;</mi> <mn>G</mn> </msub>
+  </mfrac>
+
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>>
+    <mi>X</mi>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <msup> <mn>cos</mn> <mn>2</mn> </msup> <mi>&phi;</mi>
+  <mo> . </mo>
+  <mn>sin&thinsp;</mn> <mi>&phi;</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (28.1)
+</td> </tr> </table>
+
+<p> Figure 28.1 shows the result.
+ It is the direct counterpart of figure 27.3
+ in terms of thrust and parameter variation,
+ only this time including the tip loss.
+ Like in figure XXXXXXX 26.2, the exact solution is drawn in solid lines,
+ and the 
+ <span style="font-variant: small-caps;"> Prandtl</span>'s
+approximation in thin lines.
+ The figure once again shows the difference in shape near the hub.
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img  width="520";
+     style="margin-left : 160px;
+            margin-top  :  8px";
+     alt="Chords with tips";
+     src="images/prop_chords_with_tips_separate.gif" >
+
+<p style="margin-left   :160px;
+          margin-bottom : 12px;">
+    <i> Figure 28.1 : &ensp;
+            Optimal chords with tip loss. <br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        Two blades, thrust T&thinsp;' = 0.1,
+        C<sub>L</sub> = 0.4. </i>
+</p> 
+<!------------------------------------------------------------->
+
+
+<h4> 28.2 &emsp; Blade shape variation with X and B </h4>
+
+<p> Chapter 27 explored the basic parameters 
+influencing the blade chord.
+ It gave a simple approximation
+ for the blade chord at 0.7 R in (27.24).
+ This approximation still holds if we replace
+ <i>&kappa;</i><sub>&phi;</sub> by 
+<i>&kappa;</i><sub>G</sub>,
+ and take into account that the correction by
+    <i>K</i>&hairsp;(<i>&hairsp;x&hairsp;</i>&hairsp;) 
+is usually small at 0.7<i>R</i>.
+</p>
+<p>&emsp;
+ The chord at 0.7<i>R</i> varies with 
+   1<i>&thinsp;/&thinsp;X</i><sup>&hairsp;2</sup>,
+ but the largest chord width varies only by 
+   1<i>&thinsp;/&thinsp;X</i>.
+ This means that there is a systematic variation with
+  1<i>&thinsp;/&thinsp;X</i> in the taper ratio
+  between the widest point and the tip region.
+</p>
+<p>&emsp; Figure 28.2 shows this variation.
+ The tip speed ratio <i>X</i> decreases
+ when moving from left to right between the pictures.
+ The variation in taper ratio is most visible
+ in the top row, for almost infinitely many blades.
+ The location of the widest point at
+ <i>r&thinsp;/&thinsp;R</i> = √2<i>&thinsp;/&thinsp;X</i>
+ is indicated by circle markers.
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img  width="700";
+     style="margin-left : 100px;
+            margin-top  :  0px";
+     alt="Chords with tips";
+     src="images/prop_chords_matrix.gif" >
+
+<p style="margin-left   :220px;
+          margin-bottom : 12px;">
+    <i> Figure 28.2 : &ensp;
+            Chord shapes for varying X and B.
+</p> 
+<!------------------------------------------------------------->
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>

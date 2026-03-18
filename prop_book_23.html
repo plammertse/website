@@ -19,778 +19,698 @@
 
 <!-- NAVIGATION BAR MENU -------------------------------------->
 <ul>
-  <li> <a href="index.html">                Home      </a> </li>
-  <li> <a href="prop_book_23_TOC.html">&#x25C4 Previous  </a> </li>
+  <li> <a href="index.html">                 Home     </a> </li>
+  <li> <a href="prop_book_22.html">&#x25C4  Previous  </a> </li>
   <li> <a style="background-color:#0000C0;"
           href="prop_book_00_TOC.html"> 
                                       Contents &#x25BC</a> </li>
-  <li> <a href="prop_book_24.html">        Next &#x25BA</a> </li>
+  <li> <a href="prop_book_24.html">  Next &#x25BA</a> </li>
 </ul>
 
-<!--- PAGE HEADER --------------------------------------------->
-<p style="margin-left : 320px">  <i> VORTEX THEORY </i> </p>
+
+<!-- PAGE HEADER ---------------------------------------------->
+
+<p style="margin-left : 320px">  <i> VORTEX THEORY </i>     </p>
 <hr style="margin : 0 0;">
 
-<!-- CHAPTER 23 ------------------------------------------------>
+<!-- CHAPTER -------------------------------------------------->
 
-<h2> 23 &emsp; Vortex theory                                </h2>
+<h2> 23 &emsp; The propeller lifting line                  </h2>
 
-<!-- SECTION 23.1 ---------------------------------------------->
+<!-- SECTION -------------------------------------------------->
 
-<h4> 23.1 &emsp; Introduction                               </h4>
+<h4> 23.1 &emsp;The spiral horseshoe vortex                </h4>
 
-<p> <span style="font-variant: small-caps;"> Prandtl</span>'s 
- approximation gives us a physical intuition
- on the tip loss. His tip factor
-    <i>F</i>&hairsp;(&hairsp;<i>x</i>&hairsp;)
- represents a reduction of the effective mass flow
- receiving the "full" induction on a given radius.
- However,
-<span style="font-variant: small-caps;"> Prandtl</span>'s
-<!-- function for -->
- <nobr>
- <i>F</i>&hairsp;(&hairsp;<i>x</i>&hairsp;) </nobr>
-  was always known to be an approximation.
- It has survived for over a century as the preferred model,
- at least in pre&shylim&shyinary design,
- because of the simplicity of the equation relative to
- the complexity of the exact (&hairsp;vortex&hairsp;) solution.
-<p>&emsp;
- For a long time, the exact solution was difficult to compute,
- and only available in the form of coarsely spaced tables.
- This severely limited the use of the vortex method
- in design studies.
- However, with today's computing power, tables are no longer needed.
- The whole vortex calculation can be run in a fraction of a second
- on a laptop computer.
+<p> The vortex field around a propeller is more complicated
+ than that around a wing, but the principle is the same.
 </p>
 <p>&emsp;
- A <span style="font-variant: small-caps;">Matlab</span><sup>&hairsp;©</sup> section
- elsewhere on this website
- gives a number of simple downloadable 
- <span style="font-variant: small-caps;">Matlab</span><sup>©</sup> scripts,
- which can be easily ported to other languages,
- like
- <span style="font-variant: small-caps;">Python</span> or
- <span style="font-variant: small-caps;">Octave</span>,
- which&nbsp;support a toolbox 
- for matrix inversion.
+ Figure 23.1 shows the "horseshoe" vortex
+ from a single propeller blade.
+ It is the equivalent of the single horse&shyshoe on the wing
+ of figure 21.3, but it looks even less like one...
 </p>
 <p>&emsp;
- This chapter introduces the basic idea of classical vortex theory,
- with the aircraft wing as a baseline.
- The&nbsp;next chapter applies it to the propeller. 
- </p>
-
-<!------------------------------------------------------------->
-
-<h4> 23.2 &emsp; The ideal vortex </h4>
-
-<p> The basic building block of vortex theory is the line vortex.
- A line vortex is like a little tornado.
- A vortex of "circulation" strength&ensp;<i>&Gamma;</i> 
- (&hairsp;Greek capital letter <i>Gamma</i>&hairsp;</i>)
- creates a circular velocity <i>v</i>
- around its centerline, the strength of&nbsp;which is by definition
- <i>inversely</i> proportional to the distance <i>r</i>&hairsp;
- from its center.
- The circulation is defined as the integral of the velocity
- along a circular path around the center.
-  The equation therefore contains a factor of 2&hairsp;&pi; : 
+ This simplest of propeller lifting line models
+ is sometimes called the
+"<span style="font-variant: small-caps;">Joukowsky</span>" rotor.
 </p>
 
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>&Gamma;</mi>  <mspace/> <mo>&equiv;</mo> <mspace/>
-  <mn>2&hairsp;&pi;</mn>
-    <mo>.</mo><mi>r</mi><mo>.</mo><mi>v</mi> 
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.1)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> This can also be written as :
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>v</mi>  <mspace/> <mo>&equiv;</mo> <mspace/>
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mi>&Gamma;</mi>
-    <mrow> <mn>2&hairsp;&pi;&hairsp;</mn> <mi>r</mi> 
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.2)
-</td> </tr> </table>
-<!-- END EQUATION -------------------------------------------->
-
-<p> Figure 23.1 gives the graph of velocity versus radius,
- looking down the axis of the vortex line.
- The ideal vortex has infinite velocity at the core.
- There is no calm "eye of the storm".
- This makes the concept very clean, but it complicates the math.
-</p>
-
-<!-- FIGURE  ------------------------------------------------->
-<img  width="300";
-     style="margin-left:250px";
-     alt="Actuator tube";
-     src="images/prop_vortex_2D.webp" >
-<p style="margin-left   :250px;
+<!-- FIGURE  -------------------------------------------------->
+<img  width="560";
+     style="margin-left:100px";
+     alt="Joukowsky rotor";
+     src="images/prop_spiral_vortex_joukowsky.gif" >
+<p style="margin-left   : 100px;
           margin-bottom : 12px;">
     <i> Figure 23.1 : &ensp;
-                     The vertical velocity around a vortex. </i>
+    Joukowsky rotor : core, bound, and tip vortex
+    of a single "horseshoe". </i>
 </p>
 <!------------------------------------------------------------->
 
-
-
-<!------------------------------------------------------------->
-
-<h4> 23.3 &emsp;
-      Vortex lift - the aerodynamic equivalent of the Lorentz force </h4>
-
-<p> When a parallel airstream flows across a vortex line,
- the circulation changes the flow into a locally curved flow.
- Immediately around the vortex line,
- the flow circles around the vortex line with infinite velocity.
- Since infinite velocities do not exist in real flows,
- in the real world the line of infinite velocity is always hidden
- inside a physical object. 
-</po>
-<p>&emsp;
- The simplest such physical object is a rotating drum
- placed in a parallel flow.
- The rotating drum draws the air around it by its surface friction,
- matching the circumferential velocity of an ideal vortex
- at the drum surface.
- This arrangement is known as the
-<span style="font-variant: small-caps;">Flettner</span> rotor.
+<p> Both the bound vortex and the root vortex
+ (&hairsp;i.e. the inner tip vortex&hairsp;) are straight lines,
+ just like in the wing. However, the outer tip vortex follows 
+ the spiral path of the blade tip.
 </p>
 <p>&emsp;
- Remarkably, the same circulation pattern can be created
- without having a rotating object,
- just by the friction at the sharp trailing edge
- of a curved wing section.
- The wing trailing edge steers the local flow
- by the so-called
- <span style="font-variant: small-caps;">Kutta</span>
- condition. 
+ The   <a style = "color:black"
+          href="prop_book_frontispiece.html">frontispiece</a>
+ photograph of a Hawker Hurricane ticking over
+ on a moist day, shows that these spiral vortices
+ are more than just a theoretical model.
 </p>
 <p>&emsp;
- Figure 23.2 shows the idea. The wing section bends air down,
- and creates lift as a reaction force.
- If we look at it from a reasonable distance
- the wing section can be modelled by a single vortex.
- This vortex lifts up the approaching air,
- and sends it down by exactly the same amount behind it.
- There is no net downwash, and the lift is exactly orthogonal
- to the undisturbed local velocity <i>V</i>.
- We will see later that a finite wing does have a net down&shywash,
- but it is not caused by the vortex around the lifting line.
+ We will develop this horseshoe spiral model
+ first into a justification for the ideal actuator disk,
+ and then into a tip loss and lifting line model
+ for propellers of finite tip speed ratio.
 </p>
 
-<!-- FIGURE  ------------------------------------------------->
-<img  width="360";
-     style="margin-left:250px";
-     alt="Actuator tube";
-     src="images/prop_naca_curved_blade_lift.webp" >
-<p style="margin-left   :250px;
-          margin-bottom : 12px;">
-    <i> Figure 23.2 : &ensp;
-           The lift on a vortex placed in a parallel flow. </i>
-</p>
-<!------------------------------------------------------------->
+<!-- SECTION --------------------------------------------------->
 
-<p> The force per unit length of vortex follows
- from the remarkably simple equation :
+<h4> 23.2 &emsp; The thrust from the bound vortex          </h4>
+
+<p>
+ First we have a look at the thrust.
+ Like in the wing, and for the same reasons,
+ the thrust comes exclusively from the bound vortex.
+ The core vortex and the spiral vortex drift with the flow,
+ and therefore they cannot generate thrust, or any other force.
 </p>
+<p>&emsp;
+ The vortex lift (21.3)&ensp;, alias the 
+  <span style="font-variant: small-caps;">Lorentz</span>
+ force,
+  on a blade element of spanwise width
+ d<i>r</i>&thinsp; generates
+ both the torque and the thrust for that element.
+ The
+  <span style="font-variant: small-caps;">Lorentz</span>
+ force works at right angles to the flow,
+ and since it is linear in the velocity, 
+ it can be split into two orthogonal components.
+ The <i>axial</i> component <i>V</i> of the local airspeed
+ relative to the blade gives a <i>tangential</i> force
+ at right angles to it. This leads to a torque,
+ but we will not be using the torque directly in our derivations.
+</p>
+<p>&emsp; 
+  The <i>tangential</i> velocity <i>&Omega;&hairsp;r</i>
+ gives an <i>axial</i> force, or in other words a thrust,
+ on the blade element.
+ From the generic
+  <span style="font-variant: small-caps;">Lorentz</span>
+ force (21.3), this axial thrust is :
 
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mi>F</mi>
-  <mspace/> <mo>=</mo> <mspace/> 
-  <mi>&rho;</mi> <mo>.</mo> <mi>V</mi> <mo>.</mo> <mi>&Gamma;</mi> 
-</math>
-</td>
+  <mn>d</mn> <mi>T</mi>
 
-<td style="width:50px; text-align:right">  (23.3)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> This is the aerodynamic equivalent of the
- <span style="font-variant: small-caps;">Lorentz</span> force
- on an electrical current in a magnetic field.
- The elec&shytric&shyal current is the analog of the circulation,
- the wire carrying it is the analog of the vortex line,
- and the magnetic field in which the wire "lives"
- is the analog of the local airflow.
-</p>
-
-<!------------------------------------------------------------->
-
-<h4> 23.4 &emsp; The horseshoe vortex </h4>
-
-<p> A single line vortex of constant strength
- <i>&Gamma;</i>&thinsp;
- can be used to model both the lift and the downwash
- around a simplified wing.
- Figure 23.3 shows the vortex pattern.
- The single vortex line runs in a tuning fork shape
- called the "horseshoe vortex".
- The name was coined before it was realized
- that the transition between the legs is not rounded,
- but sharply kinked.
-</p>
-
-<!-- FIGURE  -------------------------------------------------->
-<img  width="600";
-     style="margin-left:120px";
-     alt="Actuator tube";
-     src="images/prop_junkers_tip_vortices.webp" >
-<p style="margin-left   :160px;
-          margin-bottom : 12px;">
-    <i> Figure 23.3 : &ensp;
-           The horseshoe vortex for a constant lifting line. </i>
-</p>
-<!------------------------------------------------------------->
-
-<p> The physical wing is represented by the crosswind section
- of the vortex, shown in red in the picture.
- This cross&shywind vortex travels with the wing.
- Actually, it is continuously created by the wing.
- This section of the vortex is called the "bound vortex".
-</p>
-<p>&emsp;
-  The span of a wing is traditionally denoted by <i>b</i>,
- not to be confused with our previous use of <i>b</i> 
- for the local induction <i>w / V</i>.
- For an infinitesimal  spanwise section d<i>b</i>, the lift is :
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mn>d&hairsp;</mn> <mi>L</mi>
-  <mspace/> <mo>=</mo> <mspace/> 
-  <mi>&rho;</mi> <mo>.</mo> <mi>V</mi> <mo>.</mo> <mi>&Gamma;</mi>
-  <mo>.</mo> <mn>d&hairsp;</mn> <mi>b</mi>
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.4)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p>&emsp; The other two legs of the tuning fork
- are called "trailing vortices",
- colloquially known as "tip vortices".
- Viewed from the airplane, these tip vortices "trail"
- from the ends of the bound vortex.
- The wing tips leave these trails behind in the atmosphere
- like a snail leaves behind a stationary trace on the ground.
- Immediately after leaving the wing,
- these vortex trails simply float in the stationary atmosphere.
- They do not follow the airplane.
- The far end of the system is closed by another cross vortex
- left behind "at infinity", or at least very far away,
- where the aircraft took off.
-</p>
-<p>&emsp;
- Precisely because the trailing vortices have no self motion
- relative to the  air around them,
- they are simply "written" in the exact path
- of the wing tips that created them.
- Floating free, they cannot exert a force on the air.
- The trailing vortices therefore do not cause lift.
- However, they do "cause", or at least describe,
- a circular motion of the air around each trailing vortex line
- as shown in the wake cross-section in figure 23.3.
-</p>
-
-<!------------------------------------------------------------->
-
-<h4> 23.5 &emsp; 
-      The uniform lift from a single horseshoe vortex </h4>
-
-<p> The lift on the single bound vortex of a horseshoe vortex
- follows directly from (23.3) :
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>L</mi>
-  <mspace/> <mo>=</mo> <mspace/> 
-  <mi>&rho;</mi> <mo>.</mo> <mi>v</mi> <mo>.</mo> <mi>&Gamma;</mi>
-  <mo>.</mo> <mi>b</mi>
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.5)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-<p> This is the only lift in the system.
- The trailing vortices do not contribute,
- because they drift with the flow.
- 
-<!------------------------------------------------------------->
-
-<h4> 23.6 &emsp; The local downwash from a single horseshoe vortex </h4>
-
-<p> The downwash far away from the wing
- is not affected by its bound vortex.
- The wing has moved infinitely far away from us
- by the time we start looking at the far wake.
- In the far wake, the only vortices nearby are the tip vortices,
- stretching infinitely far ahead and behind.
-</p>
-<p> For measuring distances from the the center of the wing,
- we will use the spanwise coordinate <i>x</i>.
-</p>
-</p>
-<p>&emsp;
- The effect of a single trailing vortex at a location
- <i>x</i><sub>t</sub>
- on the downwash at a different spanwise location  <i>x</i><sub>w</sub>
- follows directly from the definition of the vortex in (23.2),
- at a distance <i>r</i>&thinsp; =
- <i>x</i><sub>w</sub> &minus;
- <i>x</i>&hairsp;<sub>t</sub> away from the vortex line : 
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mn>d&hairsp;</mn><mi>w</mi>
   <mspace/> <mo>=</mo> <mspace/>
 
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mrow> <mn>d&hairsp;</mn><mi>&Gamma;</mi> </mrow>
-    <mn>2&hairsp;&pi;</mn> 
- </mfrac>
+  <mi>&rho;</mi>
+  <mo>.</mo>
+  <mi>&Omega;</mi> <mi>r</mi> 
+  <mo>.</mo>
+  <mi>&Gamma;</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>r;</mi>
 
-  <mspace/> <mo>.</mo> <mspace/>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.1)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+</p>
+<p> At any given <i>&Omega;</i>, the thrust on a blade element
+ is proportional to the local radius <i>r</i>.
+ But so is the ring area
+ 2&pi;&hairsp;<i>r</i>&hairsp;.&hairsp;d<i>r</i>
+ swept by that element.
+ For a single bound vortex, the thrust per frontal area
+ is therefore constant over the whole prop disk.
+</p>
+<p>&emsp;
+ The overall thrust follows by integrating (23.1)
+ over the blade span for the single constant value
+ of <i>&Gamma;</i> :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>T</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>R</mi>
+  </msubsup>
+
+  <mi>&rho;</mi>
+  <mo>.</mo>
+  <mi>&Omega;</mi> <mi>r</mi> 
+  <mo>.</mo>
+  <mi>&Gamma;</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>r</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+
+  <mn>&frac12;&thinsp;</mn>
+  <mi>&rho;</mi>
+  <mo>.</mo>
+  <mi>&Omega;</mi> <mn>&hairsp;</mn>
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+  <mo>.</mo>
+  <mi>&Gamma;</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.2)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+
+<!-- SECTION -------------------------------------------------->
+
+<h4> 23.3 &emsp; The non-dimensional thrust                </h4>
+
+<p> We can make the thrust non-dimensional
+ by the definition of  (3.2) :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
 
   <mstyle displaystyle="true">
   <mfrac>
-    <mn >1</mn>
-    <mrow> <msub> <mi>x</mi> <mn>w</mn> </msub>
-           <mo>&minus;</mo>
-           <msub> <mi>x</mi> <mn>t</mn> </msub> 
+    <mrow>
+     <mn>&frac12;&thinsp;</mn>
+     <mi>&rho;</mi>
+     <mo>.</mo>
+     <mi>&Omega;</mi> <mn>&hairsp;</mn>
+     <msup> <mi>R</mi> <mn>2</mn> </msup>
+     <mn>.&hairsp;</mn>
+     <mi>&Gamma;</mi>
    </mrow>
+   <mrow>
+     <mi>&rho;</mi>
+     <mn>&hairsp;</mn>
+     <msup> <mi>V</mi> <mn>2</mn> </msup>
+     <mn>.&hairsp;</mn>
+     <mn>&pi;</mn>
+     <msup> <mi>R</mi> <mn>2</mn> </msup>
+    </mrow>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>
+    <mrow> <mn>2&pi;&hairsp;</mn> <mi>V</mi> </mrow>
+  </mfrac>
+
+  <mo>&thinsp;.&thinsp;</mo>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&Omega;</mi>
+    <mi>V</mi>
+  </mfrac>
+
+  <mo>&thinsp;.&thinsp;</mo>
+
+  <mi>&Gamma;</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.3)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Multiplying by <i>R</i> top and bottom and using
+  <i>X</i> = <i>Ω&hairsp;R / V</i> from (2.11) we get :
+<p/>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Gamma;</mi> <mo>.</mo> <mi>X</mi> </mrow>
+    <mrow> <mn>2&pi;&hairsp;</mn> 
+           <mi>R</mi> <mo>.</mo><mi>V</mi> </mrow>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.4)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> In the propeller, we will define a non-dimensional
+ vortex strength <i>Γ</i>&thinsp;&prime; :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>&Gamma;</mi> <mn>&hairsp;&prime;</mn>
+
+  <mspace/> <mo>&equiv;</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&Gamma;</mi>
+    <mrow> <mn>2&pi;&hairsp;</mn> 
+           <mi>R</mi> <mo>.</mo><mi>V</mi> </mrow>
+  </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.5)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This changes (23.4) to :
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>T</mi> <mn>&hairsp;&prime;</mn>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>&Gamma;</mi> <mn>&hairsp;&prime;</mn>
+  <mn>.&thinsp;</mn> <mi>X</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.6)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>&emsp;
+ The factor <i>X</i> is a bit unexpected at first,
+ but it derives from the decision to use the thrust
+ (&hairsp;and not the torque&hairsp;) as the basic
+ design parameter. This makes it more appropriate
+ to use <i>V</i> as the reference velocity,
+ and not <i>&Omega;&hairsp;R</i>.
+</p>
+<p>&emsp; The next section discusses the interpretation
+ of the factor <i>X</i> further.
+</p>
+
+<!-- SECTION 23.4 --------------------------------------------->
+
+<h4> 23.4 &emsp; Axial induction in the ideal propeller    </h4>
+
+<p> For the axial induction, we will first look at
+ the " ideal" case of very flat spirals,
+ i.e. for spirals of "infinitely small pitch".
+ Like for the
+<span style="font-variant: small-caps;"> Lorentz</span>
+ force (22.3),
+ there is a direct electro-magnetic equivalent.
+ This is the tightly wound electrical coil,
+ the so-called "solenoid".
+</p>
+<p>&emsp; 
+ Figure 23.2 gives a schematic impression.
+  A wire carrying an electrical current is wound as a coil
+ around a passive empty tube,
+ and this generates a magnetic field inside the tube.
+ It turns out that the magnetic field becomes parallel
+ and uniform inside the coil, and zero outside it. 
+</p>
+
+<!-- FIGURE  -------------------------------------------------->
+<img  width="400";
+     style="margin-left:180px";
+     alt="Solenoid";
+     src="images/prop_solenoid_magnetic_field.jpg" >
+<p style="margin-left   : 160px;
+          margin-bottom : 12px;">
+    <i> Figure 23.2 : &ensp;
+        Magnetic field lines inside and outside a solenoid. </i>
+</p>
+<!------------------------------------------------------------->
+
+<p> We are going to use the solenoid as an analog
+ for the spiral vortices wound around a flow tube.
+ The transformation between the electromagnetic
+ and the aerodynamic domains is :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>&Gamma;</mi>
+  <mspace/> <mn>&emsp;&harr;&emsp;</mn> <mspace/>
+  <msub> <mi>&mu;</mi> <mn>o</mn> </msub>
+  <mo>.</mo>  <mi>I</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.7)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>v</mi>
+  <mspace/>  <mn>&emsp;&harr;&emsp;</mn>  <mspace/>
+  <mi>B</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (23.8)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> If  <i>s</i>  is the axial spacing between the spirals or coils,
+ then the axial induction inside a  tightly wound "tip" spiral is :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>w</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>&Gamma;</mi>
+    <mi>s</mi>
  </mfrac>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (23.6)
+<td style="width:50px; text-align:right">                (23.9)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p>
+<p> The direct derivation by the law of
+ <span style="font-variant: small-caps;"> Biot-Savart</span>
+ is relatively straightforward,
+ but we will take the result for granted here.
+ It can be looked up in any text on electrical
+ (&hairsp;potential&hairsp;) theory. 
+</p>
 
+<p>&emsp;
+ In the propeller, by figure 2.4 the tip spacing equals
+ 1<i>&hairsp;/X&hairsp;</i> times the prop disk circumference
+ 2&pi;&hairsp;<i>R</i> :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>s</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mn>2&pi;&thinsp;</mn> <mi>R</mi> </mrow>
+    <mi>X</mi>
+ </mfrac>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">               (23.10)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Substituting this into (23.9)  <i>V</i> yields :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>w</mi>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Gamma;</mi>
+   </mrow>
+    <mrow> <mn>2&pi;&hairsp;</mn> <mi>R</mi>
+   </mrow>
+ </mfrac>
+
+ <mo>&thinsp;.&thinsp;</mo> <mi>X</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">               (23.11)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> Dividing by <i>V</i>, by (23.5)
+ the non-dimensional version is :
+</p>
+
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>w</mi>
+    <mi>V</mi>
+ </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>&Gamma;</mi>
+   </mrow>
+    <mrow> <mn>2&pi;&hairsp;</mn> <mi>R</mi>
+   <mo>.</mo> <mi>V</mi>
+   </mrow>
+ </mfrac>
+
+ <mo>&thinsp;.&thinsp;</mo> <mi>X</mi>
+
+ <mspace/> <mo>=</mo> <mspace/>
+
+ <mi>&Gamma;</mi> <mn>&hairsp;&prime;</mn>
+ <mn>.&thinsp;</mn> <mi>X</mi>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">               (23.12)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> With (23.6) we have :
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mi>w</mi>
+    <mi>V</mi>
+ </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mi>T</mi> <mn>&thinsp;&prime;</mi>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">               (23.13)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> With (4.2), this result is identical to (5.10)
+ for the ideal actuator disk. Like in the elliptical wing
+ with uniform down&shywash, the vortex picture gives
+ a "physical" justification for the actuator tube flow with
+ a uniform propwash inside the tube, and zero outside it.
+</p>
+<p>&emsp;
+ The factor X reflects the fact that the thrust on the bound vortex
+ is proportional to the (&hairsp;tip) circumferential velocity,
+ which is a factor of <i>X</i> larger than the axial velocity.
+ The same thrust can be generated by narrow-chord blades
+ turning at high RPM, or by wider chord blades turning at lower RPM.
+ This is the interpretation from the bound vortex. 
+</p>
+<p>&emsp;
+ We can also make sense of the factor of <i>X</i>
+  via the trailing spirals.
+ In the electrical solenoid, the same magnetic induction
+ can be generated by many windings of thin copper wire
+ carrying a small current, or by fewer windings of thicker wire
+ carrying a larger current.
+ They will have the same "current density per length"
+ (&hairsp;known in the elec&shytrical world as
+"<span style="font-variant: small-caps;">  Ampère</span>
+turns" per length&hairsp;).
+</p>
+<p>&emsp;
+ Similarly, we can see the
+    <i>&Gamma;</i>&thinsp;&prime;.&thinsp;<i>X</i>
+  in (23.12) as the "vortex density per length"
+ on the surface of the flow tube.
+ This vortex density determines the axial induction
+ inside the tube.
+ </p>
 <!--
- From symmetry, the downwash from the half-infinite vortex
- starting from one of the tips of  the lifting line
- is exactly half this value.
+ <p>&emsp;
+ There will be a tip effect for lower <i>X</i>,
+ when the axial spacing between the spirals
+ is no longer negligible w.r.t the radius. 
+</p>
 -->
 
- Figure 23.4 shows the graph of the downwash
- from a single horseshoe (&hairsp;two trailing vortices&hairsp;)
- in the far wake.
-</p>
+<!-- SECTION ---------------------------------------------------->
 
-<!-- FIGURE  -------------------------------------------------->
-<img  width="600";
-     style="margin-left:120px";
-     alt="Actuator tube";
-     src="images/prop_lift_downwash_constant_lift.gif" >
-<p style="margin-left   :160px;
-          margin-bottom : 12px;">
-    <i> Figure 23.4 : &ensp;
-           Lift and downwash for a single horseshoe vortex. </i>
-</p>
-<!------------------------------------------------------------->
+<h4> 23.5 &emsp; Mass flow in the ideal propeller          </h4>
 
-<p> At the center of the far wake, both tip vortices stretch from 
- (&hairsp;almost&hairsp;) minus to plus infinity. 
- At the center of the wake, both tip vortices are 
- at a distance of
- &frac12&thinsp;<i>b</i> from the center.
- So by (23.2) the downwash at the center of the far wake
- from the two trailing vortices is :
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>w</mi>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mrow> <mn>2&hairsp;</mn><mi>&Gamma;</mi> </mrow>
-    <mrow>
-      <mn>2&hairsp;&pi;</mn> <mo>.</mo>
-      <mn>&frac12&hairsp;</mn> <mi>b</mi>
-   </mrow>
- </mfrac>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mn>2</mn>
-    <mn>&pi;</mn>
-   </mrow>
- </mfrac>
-
-  <mo>.</mo>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mi>&Gamma;</mi>
-    <mi>b</mi>
- </mfrac>
-
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.7)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> The <i>average</i> downwash over the span is surprisingly
- difficult to calculate, due to the infinities at the tips.
-</p>
-
-<!------------------------------------------------------------->
-
-<h4> 23.7 &emsp; The elliptical wing </h4>
-
-<p> The single horseshoe wing is physically impossible,
- due to the infinite downwash at the tips. Even if it were possible,
- it is also very inefficient. 
+<p> By (23.1) we know that the thrust is uniform 
+ over the prop disk and zero outside it.
+ By (23.11) we know that the axial induction
+ is uniform on the prop disk, and again zero outside it.
+ This means that the
+ <span style="font-variant: small-caps;">Joukowsky</span>
+ rotor with infinitesimally small pitch is identical
+ to the ideal actuator disk of figure 4.1,
+ with uniform thrust and uniform induction
+ inside a closed tube.
 </p>
 <p>&emsp;
-  <span style="font-variant: small-caps;"> Prandtl</span>'s
- co-worker<span style="font-variant: small-caps;"> Munk</span>
- found early on that for a given total lift,
- the induced drag is at a minimum when the wing has
- constant downwash along the span.
- His reasoning was the same as the one used later by
- <span style="font-variant: small-caps;"> Betz</span> 
- to&nbsp;find the cos<sup>2</sup>&hairsp;<i>&phi;</i> distribution
- for the optimal propeller.
+ Combining the overall thrust (23.2) with the induction (23.11)
+ allows us to find the effective mass flow.
+ From
+  <span style="font-variant: small-caps;">Newton</span>'s
+ law (4.7) we have :
 </p>
-<p>&emsp;
- But because the downwash of an arbitrary vortex pattern
- is not easy to invert, 
- it took a while before he found the lift distribution
- which gives an even downwash.
- After "several attempts", to quote 
-  <span style="font-variant: small-caps;"> Prandtl</span>,
- the corres&shypond&shying lift distribution turned out to be 
- a simple elliptical shape.
-</p>
-<p>&emsp;
-  By a non-trivial integration, the following result was found
- for the downwash from an elliptical vortex distribution
- with a maximum circulation of <i>&Gamma;</i><sub>o</sub>
- in the center of the wing :
-</p>
-<p>&emsp; <i> TODO - mention Cauchy principal value,
-        refer to Glauert integral further down.  </i>
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>w</mi>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <msub> <mi>&Gamma;</mi><mn>o</mn> </msub>
-    <mi>b</mi>
- </mfrac>
-
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.8)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> We will define an average value for 
- <span style="text-decoration:overline;"><i>&Gamma;</i></span> 
- over the span (&hairsp;note the overbar symbol
- to indicate an average&hairsp;).
- It equals the area of a half circle, which is
- &pi;&nbsp;&#x2044;&nbsp;4 times that
- of the surrounding rectangle :
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mover>
-   <mi>&Gamma;</mi>
-   <mo>&#x2015;</mo>
-  </mover>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mn>&pi;</mn>
-    <mn>4</mn>
- </mfrac>
-
-  <mo>.</mo>
-
-  <msub> <mi>&Gamma;</mi><mn>o</mn> </msub>
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.9)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> We can then write the constant downwash as :
-</p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>w</mi>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mn>4</mn>
-    <mn>&pi;</mn>
- </mfrac>
-
-  <mo>.</mo>
-
-  <mstyle displaystyle="true">
-  <mfrac> 
-    <mrow>
-      <mover>
-        <mi>&Gamma;</mi>
-        <mo>&#x2015;</mo>
-      </mover>
-   </mrow>
-   <mi>b</mi>
- </mfrac>
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.10)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-<p> The lift of the elliptical wing is quite easy to find.
- If we integrate (23.4) for an elliptical distribution of 
- <i>&Gamma;</i>, the area is that of an ellipse
- with a center height of <i>&Gamma;</i><sub>o</sub> and an
- average value over the span of 
- <span style="text-decoration:overline;"><i>&Gamma;</i></span> :
-</p>
-
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mi>L</mi>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mo>&int;</mo> <mi>&Gamma;</mi> 
-  <mo>.</mo> 
-  <mn>d&hairsp;</mn>
-  <mi>b</mi>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mi>&rho;</mi> <mo>.</mo> <mi>V</mi> <mo>.</mo>
-  <mover>
-    <mi>&Gamma;</mi>
-    <mo>&#x2015;</mo>
-  </mover>
-
-  <mo>.</mo>
-
-  <mi>b</mi>
-</math>
-</td>
-
-<td style="width:50px; text-align:right">  (23.11)
-</td> </tr> </table>
-<!-- END EQUATION --------------------------------------------->
-
-
-<p> Figure 23.5 shows the lift and downwash for the elliptical wing.
- The downwash in the middle is twice that of the flat lift case
- (23.7), for the same average 
- <span style="text-decoration:overline;"><i>&Gamma;</i></span>,
- i.e. for the same overall lift.
-</p>
-
-<!-- FIGURE  -------------------------------------------------->
-<img  width="620";
-     style="margin-left:120px";
-     alt="Actuator tube";
-     src="images/prop_lift_downwash_elliptical_lift.gif" >
-<p style="margin-left   :160px;
-          margin-top    :  8px;
-          margin-bottom : 12px;">
-    <i> Figure 23.5 : &ensp;
-           Lift and downwash for the elliptical wing. </i>
-</p>
-<!------------------------------------------------------------->
-
-
-<!------------------------------------------------------------->
-
-<h4> 23.8 &emsp; The deflected mass of the elliptical wing </h4>
-
-<p> If we acccept (23.10) for the downwash,
- then with (23.11) for the lift
- we can calculate the effective mass flow 
- deflected by the wing, according to
- <span style="font-variant: small-caps;"> Newton</span>'s
- law (4.7) for the thrust of a propeller
- rewritten for the lift of a wing : 
-</p>
-
 
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
   <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
 
-  <mspace/> <mo>&equiv;</mo> <mspace/>
+  <mo>&thinsp;=&thinsp;</mo> <mspace/>
 
   <mstyle displaystyle="true">
   <mfrac>
-    <mi>L</mi>
+    <mi>T</mi>
     <mi>w</mi>
  </mfrac>
 
-  <mspace/> <mo>=</mo> <mspace/>
+  <mo>&thinsp;=&thinsp;</mo>
 
-  <mi>&rho;</mi> <mo>.</mo> <mi>V</mi> <mo>.</mo>
-  <mover>
-    <mi>&Gamma;</mi>
-    <mo>&#x2015;</mo>
-  </mover>
-  <mo>.</mo> <mi>b</mi>
+  <mn>&frac12;&thinsp;</mn>
+  <mi>&rho;</mi>
+  <mo>.</mo>
+  <mi>&Omega;</mi> <mn>&hairsp;</mn>
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+  <mo>.</mo>
+  <mi>&Gamma;</mi>
 
   <mo>.</mo>
 
   <mstyle displaystyle="true">
   <mfrac>
     <mrow>
-      <mn>&pi;</mn> <mo>.</mo> <mi>b</mi>
+      <mn>2&pi;&thinsp;</mn> <mi>R</mi>
    </mrow>
-   <mrow>
-      <mn>4</mn> <mo>.</mo> 
-      <mover>
-        <mi>&Gamma;</mi>
-        <mo>&#x2015;</mo>
-     </mover>
+    <mrow> <mi>&Gamma;</mi> <mo>.</mo><mi>X</mi>
    </mrow>
- </mfrac>
+  </mfrac>
 
+  <mo>&thinsp;=&thinsp;</mo>
 
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mi>&rho;</mi> <mn>&thinsp;</mn> <mi>V</mi> 
-  <mo>.</mo>
-  <mn>&frac14;</mn> <mn>&hairsp;&pi;&hairsp;</mn> 
-  <msup> <mi>b</mi> <mn>2</mn> </msup>
-
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow>
+      <mi>&rho;</mi> <mn>&thinsp;&pi;</mn>
+     <mo>.</mo>
+     <mi>&Omega;</mi> <mn>&hairsp;</mn>
+      <msup> <mi>R</mi> <mn>3</mn> </msup>
+   </mrow>
+    <mi>X</mi>
+  </mfrac>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">  (23.12)
+<td style="width:50px; text-align:right">               (23.14)
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p>&emsp;
-This is the well known result for an ideal
- (&hairsp;elliptical&hairsp;) wing :
- the deflected mass flow equals the flow through a circular tube,
- with the wing span as its horizontal centerline.
-</p>
-<p>&emsp; This result is normally offered in aerodynamics texts 
- without proof, hidden in an expression involving the
- so-called "aspect ratio" <i>A</i> of the wing.
- In the form given here, the parallel with the circular tube
- accelerated by an ideal propeller in (5.2) is striking. 
+<p> With <i>X</i> &equiv; 
+    <i>&Omega;&hairsp;R&thinsp;/&thinsp;V</i>
+ this simplifies to :
 </p>
 
-<!------------------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <msup> <mi>m</mi> <mn>&bull;</mn> </msup>
 
-<h4> 23.8 &emsp; Wing aspect ratio </h4>
+  <mo>&thinsp;=&thinsp;</mo> <mspace/>
 
-<p> In texts on wings, (23.12) is usually given without proof,
- and in a noticeably different form.</p>
-<p>&emsp;
- First of all, it is written in terms of the deflection angle
- <i>&epsilon;</i><sub>i</i></sub> = <i>v / V</i>
- as induced at the lifting line, where it is
- exactly half the value of the far wake.
- This is a useful choice in the airplane wing,
- because the so-called "induced drag"
- directly results from the backward tilt of the lift vector
- by this angle.
-</p>
-<p>&emsp;
- Unfortunately, the equation is also usually given in terms of
- the so-called "wing aspect ratio"
-  <i>A</i> &equiv; <i>&thinsp;b&thinsp;/</i>
- <span style="text-decoration:overline;"><i>c</i></span>.
-</p>
-<p>
- By definition <nobr>
-  <span style="text-decoration:overline;"><i>c</i></span>
-  &thinsp;&equiv;&thinsp;<i>S&thinsp;/&thinsp;b</i> </nobr>
- is the average chord of the wing, making
- <i>A</i> = <i>b</i><sup>2</sup><i>/&thinsp;S</i>.
+  <mi>&rho;</mi>
+  <mn>&thinsp;</mn>
+  <mi>V</mi>
+  <mo>.</mo>
+  <mn>&pi;</mn> <mn>&hairsp;</mn>
+  <msup> <mi>R</mi> <mn>2</mn> </msup>
+</math>
+</td>
+
+<td style="width:50px; text-align:right">               (23.15)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p> This matches exactly with equation (5.2), which simply assumed
+ that the effective mass is the mass <i>&rho;&hairsp;V</i> 
+ flowing through the actuator disk frontal area
+ &pi;&hairsp;<i>R</i><sup>2</sup>.
 </p>
 <p>&emsp;
- This convention has given rise to the spurious impression
- that the wing aspect ratio is a governing factor
- in the induced drag of the wing, which it is not. 
-</p>
-<p>&emsp;
- The governing factor is the span of the wing.
- For a given airspeed, lift <i>and span</i>,
- the induced drag is fixed.
- The&nbsp;aspect ratio will vary
- with the design lift coefficient,
- which determines the wing area, and hence the wing chord
-for a given span.
- The aspect ratio is a derived value.
- It has no direct influence on the induced drag.
+ It is also strikingly similar to (21.22) for the ideal wing.
+ But most importantly, the solenoid model provides
+ the "physical" justification for the  ideal actuator disk model,
+ with its sharp edge between the uniform, full induction
+ inside the tube and zero induction outside it.
 </p>
 
-
-<!-- FOOTER --------------------------------------------------->
+<!-- FOOTER ------------------------------------------------------->
 <br> <br>
 <div class="footer"> P. Lammertse, 2025 </div>
 
