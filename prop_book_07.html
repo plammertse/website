@@ -75,7 +75,7 @@
 <h4> 7.2 &emsp; Integrating over the rings                 </h4>
 <p> We will often wish to know the total,
  or average of some value
- <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+ <i>g</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
  over the prop disk.
  This could be the overall thrust, or an average loss factor.
  Such values can be found by integrating the
@@ -87,21 +87,21 @@
  The frontal area of a ring is
  2&hairsp;&pi;&hairsp;<i>r</i>&hairsp;.&hairsp;d<i>r</i>,
  and the contribution of a local value
-  <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+  <i>g</i>&hairsp;(&hairsp;<i>r</i>&hairsp;)
  to the total will be
-   <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)&hairsp;.&hairsp;2&hairsp;&pi;&hairsp;</i>r&hairsp;</i>.&hairsp;d<i>r</i>.
+   <i>g</i>&hairsp;(&hairsp;<i>r</i>&hairsp;)&hairsp;.&hairsp;2&hairsp;&pi;</i><i>r&hairsp;</i>.&hairsp;d<i>r</i>.
 
  Summing over "infinitely narrow" rings of width d<i>r</i> 
  represents an integral.
- The average of <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;)
+ The average of <i>g</i>&hairsp;(&hairsp;<i>r</i>&hairsp;)
  over the disk is the integral divided by the disk area.
- We will call this average &thinsp;<i>F</i> :
+ We will call this average &thinsp;<i>G</i> :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mi>F</mi>
+  <mi>G</mi>
   <mspace/> <mo>=</mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
@@ -113,7 +113,7 @@
   <mn>&thinsp;.</mn>
   <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>R</mi> </msubsup>
 
-  <mi>f</mi> <mn>(</mn><mi>r</mi><mn>)</mn>
+  <mi>g</mi> <mn>(</mn><mi>r</mi><mn>)</mn>
   <mo>.</mo>
   <mn>2&hairsp;&pi;&hairsp;</mn> <mi>r</mi>
   <mo>.</mo>
@@ -131,7 +131,7 @@
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mi>F</mi>
+  <mi>G</mi>
   <mspace/> <mo>=</mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
@@ -141,7 +141,7 @@
   <mn>&thinsp;.</mn>
   <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>R</mi> </msubsup>
 
-  <mi>f</mi> <mn>(</mn><mi>r</mi><mn>)</mn>
+  <mi>g</mi> <mn>(</mn><mi>r</mi><mn>)</mn>
   <mo>.</mo>
   <mn>2&hairsp;</mn> <mi>r</mi>
   <mo>.</mo>
@@ -153,13 +153,7 @@
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> The function <i>f</i>&hairsp;(&hairsp;<i>r</i>&hairsp;)
- is often easier to express in a non-dimensional parameter,
- like <i>x</i> or <i>&phi;</i>.
- It will then be convenient to write the whole integral
- in that parameter.</p>
- <p>&emsp;
- By (2.12), we can replace <i>r&nbsp;&#x2044;&nbsp;R</i>
+<p> By (2.12), we can replace <i>r&nbsp;&#x2044;&nbsp;R</i>
  by <i>x</i>&nbsp;&#x2044;&thinsp;<i>X</i>,
  and d<i>r</i>&nbsp;&#x2044;&nbsp;<i>R</i>
  by d<i>x</i>&nbsp;&#x2044;&thinsp;<i>X</i>,
@@ -169,7 +163,7 @@
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mi>F</mi>
+  <mi>G</mi>
   <mspace/> <mo>=</mo> <mspace/>
   <mstyle displaystyle="true">
   <mfrac>
@@ -179,7 +173,7 @@
   <mn>&thinsp;.</mn>
   <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>X</mi> </msubsup>
 
-  <mi>f</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
+  <mi>g</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
   <mo>.</mo>
   <mn>2&hairsp;</mn> <mi>x</mi>
   <mo>.</mo>
@@ -191,14 +185,14 @@
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-<p> We can write either <i>f</i>&thinsp;(&hairsp;<i>r</i>&hairsp;),
-  <i>f</i>&thinsp;(&hairsp;<i>x</i>&hairsp;) or
- <i>f</i>&thinsp;(&hairsp;<i>&phi;</i>&hairsp;),
+<p> We can write either <i>g</i>&thinsp;(&hairsp;<i>r</i>&hairsp;),
+  <i>g</i>&thinsp;(&hairsp;<i>x</i>&hairsp;) or
+ <i>g</i>&thinsp;(&hairsp;<i>&phi;</i>&hairsp;),
  whichever is the most natural expression for the function
  at that moment.
  They are easily converted into each other by (2.5),
  when the time comes to evaluate the integral.
- In many cases, we will simply write <i>f</i> without an argument.
+ In many cases, we will simply write <i>g</i> without an argument.
 </p>
 <p>&emsp; We can interpret
  2&hairsp;&pi;&hairsp;<i>r</i>&hairsp;.&hairsp;d<i>r</i> as
@@ -208,18 +202,17 @@
  as the increase of d&hairsp;(&hairsp;<i>x</i><sup>2</sup>&hairsp;).
  This is rarely useful from an analytical point of view,
  but it offers the opportunity to plot
-  <i>f</i>&thinsp;(&hairsp;<i>x</i>&hairsp;)
+  <i>g</i>&thinsp;(&hairsp;<i>x</i>&hairsp;)
  against <i>x</i><sup>2</sup> instead of against <i>x</i>.
  Such a plot can be useful to get a graphical feeling
  for the contribution of a ring.
  The function value is unchanged on the vertical axis,
  but the horizontal "strips" 
  d&hairsp;(&hairsp;<i>x</i>&hairsp;<sup>2</sup>&hairsp;)
- get progressively narrower towards the hub,
- giving the proper visual impression
- of their relative contribution to the area integral.
+ get progressively narrower towards the hub.
+This gives the proper visual impression
+ of their relative area contribution to the integral.
 </p>
-
 
 <!-- SECTION 7.3 ---------------------------------------------->
 
@@ -248,7 +241,7 @@ and bringing it outside the summation yields :
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
-  <mi>F</mi>
+  <mi>G</mi>
   <mspace/> <mo>=</mo> <mspace/>
 <mstyle displaystyle="true">
   <mfrac>
@@ -268,7 +261,7 @@ and bringing it outside the summation yields :
      <!-- <mn>0</mn> <mi>N</mi>-->
  </msubsup> 
 
-  <mi>f</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
+  <mi>g</mi> <mn>(</mn><mi>x</mi><mn>)</mn>
   <mo>.</mo>
   <mn>2&hairsp;</mn> <mi>x</mi>
 
@@ -296,6 +289,7 @@ and bringing it outside the summation yields :
  integration of (7.4) does not need such refinement.
 </p>
 
+<a name="7.4"></a>
 
 <!-- SECTION 7.4 ---------------------------------------------->
 <h4> 7.4 &emsp; The thrust per ring                        </h4>
@@ -303,7 +297,6 @@ and bringing it outside the summation yields :
 <p> The thrust of a uniform actuator disk follows from (5.1).
  We define the equivalent for a ring :
 </p>
-
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
 <math>
@@ -327,6 +320,7 @@ and bringing it outside the summation yields :
 
 <td style="width:50px; text-align:right">                 (7.5)
 </td> </tr> </table>
+
 <!-- END EQUATION --------------------------------------------->
 
 <p> The non-dimensional version follows just like in (5.8) :
@@ -368,7 +362,12 @@ and bringing it outside the summation yields :
  instead of the air flowing through the whole disk,
  and that the induction ratio <i>b</i> may vary among the rings.
 </p>
-<p>&emsp; By analogy with (5.2), the mass flow through a ring is :
+
+<a name="(7.7)"></a>
+
+<p>&emsp;
+ By analogy with (5.2) and (5.3),
+ the mass flow through a ring is :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -377,7 +376,7 @@ and bringing it outside the summation yields :
   <mn>d</mn> 
     <msup> <mi>m</mi> <mn>&hairsp;&bull;</mn> </msup>
 
-  <mo>=</mo>
+  <mspace/> <mo> = </mo> <mspace/> 
 
   <mi>&rho;</mi> <mo>.</mo> <mi>V</mi> <mo>.</mo> 
   <mn>2&hairsp;&pi;&hairsp;</mn>
@@ -389,8 +388,23 @@ and bringing it outside the summation yields :
      <mn>1&thinsp;+&thinsp;&frac12;&thinsp;</mn> <mi>b</mi>
   <mo>)</mo>
 </math>
-
 <td style="width:50px; text-align:right">                 (7.7)
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mspace width="2.2em"/> <mo> &cong; </mo> <mspace/>
+
+  <mi>&rho;</mi> <mo>.</mo> <mi>V</mi> <mo>.</mo> 
+  <mn>2&hairsp;&pi;&hairsp;</mn>
+  <mi>R</mi>
+  <mo>.</mo>
+  <mn>d</mn> <mi>r</mi>
+</math>
+
+<td style="width:50px; text-align:right">
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
@@ -531,8 +545,7 @@ and bringing it outside the summation yields :
  frontal area of the ring.
 </p>
 
-<p>&emsp;
- Using this in (7.6) we have :
+<p> Using this in (7.6) we have :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
