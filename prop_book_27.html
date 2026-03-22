@@ -33,7 +33,7 @@
 
 <!-- CHAPTER -------------------------------------------------->
 
-<h2> 27 &emsp; Blade chords </h2>
+<h2> 27 &emsp; Blade chords before tip loss </h2>
 
 <!-- SECTION -------------------------------------------------->
 
@@ -43,7 +43,7 @@
 needed for a given thrust (&hairsp;or induction&hairsp;).
 </p>
 <p>&emsp;
-A first dimensional idea can be obtained by looking
+A helpful dimensional idea can be obtained by looking
 at the case of small pitch angles.
 </p>
 <p>&emsp;
@@ -52,7 +52,7 @@ area of the blade elements in the ring.
 The thrust on these blade ele&shyments must provide
 the induction in the whole of the ring.
 From figure 
-<a href="prop_book_08.html#8.3">8.2</a>,
+<a href="prop_book_08.html#8.3">8.2</a>&hairsp;,
  the circum&shyferential airspeed 
 of the blade at small pitch angles is
    <i>W</i> &cong; <i>&Omega;.r</i>.
@@ -64,8 +64,8 @@ to <i>r</i><sup>&hairsp;2</sup>.
 <p>&emsp;
 The blade elements at that radius cover 
 a ring of area 2&pi;<i>r</i>.
-Comparing the two, we can expect the chord needed
-for a given induction to be proportional to 
+Comparing the two, the chord needed
+for a given induction will be proportional to 
 1<i>&hairsp;/&hairsp;r</i>.
 This is the basic shape of a propeller blade.
  We will see below that it is modified by rotational
@@ -74,16 +74,26 @@ pitch angles near the hub, but in principle,
  the blade outline will have a hyperbolic taper.
 </p>
 <p>&emsp;
-A less obvious consequence is that propellers 
-of high tip speed ratio <i>X</i>
-will have narrower chords than propel&shylers of low <i>X</i>,
-in the ratio 1<i>&hairsp;/&hairsp;X</i>.
-High pitch propellers have <i>much</i> wider blades
- than propellers of lower pitch.
-This will become clear after studying the scaling difference
-between the non-dimensional and the dimensional chord.
+A second result is that propellers 
+of higher pitch will have much wider blades.
+ The ratio is quadratic in <i>X</i>.
+This ratio follows from combining the definition of 
+<i>X</i> =
+ <i>&Omega;&hairsp;.&hairsp;r&thinsp;/&thinsp;V</i>
+ with the blade speed approximation 
+<i>W</i> &cong; <i>&Omega;&hairsp;.&hairsp;r</i>.
+Since the lift is proportional to 
+  <i>W</i><sup>&thinsp;2</sup>, it is also
+proportional to <i>&Omega;</i><sup>&hairsp;2</sup>,
+and so to <i>X</i><sup>&thinsp;2</sup>.
+The blade chords get quadratically wider 
+with decreasing <i>X</i>.
+Propellers of high pitch have extremely wide blades.
+</p>
 
-<h4> 27.1 &emsp; The blade chord for a given local induction </h4>
+<!------- SECTION --------------------------------------------->
+
+<h4> 27.2 &emsp; The blade chord for a given local induction </h4>
 
 <!--
  Equation
@@ -412,7 +422,7 @@ The&nbsp;chord is defined in the direction
 
 <!-- SECTION -------------------------------------------------->
 
-<h4> 27.2 &emsp; The non-dimensional solidity              </h4>
+<h4> 27.3 &emsp; The non-dimensional solidity              </h4>
 
 <p> We will first derive a non-dimensional chord
 on the same scale as the non-dimensional radius <i>x</i>.
@@ -584,7 +594,7 @@ stays the same in the non-dimensional form.
 
 <!-- SECTION -------------------------------------------------->
 
-<h4> 27.3 &emsp; The blade shape for uniform loading       </h4>
+<h4> 27.4 &emsp; The blade shape for uniform loading       </h4>
 
 <p> For uniform loading,
  (&hairsp;<a href="prop_book_05.html#(5.10)">5.10</a>&hairsp;)
@@ -629,22 +639,8 @@ stays the same in the non-dimensional form.
  as a red line.
 </p>
 
-<!-- FIGURE --------------------------------------------------->
-<img  width="520";
-     style="margin-left : 160px;
-            margin-top  :  8px";
-     alt="Betz_arc";
-     src="images/prop_cos2_chord_x.gif" >
-<p style="margin-left   :160px;
-          margin-bottom : 12px;">
-    <i> Figure 27.1 : &ensp;
-            Non-dimensional shape factors for uniform<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            and rotationally optimal distributions. </i>
-</p> 
-<!------------------------------------------------------------->
-
-<p> For larger values of <i>x</i>,
+<p>&emsp;
+ For larger values of <i>x</i>,
 we have small
  local pitch angles <i>&phi;</i>,
  where <i>&phi;</i> in<i>&thinsp;&phi;</i>
@@ -692,15 +688,29 @@ we have small
 <p> The figure shows this as a grey line.
 </p>
 
-<p>&emsp;
-  Near the hub, <i>&phi;</i>&nbsp;&cong;&nbsp;90&deg;
- and sin&thinsp;&phi;&nbsp;&cong;&nbsp;1.
- The non-dimensional chord factor becomes 1.
- Dividing the chord factor by the local 
+<!-- FIGURE --------------------------------------------------->
+<img  width="520";
+     style="margin-left : 160px;
+            margin-top  :  8px";
+     alt="Betz_arc";
+     src="images/prop_cos2_chord_x.gif" >
+<p style="margin-left   :160px;
+          margin-bottom : 12px;">
+    <i> Figure 27.1 : &ensp;
+            Non-dimensional shape factors for uniform<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            and rotationally optimal distributions. </i>
+</p> 
+<!------------------------------------------------------------->
+
+<p> Near the hub, <i>&phi;</i>&nbsp;&cong;&nbsp;90&deg;
+ and therefore sin&thinsp;<i>&phi;</i>&nbsp;&cong;&nbsp;1.
+ The chord factor of (27.12) becomes 1 there.
+ Dividing this by the&nbsp;local 
 (&hairsp;non-dimensional&hairsp;) circumference
 <nobr> 2&hairsp;&pi;.<i>&hairsp;x</i> </nobr>
  shows that the local solidity 
- will go to infinity near the hub.
+ will go to infinity.
 </p>
 <p>&emsp;
  The propeller blades become layered like a
@@ -708,10 +718,9 @@ we have small
  with the chords wrapping around the hub
  infinitely many times
  on an infinitely small radius. 
- Such shapes have actually been attempted in the past,
+ Such blade shapes have actually been attempted in the past,
  but they are both impractical and unnecessary.
-</p>
-<p>&emsp;
+
  We will see that in the rotationally optimal load distribution,
  the cos<sup>2</sup>&hairsp;<i>&phi;</i> term 
 comes to the rescue.
@@ -719,8 +728,8 @@ comes to the rescue.
 
 <!-- SECTION -------------------------------------------------->
 
-<h4> 27.4 &emsp;
-   The blade shape for rotationally optimal loading        </h4>
+<h4> 27.5 &emsp;
+   The shape for rotationally optimal loading </h4>
 
 <p> Rotational optimization will scale the thrust by
  cos<sup>2&thinsp;</sup><i>&phi;</i>.
@@ -758,41 +767,42 @@ comes to the rescue.
 </td> </tr> </table>
 
 <p> Figure 27.1 shows this factor as a solid blue line.
- For large <i>x</i>, where
- cos<sup>&hairsp;2</sup>&thinsp;<i>&phi;</i> &cong; 1,
- the blade shape factor is app&shyrox&shyimately
-  &cong; 1<i>&thinsp;/&thinsp;x</i>&thinsp;,
- just like with the sin<i>&thinsp;&phi;</i>
- for the uniform propeller.
+It differs from (27.12)  by a factor of 
+cos<sup>&hairsp;2</sup><i>&hairsp;&phi;
+ &hairsp;/&thinsp;&kappa;</i><sub>&hairsp;&phi;</sub>.
 </p>
 <p>&emsp;
  For small <i>x</i>, by 
  (&hairsp;<a href="prop_book_02.html#(2.2)">2.5</a>&hairsp;)
  and 
 (&hairsp;<a href="prop_book_02.html#(2.2)">2.7</a>&hairsp;)
- the shape factor becomes approximately <i>x</i><sup>2</sup>.
+ the factor
+   cos<sup>2</sup><i>&hairsp;&phi;</i>&thinsp;.&thinsp;sin<i>&hairsp;&phi;</i>
+ becomes approximately
+ <i>x</i><sup>2</sup>.
  For the local solidity we have to divide by 
  2&pi;<i>&hairsp;x</i>, so the solidity
- goes to zero at the hub with <i>x</i>.
- In practice, the chord will not go completely
- to zero, if only for mechanical reasons.
+ goes to zero at the hub in linear proportion to <i>x</i>.
+ In practice, the chord will not vanish com&shypletely,
+ if only for mechanical reasons.
  Unlike the uniformly loaded propeller, the local chord
- and solidity do not go to infinity at the hub.
- The rotationally optimal propeller has a viable blade shape.
+ and solidity do not go to infinity.
+ The rotationally optimal propeller has a viable blade shape,
+ right down to the the hub.
 </p>
 
 <p>&emsp;
  The location of the widest chord is found by setting
  the derivative of 
-   cos<sup>2</sup><i>&hairsp;&phi;</i> . sin<i>&hairsp;&phi;</i>
+   cos<sup>2</sup><i>&hairsp;&phi;</i>&thinsp;.&thinsp;sin<i>&hairsp;&phi;</i>
  to zero.
-This yields <br>
+This yields : <br>
 cos<sup>3</sup><i>&hairsp;&phi;</i> &minus;
 2&thinsp;.&thinsp;cos&thinsp;&phi;&thinsp;.&thinsp;sin<sup>2</sup><i>&hairsp;&phi;</i>
  = 0, hence 
  tan<sup>2&thinsp;</sup><i>&phi;</i> = &frac12;,
  hence <i>x</i>
- = 1&thinsp;/&thinsp;tan&thinsp;<i>&phi;</i> = &radic;2 :
+ = (&hairsp;1&thinsp;/&thinsp;tan&thinsp;<i>&phi;</i>&hairsp;) = &radic;2 :
 </p>
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
@@ -836,25 +846,66 @@ cos<sup>3</sup><i>&hairsp;&phi;</i> &minus;
 </td> </tr> </table>
 <!-- END EQUATION --------------------------------------------->
 
-
-<p>Figure 27.1 indicates the widest point by a circle marker.
+<p> This changes (27.14) to :
 </p>
 
-<!-- SECTION -------------------------------------------------->
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>B</mi> <mo>.</mo> 
+    <msub>
+      <mrow> <mi>c</mi><mn>&prime;</mn></mrow>
+      <mn>wide</mn>
+   </msub>
 
-<h4> 27.5 &emsp; Inflating the chord to unit thrust        </h4>
+  <mspace/> <mo>=</mo> <mspace/>
 
-<p> To normalize the thrust,
- we can make the factor
- 1<i>&thinsp;/&thinsp;&kappa;</i><sub>&phi;</sub>
- in (27.14) part of the blade shape factor.
+  <mn>0.385</mn>
+
+  <mspace/> <mn>.</mn> <mspace/>
+
+  <mstyle displaystyle = "true">
+  <mfrac>
+   <mn>4&pi;</mn>
+   <msub><mi>C</mi><mn>L</mn></msub>
+  </mfrac>
+  <mo>.</mo>
+  <mstyle displaystyle = "true">
+  <mfrac>
+    <mrow> <mi>T</mi><mn>&prime;</mn> </mrow>   
+    <msub><mi>&kappa;</mi> <mn>&phi;</mn> </msub>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (27.17)
+</td> </tr> </table>
+
+<p> Figure 27.1 indicates this widest point by a circle marker.
+</p>
+
+<!------- SECTION --------------------------------------------->
+<h4> 27.6 &emsp; The effect of
+      1<i>&hairsp;/&hairsp;&kappa;</i><sub>&phi;</sub> </h4>
+
+<p> Figure
+ <a href="prop_book_11.html#11.2">11.2</a> showed that 
+ scaling the loading by 
+    1<i>&hairsp;/&hairsp;&kappa;</i><sub>&phi;</sub>
+ to maintain the same thrust regardless of 
+tip speed ratio <i>X</i>
+ inflates the loading for propellers
+ of lower tip speed ratio <i>X</i>, i.e. for propellers
+ of high pitch.
+Figure 27.2 below, compared to the blue line in Figure 27.1,
+shows exactly the same effect on the chords.
 </p>
 <p>&emsp;
- Figure 27.2 shows the result.
- Still like in figure 27.1, all rotationally optimal
+ Once again, it shows that all rotationally optimal
  propellers are identical in shape.
- The shape factor depends only on <i>x</i>.
- Blades of smaller <i>X</i> are just "cut off" sooner.
+ They just differ in width, 
+ and blades of smaller <i>X</i> are "cut off" sooner.
 </p>
 
 <!-- FIGURE --------------------------------------------------->
@@ -869,9 +920,76 @@ cos<sup>3</sup><i>&hairsp;&phi;</i> &minus;
           Rotationally optimal chord for unit thrust. </i> 
 <!------------------------------------------------------------->
 
+<!------- SECTION --------------------------------------------->
+<h4> 27.7 &emsp; 
+     The large <i>x</i> approximation with rotation </h4>
+
+<p> The chord approximation (27.13) for large <i>x</i>
+can be kept unchanged for the rotationally optimal propeller,
+ or we can add the <i>&kappa;</i><sub>&phi;</sub>
+term if desired.  
+<p>&emsp;
+ For large <i>x</i>, cos<sup>&hairsp;2</sup><i>&hairsp;&phi;</i>
+ is nearly 1 as we saw in Figure
+<a href=prop_book_10.html#(10.1)>10.1</a>&hairsp;.
+ The <i>&kappa;</i><sub>&phi;</sub> term
+converges a bit more slowly, see figure
+<a href=prop_book_11.html#(11.1)>11.1</a>&hairsp;,
+so we can write :
+</p>
+ 
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mi>B</mi> <mo>.</mo> <mi>c</mi> <mn>&thinsp;&prime;</mn>
+
+  <mspace/> <mo>&cong;</mo> <mspace/>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>4&hairsp;&pi;</mn>
+    <msub> <mi>C</mi> <mn>L</mn> </msub>
+ </mfrac>
+
+  <mo>. </mo>
+
+  <mfrac>
+    <mrow> <mi>T</mi><mn>&prime;</mn> </mrow>   
+    <msub><mi>&kappa;</mi> <mn>&phi;</mn> </msub>
+  </mfrac>
+
+  <mn>&thinsp;.&thinsp;</mn>
+
+  <mfrac>
+    <mn>1</mn>
+    <mi>x</mi>
+ </mfrac>
+
+  <mspace width="120px"/>
+  <mi>x</mi>
+  <mn>&nbsp;&Gt;&nbsp;</mn>
+  <mi>1</mi>
+
+</math>
+
+<td style="width:50px; text-align:right">               (27.18)
+</td> </tr> </table>
+
+</td> </tr> </table>
+<!-- END EQUATION --------------------------------------------->
+
+<p>
+ Since <i>&kappa;</i><sub>&phi;</sub>
+ is close to 1 for large <i>X</i>,
+ the result is almost identical to (27.13),
+ and follows the same grey line there.
+</p>
+
 <!-- SECTION  ------------------------------------------------->
 
-<h4> 27.6 &emsp; The dimensional chord                     </h4>
+<a name="27.7"></a>
+
+<h4> 27.7 &emsp; The dimensional chord                     </h4>
 
 <p> Figures 27.1 and 27.2 showed the non-dimensional chord
  <i>c</i>&thinsp;&prime; against <i>x</i>.
@@ -888,9 +1006,13 @@ cos<sup>3</sup><i>&hairsp;&phi;</i> &minus;
  if we plot all blades to a standard radius from 0 to 1.
  We&nbsp;achieve this by plotting 
    <i>c&thinsp;/&thinsp;R</i> versus
- <i>r&thinsp;/&thinsp;R</i>.
+ <i>r&thinsp;/&thinsp;R</i>,
+ instead of 
+   <i>c&thinsp;</i>&prime; against <i>x</i>.
+
  Relative to figure 27.2, we need to reduce
- both the horizontal and the vertical axis by  1<i>/X</i>.
+ both the horizontal and the vertical axis by
+  1<i>&thinsp;/&thinsp;X</i>.
 With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
  = <i>c&prime;&thinsp;/&thinsp;X</i>. 
  This changes (27.14) to :
@@ -943,19 +1065,103 @@ With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (27.17)
+<td style="width:50px; text-align:right">                (27.19)
 </td> </tr> </table>
 
 <p> Figure 27.3 shows the result for two-bladed propellers
  of various tip speed ratios <i>X</i>.
  This figure is basically the same as figure 27.2,
- but this time with all blades scaled to a single radius.
+ but this time all blades are scaled to a single radius.
  This new plot is dimensioned for our typical lightplane example
  of <i>T</i>&thinsp;&prime;&nbsp;=&nbsp;0.1 and
  <i>C</i><sub>L</sub>&nbsp;=&nbsp;0.4.
 </p>
 
-<h4> 27.7 &emsp;                       The widest chord   </h4>
+<p>&emsp;
+Similar to (27.18), the large <i>x</i> approximation is :
+</p>
+
+<!-- EQUATION ------------------------------------------------->
+<table> <tr> <td>
+<math>
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mrow> <mi>B</mi> <mo>.</mo> <mi>c</mi> </mrow>
+    <mi>R</mi>
+  </mfrac>
+
+  <mspace/> <mo>=</mo> <mspace/>
+
+  <mstyle displaystyle = "true">
+  <mfrac>
+   <mn>4&pi;</mn>
+   <msub><mi>C</mi><mn>L</mn></msub>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle = "true">
+  <mfrac>
+    <mrow> <mi>T</mi><mn>&prime;</mn> </mrow>   
+    <msub><mi>&kappa;</mi> <mn>&phi;</mn> </msub>
+  </mfrac>
+  <mo>.</mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>>
+    <mi>X</mi>
+  </mfrac>
+
+  <mo> . </mo>
+
+  <mstyle displaystyle="true">
+  <mfrac>
+    <mn>1</mn>>
+    <mi>x</mi>
+  </mfrac>
+
+</math>
+</td>
+
+<td style="width:50px; text-align:right">                (27.20)
+</td> </tr> </table>
+
+<!------- SECTION --------------------------------------------->
+
+<h4> 27.8 &emsp; Dimensional chord example </h4>
+
+<p>Figure 27.3 shows how the chord equation (27.19)
+ works out for a few numerical examples.
+</p>
+<p>&emsp;
+ The middle blade is our standard
+example of two blades, <i>X</i>&nbsp;=&nbsp;5.
+A blade lift coefficient of 
+  <i>C</i><sub>L</sub>&nbsp;=&nbsp;0.4 is assumed.
+The other blades are the same, only for different 
+values of the tip speed ratio <i>X</i>.
+Clearly, this has a significant influence
+on the blade shape and on the chords.
+</p>
+
+<!-- FIGURE --------------------------------------------------->
+<img  width="520";
+     style="margin-left : 160px;
+            margin-top  :  8px";
+     alt="Betz_arc";
+     src="images/prop_chord_cos2_X_separate.gif" >
+<p style="margin-left   :160px;
+          margin-bottom : 12px;">
+    <i> Figure 27.3 : &ensp;
+            Rotationally optimal chords for varying X. <br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        Two blades, thrust T&thinsp;' = 0.1,
+        C<sub>L</sub> = 0.4. </i>
+</p> 
+<!------------------------------------------------------------->
+
+<h4> 27.9 &emsp; The widest chord </h4>
 
 <p> By (27.15) the widest chord is located at
  <i>r&thinsp;/&thinsp;R</i>
@@ -996,112 +1202,24 @@ With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (27.18)
+<td style="width:50px; text-align:right">                (27.21)
 </td> </tr> </table>
 
 <p> These points are marked by a circle marker.
  Apart from the secondary effect of
  1</i>&thinsp;/&thinsp;&kappa;</i><sub>&phi;</sub> ,
  all else being equal,
- the width of the widest chord varies
+ the width at the widest chord varies
   with 1<i>&thinsp;/&thinsp;X</i>.
 </p>
 
-<!-- FIGURE --------------------------------------------------->
-<img  width="520";
-     style="margin-left : 160px;
-            margin-top  :  8px";
-     alt="Betz_arc";
-     src="images/prop_chord_cos2_X_separate.gif" >
-<p style="margin-left   :160px;
-          margin-bottom : 12px;">
-    <i> Figure 27.3 : &ensp;
-            Rotationally optimal chords for varying X. <br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        Two blades, thrust T&thinsp;' = 0.1,  CL = 0.4. </i>
-</p> 
-<!------------------------------------------------------------->
-
 <!-- SECTION -------------------------------------------------->
 
-<h4> 27.7 &emsp; The chord at the tip                      </h4>
-
-<span style="color:darkgrey">
+<h4> 27.9 &emsp; The chord at 0.7&thinsp;<i>R</i>          </h4>
 
 <p> At the tip, we have <i>x</i> = <i>X</i>.
- equation (27.18) now reads : 
+By (27.20) the tip chord will approximately be :
 </p>
-
-<!-- EQUATION ------------------------------------------------->
-<table> <tr> <td>
-<math>
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mrow>
-      <mi>B</mi> <mo>.</mo> 
-        <msub> <mi>c</mi> <mn>tip</mn> </msub>
-    </mrow>
-    <mi>R</mi>
-  </mfrac>
-
-  <mspace/> <mo>=</mo> <mspace/>
-
-  <mstyle displaystyle = "true">
-  <mfrac>
-   <mn>4&pi;</mn>
-   <msub><mi>C</mi><mn>L</mn></msub>
-  </mfrac>
-
-  <mo>.</mo>
-
-  <mstyle displaystyle = "true">
-  <mfrac>
-    <mrow> <mi>T</mi><mn>&prime;</mn> </mrow>   
-    <msub><mi>&kappa;</mi> <mn>&phi;</mn> </msub>
-  </mfrac>
-  <mo> . </mo>
-
-  <mstyle displaystyle="true">
-  <mfrac>
-    <mn>1</mn>>
-    <mi>X</mi>
-  </mfrac>
-
-  <mo> . </mo>
-  <mstyle displaystyle="true">
-  <mfrac>
-   <msup> <mi>X</mi> <mn>2</mn> </msup>
-   <mrow>
-     <mn>1</mn> <mo>+</mo> 
-       <msup> <mi>X</mi> <mn>2</mn> </msup>
-  </mrow>
- </mfrac>
-
-  <mo> . </mo>
-
-  <mstyle displaystyle="true">
-  <mfrac>
-   <mn>1</mn>
-   <mrow>
-     <msqrt> <mn>1</mn> <mo>+</mo> 
-       <msup> <mi>X</mi> <mn>2</mn> </msup>
-     </msqrt>
-  </mrow>
- </mfrac>
-
-</math>
-</td>
-
-<td style="width:50px; text-align:right">                (27.19)
-</td> </tr> </table>
-
-<p> For larger <i>X</i> we have 
- (&thinsp;1 + <i>X</i><sup>&thinsp;2</sup>&thinsp;)
-    &cong; <i>X</i><sup>2</sup>,
- and we can approximate the tip chord  by : 
-</p>
-
-</span>
 
 <!-- EQUATION ------------------------------------------------->
 <table> <tr> <td>
@@ -1114,7 +1232,7 @@ With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
     <mi>R</mi>
   </mfrac>
 
-  <mspace/> <mo>=</mo> <mspace/>
+  <mspace/> <mo>&cong;</mo> <mspace/>
 
   <mstyle displaystyle = "true">
   <mfrac>
@@ -1140,28 +1258,23 @@ With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (27.20)
+<td style="width:50px; text-align:right">                (27.22)
 </td> </tr> </table>
 
 <p> The tip chord is therefore roughly proportional to
  1<i>&thinsp;/&thinsp;X</i><sup>&thinsp;2</sup>.
 </p>
-
-<!-- SECTION --------------------------------------------------->
-
-<h4> 27.8 &emsp; The chord at 0.7&hairsp;<i>R</i>          </h4>
-
-<p> Because in practice the tip is rounded,
+<p>&emsp;
+ Because in practice the tip is rounded,
  it is not always the most convenient place
  to measure the chord.
-  The typical working radius for a propeller blade is
+  The&nbsp;typical working radius for a propeller blade is
  <nobr> <i>r</i>&nbsp;=&nbsp;0.7&hairsp;<i>R</i>, </nobr>
  or <nobr> <i>x</i> = 0.7&hairsp;<i>X</i>. </nobr>
 </p>
 <p>&emsp; 
- If the value of 0.7&hairsp;<i>X</i> is fairly large
- relative to 1, then the same logic applies
- as for the tip chord, and we have :
+ Again by (27.20), the chord at this radius
+ will approximately be :
 </p>
 
 <!-- EQUATION ------------------------------------------------->
@@ -1176,7 +1289,7 @@ With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
     <mi>R</mi>
   </mfrac>
 
-  <mspace/> <mo>=</mo> <mspace/>
+  <mspace/> <mo>&cong;</mo> <mspace/>
 
   <mstyle displaystyle = "true">
   <mfrac>
@@ -1203,71 +1316,31 @@ With (27.9) we have <i>c&thinsp;/&thinsp;R</i>
 </math>
 </td>
 
-<td style="width:50px; text-align:right">                (27.21)
+<td style="width:50px; text-align:right">                (27.23)
 </td> </tr> </table>
 
-<p> The chord at 70&thinsp;% of the radius is
- roughly proportional to
+<p> Like the tip chord, the chord at 0.7&thinsp;<i>R</i>
+ is roughly proportional to
  1<i>&thinsp;/&thinsp;X</i>&thinsp;<sup>2</sup>.
  Higher pitch propellers therefore have much wider blades,
  as was already obvious from figure 27.3.
 </p>
-
-<!-- SECTION --------------------------------------------------->
-
-<span style="color:darkgrey">
-
-<h4> 27.9 &emsp; Blade taper                               </h4>
-
-<p> With (27.23), the widest chord at <i>x</i> = &radic;2
-  is proportional to 1<i>&thinsp;/&thinsp;X</i>.
+<p>&emsp;
+ With some effort, we can see that the blades 
+have a taper of 1<i>&thinsp;/&thinsp;X</i>
+over the outer sections, away from the widest point.
+We can also see that the blades all have identical
+shape, only inflated in lenght and width with higher pitch,
+but that the blades of higher pitch are "cut off shorter".
 </p>
 <p>&emsp;
-  By (27.23) and (27.24) the chords farther out
- are proportional to
-   1<i>&thinsp;/&hairsp;X</i>&thinsp;<sup>2</sup>.
- Figure 27.3 shows how this works out in practice.
-<br>
-In shape, these propellers are all identical.
-A propeller of <i>X</i> = &radic;2
- would have its widest point at the tip.
-A propeller of i>X</i>&nbsp;=&nbsp;2.5
-has its widest point nearly halfway.
-<span style "color:darkgrey">
-Propellers of higher <i>X</i> start to resemble
-the 1<i>&thinsp;/&thinsp;X</i> shape. 
-</span>
-
- Propellers of high pitch
- (&hairsp;hence of low <i>X</i>&hairsp;)
+ As a result, propellers of high pitch
+ (&hairsp;hence low <i>X</i>&hairsp;)
  have paddle-like shapes,
- with the tips nearly as wide as the widest point
+ with tips nearly as wide as the widest point
  at <i>x</i>&nbsp;=&nbsp;&radic;2.
+Propellers of high <i>X</i> are clearly tapered.
 </p>
-
-<p> Propellers of high <i>X</i> are clearly tapered.
- Chapter XXXXXXX will show that this result holds
- even after tip loss.
-</p>
-<p>&emsp;
- The reason for the chord variation is the variation
- in the local airspeed on the blade elements.
- The velocity diagram of figure 2.3 shows
- that for larger values of <nobr>
- <i>x</i> &equiv; <i>&Omega;&hairsp;r&hairsp;/&hairsp;V</i>, </nobr>
- the local wind speed <i>W</i> is very similar to 
- <i>&Omega;&hairsp;r</i>.
- This makes <i>W</i> proportional to <i>x</i>, 
- with <nobr> <i>W</i> &cong; <i>x&hairsp;.&hairsp;V</i>. </nobr>
- The lift on a blade element is proportional
- to the local airspeed squared.
- All else being equal, this makes the lift per chord width
- locally proportional to <i>x</i><sup>2</sup>,
- and at the tip to <i>X</i><sup>2</sup>.
- This ratio is reflected in the tip chord width of (27.23).
-</p>
-
-</span>
 
 <!-- FOOTER --------------------------------------------------->
 <br> <br>
